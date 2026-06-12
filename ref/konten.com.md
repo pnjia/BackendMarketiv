@@ -117,7 +117,7 @@ data:
 Note:
 - Ketika diklik selesai maka gambar yang sebelumnya default menjadi gambar thumbnail yang telah dimasukkan sebelumnya.
 
-##### Detail Campaign
+##### Tab 2 Detail Campaign
 Data:
 - Checklist platform Instagram, tiktok, dan youtube. (bisa pilih lebih dari satu)
 - CPM/Reward per 1000 views (Input dalam rupiah)
@@ -125,6 +125,35 @@ Data:
 - max views (input dalam rupiah)
 - budget campaign (input dalam rupiah)
 - checklist tampilkan budget ke clipper (Saat aktif, clipper bisa lihat total budget & sisa budget di halaman campaign. Kalau di-off, hanya tarif (CPM, Min/Max payout) yang tampil.)
+
+##### Tab 3 Brief Campaign
+Data:
+- Button set up brief (Trigger modal)
+
+##### Modal Set Up Brief
+Data:
+- Judul File 
+- Minimum Followers
+- Niche akun yang diperbolehkan
+- Penjelasan singkat mengenai brand 
+- Target Audiens utama (rentang umur): Checklist: semua umur, 13-17, 18-24, 25-34, 35-44, 45+.
+- Tujuan utama campaign (dropdown dan checklist): brand awareness, traffic, sign-up/download, sales, education, lainnya
+- CTA (ajakan di akhir video)
+- Tipe Konten?
+- Narasi wajib yang harus smapai ke penonton
+- kesan yang diinginkan: checklist (serius, edukatif, casual, lucu, entertaining, inspiratif, casual, dan lainnya).
+- Tag Social media max 5 platform (opsional) (radio button yes)
+- Material links (logo, footage, fotor produk, dll) 
+- Apakah clipper wajib menggunakan seluruh material ini? (wajib dan tidak)
+- Apakah terdapat footage atau mmomen spesifik yang wajib ditampilkan di video? ("ada, wajib", dan "tidak")
+- footage opsional dari brand 
+- Elemend wajib di clip
+- Caption wajib
+- Durasi minimum
+- Durasi Maksimum
+- Hashtag Wajib max 5
+- Boleh dilakukan 
+- Dilarang dilakukan 
 
 ### Analitik Brand
 Data:
@@ -148,6 +177,12 @@ Data:
 ### Budget
 Data:
 - Balance Available: angka yang tersedia, button refund, dan button request top up
+- Dialokasi ke campaign (Terkunci di - campaign aktif)
+- Total saldo brand
+- Total saldo brand (Saldo tersedia + dialokasi)
+- History: tab completed dan on process
+- table dengan kolom date, amount ,status, dan campaign.
+
 
 
 
