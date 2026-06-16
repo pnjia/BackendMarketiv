@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const databaseId = "marketiv_db";
+const databaseId = "6a3110bf000de5a04844";
 
 const createStringAttr = (key, required = false, size = 255, def = null, array = false) => ({
     key, type: "string", status: "available", required, array, size, default: def
@@ -474,7 +474,7 @@ const functions = [
     }
 ];
 
-let existingProjectId = "marketiv-mvp";
+let existingProjectId = "69f9d45b00315cb0ec2f";
 let existingProjectName = "Marketiv";
 
 try {
