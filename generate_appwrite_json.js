@@ -300,6 +300,180 @@ const collections = [
     }
 ];
 
+const buckets = [
+    {
+        $id: "avatars",
+        name: "Avatars",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")", "delete(\"users\")"],
+        fileSecurity: false,
+        enabled: true,
+        maximumFileSize: 5000000,
+        allowedFileExtensions: ["jpg", "jpeg", "png", "webp"],
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "logos",
+        name: "Logos",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")", "delete(\"users\")"],
+        fileSecurity: false,
+        enabled: true,
+        maximumFileSize: 5000000,
+        allowedFileExtensions: ["jpg", "jpeg", "png", "webp", "svg"],
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "portfolios",
+        name: "Portfolios",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")", "delete(\"users\")"],
+        fileSecurity: false,
+        enabled: true,
+        maximumFileSize: 50000000,
+        allowedFileExtensions: ["jpg", "jpeg", "png", "webp", "pdf", "mp4"],
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "campaign-assets",
+        name: "Campaign Assets",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")", "delete(\"users\")"],
+        fileSecurity: false,
+        enabled: true,
+        maximumFileSize: 100000000,
+        allowedFileExtensions: [], // allow all
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "deliverables",
+        name: "Deliverables",
+        $permissions: ["read(\"users\")", "create(\"users\")", "update(\"users\")"],
+        fileSecurity: true,
+        enabled: true,
+        maximumFileSize: 500000000, // 500MB
+        allowedFileExtensions: [],
+        compression: "none",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "chat-files",
+        name: "Chat Files",
+        $permissions: ["read(\"users\")", "create(\"users\")"],
+        fileSecurity: true,
+        enabled: true,
+        maximumFileSize: 20000000, // 20MB
+        allowedFileExtensions: ["jpg", "jpeg", "png", "pdf", "docx"],
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "fraud-evidence",
+        name: "Fraud Evidence",
+        $permissions: ["read(\"users\")"], // System writes, admin/user reads
+        fileSecurity: true,
+        enabled: true,
+        maximumFileSize: 5000000,
+        allowedFileExtensions: ["jpg", "jpeg", "png", "pdf"],
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    }
+];
+
+const functions = [
+    {
+        $id: "create-user-wallet",
+        name: "Create User Wallet",
+        runtime: "node-18.0",
+        execute: [],
+        events: ["users.*.create"],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/create-user-wallet"
+    },
+    {
+        $id: "campaign-published",
+        name: "Campaign Published",
+        runtime: "node-18.0",
+        execute: [],
+        events: ["databases.marketiv_db.collections.campaigns.documents.*.update"],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/campaign-published"
+    },
+    {
+        $id: "ai-fraud-precheck",
+        name: "AI Fraud Precheck",
+        runtime: "node-18.0",
+        execute: [],
+        events: ["databases.marketiv_db.collections.submissions.documents.*.create"],
+        schedule: "",
+        timeout: 60,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/ai-fraud-precheck"
+    },
+    {
+        $id: "create-order",
+        name: "Create Order",
+        runtime: "node-18.0",
+        execute: [],
+        events: ["databases.marketiv_db.collections.offers.documents.*.update"],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/create-order"
+    },
+    {
+        $id: "create-escrow",
+        name: "Create Escrow",
+        runtime: "node-18.0",
+        execute: [],
+        events: [], // Assumed webhook or custom triggered
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/create-escrow"
+    },
+    {
+        $id: "release-escrow",
+        name: "Release Escrow",
+        runtime: "node-18.0",
+        execute: [],
+        events: ["databases.marketiv_db.collections.deliverables.documents.*.update"],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/release-escrow"
+    }
+];
+
 const appwriteJson = {
     projectId: "marketiv-mvp",
     projectName: "Marketiv",
@@ -309,7 +483,9 @@ const appwriteJson = {
             name: "Marketiv Database",
             collections: collections
         }
-    ]
+    ],
+    storage: buckets,
+    functions: functions
 };
 
 fs.writeFileSync('appwrite.json', JSON.stringify(appwriteJson, null, 2));
