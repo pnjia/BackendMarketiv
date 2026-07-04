@@ -85,4 +85,3 @@ Prioritas Baca
 9.  01_Global/40_Folder_Structure.md
 10. 02_Modules/00_Index.md
 11. Detail modul hanya berdasarkan workflow yang sedang divalidasi
-    Catatan awal: saya sudah menemukan satu indikasi yang perlu dirapikan, yaitu docs/README.md masih menampilkan contoh struktur Authentication/50_Database.md, padahal modul Authentication memang tidak punya database karena memakai Appwrite Auth. Ini bukan masalah arsitektur, tapi dokumentasi README sebaiknya diperbarui agar tidak menyesatkan.
