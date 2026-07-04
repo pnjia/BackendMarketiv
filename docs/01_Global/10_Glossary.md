@@ -5,7 +5,7 @@ Istilah inti domain Marketiv. Satu baris per istilah. Detail teknis tiap entitas
 ## Aktor
 
 - **UMKM** — Pelaku usaha (non-tech) yang membuat campaign, memesan jasa creator, dan membayar.
-- **Content Creator** — Pembuat konten (mayoritas Gen-Z, mobile) yang meng-claim campaign, mengunggah konten, dan menerima reward.
+- **Content Creator** — Pembuat konten (mayoritas Gen-Z, mobile) yang meng-claim campaign, menerbitkan rate card, menerima order, mengunggah konten/deliverable, dan menerima reward/escrow release.
 - **Admin** — Internal Marketiv: moderasi user, review fraud, approve withdrawal, handle dispute.
 
 ## Campaign & Konten
@@ -20,7 +20,7 @@ Istilah inti domain Marketiv. Satu baris per istilah. Detail teknis tiap entitas
 - **Offer** — Penawaran (custom price) dari UMKM ke creator melalui chat rate card.
 - **Order** — Aggregate transaksi rate card (dari offer/direct order) yang mengikat escrow & deliverable.
 - **Deliverable** — Draft hasil kerja creator yang diunggah pada sebuah order.
-- **Submission** — Bukti posting konten campaign PPV oleh creator (post URL + views) yang dinilai fraud.
+- **Submission** — Bukti posting konten campaign PPV oleh creator (post URL + views) yang dinilai fraud. Hanya untuk model Campaign.
 - **Claim** — Aksi creator mengambil sebuah campaign sebelum membuat submission.
 
 ## Finansial

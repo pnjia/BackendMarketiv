@@ -1,6 +1,6 @@
 # 02 — Modules
 
-Daftar modul fungsional Marketiv (platform UMKM ↔ Content Creator di atas Appwrite + Next.js). Setiap modul punya folder sendiri dengan dokumen Overview, Business Rules, Flow, Database, API, dan Events sesuai kebutuhan.
+Daftar modul fungsional Marketiv (platform UMKM ↔ Content Creator untuk promosi digital: Campaign PPV & Rate Card/Order dengan Escrow, di atas Appwrite + Next.js). Setiap modul punya folder sendiri dengan dokumen Overview, Business Rules, Flow, Database, API, dan Events sesuai kebutuhan.
 
 ## Daftar Modul
 

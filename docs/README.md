@@ -86,23 +86,24 @@ docs/
 │   │   └── 100_Testing.md
 │   │
 │   ├── Users/
-│   ├── Products/
-│   ├── Categories/
-│   ├── Inventory/
-│   ├── Cart/
+│   ├── Campaigns/
+│   ├── RateCards/
+│   ├── Chat/
+│   ├── Offers/
 │   ├── Orders/
 │   ├── Payments/
+│   ├── AI/
 │   ├── Notifications/
 │   └── ...
 │
 ├── 03_Workflows/
 │   ├── 00_Index.md
 │   ├── 10_Registration.md
-│   ├── 20_Login.md
-│   ├── 30_Checkout.md
-│   ├── 40_Order_Fulfillment.md
-│   ├── 50_Refund.md
-│   ├── 60_Cancel_Order.md
+│   ├── 20_Campaign_PPV.md
+│   ├── 30_RateCard_Order.md
+│   ├── 40_Submission_Fraud.md
+│   ├── 50_Withdrawal.md
+│   ├── 60_Dispute.md
 │   └── ...
 │
 ├── 04_Decisions/
