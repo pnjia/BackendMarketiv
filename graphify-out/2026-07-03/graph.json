@@ -4,66 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "opencode.json",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "opencode_opencode",
-      "community": 116,
-      "norm_label": "opencode.json"
-    },
-    {
-      "label": "$schema",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "opencode_opencode_schema",
-      "community": 116,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "plugin",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "opencode_opencode_plugin",
-      "community": 116,
-      "norm_label": "plugin"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": ".opencode/package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "opencode_package",
-      "community": 150,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": ".opencode/package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "opencode_package_dependencies",
-      "community": 150,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "@opencode-ai/plugin",
-      "file_type": "code",
-      "source_file": ".opencode/package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "opencode_package_dependencies_opencode_ai_plugin",
-      "community": 150,
-      "norm_label": "@opencode-ai/plugin"
-    },
-    {
       "label": "graphify.js",
       "file_type": "code",
       "source_file": ".opencode/plugins/graphify.js",
@@ -1010,7 +950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_00_project_20_scope_ruang_lingkup_mvp",
-      "community": 18,
+      "community": 11,
       "norm_label": "ruang lingkup mvp"
     },
     {
@@ -1020,7 +960,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_00_project_20_scope_termasuk_dalam_mvp",
-      "community": 18,
+      "community": 11,
       "norm_label": "termasuk dalam mvp"
     },
     {
@@ -1030,7 +970,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_00_project_20_scope_dikecualikan_dari_mvp",
-      "community": 18,
+      "community": 11,
       "norm_label": "dikecualikan dari mvp"
     },
     {
@@ -1040,7 +980,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "docs_00_project_20_scope_referensi",
-      "community": 18,
+      "community": 11,
       "norm_label": "referensi"
     },
     {
@@ -1110,7 +1050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack",
-      "community": 11,
+      "community": 18,
       "norm_label": "40_tech_stack.md"
     },
     {
@@ -1210,7 +1150,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_00_project_50_project_rules",
-      "community": 11,
+      "community": 18,
       "norm_label": "50_project_rules.md"
     },
     {
@@ -2900,7 +2840,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_40_user_flow_authentication_user_flow",
-      "community": 8,
+      "community": 86,
       "norm_label": "authentication \u2014 user flow"
     },
     {
@@ -2910,7 +2850,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_40_user_flow_register_verify_complete_profile",
-      "community": 8,
+      "community": 86,
       "norm_label": "register \u2192 verify \u2192 complete profile"
     },
     {
@@ -2920,7 +2860,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_40_user_flow_login",
-      "community": 8,
+      "community": 86,
       "norm_label": "login"
     },
     {
@@ -2930,7 +2870,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_40_user_flow_forgot_password",
-      "community": 8,
+      "community": 86,
       "norm_label": "forgot password"
     },
     {
@@ -2940,7 +2880,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_40_user_flow_lihat_juga",
-      "community": 8,
+      "community": 86,
       "norm_label": "lihat juga"
     },
     {
@@ -3200,7 +3140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_90_events_authentication_events",
-      "community": 75,
+      "community": 8,
       "norm_label": "authentication \u2014 events"
     },
     {
@@ -3210,7 +3150,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_90_events_user_registered",
-      "community": 75,
+      "community": 8,
       "norm_label": "user registered"
     },
     {
@@ -3220,7 +3160,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_90_events_lihat_juga",
-      "community": 75,
+      "community": 8,
       "norm_label": "lihat juga"
     },
     {
@@ -5170,7 +5110,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_offers_00_index",
-      "community": 76,
+      "community": 5,
       "norm_label": "00_index.md"
     },
     {
@@ -5180,7 +5120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_offers_00_index_modul_offers",
-      "community": 76,
+      "community": 5,
       "norm_label": "modul offers"
     },
     {
@@ -5190,7 +5130,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_offers_00_index_daftar_dokumen",
-      "community": 76,
+      "community": 5,
       "norm_label": "daftar dokumen"
     },
     {
@@ -6940,7 +6880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ratecards_00_index",
-      "community": 86,
+      "community": 5,
       "norm_label": "00_index.md"
     },
     {
@@ -6950,7 +6890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ratecards_00_index_modul_rate_cards",
-      "community": 86,
+      "community": 5,
       "norm_label": "modul rate cards"
     },
     {
@@ -6960,7 +6900,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_ratecards_00_index_daftar_dokumen",
-      "community": 86,
+      "community": 5,
       "norm_label": "daftar dokumen"
     },
     {
@@ -8310,7 +8250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_03_workflows_00_index",
-      "community": 5,
+      "community": 6,
       "norm_label": "00_index.md"
     },
     {
@@ -8320,7 +8260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_03_workflows_00_index_03_workflows_index",
-      "community": 5,
+      "community": 6,
       "norm_label": "03_workflows \u2014 index"
     },
     {
@@ -8330,7 +8270,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_03_workflows_00_index_daftar_workflow",
-      "community": 5,
+      "community": 6,
       "norm_label": "daftar workflow"
     },
     {
@@ -8700,7 +8640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_03_workflows_50_withdrawal",
-      "community": 5,
+      "community": 6,
       "norm_label": "50_withdrawal.md"
     },
     {
@@ -8880,7 +8820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index",
-      "community": 74,
+      "community": 18,
       "norm_label": "00_index.md"
     },
     {
@@ -8890,7 +8830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index_04_decisions_index",
-      "community": 74,
+      "community": 18,
       "norm_label": "04_decisions \u2014 index"
     },
     {
@@ -8900,7 +8840,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index_daftar_adr",
-      "community": 74,
+      "community": 18,
       "norm_label": "daftar adr"
     },
     {
@@ -8910,7 +8850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_001",
-      "community": 11,
+      "community": 18,
       "norm_label": "adr-001.md"
     },
     {
@@ -8970,7 +8910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_002",
-      "community": 11,
+      "community": 18,
       "norm_label": "adr-002.md"
     },
     {
@@ -9090,7 +9030,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_004",
-      "community": 74,
+      "community": 75,
       "norm_label": "adr-004.md"
     },
     {
@@ -9100,7 +9040,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_004_adr_004_pisahkan_fraud_checks_dari_campaign_submissions",
-      "community": 74,
+      "community": 75,
       "norm_label": "adr-004 \u2014 pisahkan `fraud_checks` dari `campaign_submissions`"
     },
     {
@@ -9110,7 +9050,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_004_status",
-      "community": 74,
+      "community": 75,
       "norm_label": "status"
     },
     {
@@ -9120,7 +9060,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_004_context",
-      "community": 74,
+      "community": 75,
       "norm_label": "context"
     },
     {
@@ -9130,7 +9070,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_004_decision",
-      "community": 74,
+      "community": 75,
       "norm_label": "decision"
     },
     {
@@ -9140,7 +9080,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_004_consequences",
-      "community": 74,
+      "community": 75,
       "norm_label": "consequences"
     },
     {
@@ -9150,7 +9090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005",
-      "community": 74,
+      "community": 76,
       "norm_label": "adr-005.md"
     },
     {
@@ -9160,7 +9100,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005_adr_005_simpan_counter_denormalisasi_di_campaigns",
-      "community": 74,
+      "community": 76,
       "norm_label": "adr-005 \u2014 simpan counter denormalisasi di `campaigns`"
     },
     {
@@ -9170,7 +9110,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005_status",
-      "community": 74,
+      "community": 76,
       "norm_label": "status"
     },
     {
@@ -9180,7 +9120,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005_context",
-      "community": 74,
+      "community": 76,
       "norm_label": "context"
     },
     {
@@ -9190,7 +9130,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005_decision",
-      "community": 74,
+      "community": 76,
       "norm_label": "decision"
     },
     {
@@ -9200,7 +9140,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005_consequences",
-      "community": 74,
+      "community": 76,
       "norm_label": "consequences"
     },
     {
@@ -9210,7 +9150,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006",
-      "community": 74,
+      "community": 18,
       "norm_label": "adr-006.md"
     },
     {
@@ -9220,7 +9160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006_adr_006_gunakan_zustand_untuk_state_management_bukan_redux",
-      "community": 74,
+      "community": 116,
       "norm_label": "adr-006 \u2014 gunakan zustand untuk state management, bukan redux"
     },
     {
@@ -9230,7 +9170,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006_status",
-      "community": 74,
+      "community": 116,
       "norm_label": "status"
     },
     {
@@ -9240,7 +9180,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006_context",
-      "community": 74,
+      "community": 116,
       "norm_label": "context"
     },
     {
@@ -9250,7 +9190,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006_decision",
-      "community": 74,
+      "community": 116,
       "norm_label": "decision"
     },
     {
@@ -9260,7 +9200,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006_consequences",
-      "community": 74,
+      "community": 116,
       "norm_label": "consequences"
     },
     {
@@ -9797,7 +9737,7 @@
       "label": "Layer Responsibilities",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L127",
+      "source_location": "L128",
       "_origin": "ast",
       "id": "docs_readme_layer_responsibilities",
       "community": 3,
@@ -9807,7 +9747,7 @@
       "label": "00_Project",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L129",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "docs_readme_00_project",
       "community": 3,
@@ -9817,7 +9757,7 @@
       "label": "01_Global",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L145",
+      "source_location": "L146",
       "_origin": "ast",
       "id": "docs_readme_01_global",
       "community": 3,
@@ -9827,7 +9767,7 @@
       "label": "02_Modules",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L165",
+      "source_location": "L166",
       "_origin": "ast",
       "id": "docs_readme_02_modules",
       "community": 3,
@@ -9837,7 +9777,7 @@
       "label": "03_Workflows",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L197",
+      "source_location": "L198",
       "_origin": "ast",
       "id": "docs_readme_03_workflows",
       "community": 3,
@@ -9847,7 +9787,7 @@
       "label": "04_Decisions",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L212",
+      "source_location": "L213",
       "_origin": "ast",
       "id": "docs_readme_04_decisions",
       "community": 3,
@@ -9857,7 +9797,7 @@
       "label": "99_Templates",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L222",
+      "source_location": "L223",
       "_origin": "ast",
       "id": "docs_readme_99_templates",
       "community": 3,
@@ -9867,7 +9807,7 @@
       "label": "Reading Guide",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L230",
+      "source_location": "L231",
       "_origin": "ast",
       "id": "docs_readme_reading_guide",
       "community": 3,
@@ -9877,7 +9817,7 @@
       "label": "General Understanding",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L232",
+      "source_location": "L233",
       "_origin": "ast",
       "id": "docs_readme_general_understanding",
       "community": 3,
@@ -9887,7 +9827,7 @@
       "label": "Feature Development",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L248",
+      "source_location": "L249",
       "_origin": "ast",
       "id": "docs_readme_feature_development",
       "community": 3,
@@ -9897,7 +9837,7 @@
       "label": "Cross-Module Development",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L264",
+      "source_location": "L265",
       "_origin": "ast",
       "id": "docs_readme_cross_module_development",
       "community": 3,
@@ -9907,7 +9847,7 @@
       "label": "Architecture",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L276",
+      "source_location": "L277",
       "_origin": "ast",
       "id": "docs_readme_architecture",
       "community": 3,
@@ -9917,7 +9857,7 @@
       "label": "Documentation Rules",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L288",
+      "source_location": "L289",
       "_origin": "ast",
       "id": "docs_readme_documentation_rules",
       "community": 3,
@@ -9927,7 +9867,7 @@
       "label": "AI-First Design",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L299",
+      "source_location": "L300",
       "_origin": "ast",
       "id": "docs_readme_ai_first_design",
       "community": 3,
@@ -9937,7 +9877,7 @@
       "label": "Final Principle",
       "file_type": "document",
       "source_file": "docs/README.md",
-      "source_location": "L309",
+      "source_location": "L310",
       "_origin": "ast",
       "id": "docs_readme_final_principle",
       "community": 3,
@@ -9945,46 +9885,6 @@
     }
   ],
   "links": [
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "opencode_opencode",
-      "target": "opencode_opencode_plugin",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "opencode_opencode",
-      "target": "opencode_opencode_schema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "opencode_package",
-      "target": "opencode_package_dependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "opencode_package_dependencies",
-      "target": "opencode_package_dependencies_opencode_ai_plugin",
-      "confidence_score": 1.0
-    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -19359,7 +19259,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L299",
+      "source_location": "L300",
       "weight": 1.0,
       "source": "docs_readme",
       "target": "docs_readme_ai_first_design",
@@ -19379,7 +19279,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L288",
+      "source_location": "L289",
       "weight": 1.0,
       "source": "docs_readme",
       "target": "docs_readme_documentation_rules",
@@ -19399,7 +19299,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L309",
+      "source_location": "L310",
       "weight": 1.0,
       "source": "docs_readme",
       "target": "docs_readme_final_principle",
@@ -19419,7 +19319,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0,
       "source": "docs_readme",
       "target": "docs_readme_layer_responsibilities",
@@ -19439,7 +19339,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L230",
+      "source_location": "L231",
       "weight": 1.0,
       "source": "docs_readme",
       "target": "docs_readme_reading_guide",
@@ -19449,7 +19349,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L129",
+      "source_location": "L130",
       "weight": 1.0,
       "source": "docs_readme_layer_responsibilities",
       "target": "docs_readme_00_project",
@@ -19459,7 +19359,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L145",
+      "source_location": "L146",
       "weight": 1.0,
       "source": "docs_readme_layer_responsibilities",
       "target": "docs_readme_01_global",
@@ -19469,7 +19369,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L165",
+      "source_location": "L166",
       "weight": 1.0,
       "source": "docs_readme_layer_responsibilities",
       "target": "docs_readme_02_modules",
@@ -19479,7 +19379,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L197",
+      "source_location": "L198",
       "weight": 1.0,
       "source": "docs_readme_layer_responsibilities",
       "target": "docs_readme_03_workflows",
@@ -19489,7 +19389,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L212",
+      "source_location": "L213",
       "weight": 1.0,
       "source": "docs_readme_layer_responsibilities",
       "target": "docs_readme_04_decisions",
@@ -19499,7 +19399,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L222",
+      "source_location": "L223",
       "weight": 1.0,
       "source": "docs_readme_layer_responsibilities",
       "target": "docs_readme_99_templates",
@@ -19509,7 +19409,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L276",
+      "source_location": "L277",
       "weight": 1.0,
       "source": "docs_readme_reading_guide",
       "target": "docs_readme_architecture",
@@ -19519,7 +19419,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L264",
+      "source_location": "L265",
       "weight": 1.0,
       "source": "docs_readme_reading_guide",
       "target": "docs_readme_cross_module_development",
@@ -19529,7 +19429,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L248",
+      "source_location": "L249",
       "weight": 1.0,
       "source": "docs_readme_reading_guide",
       "target": "docs_readme_feature_development",
@@ -19539,7 +19439,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/README.md",
-      "source_location": "L232",
+      "source_location": "L233",
       "weight": 1.0,
       "source": "docs_readme_reading_guide",
       "target": "docs_readme_general_understanding",
@@ -19547,5 +19447,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f1e74024a3642e06b25baba522f454ddab903633"
+  "built_at_commit": "5d6af3f8943be94b7d9fa2e182769da3a1dc77cf"
 }

@@ -79,7 +79,6 @@ docs/
 │   │   ├── 20_Concepts.md
 │   │   ├── 30_Business_Rules.md
 │   │   ├── 40_User_Flow.md
-│   │   ├── 50_Database.md
 │   │   ├── 60_API.md
 │   │   ├── 70_Backend.md
 │   │   ├── 80_Frontend.md
@@ -171,7 +170,7 @@ Every business capability belongs to exactly one module.
 
 Each module is self-contained.
 
-Every module follows the same structure.
+Every module follows the same structure where relevant. Documents that do not apply to a module are omitted instead of creating empty placeholders.
 
 ```text
 Module/
@@ -181,7 +180,7 @@ Module/
 ├── 20_Concepts.md
 ├── 30_Business_Rules.md
 ├── 40_User_Flow.md
-├── 50_Database.md
+├── 50_Database.md      # only if the module owns collections/tables
 ├── 60_API.md
 ├── 70_Backend.md
 ├── 80_Frontend.md
