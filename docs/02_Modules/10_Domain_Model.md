@@ -7,12 +7,12 @@ Gambaran model data Marketiv dikelompokkan per domain. Dokumen ini hanya menyaji
 | Domain | Collection | Modul Pemilik |
 | --- | --- | --- |
 | Identity | `users`, `umkm_profiles`, `creator_profiles`, `creator_social_accounts`, `creator_portfolios` | [Users](Users/50_Database.md) |
-| Campaign / PPV | `campaigns`, `campaign_assets`, `campaign_claims`, `campaign_submissions` | Campaigns |
-| RateCard | `rate_cards`, `rate_card_packages` | RateCards |
-| Chat / Offer | `conversations`, `messages`, `offers` | Chat, Offers |
-| Order | `orders`, `revisions`, `deliverables` | Orders |
-| Payment | `wallets`, `transactions`, `escrows`, `withdrawals` | Payments |
-| AI | `ai_requests`, `fraud_checks` | AI |
+| Campaign / PPV | `campaigns`, `campaign_assets`, `campaign_briefs`, `campaign_claims`, `campaign_submissions`, `fraud_checks` | [Campaigns](Campaigns/50_Database.md) |
+| RateCard | `rate_cards`, `rate_card_packages` | [RateCards](RateCards/50_Database.md) |
+| Chat / Offer | `conversations`, `messages`, `offers` | [Chat](Chat/50_Database.md), [Offers](Offers/50_Database.md) |
+| Order | `orders`, `revisions`, `deliverables` | [Orders](Orders/50_Database.md) |
+| Payment | `wallets`, `transactions`, `escrows`, `withdrawals` | [Payments](Payments/50_Database.md) |
+| AI | `ai_requests` | [AI](AI/50_Database.md) |
 | Notification | `notifications` | [Notifications](Notifications/50_Database.md) |
 
 > Catatan: Appwrite Auth menyimpan kredensial user; modul [Authentication](Authentication/00_Index.md) tidak memiliki collection sendiri.
@@ -26,27 +26,36 @@ USERS
  ├── WALLETS
  └── NOTIFICATIONS
 
-UMKM
+UMKM_PROFILES
  ├── CAMPAIGNS
- │     ├── CAMPAIGN_BRIEFS / AI_BRIEF_REQUESTS
+ │     ├── CAMPAIGN_ASSETS
+ │     ├── CAMPAIGN_BRIEFS
  │     ├── CAMPAIGN_CLAIMS
- │     │      └── SUBMISSIONS
- │     │              └── FRAUD_ANALYSES
- │     └── AI_BRIEF_REQUESTS
+ │     │      └── CAMPAIGN_SUBMISSIONS
+ │     │              └── FRAUD_CHECKS
+ │     └── AI_REQUESTS
  │
  └── CONVERSATIONS
+         ├── MESSAGES
+         │       └── OFFERS
          └── OFFERS
                  └── ORDERS
+                         ├── REVISIONS
                          ├── DELIVERABLES
                          └── ESCROWS
 
-CREATOR
+CREATOR_PROFILES
  ├── RATE_CARDS
+ │     └── RATE_CARD_PACKAGES
  ├── CAMPAIGN_CLAIMS
  └── CONVERSATIONS
 
 WALLETS
- └── WALLET_TRANSACTIONS
+ ├── TRANSACTIONS
+ └── WITHDRAWALS
+
+ESCROWS
+ └── TRANSACTIONS
 ```
 
 ## Catatan Pemodelan
