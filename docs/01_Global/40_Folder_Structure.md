@@ -40,7 +40,7 @@ src/
 
 ## Modules (`src/modules/`)
 
-`auth`, `users`, `creator`, `rate-card`, `campaign`, `submission`, `offer`, `order`, `wallet`, `payment`, `review`, `notification`, `ai`, `admin`.
+`auth`, `users`, `creator`, `rate-card`, `campaign`, `submission`, `chat`, `offer`, `order`, `wallet`, `payment`, `review`, `notification`, `ai`, `admin`.
 
 Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Modul memuat logika & UI fitur; **routing tetap di `src/app/`** yang meng-import view dari modul. Modul AI hanya 3 komponen MVP: `AiLandingAssistant`, `AiBriefGenerator`, `FraudScoreBadge`.
 
@@ -51,7 +51,7 @@ Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Mod
 
 ## Service Layer (`src/services/`)
 
-`authService.js`, `userService.js`, `creatorService.js`, `campaignService.js`, `submissionService.js`, `orderService.js`, `walletService.js`, `paymentService.js`, `aiService.js`. Aturan akses: lihat [`20_Coding_Standards.md`](20_Coding_Standards.md).
+`authService.js`, `userService.js`, `creatorService.js`, `campaignService.js`, `submissionService.js`, `chatService.js`, `offerService.js`, `orderService.js`, `walletService.js`, `paymentService.js`, `aiService.js`. Aturan akses: lihat [`20_Coding_Standards.md`](20_Coding_Standards.md).
 
 ## Appwrite Config (`src/lib/appwrite/`)
 
@@ -59,17 +59,17 @@ Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Mod
 
 ## Stores / Validations / Hooks
 
-- `src/stores/`: `authStore.js`, `campaignStore.js`, `walletStore.js`, `notificationStore.js`.
-- `src/validations/`: `authSchema.js`, `campaignSchema.js`, `rateCardSchema.js`, `offerSchema.js`, `withdrawSchema.js` (Zod).
-- `src/hooks/`: `useAuth`, `useCampaign`, `useWallet`, `useRealtime`, `useNotification`.
+- `src/stores/`: `authStore.js`, `campaignStore.js`, `chatStore.js`, `walletStore.js`, `notificationStore.js`.
+- `src/validations/`: `authSchema.js`, `campaignSchema.js`, `rateCardSchema.js`, `chatSchema.js`, `offerSchema.js`, `withdrawSchema.js` (Zod).
+- `src/hooks/`: `useAuth`, `useCampaign`, `useChat`, `useWallet`, `useRealtime`, `useNotification`.
 
 ## Appwrite Functions (`functions/`)
 
-`create-wallet`, `create-order`, `process-payment`, `release-escrow`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
+`create-wallet`, `create-order`, `process-payment`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
 
 ## Storage Buckets (`storage/`)
 
-`avatars/`, `logos/`, `campaign-assets/`, `campaign-thumbnails/`, `submissions/`, `drafts/`, `payment-proofs/`.
+`avatars/`, `logos/`, `campaign-assets/`, `campaign-thumbnails/`, `chat-attachments/`, `submissions/`, `drafts/`, `payment-proofs/`.
 
 ## Tests (`tests/`)
 

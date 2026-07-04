@@ -14,8 +14,6 @@ Ruang chat antara satu UMKM dan satu creator. Relasi: Conversation (1) → Messa
 | creatorId          | string  | yes      | FK → users                           |
 | lastMessage        | string  | no       | denormalisasi pesan terakhir         |
 | lastMessageAt      | string  | no       | denormalisasi waktu pesan terakhir   |
-| unreadCountUMKM    | integer | no       | badge unread untuk UMKM              |
-| unreadCountCreator | integer | no       | badge unread untuk creator           |
 
 **Index**: `umkmId`, `creatorId`, `lastMessageAt DESC`.
 
@@ -33,13 +31,16 @@ Pesan dalam sebuah percakapan. Relasi: Conversation (1) → Messages (N).
 | -------------- | ------ | -------- | ---------------------------------- |
 | conversationId | string | yes      | FK → conversations                 |
 | senderId       | string | yes      | FK → users                         |
-| type           | enum   | yes      | `text\|image\|file\|offer\|system` |
-| content        | string | no       | isi pesan (untuk `text`/`system`)  |
-| attachmentUrl  | string | no       | URL Storage untuk `image`/`file`   |
-| isRead         | bool   | no       | status dibaca                      |
+| type           | enum    | yes      | `text\|image\|file\|offer\|system` |
+| content        | string  | no       | isi pesan (untuk `text`/`system`)    |
+| offerId        | string  | no       | FK → offers untuk tipe `offer`       |
+| attachmentUrl  | string  | no       | URL Storage untuk `image`/`file`     |
+| attachmentName | string  | no       | nama file asli                       |
+| attachmentSize | integer | no       | ukuran file dalam byte               |
+| attachmentMime | string  | no       | MIME type file                       |
 
 **Index**: `conversationId`, `createdAt DESC`, `senderId`.
 
 **Permission**: Participant only.
 
-> Lampiran disimpan di Storage (bucket `chat-files`), bukan di dokumen. Tipe pesan dijelaskan di `30_Business_Rules.md`.
+> Attachment disimpan di Storage bucket `chat-attachments` dan dibatasi oleh aturan di `30_Business_Rules.md`. Read receipt dan unread counter dikecualikan dari MVP chat dasar.

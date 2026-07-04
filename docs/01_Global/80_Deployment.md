@@ -33,11 +33,11 @@ NEXT_PUBLIC_AI_FUNCTION_ID=
 
 ## Deploy Backend (Appwrite Cloud)
 
-- Buat project, database (`NEXT_PUBLIC_DB_ID`), collections, storage bucket, dan Functions di Appwrite Cloud.
+- Buat project, database (`NEXT_PUBLIC_DB_ID`), collections, storage bucket (`chat-attachments` termasuk), dan Functions di Appwrite Cloud.
 - Atur permission per collection sesuai [`50_Security_Guidelines.md`](50_Security_Guidelines.md).
 
 ## Deploy Appwrite Functions
 
-- Functions: `create-wallet`, `create-order`, `process-payment`, `release-escrow`, `generate-brief`, `fraud-detection`, `send-notification`.
+- Functions: `create-wallet`, `create-order`, `process-payment`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`.
 - Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)) dan secret Gemini sebagai function environment variables — tidak pernah di frontend.
 - Hubungkan function ke Appwrite Event yang relevan (mis. user registered → create-wallet, submission created → fraud-detection).

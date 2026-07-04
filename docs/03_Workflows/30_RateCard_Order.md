@@ -23,7 +23,7 @@ UMKM `Creator Discovery` → buka profil → lihat rate card → mulai interaksi
 3. **Offers** — UMKM `createOffer()` (judul campaign, brief, deadline, rate card, harga, catatan). Status `pending`.
 4. **Offers** — Creator review → `acceptOffer()` atau `rejectOffer()`.
 5. **Event `offers.status (pending→accepted)`** memicu `create-order`.
-6. **Orders** — Buat `orders` status `awaiting_payment`; **Notifications** notify UMKM.
+6. **Orders** — Buat `orders` status `pending_payment`; **Notifications** notify UMKM.
 7. **Payments** — UMKM bayar via gateway → `payments.status pending → paid`.
 8. **Event `payments.status (pending→paid)`** memicu `create-escrow`: buat `escrows` (`status: locked`), `wallets.escrowBalance += amount`, order → `in_progress`.
 9. **Orders** — Creator `uploadDeliverable()` (draft). Event `deliverables.create` → `notify-client-review` → notify UMKM.

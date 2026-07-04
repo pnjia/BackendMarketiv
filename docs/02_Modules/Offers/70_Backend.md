@@ -9,6 +9,6 @@
 
 ## Aturan Backend
 
-- Validasi: hanya Creator yang dapat membuat offer.
-- Validasi: hanya UMKM (peserta percakapan) yang dapat accept/reject.
+- Validasi: hanya UMKM yang dapat membuat offer.
+- Validasi: hanya Creator (peserta percakapan) yang dapat accept/reject.
 - Saat accept, value `price` dari offer digunakan sebagai `amount` order.

@@ -54,6 +54,17 @@ Permission.read(Role.user(senderId)),
 Permission.read(Role.user(receiverId))
 ```
 
+**Chat Attachment** (`chat-attachments` bucket):
+
+```javascript
+Permission.read(Role.user(senderId)),
+Permission.read(Role.user(receiverId)),
+Permission.write(Role.user(senderId))
+```
+
+- Attachment chat wajib divalidasi ukuran dan MIME type sesuai `../02_Modules/Chat/30_Business_Rules.md`.
+- File hanya boleh dibaca participant conversation.
+
 ## Function API Key Scope
 
 Buat **satu** API key khusus backend function. Scope minimal:

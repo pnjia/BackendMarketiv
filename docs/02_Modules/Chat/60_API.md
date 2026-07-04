@@ -14,8 +14,8 @@ Kontrak Chat Service. Skema di `50_Database.md`; aturan di `30_Business_Rules.md
 
 ### sendMessage()
 
-- **Input**: `{ conversationId, type?, content?, attachmentUrl? }` — `type` default `text`.
-- **Proses**: buat dokumen `messages`; update `lastMessage` & `lastMessageAt` pada conversation induk.
+- **Input**: `{ conversationId, type?, content?, offerId?, attachmentUrl?, attachmentName?, attachmentSize?, attachmentMime? }` — `type` default `text`.
+- **Proses**: validasi participant, tipe pesan, dan batas attachment; buat dokumen `messages`; update `lastMessage` & `lastMessageAt` pada conversation induk.
 - **Akses**: Participant.
 
 ---
@@ -32,4 +32,5 @@ Receiver UI Update
 
 UI penerima subscribe ke channel dokumen `messages` percakapan terkait; saat ada pesan baru, UI langsung ter-update tanpa polling.
 
-> Pesan bertipe `offer` merujuk custom offer — lihat `../Offers/`.
+> Pesan bertipe `offer` merujuk custom offer yang dibuat UMKM — lihat `../Offers/`.
+> Pesan bertipe `image`/`file` memakai file yang sudah di-upload ke bucket `chat-attachments` dan harus lolos whitelist ukuran/format.

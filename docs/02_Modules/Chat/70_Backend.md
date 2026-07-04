@@ -10,16 +10,20 @@
 ### update-conversation-on-message
 
 - **Trigger**: `messages.create`.
-- **Aksi**: update `lastMessage`, `lastMessageAt`, `unreadCount` pada conversation induk.
+- **Aksi**: update `lastMessage` dan `lastMessageAt` pada conversation induk.
 
 ## Storage
 
-- Bucket: `chat-files`.
+- Bucket: `chat-attachments`.
 - Permission: participant read/write.
-- File gambar dan lampiran disimpan di sini; dokumen message hanya menyimpan `attachmentUrl`.
+- Image maksimal `5 MB`; format: `jpg`, `jpeg`, `png`, `webp`.
+- File maksimal `10 MB`; format: `pdf`, `doc`, `docx`.
+- Dokumen `messages` hanya menyimpan metadata dan `attachmentUrl`.
 
 ## Aturan Backend
 
 - Validasi participant: hanya UMKM & creator yang terlibat dapat mengirim/membaca pesan.
 - Unique constraint `umkmId + creatorId` pada conversation.
-- Tipe `offer`: validasi bahwa pengirim adalah Creator.
+- Tipe `offer`: validasi bahwa pengirim adalah UMKM dan `offerId` merujuk offer dalam conversation yang sama.
+- Tipe `image`/`file`: validasi ukuran, MIME type, ekstensi, dan kepemilikan file di bucket `chat-attachments`.
+- Read receipt, unread counter, typing indicator, multi-file upload, dan voice note dikecualikan dari MVP chat dasar.

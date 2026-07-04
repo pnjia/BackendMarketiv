@@ -2,15 +2,15 @@
 
 ## Pembuatan Offer
 
-- Creator membuat offer dalam conversation → offer tersimpan.
-- UMKM mencoba membuat offer → ditolak (hanya Creator).
+- UMKM membuat offer dalam conversation → offer tersimpan.
+- Creator mencoba membuat offer → ditolak (hanya UMKM).
 - Offer dengan field wajib kosong → error validasi.
 
 ## Accept / Reject
 
-- UMKM accept → status `accepted`, order terbuat.
-- UMKM reject → status `rejected`.
-- Creator accept/reject offer milik sendiri → ditolak (hanya UMKM).
+- Creator accept → status `accepted`, order terbuat.
+- Creator reject → status `rejected`.
+- UMKM accept/reject offer milik sendiri → ditolak (hanya Creator).
 
 ## Order Creation
 

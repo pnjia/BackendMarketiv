@@ -9,7 +9,7 @@
 - Campaign (Pay-Per-View)
 - AI Brief Generator
 - Offer System
-- Chat dasar untuk negosiasi Offer
+- Chat dasar untuk negosiasi Offer (termasuk attachment terbatas untuk referensi negosiasi)
 - Order System
 - Escrow
 - Submission
@@ -21,7 +21,7 @@
 
 ## Dikecualikan dari MVP
 
-- Chat Real-time tingkat lanjut, termasuk typing indicator, read receipt, attachment kompleks, voice note, moderation otomatis, dan fitur chat sosial lainnya.
+- Chat Real-time tingkat lanjut, termasuk typing indicator, read receipt, multi-file upload, attachment kompleks, voice note, moderation otomatis, dan fitur chat sosial lainnya.
 - Affiliate System
 - Referral
 - Creator Agency

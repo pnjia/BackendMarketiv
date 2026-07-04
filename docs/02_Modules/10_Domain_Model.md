@@ -52,5 +52,5 @@ WALLETS
 ## Catatan Pemodelan
 
 - **One fact = one location.** Setiap collection didokumentasikan penuh hanya di modul pemiliknya; modul lain melakukan cross-link.
-- **Denormalisasi disengaja** untuk kecepatan dashboard (mis. `campaigns.totalClaims/spentAmount/remainingBudget`, `creator_profiles.totalFollowers/totalOrders/rating`, `conversations.unreadCount*`).
+- **Denormalisasi disengaja** untuk kecepatan dashboard (mis. `campaigns.totalClaims/spentAmount/remainingBudget`, `creator_profiles.totalFollowers/totalOrders/rating`, `conversations.lastMessage/lastMessageAt`).
 - ERD di atas adalah **ERD Final Product**. MVP v1 mengaktifkan sekitar 12–14 collection terlebih dahulu.

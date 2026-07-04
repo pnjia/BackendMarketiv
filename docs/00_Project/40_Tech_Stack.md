@@ -9,8 +9,8 @@
 - **Appwrite** menyediakan:
   - **Auth** — autentikasi & Google OAuth (khusus creator)
   - **Database** — koleksi data
-  - **Storage** — file (avatar, logo, campaign assets, deliverables, dll.)
-  - **Realtime** — update campaign/order/submission/notification
+  - **Storage** — file (avatar, logo, campaign assets, chat attachments, deliverables, dll.)
+  - **Realtime** — update chat/campaign/order/submission/notification
   - **Functions** — logika server-side berbasis event
 
 ## AI Layer
@@ -23,7 +23,7 @@
 
 ## Validation
 
-- **Zod** — skema validasi (auth, campaign, rate card, offer, withdraw).
+- **Zod** — skema validasi (auth, campaign, rate card, chat, offer, withdraw).
 
 ## Testing
 
