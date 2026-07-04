@@ -41,16 +41,20 @@ Koleksi terbesar MVP. Relasi: UMKM (1) → Campaign (N).
 
 Satu campaign dapat memiliki banyak asset. Relasi: Campaign (1) → Assets (N).
 
-| Attribute  | Type   | Required | Catatan                |
-| ---------- | ------ | -------- | ---------------------- |
-| campaignId | string | yes      | FK → campaigns         |
-| type       | enum   | yes      | mis. `video`, `image`  |
-| fileUrl    | string | yes      | disimpan via Storage   |
-| fileName   | string | no       |                        |
+| Attribute  | Type   | Required | Catatan                                      |
+| ---------- | ------ | -------- | -------------------------------------------- |
+| campaignId | string | yes      | FK → campaigns                               |
+| source     | enum   | yes      | `storage` \| `external_url`                  |
+| type       | enum   | yes      | `image` \| `video` \| `document` \| `link`   |
+| fileUrl    | string | yes      | URL Appwrite Storage atau URL eksternal      |
+| fileId     | string | no       | FK → user_files.$id; wajib jika `source = storage` |
+| fileName   | string | no       | nama file atau label asset                   |
 
 **Index**: `campaignId`.
 
 **Permission**: Campaign owner write · Public read.
+
+> File storage dikelola oleh modul Users (`user_files`, `user_storage_usage`). External URL bebas tanpa kuota.
 
 ---
 

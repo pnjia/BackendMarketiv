@@ -38,6 +38,22 @@ Dimiliki UMKM. Inti alur PPV.
 - **Proses**: detail satu campaign + asset + brief.
 - **Akses**: Public.
 
+### addCampaignAsset()
+
+- **Input**: `{ campaignId, source, type, fileUrl, fileId?, fileName? }`
+- **Validasi**:
+  - `source = storage` wajib `fileId` dan file harus milik owner campaign.
+  - `source = external_url` wajib URL `https`.
+  - Hanya owner campaign yang boleh menambah asset.
+- **Proses**: buat dokumen `campaign_assets`.
+- **Akses**: UMKM (owner campaign).
+
+### removeCampaignAsset()
+
+- **Input**: `{ assetId }`
+- **Proses**: hapus dokumen `campaign_assets`. Jika `source = storage`, file di Appwrite Storage tidak otomatis terhapus (user harus hapus via File Manager).
+- **Akses**: UMKM (owner campaign).
+
 ---
 
 ## Claim Service

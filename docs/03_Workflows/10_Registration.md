@@ -21,7 +21,7 @@ User submit form `Daftar UMKM` (`/register?role=umkm`) atau `Daftar Creator` (`/
 2. **Authentication** — Kirim link verifikasi email, **valid 10 menit**. Halaman Check Inbox + opsi kirim ulang link.
 3. User klik link → email terverifikasi → `Account Created`.
 4. **Event `users.create`** memicu function `create-user-wallet` (lihat Events).
-5. **Users** — Buat profil sesuai role (UMKM/Creator), pre-fill data dari registrasi.
+5. **Users** — Buat profil sesuai role (UMKM/Creator), pre-fill data dari registrasi; inisialisasi `user_storage_usage` (`usedBytes=0`, `quotaBytes=104857600`, `fileCount=0`).
 6. **Payments** — Buat dokumen `wallets` (`availableBalance=0`, `pendingBalance=0`, `escrowBalance=0`).
 7. **Notifications** — Buat notifikasi `type: system` "Selamat datang di Marketiv".
 8. User login → masuk wizard onboarding (detail wizard ada di [Users](../02_Modules/Users/00_Index.md)).
@@ -29,8 +29,8 @@ User submit form `Daftar UMKM` (`/register?role=umkm`) atau `Daftar Creator` (`/
 ## Events / Functions
 
 - Trigger: `users.create`
-- Function: `create-user-wallet` → create wallet + create profile + send welcome notification.
-- Lihat: [`../02_Modules/Authentication/90_Events.md`](../02_Modules/Authentication/90_Events.md).
+- Function: `create-user-profile` → create profile + inisialisasi `user_storage_usage` + create wallet + send welcome notification.
+- Lihat: [`../02_Modules/Authentication/90_Events.md`](../02_Modules/Authentication/90_Events.md), [`../02_Modules/Users/70_Backend.md`](../02_Modules/Users/70_Backend.md).
 
 ## Edge Cases
 

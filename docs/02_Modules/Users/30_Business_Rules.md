@@ -24,7 +24,18 @@ Disimpan langsung di `creator_profiles` agar dashboard & browse cepat, walau bis
 - `totalOrders` — jumlah order selesai.
 - `rating` — rating creator.
 
+## Storage Kuota
+
+- Setiap user memiliki kuota penyimpanan default **100 MB** (104.857.600 bytes) untuk file yang diupload ke Appwrite Storage.
+- Kuota dihitung dari total `sizeBytes` seluruh `user_files` berstatus `active`.
+- Upload ditolak jika `usedBytes + file.size > quotaBytes`.
+- Maks ukuran satu file: **20 MB**.
+- Maks jumlah file: **100** file aktif.
+- File yang dihapus (soft delete) tidak dihitung dalam kuota dan jumlah file.
+- Kuota dapat dinaikkan berdasarkan plan/subscription di masa depan.
+- External URL (Google Drive, Dropbox, dll.) tidak terikat kuota — dikelola via modul Campaigns (`campaign_assets.source = external_url`).
+
 ## Lihat Juga
 
 - [50_Database.md](50_Database.md) — atribut & index.
-- [60_API.md](60_API.md) — operasi profil & pencarian creator.
+- [60_API.md](60_API.md) — operasi profil, pencarian creator, & file manager.

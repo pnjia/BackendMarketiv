@@ -12,6 +12,8 @@ UMKM bayar → Payment Success
 Escrow Hold → Order in_progress
 ↓
 Creator upload Deliverable
+  ├─ Internal (storage) — upload via File Manager, terikat kuota 100 MB
+  └─ External URL — link Google Drive / Dropbox, bebas kuota
 ↓
 UMKM Review
   ├─ Approve → Escrow Release → completed
@@ -25,7 +27,8 @@ UMKM Review
 ## Alur Deliverable
 
 ```text
-Creator upload file + notes
+Creator upload file via File Manager (purpose = deliverable)
+  atau input external URL
 ↓
 Deliverable tersimpan (version: n+1)
 ↓

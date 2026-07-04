@@ -22,7 +22,14 @@
 - **Trigger**: `campaign_submissions.status` `pending → approved`.
 - **Aksi**: hitung reward, update `spentAmount` & `remainingBudget`, buat transaksi ke pending balance creator.
 
+### upload-campaign-asset
+
+- **Trigger**: dipanggil frontend saat upload asset campaign.
+- **Aksi**: panggil File Manager `uploadFile()` (modul Users) dengan `purpose = campaign_asset` dan `referenceId = campaignId`, lalu buat `campaign_assets` dengan `source = storage` dan `fileId` dari hasil upload.
+
 ## Aturan Validasi Backend
 
 - Unique constraint `campaignId + creatorId` pada claim (backend validation).
 - Cek `status = active`, `isProfileCompleted = true`, `totalClaims < claimLimit`.
+- Asset `source = storage` wajib memiliki `fileId` yang valid dan milik owner campaign.
+- Asset `source = external_url` wajib protokol `https`.

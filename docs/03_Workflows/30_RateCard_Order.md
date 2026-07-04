@@ -10,6 +10,7 @@ Alur pesanan rate card kustom dengan escrow: UMKM menemukan creator, chat, kirim
 - [Chat](../02_Modules/Chat/00_Index.md) — percakapan UMKM ↔ creator.
 - [Offers](../02_Modules/Offers/00_Index.md) — custom offer & accept/reject.
 - [Orders](../02_Modules/Orders/00_Index.md) — aggregate order, deliverable, revisi.
+- [Users](../02_Modules/Users/00_Index.md) — file manager & storage kuota (upload deliverable).
 - [Payments](../02_Modules/Payments/00_Index.md) — payment, escrow, wallet.
 
 ## Trigger
@@ -26,7 +27,7 @@ UMKM `Creator Discovery` → buka profil → lihat rate card → mulai interaksi
 6. **Orders** — Buat `orders` status `pending_payment`; **Notifications** notify UMKM.
 7. **Payments** — UMKM bayar via gateway → `payments.status pending → paid`.
 8. **Event `payments.status (pending→paid)`** memicu `create-escrow`: buat `escrows` (`status: locked`), `wallets.escrowBalance += amount`, order → `in_progress`.
-9. **Orders** — Creator `uploadDeliverable()` (draft). Event `deliverables.create` → `notify-client-review` → notify UMKM.
+9. **Orders** — Creator `uploadDeliverable()` via File Manager (`purpose = deliverable`) atau external URL. Event `deliverables.create` → `notify-client-review` → notify UMKM.
 10. **Orders** — UMKM review: `approveDeliverable()` atau `requestRevision()` (creator reupload → review lagi).
 11. Setelah draft approved, creator posting → submit URL → system verify URL → waiting final approval → UMKM approve final.
 12. **Event `deliverables.status (revision_requested→approved)`** memicu `release-escrow`.
@@ -47,6 +48,7 @@ UMKM `Creator Discovery` → buka profil → lihat rate card → mulai interaksi
 - Revisi berulang (lihat aturan limit di [Orders](../02_Modules/Orders/00_Index.md)).
 - URL gagal diverifikasi → tidak lanjut ke final approval.
 - Sengketa order → lihat [60_Dispute.md](60_Dispute.md).
+- **Upload deliverable via File Manager ditolak** jika kuota creator penuh. Creator harus menghapus file lama atau beralih ke external URL.
 
 ## Links
 
@@ -54,5 +56,6 @@ UMKM `Creator Discovery` → buka profil → lihat rate card → mulai interaksi
 - [Chat](../02_Modules/Chat/00_Index.md)
 - [Offers](../02_Modules/Offers/00_Index.md)
 - [Orders](../02_Modules/Orders/00_Index.md)
+- [Users](../02_Modules/Users/00_Index.md)
 - [Payments](../02_Modules/Payments/00_Index.md)
 - [Dispute workflow](60_Dispute.md)

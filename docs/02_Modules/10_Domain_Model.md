@@ -13,6 +13,7 @@ Gambaran model data Marketiv dikelompokkan per domain. Dokumen ini hanya menyaji
 | Order | `orders`, `revisions`, `deliverables` | [Orders](Orders/50_Database.md) |
 | Payment | `wallets`, `transactions`, `escrows`, `withdrawals` | [Payments](Payments/50_Database.md) |
 | AI | `ai_requests` | [AI](AI/50_Database.md) |
+| Storage | `user_storage_usage`, `user_files` | [Users](Users/50_Database.md) |
 | Notification | `notifications` | [Notifications](Notifications/50_Database.md) |
 
 > Catatan: Appwrite Auth menyimpan kredensial user; modul [Authentication](Authentication/00_Index.md) tidak memiliki collection sendiri.
@@ -24,6 +25,8 @@ USERS
  ├── UMKM_PROFILES
  ├── CREATOR_PROFILES
  ├── WALLETS
+ ├── USER_STORAGE_USAGE
+ ├── USER_FILES
  └── NOTIFICATIONS
 
 UMKM_PROFILES

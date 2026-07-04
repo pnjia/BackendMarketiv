@@ -47,6 +47,15 @@ reward = (views / 1000) × rewardPer1000Views
 
 Reward dihitung saat submission di-approve dan masuk ke **pending balance** wallet creator (lihat modul Wallet).
 
+## Aturan Asset Campaign
+
+- Asset campaign bisa berasal dari dua sumber:
+  - `storage`: file diupload ke Appwrite Storage (terikat kuota user — lihat modul Users).
+  - `external_url`: link eksternal (Google Drive, Dropbox, CDN, dll.) — tidak terikat kuota.
+- External URL hanya menerima protokol `https`.
+- `type = link` dipakai untuk referensi umum seperti folder Google Drive; `image`, `video`, `document` untuk asset spesifik.
+- Saat campaign dihapus, asset tidak otomatis dihapus dari `user_files` (user harus mengelola sendiri lewat File Manager).
+
 ## Data Denormalisasi
 
 Pada `campaigns` disimpan counter denormalisasi agar dashboard cepat (tidak perlu agregasi runtime):

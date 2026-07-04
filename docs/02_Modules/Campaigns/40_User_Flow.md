@@ -4,8 +4,12 @@
 
 ```text
 Buat Campaign (draft)
-↓
-Generate Brief via AI (opsional)
+  ├─ Basic Info (judul, kategori, platform, deskripsi)
+  ├─ Upload Asset
+  │    ├─ Internal (storage) — upload via File Manager, terikat kuota 100 MB
+  │    └─ External URL — link Google Drive / Dropbox / CDN, bebas kuota
+  ├─ Generate Brief via AI (opsional)
+  └─ Atur Reward (budget, CPM, min/max views, claim limit)
 ↓
 Publish Campaign → active
 ↓

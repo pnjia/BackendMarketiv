@@ -14,8 +14,11 @@ Kontrak Order Service. Skema di `50_Database.md`; aturan di `30_Business_Rules.m
 
 ### uploadDeliverable()
 
-- **Input**: `{ orderId, fileUrl, notes? }`
-- **Proses**: buat dokumen `deliverables` (versi berikutnya, `status = submitted`); set order `in_progress`. Notify UMKM untuk review.
+- **Input**: `{ orderId, source, fileUrl, fileId?, notes? }`
+- **Proses**:
+  - Jika `source = storage`, file sudah diupload via File Manager (`user_files` dengan `purpose = deliverable`); validasi `fileId` milik creator.
+  - Jika `source = external_url`, simpan URL eksternal langsung.
+  - Buat dokumen `deliverables` dengan versi berikutnya (`status = submitted`); set order `in_progress`. Notify UMKM untuk review.
 - **Akses**: Creator (seller).
 
 ### approveDeliverable()

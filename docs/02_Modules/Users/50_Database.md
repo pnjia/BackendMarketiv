@@ -187,7 +187,74 @@ Public: read
 
 ---
 
+## 6. `user_storage_usage`
+
+Relasi: `users` 1 ── 1 `user_storage_usage`.
+
+### Attributes
+
+```text
+userId            # FK → users, unique
+usedBytes         # total ukuran file aktif milik user
+quotaBytes        # default 104857600 (100 MB)
+fileCount         # jumlah file aktif
+```
+
+### Index
+
+```text
+userId (unique)
+```
+
+### Permission
+
+```text
+Owner : read
+System: write
+```
+
+---
+
+## 7. `user_files`
+
+Riwayat metadata setiap file yang diupload user ke Appwrite Storage. Relasi: `users` 1 ── N `user_files`.
+
+### Attributes
+
+```text
+userId            # FK → users
+storageFileId     # Appwrite Storage file ID
+bucketId          # bucket Appwrite tujuan
+fileName          # nama file asli
+mimeType          # tipe file
+sizeBytes         # ukuran file dalam byte
+purpose           # campaign_asset | chat_attachment | portfolio | deliverable
+referenceId       # id dokumen terkait (campaignId, conversationId, dll.)
+status            # active | deleted
+createdAt
+deletedAt         # null jika masih aktif
+```
+
+### Index
+
+```text
+userId, status
+storageFileId (unique)
+purpose, referenceId
+status, createdAt DESC
+```
+
+### Permission
+
+```text
+Owner : read
+System: write
+Admin : read
+```
+
+---
+
 ## Lihat Juga
 
-- [30_Business_Rules.md](30_Business_Rules.md) — aturan kelengkapan profil & denormalisasi.
+- [30_Business_Rules.md](30_Business_Rules.md) — aturan kelengkapan profil, denormalisasi, & storage kuota.
 - [60_API.md](60_API.md) — operasi terhadap collection ini.

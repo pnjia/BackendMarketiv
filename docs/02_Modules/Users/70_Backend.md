@@ -5,7 +5,27 @@
 ### create-user-profile
 
 - **Trigger**: `users.create` (dari modul Authentication).
-- **Aksi**: buat `umkm_profiles` atau `creator_profiles` sesuai role.
+- **Aksi**: buat `umkm_profiles` atau `creator_profiles` sesuai role; inisialisasi `user_storage_usage` dengan `usedBytes = 0`, `quotaBytes = 104857600`, `fileCount = 0`.
+
+### validate-and-upload
+
+- **Trigger**: dipanggil API `uploadFile()`.
+- **Aksi**:
+  1. Baca `user_storage_usage` milik user.
+  2. Validasi kuota: `usedBytes + file.size ≤ quotaBytes`.
+  3. Validasi batas file: `fileCount < 100`.
+  4. Upload file ke Appwrite Storage bucket sesuai `purpose`.
+  5. Buat metadata di `user_files` dengan `status = active`.
+  6. Increment `usedBytes` dan `fileCount` di `user_storage_usage`.
+
+### delete-file
+
+- **Trigger**: dipanggil API `deleteFile()`.
+- **Aksi**:
+  1. Validasi `user_files.$id` milik user yang memanggil.
+  2. Hapus file dari Appwrite Storage.
+  3. Soft delete metadata `user_files` (`status = deleted`, set `deletedAt`).
+  4. Decrement `usedBytes` dan `fileCount` di `user_storage_usage`.
 
 ## Aturan Backend
 
