@@ -10,5 +10,5 @@
 
 ## Konsep
 
-- Semua pemanggilan AI berjalan server-side via Appwrite Functions; API key OpenAI tidak pernah terekspos ke client.
+- Semua pemanggilan AI berjalan server-side via Appwrite Functions; API key Gemini tidak pernah terekspos ke client.
 - Hasil fraud detection disimpan di modul Campaigns (`fraud_checks`), bukan di modul AI.

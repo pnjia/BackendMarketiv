@@ -6,7 +6,7 @@
 
 - Frontend: Next.js (App Router) → deploy Vercel.
 - Backend: Appwrite BaaS (Auth, Database, Storage, Realtime, Functions) → Appwrite Cloud.
-- AI Layer: OpenAI API dibungkus Appwrite Function.
+- AI Layer: Gemini API dibungkus Appwrite Function.
 
 ## Struktur `src/`
 

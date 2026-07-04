@@ -15,7 +15,7 @@
 
 ## AI Layer
 
-- **OpenAI API** diakses melalui **Appwrite Function wrapper** (AI Brief Generator, AI Fraud Detection, Landing Assistant).
+- **Gemini API** diakses melalui **Appwrite Function wrapper** (AI Brief Generator, AI Fraud Detection, Landing Assistant).
 
 ## State Management
 

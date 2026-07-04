@@ -5,7 +5,7 @@
 ### ai-brief
 
 - **Trigger**: HTTP (dipanggil dari frontend UMKM).
-- **Proses**: terima `campaignId` → ambil data campaign → kirim ke OpenAI → kembalikan brief terstruktur.
+- **Proses**: terima `campaignId` → ambil data campaign → kirim ke Gemini API → kembalikan brief terstruktur.
 - **Output**: `{ objective, contentAngle, cta, detail, doAndDont }`.
 
 ### fraud-detection
@@ -16,4 +16,4 @@
 
 ## Integrasi Eksternal
 
-- **OpenAI API** — satu-satunya integrasi eksternal. API key disimpan sebagai environment variable Appwrite Function.
+- **Gemini API** — satu-satunya integrasi eksternal. API key disimpan sebagai environment variable Appwrite Function.

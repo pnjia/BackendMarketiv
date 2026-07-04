@@ -6,7 +6,7 @@ Panduan deployment Marketiv. Struktur & env: [`40_Folder_Structure.md`](40_Folde
 
 - **Frontend** (Next.js) → **Vercel**.
 - **Backend** (Database, Auth, Storage, Realtime, Functions) → **Appwrite Cloud**.
-- **AI Layer** → OpenAI API dipanggil dari Appwrite Function (key OpenAI hanya di environment function).
+- **AI Layer** → Gemini API dipanggil dari Appwrite Function (key Gemini hanya di environment function).
 
 ## Environment Variables (Frontend / Vercel)
 
@@ -24,7 +24,7 @@ NEXT_PUBLIC_AI_FUNCTION_ID=
 ```
 
 - Set semua `NEXT_PUBLIC_*` di Vercel Project Settings (Environment Variables).
-- Hanya variabel ber-prefiks `NEXT_PUBLIC_` yang aman diekspos ke client. JANGAN menaruh API key server / OpenAI key di sini (lihat [`50_Security_Guidelines.md`](50_Security_Guidelines.md)).
+- Hanya variabel ber-prefiks `NEXT_PUBLIC_` yang aman diekspos ke client. JANGAN menaruh API key server / Gemini key di sini (lihat [`50_Security_Guidelines.md`](50_Security_Guidelines.md)).
 
 ## Deploy Frontend (Vercel)
 
@@ -39,5 +39,5 @@ NEXT_PUBLIC_AI_FUNCTION_ID=
 ## Deploy Appwrite Functions
 
 - Functions: `create-wallet`, `create-order`, `process-payment`, `release-escrow`, `generate-brief`, `fraud-detection`, `send-notification`.
-- Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)) dan secret OpenAI sebagai function environment variables — tidak pernah di frontend.
+- Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)) dan secret Gemini sebagai function environment variables — tidak pernah di frontend.
 - Hubungkan function ke Appwrite Event yang relevan (mis. user registered → create-wallet, submission created → fraud-detection).
