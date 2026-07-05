@@ -1,11 +1,11 @@
 # Graph Report - BackendMarketiv  (2026-07-04)
 
 ## Corpus Check
-- 169 files · ~28,997 words
+- 169 files · ~28,610 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 997 nodes · 962 edges · 153 communities (140 shown, 13 thin omitted)
+- 995 nodes · 960 edges · 152 communities (137 shown, 15 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -154,7 +154,6 @@
 - [[_COMMUNITY_Offers — Database|Offers — Database]]
 - [[_COMMUNITY_Offers — Events|Offers — Events]]
 - [[_COMMUNITY_Community 150|Community 150]]
-- [[_COMMUNITY_Community 152|Community 152]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `40_Folder_Structure` - 12 edges
@@ -174,7 +173,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (153 total, 13 thin omitted)
+## Communities (152 total, 15 thin omitted)
 
 ### Community 0 - "00_Index.md"
 Cohesion: 0.05
@@ -197,28 +196,24 @@ Cohesion: 0.13
 Nodes (5): Campaign Service, Campaigns — API, Claim Service, getCampaigns(filter), Submission Service
 
 ### Community 5 - "30_RateCard_Order.md"
-Cohesion: 0.16
-Nodes (8): Daftar Dokumen, Modul Offers, Daftar Dokumen, Modul Orders, Daftar Dokumen, Modul Payments, Daftar Dokumen, Modul Rate Cards
+Cohesion: 0.23
+Nodes (6): Daftar Dokumen, Modul Orders, Daftar Dokumen, Modul Payments, 03_Workflows — Index, Daftar Workflow
 
 ### Community 6 - "20_Campaign_PPV.md"
-Cohesion: 0.22
-Nodes (6): Daftar Dokumen, Modul AI, Daftar Dokumen, Modul Campaigns, 03_Workflows — Index, Daftar Workflow
+Cohesion: 0.31
+Nodes (4): Daftar Dokumen, Modul AI, Daftar Dokumen, Modul Campaigns
 
 ### Community 7 - "40_Folder_Structure"
 Cohesion: 0.17
 Nodes (12): 40_Folder_Structure, Appwrite Config (`src/lib/appwrite/`), Appwrite Functions (`functions/`), Environment Variables, Modules (`src/modules/`), Service Layer (`src/services/`), Shared Components (`src/components/`), Stack (+4 more)
 
 ### Community 8 - "00_Index.md"
-Cohesion: 0.26
-Nodes (5): Authentication, Dokumen, Authentication — Events, Lihat Juga, User Registered
+Cohesion: 0.21
+Nodes (7): Authentication, Dokumen, Authentication — User Flow, Forgot Password, Lihat Juga, Login, Register → Verify → Complete Profile
 
 ### Community 9 - "generate_appwrite_json.js"
 Cohesion: 0.17
 Nodes (5): appwriteJson, buckets, collections, fs, functions
-
-### Community 11 - "00_Index.md"
-Cohesion: 0.24
-Nodes (6): 00_Project — Index, Daftar Dokumen, Dikecualikan dari MVP, Referensi, Ruang Lingkup MVP, Termasuk dalam MVP
 
 ### Community 12 - "90_Design_System"
 Cohesion: 0.20
@@ -243,6 +238,10 @@ Nodes (8): Halaman Creator, Halaman UMKM, Komponen, My Orders, My Orders, Order 
 ### Community 17 - "Rate Cards — Frontend"
 Cohesion: 0.22
 Nodes (8): Create/Edit Rate Card, Creator Profile, Discovery / Browse Creators, Halaman Creator, Halaman UMKM, Komponen, My Rate Cards, Rate Cards — Frontend
+
+### Community 18 - "40_Tech_Stack.md"
+Cohesion: 0.50
+Nodes (4): Dikecualikan dari MVP, Referensi, Ruang Lingkup MVP, Termasuk dalam MVP
 
 ### Community 20 - "Authentication — Business Rules"
 Cohesion: 0.25
@@ -309,8 +308,8 @@ Cohesion: 0.29
 Nodes (7): 20_Coding_Standards, Arsitektur Modul (Feature-Based), Hooks, Konvensi Penamaan (ringkas), Service Layer (WAJIB), State Management (Zustand), Validasi (Zod)
 
 ### Community 36 - "Chat — Backend"
-Cohesion: 0.29
-Nodes (6): Appwrite Functions, Appwrite Realtime, Aturan Backend, Chat — Backend, Storage, update-conversation-on-message
+Cohesion: 0.33
+Nodes (5): Appwrite Functions, Appwrite Realtime, Aturan Backend, Chat — Backend, update-conversation-on-message
 
 ### Community 38 - "Orders — Testing"
 Cohesion: 0.29
@@ -373,8 +372,8 @@ Cohesion: 0.29
 Nodes (6): Chat — Testing, Conversation, Di Luar MVP, Offer dari Chat, Pesan, Realtime
 
 ### Community 54 - "Chat — Business Rules"
-Cohesion: 0.29
-Nodes (6): Attachment Terbatas, Chat — Business Rules, Denormalisasi, Realtime & Akses, Satu Percakapan per Pasangan, Tipe Pesan
+Cohesion: 0.33
+Nodes (5): Chat — Business Rules, Denormalisasi, Realtime & Akses, Satu Percakapan per Pasangan, Tipe Pesan
 
 ### Community 55 - "Chat — API"
 Cohesion: 0.33
@@ -449,16 +448,12 @@ Cohesion: 0.33
 Nodes (6): Get Profile, Lihat Juga, Search Creators, Social Accounts (Creator), Update Profile, Users — API (Profile Service)
 
 ### Community 74 - "ADR-003 — `orders` sebagai Aggregate Utama Alur Rate Card"
-Cohesion: 0.33
-Nodes (5): ADR-003 — `orders` sebagai Aggregate Utama Alur Rate Card, Consequences, Context, Decision, Status
+Cohesion: 0.07
+Nodes (22): 04_Decisions — Index, Daftar ADR, ADR-003 — `orders` sebagai Aggregate Utama Alur Rate Card, Consequences, Context, Decision, Status, ADR-004 — Pisahkan `fraud_checks` dari `campaign_submissions` (+14 more)
 
 ### Community 75 - "ADR-004 — Pisahkan `fraud_checks` dari `campaign_submissions`"
-Cohesion: 0.33
-Nodes (5): ADR-004 — Pisahkan `fraud_checks` dari `campaign_submissions`, Consequences, Context, Decision, Status
-
-### Community 76 - "ADR-005 — Simpan Counter Denormalisasi di `campaigns`"
-Cohesion: 0.33
-Nodes (5): ADR-005 — Simpan Counter Denormalisasi di `campaigns`, Consequences, Context, Decision, Status
+Cohesion: 0.67
+Nodes (3): Authentication — Events, Lihat Juga, User Registered
 
 ### Community 78 - "Roadmap Pengembangan"
 Cohesion: 0.40
@@ -491,10 +486,6 @@ Nodes (4): AI — Events, Event yang Dikonsumsi, Event yang Diterbitkan, Lihat J
 ### Community 85 - "Authentication — Overview"
 Cohesion: 0.40
 Nodes (5): Authentication — Overview, Batasan Kepemilikan, Ketergantungan, Lihat Juga, Ringkasan
-
-### Community 86 - "Authentication — User Flow"
-Cohesion: 0.40
-Nodes (5): Authentication — User Flow, Forgot Password, Lihat Juga, Login, Register → Verify → Complete Profile
 
 ### Community 87 - "Campaigns — Overview"
 Cohesion: 0.40
@@ -680,14 +671,10 @@ Nodes (3): Istilah, Konsep, Users — Concepts
 Cohesion: 0.67
 Nodes (3): Lihat Juga, Notifications — Events, Pola Implementasi
 
-### Community 152 - "Community 152"
-Cohesion: 0.40
-Nodes (5): ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux, Consequences, Context, Decision, Status
-
 ## Knowledge Gaps
-- **567 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `collections` (+562 more)
+- **565 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `collections` (+560 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -699,7 +686,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Workflow: Registration & Onboarding` connect `Workflow: Registration & Onboarding` to `00_Index.md`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `$schema`, `plugin`, `@opencode-ai/plugin` to the rest of the system?**
-  _567 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _565 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `00_Index.md` be split into smaller, more focused modules?**
   _Cohesion score 0.04521276595744681 - nodes in this community are weakly interconnected._
 - **Should `AGENTS.md` be split into smaller, more focused modules?**
