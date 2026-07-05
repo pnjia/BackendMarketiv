@@ -18,13 +18,6 @@
 - Google OAuth Register/Login **khusus Content Creator**.
 - UMKM hanya dapat login manual (email + password).
 
-## Verifikasi Email
-
-- Setelah register, pengguna diarahkan ke halaman "Check Inbox".
-- **Link verifikasi hanya berlaku 10 menit.**
-- Tersedia aksi **"Kirim ulang link"** (resend) bila link kedaluwarsa.
-- Akun dianggap "Account Created" setelah verifikasi berhasil, lalu pengguna login.
-
 ## Verifikasi Akun Sosial Creator
 
 - Saat verifikasi akun sosial, sistem menghasilkan kode unik berformat **`MARKETIV-XXXX`**.

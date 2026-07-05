@@ -62,12 +62,10 @@ Return data login:
 ## Auth Utilities
 
 ```typescript
-verifyEmailToken(token)         // verifikasi link email (valid 10 menit)
-resendVerificationLink(email)   // kirim ulang link verifikasi
 forgotPassword(email)           // kirim link reset password
 ```
 
 ## Lihat Juga
 
-- [30_Business_Rules.md](30_Business_Rules.md) — aturan validasi input & verifikasi.
+- [30_Business_Rules.md](30_Business_Rules.md) — aturan validasi input.
 - Skema profil: [Users/50_Database.md](../Users/50_Database.md).

@@ -14,12 +14,6 @@
 - UMKM: Nama Usaha, Kategori, Email, Nomor HP, Password.
 - Creator: Nama Lengkap, Email, Password — atau tombol "Daftar dengan Google".
 
-### Check Inbox
-
-- Ditampilkan setelah register berhasil.
-- Informasi "Cek emailmu untuk verifikasi".
-- Link "Kirim ulang link" (resend verification).
-
 ### Login
 
 - Form email + password.
@@ -34,4 +28,4 @@
 
 - `AuthForm` — form registrasi/login dinamis sesuai role.
 - `GoogleButton` — tombol OAuth Google (hanya creator).
-- `VerificationBanner` — banner peringatan verifikasi email.
+

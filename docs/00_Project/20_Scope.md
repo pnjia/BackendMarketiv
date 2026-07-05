@@ -2,7 +2,7 @@
 
 ## Termasuk dalam MVP
 
-- Authentication (login, register UMKM/Creator, verifikasi email, Google OAuth untuk creator, forgot password)
+- Authentication (login, register UMKM/Creator, Google OAuth untuk creator, forgot password)
 - UMKM Profile
 - Creator Profile
 - Rate Card
@@ -21,6 +21,7 @@
 
 ## Dikecualikan dari MVP
 
+- Email Verification
 - Chat Real-time tingkat lanjut, termasuk typing indicator, read receipt, multi-file upload, attachment kompleks, voice note, moderation otomatis, dan fitur chat sosial lainnya.
 - Affiliate System
 - Referral

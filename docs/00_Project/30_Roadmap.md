@@ -27,7 +27,7 @@ Tim 4 orang, target MVP siap soft launch dalam 6 sprint (12 minggu). Urutan impl
 ## Prioritas
 
 - **P0 (Wajib saat soft launch)**: Authentication, Creator Profile, Rate Card, Chat dasar untuk negosiasi Offer, Offer System, Order System, Campaign, Submission, Wallet, Escrow, Admin Panel, AI Brief Assistant, Basic Fraud Detection.
-- **P1 (Setelah launch)**: Recommendation AI, Smart Creator Matching, Advanced Analytics, Auto Moderation, Push Notification, Referral Program.
+- **P1 (Setelah launch)**: Email Verification, Recommendation AI, Smart Creator Matching, Advanced Analytics, Auto Moderation, Push Notification, Referral Program.
 - **P2 (Growth stage)**: Mobile App, Creator Ranking, Affiliate System, Agency Dashboard, Regional Expansion.
 
 ## Referensi

@@ -4,7 +4,7 @@ Daftar modul fungsional Marketiv (platform UMKM ↔ Content Creator untuk promos
 
 ## Daftar Modul
 
-- **Authentication** — Registrasi, login (manual & Google OAuth), verifikasi email, dan reset password. Tidak memiliki collection sendiri (memakai Appwrite Auth).
+- **Authentication** — Registrasi, login (manual & Google OAuth), dan reset password. Tidak memiliki collection sendiri (memakai Appwrite Auth).
 - **Users** — Profil pengguna: UMKM, Creator, akun sosial creator, dan portfolio. Pemilik collection identitas non-Auth.
 - **Campaigns** — Campaign Pay-Per-View (PPV): pembuatan, publish, claim oleh creator, dan submission konten.
 - **RateCards** — Katalog layanan creator (rate card + paket) untuk model booking langsung.

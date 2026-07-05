@@ -1,6 +1,6 @@
 # Authentication — User Flow
 
-## Register → Verify → Complete Profile
+## Register → Complete Profile
 
 ```text
 Landing Page
@@ -12,10 +12,6 @@ Isi Data
   - Creator: Nama Lengkap, Email, Password (atau Google OAuth)
 ↓
 Submit
-↓
-Verifikasi Email (link valid 10 menit)
-  ├─ Halaman Check Inbox
-  └─ Opsi Kirim Ulang Link
 ↓
 Account Created
 ↓

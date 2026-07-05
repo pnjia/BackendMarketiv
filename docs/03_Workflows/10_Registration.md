@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Membawa user baru (UMKM atau Creator) dari form pendaftaran sampai akun siap pakai: terverifikasi, punya profil, punya wallet, kuota storage, dan menerima welcome notification.
+Membawa user baru (UMKM atau Creator) dari form pendaftaran sampai akun siap pakai: punya profil, punya wallet, kuota storage, dan menerima welcome notification.
 
 ## Modules Involved
 
-- [Authentication](../02_Modules/Authentication/00_Index.md) — pembuatan akun Appwrite Auth, verifikasi email, role routing.
+- [Authentication](../02_Modules/Authentication/00_Index.md) — pembuatan akun Appwrite Auth, role routing.
 - [Users](../02_Modules/Users/00_Index.md) — profil UMKM/Creator, storage kuota.
 - [Payments](../02_Modules/Payments/00_Index.md) — pembuatan wallet.
 - [Notifications](../02_Modules/Notifications/00_Index.md) — welcome notification.
@@ -37,43 +37,35 @@ User submit form pendaftaran dari halaman Landing Page:
    - UMKM: `registerUMKM({ businessName, category, email, phone, password })`.
    - Creator: `registerCreator({ name, email, password })` atau via Google OAuth.
 3. **Authentication** — Appwrite Auth membuat user (`account.create()`), role tercatat di collection `users`.
-4. **Authentication** — Kirim link verifikasi email via Appwrite Auth (`account.createVerification()`), **valid 10 menit**.
-5. User diarahkan ke halaman **Check Inbox** + opsi "Kirim Ulang Link" bila kedaluwarsa.
-6. **Event `users.create`** terpicu (dari Appwrite Auth).
+4. **Event `users.create`** terpicu (dari Appwrite Auth).
 
 ### Tahap 2: Event-Driven Setup (users.create)
 
-7. **Function `create-user-profile`** membaca data user dari event.
-8. **Users** — Buat profil sesuai role:
+5. **Function `create-user-profile`** membaca data user dari event.
+6. **Users** — Buat profil sesuai role:
    - `umkm_profiles`: `{ userId, businessName, category, phone, isProfileCompleted: false }`.
    - `creator_profiles`: `{ userId, displayName, isProfileCompleted: false }`.
-9. **Users** — Inisialisasi `user_storage_usage`: `{ userId, usedBytes: 0, quotaBytes: 104857600, fileCount: 0 }`.
-10. **Payments** — Buat dokumen `wallets`: `{ userId, balance: 0, pendingBalance: 0 }`.
-11. **Notifications** — Buat notifikasi `{ userId, title: "Selamat datang di Marketiv", type: "system" }`, terkirim in-app + email.
+7. **Users** — Inisialisasi `user_storage_usage`: `{ userId, usedBytes: 0, quotaBytes: 104857600, fileCount: 0 }`.
+8. **Payments** — Buat dokumen `wallets`: `{ userId, balance: 0, pendingBalance: 0 }`.
+9. **Notifications** — Buat notifikasi `{ userId, title: "Selamat datang di Marketiv", type: "system" }`, terkirim in-app + email.
 
-### Tahap 3: Verifikasi & Login
+### Tahap 3: Login
 
-12. User klik link di email → **Authentication** `verifyEmailToken()` → status `email terverifikasi`.
-13. Jika link kedaluwarsa (>10 menit), user klik "Kirim Ulang" → resend verification link.
-14. Setelah terverifikasi, user login: `loginUser(email, password, role)`.
-15. Response login berisi `{ user, profile, wallet }`.
-16. Redirect ke wizard onboarding (detail di [Users 40_User_Flow](../02_Modules/Users/40_User_Flow.md)).
+10. User login: `loginUser(email, password, role)`.
+11. Response login berisi `{ user, profile, wallet }`.
+12. Redirect ke wizard onboarding (detail di [Users 40_User_Flow](../02_Modules/Users/40_User_Flow.md)).
 
 ### Tahap 4: Onboarding (dipisah dari workflow ini)
 
-17. **Users** — Wizard onboarding sesuai role:
+13. **Users** — Wizard onboarding sesuai role:
     - UMKM: isi deskripsi, kota, alamat, social media, upload logo.
     - Creator: isi bio, kota, avatar, tambah akun sosial & portfolio.
-18. `isProfileCompleted` di-set `true` setelah wizard selesai.
+14. `isProfileCompleted` di-set `true` setelah wizard selesai.
 
 ## State Transitions
 
 ```text
-Form Submitted → Appwrite Auth Created → Email Sent (pending verification)
-                                                      ↓
-                                          Link Clicked → Email Verified
-                                                      ↓
-                                          users.create (event)
+Form Submitted → Appwrite Auth Created → users.create (event)
                                                       ↓
                                           Profile + Wallet + Storage + Notification Created
                                                       ↓
@@ -95,7 +87,6 @@ Form Submitted → Appwrite Auth Created → Email Sent (pending verification)
 | Register UMKM | `phone` wajib diisi | Error form, tidak submit |
 | Register | Email unik (Appwrite Auth) | Error "Email sudah terdaftar" |
 | Register Creator via Google OAuth | Role = creator | UMKM tidak bisa Google OAuth |
-| Verifikasi email | Link valid < 10 menit | Tampilkan opsi "Kirim Ulang" |
 | Login | Email + password cocok | Error login |
 | Create profile | `users.create` event | Idempotent — tidak duplikat |
 | Create wallet | `users.create` event | Idempotent — tidak duplikat |
@@ -108,7 +99,6 @@ Form Submitted → Appwrite Auth Created → Email Sent (pending verification)
 
 ## Edge Cases
 
-- Link verifikasi kedaluwarsa (>10 menit) → user pakai opsi kirim ulang; link baru terkirim, valid 10 menit lagi.
 - Email sudah terdaftar → registrasi ditolak (validasi Appwrite Auth).
 - Google OAuth hanya untuk Creator — UMKM tidak dapat login via Google.
 - Wallet/profil idempoten — function `create-user-profile` harus cek eksistensi sebelum insert agar tidak duplikat jika event terpicu ulang.
