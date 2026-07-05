@@ -1,10 +1,12 @@
-# Authentication — API (Auth Service)
+# Authentication — API
 
-Semua fungsi berjalan via Appwrite SDK / Functions.
+## Service Layer (Client SDK)
 
-## Register
+Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Client SDK (Auth)**. Berjalan di browser user.
 
-### `registerUMKM()`
+---
+
+### `registerUMKM()` — [Client SDK]
 
 Input:
 
@@ -18,7 +20,7 @@ Input:
 }
 ```
 
-### `registerCreator()`
+### `registerCreator()` — [Client SDK]
 
 Input:
 
@@ -40,14 +42,15 @@ Create Profile              (umkm_profiles / creator_profiles)
 Create Wallet
 ```
 
-> Pembuatan Wallet juga dipicu otomatis oleh event `users.create` — lihat [90_Events.md](90_Events.md).
+> Pembuatan Wallet juga dipicu otomatis oleh event `users.create` — lihat [90_Events.md](90_Events.md) dan `../Payments/90_Events.md`.
 
-## Login
+---
 
-```typescript
-loginUser(email, password, role)
-loginWithGoogle()   // Khusus Creator
-```
+### `loginUser(email, password, role)` — [Client SDK]
+
+### `loginWithGoogle()` — [Client SDK]
+
+Khusus Creator.
 
 Return data login:
 
@@ -59,11 +62,19 @@ Return data login:
 }
 ```
 
-## Auth Utilities
+---
 
-```typescript
-forgotPassword(email)           // kirim link reset password
-```
+### `forgotPassword(email)` — [Client SDK]
+
+Kirim link reset password.
+
+---
+
+## Appwrite Functions (Server-side)
+
+Module ini tidak memiliki Appwrite Functions sendiri. Wallet creation dipicu oleh event `users.create` dan ditangani oleh function `create-user-wallet` di modul **Payments** — lihat `../Payments/90_Events.md`.
+
+---
 
 ## Lihat Juga
 

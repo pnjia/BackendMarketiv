@@ -1,35 +1,40 @@
 # AI — API
 
-Kontrak Appwrite Function untuk fitur AI. Semua server-side. Aturan input/output & threshold di `30_Business_Rules.md`.
+Module ini **khusus Appwrite Functions**. Tidak ada service layer yang dipanggil langsung dari frontend. Semua fungsi berjalan server-side di Appwrite Cloud.
+
+## Service Layer (Client SDK)
+
+Module ini tidak memiliki service layer functions.
 
 ---
 
-## AI Brief
+## Appwrite Functions (Server-side)
 
-```text
-POST /functions/ai-brief
-```
+Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud**. Aturan input/output & threshold di `30_Business_Rules.md`.
+
+---
+
+### `ai-brief` — [Appwrite Function]
+
+**Endpoint**: `POST /functions/ai-brief`
 
 - **Input**: `{ campaignId }`
 - **Return**: `{ brief }` — brief terstruktur (objective, content angle, CTA, detail, do & don't).
 - **Efek**: hasil dapat disimpan ke `campaign_briefs` (lihat `../Campaigns/50_Database.md`).
+- **Pemanggil**: dipanggil oleh service layer `generateBrief()` dari modul **Campaigns**.
 
----
+### `fraud-detection` — [Appwrite Function]
 
-## Fraud Detection
-
-```text
-POST /functions/fraud-detection
-```
+**Endpoint**: `POST /functions/fraud-detection`
 
 - **Input**: `{ submissionId }`
 - **Return**: `{ score, status }` — `score` 0–100, `status` `safe|review|rejected`.
 - **Efek**: tulis `fraud_checks` + update `fraudScore`/`fraudStatus` pada submission (data di modul Campaigns).
-- **Trigger**: dipanggil otomatis oleh event **Submission Created** — lihat `../Campaigns/90_Events.md`.
+- **Trigger**: dipanggil otomatis oleh Appwrite Function `ai-fraud-precheck` saat event **Submission Created** — lihat `../Campaigns/90_Events.md`.
 
 ---
 
-## ai_requests
+### `ai_requests`
 
 Log permintaan AI (Brief, Fraud, Landing). Relasi: User (1) → AI Requests (N).
 
@@ -43,3 +48,10 @@ Log permintaan AI (Brief, Fraud, Landing). Relasi: User (1) → AI Requests (N).
 **Index**: `userId`, `feature`, `createdAt DESC`.
 
 **Permission**: Owner read · System write.
+
+---
+
+## Lihat Juga
+
+- [30_Business_Rules.md](30_Business_Rules.md) — aturan validasi & threshold
+- [Campaigns/90_Events.md](../Campaigns/90_Events.md) — event trigger flow

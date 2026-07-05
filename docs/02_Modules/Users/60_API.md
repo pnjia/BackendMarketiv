@@ -1,35 +1,30 @@
-# Users — API (Profile Service)
+# Users — API
 
-## Get Profile
+## Service Layer (Client SDK)
 
-```typescript
-getProfile(userId)
-```
+Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Client SDK (Database, Storage)**. Berjalan di browser user.
+
+---
+
+### `getProfile(userId)` — [Client SDK]
 
 Mengembalikan profil sesuai role (umkm/creator).
 
-## Update Profile
-
-```typescript
-updateProfile()
-```
+### `updateProfile()` — [Client SDK]
 
 Memperbarui field profil (deskripsi, kota, logo/avatar, dll.).
 
-## Social Accounts (Creator)
+---
 
-```typescript
-addSocialAccount()
-removeSocialAccount()
-```
+### `addSocialAccount()` — [Client SDK]
+
+### `removeSocialAccount()` — [Client SDK]
 
 Mengelola entri `creator_social_accounts` (satu creator banyak akun).
 
-## Search Creators
+---
 
-```typescript
-searchCreators(filter)
-```
+### `searchCreators(filter)` — [Client SDK]
 
 Contoh filter:
 
@@ -44,9 +39,7 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `creato
 
 ---
 
-## File Manager
-
-### uploadFile()
+### `uploadFile()` — [Client SDK]
 
 - **Input**: `{ file, purpose, referenceId? }`
 - **Proses**: validasi kuota → upload ke Appwrite Storage → catat metadata ke `user_files` → update `user_storage_usage`.
@@ -57,22 +50,30 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `creato
   - File type allowed: `image/*`, `video/*`, `application/pdf`, `application/msword`, `application/vnd.openxmlformats-officedocument.*`.
 - **Akses**: Authenticated user (owner).
 
-### deleteFile()
+### `deleteFile()` — [Client SDK]
 
 - **Input**: `{ fileId }`
 - **Proses**: validasi kepemilikan → hapus dari Appwrite Storage → soft delete metadata `user_files` (`status = deleted`, set `deletedAt`) → update `user_storage_usage`.
 - **Akses**: Authenticated user (owner).
 
-### getMyFiles(filter)
+### `getMyFiles(filter)` — [Client SDK]
 
 - **Input**: `{ purpose?, status? }`
 - **Proses**: list file milik user.
 - **Akses**: Authenticated user (owner).
 
-### getStorageUsage()
+### `getStorageUsage()` — [Client SDK]
 
 - **Proses**: return `{ usedBytes, quotaBytes, fileCount }` untuk user.
 - **Akses**: Authenticated user (owner).
+
+---
+
+## Appwrite Functions (Server-side)
+
+Module ini tidak memiliki Appwrite Functions sendiri.
+
+---
 
 ## Lihat Juga
 

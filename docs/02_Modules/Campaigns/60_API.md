@@ -1,44 +1,46 @@
 # Campaigns — API
 
-Kontrak service modul Campaigns. Skema data ada di `50_Database.md`; aturan validasi di `30_Business_Rules.md`. Semua dijalankan via Appwrite SDK (Database/Functions).
+## Service Layer (Client SDK)
+
+Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Client SDK (Database, Storage)**. Berjalan di browser user.
 
 ---
 
-## Campaign Service
+### Campaign Service
 
 Dimiliki UMKM. Inti alur PPV.
 
-### createCampaign()
+#### `createCampaign()` — [Client SDK]
 
 - **Input**: `{ title, category, platforms[], budget, rewardPer1000Views, minViews?, maxViews?, claimLimit }`
 - **Proses**: buat dokumen `campaigns` dengan `status = draft`.
 - **Akses**: UMKM (owner).
 
-### generateBrief()
+#### `generateBrief()` — [Client SDK] *(memanggil Appwrite Function `ai-brief` di belakang)*
 
 - **Input**: `{ campaignId, description, materials[] }`
 - **Proses**: panggil AI Function → tulis ke `campaign_briefs`. Brief dapat diedit & disimpan ulang.
 - **Akses**: UMKM (owner). Kontrak fungsi AI di `../AI/60_API.md`.
 
-### publishCampaign()
+#### `publishCampaign()` — [Client SDK]
 
 - **Input**: `{ campaignId }`
 - **Proses**: `status: draft → active`, set `publishedAt`. Memicu event Campaign Published (lihat `90_Events.md`).
 - **Akses**: UMKM (owner).
 
-### getCampaigns(filter)
+#### `getCampaigns(filter)` — [Client SDK]
 
 - **Input**: `{ platform?, category?, sort? }` (mis. `sort=latest`).
 - **Proses**: query job board, default `status = active ORDER BY publishedAt DESC`.
 - **Akses**: Public.
 
-### getCampaignById()
+#### `getCampaignById()` — [Client SDK]
 
 - **Input**: `{ campaignId }`
 - **Proses**: detail satu campaign + asset + brief.
 - **Akses**: Public.
 
-### addCampaignAsset()
+#### `addCampaignAsset()` — [Client SDK]
 
 - **Input**: `{ campaignId, source, type, fileUrl, fileId?, fileName? }`
 - **Validasi**:
@@ -48,7 +50,7 @@ Dimiliki UMKM. Inti alur PPV.
 - **Proses**: buat dokumen `campaign_assets`.
 - **Akses**: UMKM (owner campaign).
 
-### removeCampaignAsset()
+#### `removeCampaignAsset()` — [Client SDK]
 
 - **Input**: `{ assetId }`
 - **Proses**: hapus dokumen `campaign_assets`. Jika `source = storage`, file di Appwrite Storage tidak otomatis terhapus (user harus hapus via File Manager).
@@ -56,11 +58,11 @@ Dimiliki UMKM. Inti alur PPV.
 
 ---
 
-## Claim Service
+### Claim Service
 
 Dimiliki Creator.
 
-### claimCampaign()
+#### `claimCampaign()` — [Client SDK]
 
 - **Input**: `{ campaignId }` (creatorId dari sesi).
 - **Validasi** (lihat `30_Business_Rules.md`):
@@ -73,28 +75,65 @@ Dimiliki Creator.
 
 ---
 
-## Submission Service
+### Submission Service
 
-### createSubmission()
+#### `createSubmission()` — [Client SDK]
 
 - **Input**: `{ claimId, campaignId, platform, postUrl, caption?, views, engagement? }`
 - **Proses**: buat `campaign_submissions` (`status = pending`). Memicu event Submission Created → AI Fraud (lihat `90_Events.md`).
 - **Akses**: Creator (owner claim).
 
-### getMySubmissions()
+#### `getMySubmissions()` — [Client SDK]
 
 - **Input**: (creatorId dari sesi).
 - **Proses**: list submission milik creator.
 - **Akses**: Creator (read own).
 
-### approveSubmission()
+#### `approveSubmission()` — [Client SDK]
 
 - **Input**: `{ submissionId }`
-- **Proses**: `status: pending → approved`. Memicu reward calculation → pending balance wallet creator (lihat `90_Events.md`).
+- **Proses**: `status: pending → approved`. Memicu event Submission Approved → reward calculation (lihat `90_Events.md`).
 - **Akses**: UMKM (owner campaign).
 
-### rejectSubmission()
+#### `rejectSubmission()` — [Client SDK]
 
 - **Input**: `{ submissionId, reason? }`
 - **Proses**: `status: pending → rejected`.
 - **Akses**: UMKM (owner campaign).
+
+---
+
+## Appwrite Functions (Server-side)
+
+Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud** dan dipicu oleh **event database**. Tidak dipanggil langsung dari frontend. Detail lebih lanjut di `70_Backend.md` dan `90_Events.md`.
+
+---
+
+### `campaign-published` — [Appwrite Function]
+
+- **Trigger**: `campaigns.status` `draft → active`.
+- **Aksi**: set `publishedAt`, kirim notifikasi ke creator eligible.
+
+### `campaign-claimed` — [Appwrite Function]
+
+- **Trigger**: `campaign_claims.create`.
+- **Aksi**: validasi claim limit & duplikasi, update `totalClaims`, notifikasi UMKM.
+
+### `ai-fraud-precheck` — [Appwrite Function]
+
+- **Trigger**: `campaign_submissions.create`.
+- **Aksi**: panggil AI Fraud Detection via function `fraud-detection` (modul AI), tulis hasil ke `fraud_checks` & update submission.
+
+### `calculate-campaign-reward` — [Appwrite Function]
+
+- **Trigger**: `campaign_submissions.status` `pending → approved`.
+- **Aksi**: hitung reward (`views/1000 × rewardPer1000Views`), update `spentAmount` & `remainingBudget`, buat transaksi ke pending balance wallet creator.
+
+---
+
+## Lihat Juga
+
+- [50_Database.md](50_Database.md) — skema data
+- [30_Business_Rules.md](30_Business_Rules.md) — aturan validasi
+- [70_Backend.md](70_Backend.md) — detail Appwrite Functions
+- [90_Events.md](90_Events.md) — event trigger flow
