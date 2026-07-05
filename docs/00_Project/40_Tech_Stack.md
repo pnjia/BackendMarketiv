@@ -7,7 +7,7 @@
 ## Backend (BaaS)
 
 - **Appwrite** menyediakan:
-  - **Auth** — autentikasi & Google OAuth (khusus creator)
+  - **Auth** — autentikasi & Google OAuth
   - **Database** — koleksi data
   - **Storage** — file (avatar, logo, campaign assets, chat attachments, deliverables, dll.)
   - **Realtime** — update chat/campaign/order/submission/notification

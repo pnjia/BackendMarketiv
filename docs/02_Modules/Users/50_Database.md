@@ -138,7 +138,6 @@ platform            # tiktok | instagram | youtube | ...
 username
 followers
 engagementRate
-isVerified
 ```
 
 ### Index

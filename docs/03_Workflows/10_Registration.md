@@ -14,8 +14,8 @@ Membawa user baru (UMKM atau Creator) dari form pendaftaran sampai akun siap pak
 ## Trigger
 
 User submit form pendaftaran dari halaman Landing Page:
-- `Daftar UMKM` → `/register?role=umkm`
-- `Daftar Creator` → `/register?role=creator` (opsi Google OAuth)
+- `Daftar UMKM` → `/register?role=umkm` (opsi Google OAuth + data tambahan)
+- `Daftar Creator` → `/register?role=creator` (opsi Google OAuth langsung jadi)
 
 ## Data Model — Collection yang Terlibat
 
@@ -33,9 +33,11 @@ User submit form pendaftaran dari halaman Landing Page:
 ### Tahap 1: Register
 
 1. **Authentication** — User pilih role: `umkm` atau `creator` → routing ke form sesuai role.
-2. **Authentication** — Submit form:
-   - UMKM: `registerUMKM({ businessName, category, email, phone, password })`.
-   - Creator: `registerCreator({ name, email, password })` atau via Google OAuth.
+2. **Authentication** — Submit form atau Google OAuth:
+   - UMKM manual: `registerUMKM({ businessName, category, email, phone, password })`.
+   - UMKM Google OAuth: Google Auth → redirect ke form data tambahan → `registerUMKM({ businessName, category, phone })`.
+   - Creator manual: `registerCreator({ name, email, password })`.
+   - Creator Google OAuth: langsung jadi.
 3. **Authentication** — Appwrite Auth membuat user (`account.create()`), role tercatat di collection `users`.
 4. **Event `users.create`** terpicu (dari Appwrite Auth).
 
@@ -86,7 +88,8 @@ Form Submitted → Appwrite Auth Created → users.create (event)
 |---|---|---|
 | Register UMKM | `phone` wajib diisi | Error form, tidak submit |
 | Register | Email unik (Appwrite Auth) | Error "Email sudah terdaftar" |
-| Register Creator via Google OAuth | Role = creator | UMKM tidak bisa Google OAuth |
+| Register Creator via Google OAuth | Role = creator | Google OAuth creator langsung jadi |
+| Register UMKM via Google OAuth | Role = umkm | Redirect ke form data tambahan |
 | Login | Email + password cocok | Error login |
 | Create profile | `users.create` event | Idempotent — tidak duplikat |
 | Create wallet | `users.create` event | Idempotent — tidak duplikat |
@@ -100,7 +103,7 @@ Form Submitted → Appwrite Auth Created → users.create (event)
 ## Edge Cases
 
 - Email sudah terdaftar → registrasi ditolak (validasi Appwrite Auth).
-- Google OAuth hanya untuk Creator — UMKM tidak dapat login via Google.
+- UMKM via Google OAuth tetap harus isi Nama Usaha, Kategori, Nomor HP setelah redirect — jika tidak dilengkapi, profil UMKM tidak terbentuk.
 - Wallet/profil idempoten — function `create-user-profile` harus cek eksistensi sebelum insert agar tidak duplikat jika event terpicu ulang.
 - `users.create` event gagal → retry mechanism Appwrite Function; jika tetap gagal, admin harus manual check.
 - Onboarding bisa dilewati (skip) — user tetap bisa akses dashboard meski `isProfileCompleted = false`, namun fitur tertentu terblokir (claim campaign, dll.).

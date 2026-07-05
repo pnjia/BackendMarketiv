@@ -33,7 +33,7 @@ Input:
 ### Register Process (kedua role)
 
 ```text
-Create Appwrite Auth User   (Creator boleh via Google OAuth)
+Create Appwrite Auth User   (kedua role boleh via Google OAuth)
 ↓
 Create Profile              (umkm_profiles / creator_profiles)
 ↓

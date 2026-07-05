@@ -2,26 +2,25 @@
 
 ## Role & Routing
 
-- Role ditentukan lewat query string: `?role=umkm` atau `?role=creator`.
+- Role ditentukan lewat query string saat register: `?role=umkm` atau `?role=creator`.
   - Register: `/register?role=umkm`, `/register?role=creator`.
-  - Login: `/login?role=umkm`, `/login?role=creator`.
-- Role wajib diketahui sebelum proses register/login agar form dan profil yang dibuat sesuai.
+- Login tidak perlu query role — role sudah tersimpan di database.
 
 ## Data Registrasi per Role
 
-- **UMKM** wajib mengisi: Nama Usaha, Kategori Usaha, Email, **Nomor HP**, Password.
+- **UMKM** wajib mengisi:
+  - Manual: Nama Usaha, Kategori Usaha, Email, **Nomor HP**, Password.
+  - Google OAuth: Nama Usaha, Kategori Usaha, **Nomor HP** (email & nama dari Google).
   - Nomor HP **wajib** untuk UMKM (tidak wajib untuk Creator).
-- **Creator** mengisi: Nama Lengkap, Email, Password — atau langsung via Google OAuth.
+- **Creator** mengisi:
+  - Manual: Nama Lengkap, Email, Password.
+  - Google OAuth: langsung jadi (data dari Google).
 
 ## Google OAuth
 
-- Google OAuth Register/Login **khusus Content Creator**.
-- UMKM hanya dapat login manual (email + password).
-
-## Verifikasi Akun Sosial Creator
-
-- Saat verifikasi akun sosial, sistem menghasilkan kode unik berformat **`MARKETIV-XXXX`**.
-- Creator memasang kode di bio atau memposting story, lalu menekan Verify; sistem mengecek keberadaan kode untuk menandai akun terverifikasi.
+- Google OAuth tersedia untuk **UMKM** dan **Creator**.
+- UMKM via Google OAuth tetap harus mengisi data tambahan (Nama Usaha, Kategori, Nomor HP) setelah redirect.
+- Creator via Google OAuth langsung jadi tanpa isi data tambahan.
 
 ## Reset Password
 

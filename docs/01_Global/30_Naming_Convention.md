@@ -28,7 +28,7 @@ Konvensi penamaan tunggal untuk seluruh Marketiv. Struktur folder di [`40_Folder
 ## Route (React Router)
 
 - `kebab-case`, lowercase, di-namespace per role.
-- Public: `/`, `/about`, `/pricing`, `/login?role=umkm`, `/register?role=creator`.
+- Public: `/`, `/about`, `/pricing`, `/login`, `/register?role=creator`.
 - UMKM: `/umkm/dashboard`, `/umkm/campaigns/create`, `/umkm/orders/:id`.
 - Creator: `/creator/rate-cards`, `/creator/submissions/:id`, `/creator/wallet`.
 - Admin: `/admin/users`, `/admin/fraud`, `/admin/withdraws`.

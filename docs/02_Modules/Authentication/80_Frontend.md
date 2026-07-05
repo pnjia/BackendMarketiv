@@ -11,14 +11,16 @@
 ### Register
 
 - Form dinamis berdasarkan role.
-- UMKM: Nama Usaha, Kategori, Email, Nomor HP, Password.
-- Creator: Nama Lengkap, Email, Password — atau tombol "Daftar dengan Google".
+- UMKM:
+  - Manual: Nama Usaha, Kategori, Email, Nomor HP, Password.
+  - Google OAuth: setelah redirect, isi Nama Usaha, Kategori, Nomor HP.
+- Creator:
+  - Manual: Nama Lengkap, Email, Password.
+  - Google OAuth: langsung jadi.
 
 ### Login
 
-- Form email + password.
-- UMKM login manual.
-- Creator: manual atau "Login dengan Google".
+- Form email + password atau "Login dengan Google" untuk kedua role.
 
 ### Forgot Password
 
@@ -27,5 +29,5 @@
 ## Komponen
 
 - `AuthForm` — form registrasi/login dinamis sesuai role.
-- `GoogleButton` — tombol OAuth Google (hanya creator).
+- `GoogleButton` — tombol OAuth Google untuk kedua role.
 

@@ -14,7 +14,7 @@
 ## Akun Sosial Creator
 
 - Satu creator dapat memiliki **banyak** akun sosial (`creator_social_accounts`), satu per platform (tiktok, instagram, youtube, dst.).
-- Tiap akun menyimpan `followers`, `engagementRate`, dan flag `isVerified`.
+- Tiap akun menyimpan `followers` dan `engagementRate`.
 
 ## Data Denormalisasi (disengaja)
 

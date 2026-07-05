@@ -3,7 +3,7 @@
 ## Onboarding UMKM
 
 ```text
-Register → Verifikasi Email → Login
+Register → Login
 ↓
 Onboarding Wizard
   ├─ Nama Usaha, Kategori (pre-filled dari register)
@@ -19,7 +19,7 @@ Dashboard UMKM
 ## Onboarding Creator
 
 ```text
-Register → Verifikasi Email → Login
+Register → Login
 ↓
 Onboarding Wizard
   ├─ Display Name, Bio, Kota
