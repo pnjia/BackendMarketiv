@@ -1,5 +1,7 @@
 # Chat — Backend
 
+Dokumen ini khusus untuk Appwrite Functions, Realtime, dan aturan backend. Kontrak pemanggilan dari frontend dibahas di [60_API.md](60_API.md).
+
 ## Appwrite Realtime
 
 - Subscriber UI mendengarkan channel `conversations.{id}.messages`.

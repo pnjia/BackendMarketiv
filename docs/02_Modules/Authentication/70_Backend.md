@@ -1,5 +1,7 @@
 # Authentication — Backend
 
+Dokumen ini khusus untuk Appwrite Auth SDK dan aturan backend. Kontrak pemanggilan dari frontend dibahas di [60_API.md](60_API.md).
+
 ## Appwrite Auth SDK
 
 Modul Authentication menggunakan Appwrite Auth SDK (client-side & server-side):

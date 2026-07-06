@@ -1,8 +1,6 @@
 # Rate Cards — Backend
 
-## Appwrite Functions
-
-Modul Rate Cards tidak memiliki Appwrite Functions khusus. Operasi CRUD dilakukan langsung via Appwrite SDK.
+Dokumen ini khusus untuk aturan backend. Kontrak pemanggilan dari frontend dibahas di [60_API.md](60_API.md).
 
 ## Aturan Backend
 

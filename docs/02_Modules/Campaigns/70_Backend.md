@@ -1,5 +1,7 @@
 # Campaigns — Backend
 
+Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggilan dari frontend dibahas di [60_API.md](60_API.md).
+
 ## Appwrite Functions
 
 ### campaign-published
