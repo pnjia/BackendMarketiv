@@ -41,7 +41,7 @@ UMKM buka `Creator Discovery` → profil creator → lihat rate card → pilih j
 
 ### Step-by-step Flow
 
-1. **RateCards** — UMKM browse/search/filter creator di halaman Creator Discovery. Filter: platform, kota, harga.
+1. **RateCards** — UMKM browse/search/filter creator di halaman Creator Discovery. Filter MVP: TikTok, kota, harga.
 2. **RateCards** — Buka profil creator → lihat rate card + paket yang `published`.
 3. **RateCards** — Pilih paket → klik "Pesan".
 4. **Orders** — Sistem buat `orders`: `{ umkmId, creatorId, packageId, amount: package.price, status: 'pending_payment' }`.

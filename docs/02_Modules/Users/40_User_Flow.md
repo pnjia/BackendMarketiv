@@ -8,8 +8,8 @@ Register → Login
 Onboarding Wizard
   ├─ Nama Usaha, Kategori (pre-filled dari register)
   ├─ Deskripsi, Kota, Alamat
-  ├─ Social Media (Instagram, TikTok, Website)
-  └─ Upload Logo
+  ├─ Social Media MVP (TikTok, opsional)
+  └─ Upload Logo (opsional)
 ↓
 isProfileCompleted = true
 ↓
@@ -24,8 +24,8 @@ Register → Login
 Onboarding Wizard
   ├─ Display Name, Bio, Kota
   ├─ Avatar
-  ├─ Tambah Akun Sosial (platform, username, followers)
-  └─ Tambah Portfolio
+  ├─ Tambah Akun Sosial TikTok (username, followers)
+  └─ Tambah Portfolio (opsional: title, description, thumbnailUrl, portfolioUrl)
 ↓
 isProfileCompleted = true
 ↓
@@ -35,6 +35,8 @@ Dashboard Creator
 ## File Manager
 
 Setiap user (UMKM & Creator) memiliki akses ke File Manager untuk mengelola file yang diupload ke Appwrite Storage.
+
+Logo UMKM dan portfolio Creator yang tidak diisi saat onboarding dapat ditambahkan atau diganti dari halaman profil.
 
 ```text
 Buka File Manager
@@ -57,7 +59,7 @@ Hapus File
 ```text
 UMKM buka halaman Browse Creator
 ↓
-Filter: platform, kota
+Filter: platform MVP (TikTok), kota
 ↓
 Hasil: card Creator (avatar, name, city, rating, followers)
 ↓

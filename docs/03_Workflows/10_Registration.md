@@ -43,13 +43,13 @@ User submit form pendaftaran dari halaman Landing Page:
 
 ### Tahap 2: Event-Driven Setup (users.create)
 
-5. **Function `create-user-profile`** membaca data user dari event.
+5. **Users** — Function `create-user-profile` membaca data user dari event.
 6. **Users** — Buat profil sesuai role:
-   - `umkm_profiles`: `{ userId, businessName, category, phone, isProfileCompleted: false }`.
-   - `creator_profiles`: `{ userId, displayName, isProfileCompleted: false }`.
+    - `umkm_profiles`: `{ userId, businessName, category, phone, isProfileCompleted: false }`.
+    - `creator_profiles`: `{ userId, displayName, isProfileCompleted: false }`.
 7. **Users** — Inisialisasi `user_storage_usage`: `{ userId, usedBytes: 0, quotaBytes: 104857600, fileCount: 0 }`.
-8. **Payments** — Buat dokumen `wallets`: `{ userId, balance: 0, pendingBalance: 0 }`.
-9. **Notifications** — Buat notifikasi `{ userId, title: "Selamat datang di Marketiv", type: "system" }`, terkirim in-app + email.
+8. **Payments** — Function `create-user-wallet` membuat dokumen `wallets`: `{ userId, balance: 0, pendingBalance: 0 }`.
+9. **Notifications** — `create-user-wallet` memicu notifikasi `{ userId, title: "Selamat datang di Marketiv", type: "system" }`, terkirim in-app + email.
 
 ### Tahap 3: Login
 
@@ -60,7 +60,7 @@ User submit form pendaftaran dari halaman Landing Page:
 ### Tahap 4: Onboarding (dipisah dari workflow ini)
 
 13. **Users** — Wizard onboarding sesuai role:
-    - UMKM: isi deskripsi, kota, alamat, social media, upload logo.
+    - UMKM: isi deskripsi, kota, alamat, social media TikTok opsional, upload logo. Tidak ada input website pada MVP.
     - Creator: isi bio, kota, avatar, tambah akun sosial & portfolio.
 14. `isProfileCompleted` di-set `true` setelah wizard selesai.
 
@@ -78,7 +78,7 @@ Form Submitted → Appwrite Auth Created → users.create (event)
 
 | Trigger | Function | Aksi |
 |---|---|---|
-| `users.create` | `create-user-profile` | Buat profile + `user_storage_usage` + wallet + welcome notification |
+| `users.create` | `create-user-profile` → `create-user-wallet` | Buat profile + `user_storage_usage` + wallet + welcome notification |
 
 - Lihat: [Authentication/90_Events](../02_Modules/Authentication/90_Events.md), [Users/70_Backend](../02_Modules/Users/70_Backend.md), [Payments/90_Events](../02_Modules/Payments/90_Events.md).
 
@@ -94,17 +94,18 @@ Form Submitted → Appwrite Auth Created → users.create (event)
 | Create profile | `users.create` event | Idempotent — tidak duplikat |
 | Create wallet | `users.create` event | Idempotent — tidak duplikat |
 
+
 ## Notifikasi
 
 | Titik | Notifikasi | Penerima |
 |---|---|---|
-| Setelah profile + wallet dibuat | "Selamat datang di Marketiv" (system) | User baru |
+| Setelah wallet dibuat | "Selamat datang di Marketiv" (system) | User baru |
 
 ## Edge Cases
 
 - Email sudah terdaftar → registrasi ditolak (validasi Appwrite Auth).
 - UMKM via Google OAuth tetap harus isi Nama Usaha, Kategori, Nomor HP setelah redirect — jika tidak dilengkapi, profil UMKM tidak terbentuk.
-- Wallet/profil idempoten — function `create-user-profile` harus cek eksistensi sebelum insert agar tidak duplikat jika event terpicu ulang.
+- Wallet/profil idempoten — function `create-user-profile` dan `create-user-wallet` harus cek eksistensi sebelum insert agar tidak duplikat jika event terpicu ulang.
 - `users.create` event gagal → retry mechanism Appwrite Function; jika tetap gagal, admin harus manual check.
 - Onboarding bisa dilewati (skip) — user tetap bisa akses dashboard meski `isProfileCompleted = false`, namun fitur tertentu terblokir (claim campaign, dll.).
 

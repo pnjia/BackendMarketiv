@@ -25,7 +25,7 @@ Campaign publik berbasis performa: UMKM membuka campaign, creator mendaftar, dib
 1. **UMKM** membuat **Campaign** — memuat informasi produk, brief (bisa pakai AI Brief Generator), reward per 1000 views (CPM), budget, dan syarat creator.
 2. **Campaign dipublikasikan** — tampil di job board creator, siap diklaim.
 3. **Creator** menemukan campaign yang sesuai → melakukan **claim** (First Come First Serve, satu creator satu campaign).
-4. **Creator** memproduksi konten sesuai brief → memposting di platform sosial → mengirim **Submission** (URL posting + metadata views).
+4. **Creator** memproduksi konten sesuai brief → memposting di TikTok untuk MVP → mengirim **Submission** (URL posting + metadata views).
 5. **Sistem** melakukan **Fraud Check** otomatis terhadap submission (AI Fraud Detection) → menghasilkan skor risiko.
 6. **UMKM** mereview submission → approve atau reject.
 7. **Penyelesaian** — Jika approve, reward dihitung dari jumlah views → masuk ke pending balance wallet creator.
@@ -39,7 +39,7 @@ Pemesanan langsung jasa creator melalui paket layanan yang sudah ditetapkan.
 **Cara kerja:**
 
 1. **Creator** membuat **Rate Card** — etalase layanan berisi paket-paket (Basic/Standard/Premium) dengan harga, output, durasi pengerjaan, dan batas revisi.
-2. **UMKM** menemukan creator lewat discovery (filter platform, kota), lalu melihat rate card-nya.
+2. **UMKM** menemukan creator lewat discovery (filter TikTok/kota pada MVP), lalu melihat rate card-nya.
 3. **Pemesanan** bisa melalui dua jalur:
    - **Direct Order** — UMKM langsung memesan paket rate card tanpa negosiasi.
    - **Custom Offer** — UMKM dan creator bernegosiasi via chat, lalu UMKM membuat offer khusus. Jika diterima creator, offer berubah jadi order.

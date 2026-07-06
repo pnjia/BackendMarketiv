@@ -72,7 +72,7 @@ Kirim link reset password.
 
 ## Appwrite Functions (Server-side)
 
-Module ini tidak memiliki Appwrite Functions sendiri. Wallet creation dipicu oleh event `users.create` dan ditangani oleh function `create-user-wallet` di modul **Payments** — lihat `../Payments/90_Events.md`.
+Module ini tidak memiliki REST API publik sendiri. Operasi server-side yang diperlukan module Authentication dijalankan lewat Appwrite Functions dan didokumentasikan di [70_Backend.md](70_Backend.md).
 
 ---
 

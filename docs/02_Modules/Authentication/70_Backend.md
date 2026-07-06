@@ -11,10 +11,8 @@ Modul Authentication menggunakan Appwrite Auth SDK (client-side & server-side):
 
 ## Appwrite Functions
 
-### create-user-profile
-
-- **Trigger**: `users.create` (Auth).
-- **Proses**: buat profil sesuai role (`umkm_profiles` / `creator_profiles`) + wallet.
+Authentication tidak mendefinisikan Appwrite Functions khusus di modul ini.
+Provisioning profile ditangani oleh `create-user-profile` di modul [Users](../Users/70_Backend.md), sedangkan pembuatan wallet ditangani oleh `create-user-wallet` di modul [Payments](../Payments/70_Backend.md).
 
 ## Aturan Implementasi
 

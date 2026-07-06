@@ -18,6 +18,7 @@
 - Wallet
 - Withdraw
 - Notification (In-App + Email)
+- Platform sosial media MVP: **TikTok saja** untuk creator social account, campaign PPV, submission, fraud check, dan creator discovery.
 
 ## Dikecualikan dari MVP
 
@@ -34,6 +35,7 @@
 - Public Campaign Board
 - Analytics Advanced
 - Mobile App
+- Platform sosial media selain TikTok, termasuk Instagram, Facebook, YouTube, X/Twitter, dan platform lain. Platform tersebut direncanakan untuk fase setelah MVP.
 
 ## Referensi
 

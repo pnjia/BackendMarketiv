@@ -80,28 +80,28 @@
     "semantic_hash": ""
   },
   "docs/00_Project/00_Index.md": {
-    "mtime": 1783147520.5438428,
-    "ast_hash": "738f94ffeadd94f78e97e1a24b546f36",
+    "mtime": 1783154070.7402434,
+    "ast_hash": "9524740d02015294d42f13c8fab8f331",
     "semantic_hash": ""
   },
   "docs/00_Project/10_Vision.md": {
-    "mtime": 1782811621.7407708,
-    "ast_hash": "34d2e3f872a9bb39c439b4046f629a10",
+    "mtime": 1783294745.4131896,
+    "ast_hash": "09d46b2d427f5be34aa8574097402d5a",
     "semantic_hash": ""
   },
   "docs/00_Project/20_Scope.md": {
-    "mtime": 1783149053.3187807,
-    "ast_hash": "86e700983b1cef2b5f8111a656f0b884",
+    "mtime": 1783294663.6441329,
+    "ast_hash": "b7181a6469f26639644262b5e146b143",
     "semantic_hash": ""
   },
   "docs/00_Project/30_Roadmap.md": {
-    "mtime": 1783148386.6452875,
-    "ast_hash": "8338448120ab8eb47f6e84a38436c878",
+    "mtime": 1783294663.6471324,
+    "ast_hash": "0d7d1290972d23ff318a58a555dec9c5",
     "semantic_hash": ""
   },
   "docs/00_Project/40_Tech_Stack.md": {
-    "mtime": 1783149099.8586292,
-    "ast_hash": "33633d14f57389103bb457dc4575b14a",
+    "mtime": 1783234667.656293,
+    "ast_hash": "1678601463a7f653b4926ce436697b9a",
     "semantic_hash": ""
   },
   "docs/00_Project/50_Project_Rules.md": {
@@ -110,13 +110,13 @@
     "semantic_hash": ""
   },
   "docs/01_Global/00_Index.md": {
-    "mtime": 1782871412.1201053,
-    "ast_hash": "05d6bae252406fa7655511abe5d3a34b",
+    "mtime": 1783154097.577623,
+    "ast_hash": "1d4df1945a9aa9da3a52a7875102f9f2",
     "semantic_hash": ""
   },
   "docs/01_Global/10_Glossary.md": {
-    "mtime": 1782811655.746478,
-    "ast_hash": "d728e804f60a0c398f2047ef5fcdb746",
+    "mtime": 1783154294.5700681,
+    "ast_hash": "c1942ec0fcbda3cbc45f74a763e3da97",
     "semantic_hash": ""
   },
   "docs/01_Global/20_Coding_Standards.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "docs/01_Global/30_Naming_Convention.md": {
-    "mtime": 1782871834.0642827,
-    "ast_hash": "9002c269a4ef4dbc28d367447ad99812",
+    "mtime": 1783235087.3620338,
+    "ast_hash": "03300a2a6d253f1207a041219ae229c8",
     "semantic_hash": ""
   },
   "docs/01_Global/40_Folder_Structure.md": {
@@ -160,13 +160,13 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/00_Index.md": {
-    "mtime": 1782871470.9537332,
-    "ast_hash": "c85d7c2d4b517a7d2436933da41b762d",
+    "mtime": 1783233545.2973723,
+    "ast_hash": "06bd209cfceffff455f97acb93964f34",
     "semantic_hash": ""
   },
   "docs/02_Modules/10_Domain_Model.md": {
-    "mtime": 1783148288.964472,
-    "ast_hash": "7c3476d4af895fd0557161dd6780c31c",
+    "mtime": 1783151574.900779,
+    "ast_hash": "54e8d755ead7798fea3bd995574decea",
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/00_Index.md": {
@@ -205,8 +205,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/60_API.md": {
-    "mtime": 1782823741.985089,
-    "ast_hash": "536917dfabdaa6d78c8590e1c35f72eb",
+    "mtime": 1783236861.2711494,
+    "ast_hash": "bbd54b75aada7949529bfa5ba1927d56",
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/70_Backend.md": {
@@ -225,48 +225,48 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/00_Index.md": {
-    "mtime": 1783033423.6745646,
-    "ast_hash": "c5f2512ba7c038c66eb71ff780f8b8e9",
+    "mtime": 1783233536.1916497,
+    "ast_hash": "f140f9f3f13e28f9ded4813af43a5072",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/100_Testing.md": {
-    "mtime": 1783033423.6745646,
-    "ast_hash": "fdf18192829ede19577d689ddc84fc34",
+    "mtime": 1783234666.9873128,
+    "ast_hash": "547942a89f4cd30ec5e567bc81574154",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/10_Overview.md": {
-    "mtime": 1782823378.8838415,
-    "ast_hash": "74aea156f12b195851c279e2fc08caa7",
+    "mtime": 1783233536.8376315,
+    "ast_hash": "6d214346d51bcfe4ab32fe9c0fd66c23",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/20_Concepts.md": {
-    "mtime": 1783033423.6745646,
-    "ast_hash": "48fe7ed62b5988757121cb28c94d6c82",
+    "mtime": 1783234673.6021175,
+    "ast_hash": "ee2f84a4c2282362df09747c0467173e",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/30_Business_Rules.md": {
-    "mtime": 1782823410.1019864,
-    "ast_hash": "a1306dafa567e5a7a1f989af1ff324da",
+    "mtime": 1783236149.3600738,
+    "ast_hash": "828a6870c9ae94339ad7cc2f983bfc3a",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/40_User_Flow.md": {
-    "mtime": 1782823431.7593932,
-    "ast_hash": "3e21fbcccc596122f8bedea59f72965c",
+    "mtime": 1783235085.37308,
+    "ast_hash": "ccee663774ca9bb44ead3fe806e68675",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/60_API.md": {
-    "mtime": 1782823474.4372244,
-    "ast_hash": "1232672bc8841f9215398e54c336117a",
+    "mtime": 1783236826.9038963,
+    "ast_hash": "c8b62e867d0ee99d8e9c2e92f2f0d629",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/70_Backend.md": {
-    "mtime": 1783033423.6745646,
-    "ast_hash": "a12a423fd8af68808b5edbef7432b24a",
+    "mtime": 1783233538.2365923,
+    "ast_hash": "6afd597d351840441c57c6c0c9150f0f",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/80_Frontend.md": {
-    "mtime": 1783033423.6745646,
-    "ast_hash": "338cabfec8c1e8e5bd1b6cd81cb22a39",
+    "mtime": 1783234665.5433555,
+    "ast_hash": "e8e9988217743a97973c70037c9bc5d3",
     "semantic_hash": ""
   },
   "docs/02_Modules/Authentication/90_Events.md": {
@@ -295,33 +295,33 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/30_Business_Rules.md": {
-    "mtime": 1782813106.201107,
-    "ast_hash": "abc1651edadec188057aa35281f91eaa",
+    "mtime": 1783294745.4201894,
+    "ast_hash": "03b0b853235468d876eaf827d6e6d561",
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/40_User_Flow.md": {
-    "mtime": 1783033423.6755648,
-    "ast_hash": "8ce3be033ba656350f9fe75a6fc28e0e",
+    "mtime": 1783294745.4211893,
+    "ast_hash": "cfe2501dcc24cc3866c806db2e5e38d8",
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/50_Database.md": {
-    "mtime": 1782813132.8541064,
-    "ast_hash": "d5b76b3b4d204e86a82cd2e8c96d9eca",
+    "mtime": 1783294663.8131168,
+    "ast_hash": "c45a7c39e293c43192c753398199d4d7",
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/60_API.md": {
-    "mtime": 1782823449.258914,
-    "ast_hash": "7eb8d83bb740760526d73e252db79736",
+    "mtime": 1783294663.8501134,
+    "ast_hash": "04d6ba37bdd192f89a7b6ed4518c477a",
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/70_Backend.md": {
-    "mtime": 1783033423.6755648,
-    "ast_hash": "2e4f890145cf82c4d22e62abeb806f91",
+    "mtime": 1783151567.3589675,
+    "ast_hash": "b1fb3bb6a2e9ea8ea136acfa42d07f97",
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/80_Frontend.md": {
-    "mtime": 1783033423.6755648,
-    "ast_hash": "dfc27a32ed1330e53a5a929e68df8fa2",
+    "mtime": 1783294663.8891096,
+    "ast_hash": "2525207e6bb2a32cd83e6b0c275d72be",
     "semantic_hash": ""
   },
   "docs/02_Modules/Campaigns/90_Events.md": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/60_API.md": {
-    "mtime": 1783149053.34878,
-    "ast_hash": "e9daa55bc5d03586f16e4a76d7fa74ec",
+    "mtime": 1783236852.644337,
+    "ast_hash": "f3337a6a536d17597b4b5c85cf9cb548",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/70_Backend.md": {
@@ -420,8 +420,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Notifications/60_API.md": {
-    "mtime": 1783033423.6775646,
-    "ast_hash": "f543e561dee30d8e20242702edecdd2e",
+    "mtime": 1783236854.934287,
+    "ast_hash": "dc159d995084ce57c6367463a213ffd0",
     "semantic_hash": ""
   },
   "docs/02_Modules/Notifications/70_Backend.md": {
@@ -475,8 +475,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Offers/60_API.md": {
-    "mtime": 1783148227.4578476,
-    "ast_hash": "16de404d46e14495a2f862587219dbba",
+    "mtime": 1783236841.4275806,
+    "ast_hash": "9fa1421357e64029aedd1931071b7310",
     "semantic_hash": ""
   },
   "docs/02_Modules/Offers/70_Backend.md": {
@@ -495,8 +495,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/00_Index.md": {
-    "mtime": 1783033423.6785645,
-    "ast_hash": "3fd8ca97ef3075eeb0c99a9dc7de5baa",
+    "mtime": 1783152332.9568136,
+    "ast_hash": "6536c33df45310fb7fa2bdc37e5b6841",
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/100_Testing.md": {
@@ -515,28 +515,28 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/30_Business_Rules.md": {
-    "mtime": 1782824955.8806508,
-    "ast_hash": "c31bc4176b41348e73978eef87e41406",
+    "mtime": 1783152300.895607,
+    "ast_hash": "982d24d2b514fcdfcd1d66bedf095387",
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/40_User_Flow.md": {
-    "mtime": 1783033423.6785645,
-    "ast_hash": "59a12a8bcd7e2ca797c1ae756c587bbb",
+    "mtime": 1783152296.1557243,
+    "ast_hash": "cf08dc5b9d7c4a5de15b3eee4c351eb2",
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/50_Database.md": {
-    "mtime": 1782825030.9248216,
-    "ast_hash": "9f8da92e5ff3e4d9b53bbc4dc3f8a1aa",
+    "mtime": 1783152278.0681765,
+    "ast_hash": "b19761daa9750c5989baf21a34928889",
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/60_API.md": {
-    "mtime": 1782825060.939139,
-    "ast_hash": "91c0ad25632b94ef11b76395c8b785c1",
+    "mtime": 1783236846.4414718,
+    "ast_hash": "933f9c7da09b2284e7767d9d44bef6b0",
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/70_Backend.md": {
-    "mtime": 1783033423.6785645,
-    "ast_hash": "9525bd8e318fc0fb397680f9a3dbeff4",
+    "mtime": 1783152289.7138848,
+    "ast_hash": "05f2b1ac94197462c964d21e83952f15",
     "semantic_hash": ""
   },
   "docs/02_Modules/Orders/80_Frontend.md": {
@@ -585,8 +585,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/60_API.md": {
-    "mtime": 1782825363.945671,
-    "ast_hash": "a24572a805acb52f1bf609970ab6fc4b",
+    "mtime": 1783236849.9993944,
+    "ast_hash": "9dd6aca119f39926821732e56a7b1f7e",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/70_Backend.md": {
@@ -615,8 +615,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/10_Overview.md": {
-    "mtime": 1782823541.8776464,
-    "ast_hash": "4ba092149886749d55edb1adc76b6cc9",
+    "mtime": 1783294745.4151895,
+    "ast_hash": "1e277336c0dc01f724003d442c494dc1",
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/20_Concepts.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/40_User_Flow.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "b5cc68af746501dcad262da817486a34",
+    "mtime": 1783294745.4161894,
+    "ast_hash": "4e06c5d794bd46670330881e763ce97d",
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/50_Database.md": {
@@ -640,18 +640,18 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/60_API.md": {
-    "mtime": 1782823626.8824508,
-    "ast_hash": "c2fe240c5b4d2499c8517b57ee895902",
+    "mtime": 1783294745.4171894,
+    "ast_hash": "8f490812f616d56a5d628c8e2927fc5c",
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/70_Backend.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "780b757cddf9700ad633fc6e10d9ec33",
+    "mtime": 1783294745.4181893,
+    "ast_hash": "c77c96db106129db4b2e7cf5d873c959",
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/80_Frontend.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "bb5aadee29496b4ffdcb39338cb1a2e0",
+    "mtime": 1783294745.4191892,
+    "ast_hash": "ea07b98aad03312d10ec416f6ba14e0c",
     "semantic_hash": ""
   },
   "docs/02_Modules/RateCards/90_Events.md": {
@@ -660,13 +660,13 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/00_Index.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "4cfb767e1c907e70a73348ac6c857620",
+    "mtime": 1783151560.3101437,
+    "ast_hash": "0f8516baede4b6839af17e43d3e79bb6",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/100_Testing.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "729f59a1cbc89cdfa5609062c45ad3e8",
+    "mtime": 1783294663.7731206,
+    "ast_hash": "318c64f45256875176bb68b60bc5643d",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/10_Overview.md": {
@@ -675,38 +675,38 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/20_Concepts.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "b10c5321dfb529774c5de52073d3e441",
+    "mtime": 1783294663.6681304,
+    "ast_hash": "5f9891c641cef11954118ea60ad1edca",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/30_Business_Rules.md": {
-    "mtime": 1782823566.0500956,
-    "ast_hash": "797c04deaffa353f478f2adc7573dd21",
+    "mtime": 1783295611.895401,
+    "ast_hash": "25ce5228b9f1145c1f489923b20e6f92",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/40_User_Flow.md": {
-    "mtime": 1783033423.6805646,
-    "ast_hash": "9eaf630099527c7cca6137fab24ee72f",
+    "mtime": 1783295611.896401,
+    "ast_hash": "5254b89deff8c561f1c49f5f9c7907b1",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/50_Database.md": {
-    "mtime": 1782823638.207984,
-    "ast_hash": "9f7219510943384385c1152ecfb3d88b",
+    "mtime": 1783295611.8974009,
+    "ast_hash": "2238c146d176b2ad862a985415dd2b01",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/60_API.md": {
-    "mtime": 1782823654.767301,
-    "ast_hash": "ae877863451e9745d61f58c937f38e3e",
+    "mtime": 1783294663.7551222,
+    "ast_hash": "77bf2dc4a9c3efc59393df870a36ee4e",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/70_Backend.md": {
-    "mtime": 1783033423.6815646,
-    "ast_hash": "ec3cd7e7e5e8fe476b2e21b819ba88b7",
+    "mtime": 1783151556.6832345,
+    "ast_hash": "c7b7928de3158d60cf405e77e731225c",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/80_Frontend.md": {
-    "mtime": 1783033423.6815646,
-    "ast_hash": "161eb7b1f70f2a145a7a019f02208545",
+    "mtime": 1783295611.8984008,
+    "ast_hash": "19db678909dc52abaf38bf8f456565cb",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/90_Events.md": {
@@ -715,38 +715,38 @@
     "semantic_hash": ""
   },
   "docs/03_Workflows/00_Index.md": {
-    "mtime": 1782824703.8502238,
-    "ast_hash": "8780c9bb4583a16c8319e4891e775ebd",
+    "mtime": 1783155255.2691226,
+    "ast_hash": "ce4a7a134f8ecb9a4797e3ed5a74be87",
     "semantic_hash": ""
   },
   "docs/03_Workflows/10_Registration.md": {
-    "mtime": 1782824770.1213324,
-    "ast_hash": "fba1e5f373c21b350680b6aac07d6290",
+    "mtime": 1783295611.8994007,
+    "ast_hash": "60cd7f5d8291e9617ed1470e0ca403bb",
     "semantic_hash": ""
   },
   "docs/03_Workflows/20_Campaign_PPV.md": {
-    "mtime": 1782824858.8155649,
-    "ast_hash": "92f0ba92e31f827d54692049d2dccdaa",
+    "mtime": 1783294663.9211066,
+    "ast_hash": "7d64a73e74ac246e57bc0745b3437b56",
     "semantic_hash": ""
   },
   "docs/03_Workflows/30_RateCard_Order.md": {
-    "mtime": 1783148386.6462874,
-    "ast_hash": "6b981f10fde09f5bd1278d450a81d38f",
+    "mtime": 1783294783.1577652,
+    "ast_hash": "4ea316ffed0becd48d40e79ee9adb486",
     "semantic_hash": ""
   },
   "docs/03_Workflows/40_Submission_Fraud.md": {
-    "mtime": 1782824995.1766348,
-    "ast_hash": "03f2355f216f6a1317e3ac68dc171333",
+    "mtime": 1783294663.9231064,
+    "ast_hash": "ef38c030572163e9f558f44c76e4a9f6",
     "semantic_hash": ""
   },
   "docs/03_Workflows/50_Withdrawal.md": {
-    "mtime": 1782825036.360698,
-    "ast_hash": "9b05f6de66cd22930fc6d693f63dcdcf",
+    "mtime": 1783155224.9208832,
+    "ast_hash": "f8b0cd2c3f1494db5a5eca3bb8237553",
     "semantic_hash": ""
   },
   "docs/03_Workflows/60_Dispute.md": {
-    "mtime": 1782825081.0006826,
-    "ast_hash": "29b477929d474dffe70032049a77ffd3",
+    "mtime": 1783155246.19335,
+    "ast_hash": "482edd219da6c6dd700125c8acbd53ee",
     "semantic_hash": ""
   },
   "docs/04_Decisions/00_Index.md": {
@@ -810,8 +810,8 @@
     "semantic_hash": ""
   },
   "docs/99_Templates/Module_Template.md": {
-    "mtime": 1782825171.9197638,
-    "ast_hash": "203156b3ba58532ca14f0efd3de8f58b",
+    "mtime": 1783236879.5947511,
+    "ast_hash": "2c82b9596c8c04760d6a362ce500d06d",
     "semantic_hash": ""
   },
   "docs/99_Templates/Screen_Template.md": {
@@ -825,8 +825,8 @@
     "semantic_hash": ""
   },
   "docs/README.md": {
-    "mtime": 1783051556.3171678,
-    "ast_hash": "69cb697d1216102a5218f3919a1655aa",
+    "mtime": 1783154087.2928607,
+    "ast_hash": "0dde9d9e44842bed1da1cfbec15ced9f",
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
@@ -840,8 +840,8 @@
     "semantic_hash": ""
   },
   "Cara_Baca.md": {
-    "mtime": 1783146972.812829,
-    "ast_hash": "a3558859fe04bd589b578602e4b84764",
+    "mtime": 1783152777.1658216,
+    "ast_hash": "7a686ce9e3a1e011b2eda5601df7f7fc",
     "semantic_hash": ""
   }
 }

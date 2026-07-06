@@ -17,7 +17,7 @@ Publish → muncul di profil & discovery
 ```text
 Browse Creator (discovery)
 ↓
-Filter: platform, kota
+Filter: platform MVP (TikTok), kota
 ↓
 Lihat profil Creator → Rate Card
 ↓

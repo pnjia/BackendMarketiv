@@ -32,13 +32,13 @@ Dimiliki Creator.
 
 ### Discovery Creator
 
-`searchCreators({ platform, city })` digunakan untuk menemukan creator beserta rate card-nya. Service ini **dibagi dengan modul Users** — lihat `../Users/` (jangan diduplikasi di sini).
+`searchCreators({ platform, city })` digunakan untuk menemukan creator beserta rate card-nya. Pada MVP, `platform` hanya `tiktok`. Service ini **dibagi dengan modul Users** — lihat `../Users/` (jangan diduplikasi di sini).
 
 ---
 
 ## Appwrite Functions (Server-side)
 
-Module ini tidak memiliki Appwrite Functions sendiri.
+Module ini tidak memiliki REST API publik sendiri. Operasi CRUD dilakukan langsung via Appwrite SDK dan tidak ada Appwrite Function khusus untuk modul ini.
 
 ---
 

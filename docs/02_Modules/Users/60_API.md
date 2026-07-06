@@ -20,7 +20,7 @@ Memperbarui field profil (deskripsi, kota, logo/avatar, dll.).
 
 ### `removeSocialAccount()` — [Client SDK]
 
-Mengelola entri `creator_social_accounts` (satu creator banyak akun).
+Mengelola entri `creator_social_accounts`. Pada MVP hanya `platform = "tiktok"` yang boleh dibuat; platform lain ditolak sampai fase ekspansi multi-platform.
 
 ---
 
@@ -35,7 +35,7 @@ Contoh filter:
 }
 ```
 
-Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `creator_social_accounts` (platform, followers).
+Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `creator_social_accounts` (platform, followers). Pada MVP nilai `platform` hanya `tiktok`.
 
 ---
 
@@ -71,7 +71,7 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `creato
 
 ## Appwrite Functions (Server-side)
 
-Module ini tidak memiliki Appwrite Functions sendiri.
+Module ini tidak memiliki REST API publik sendiri. Operasi server-side yang diperlukan module Users dijalankan lewat Appwrite Functions dan didokumentasikan di [70_Backend.md](70_Backend.md).
 
 ---
 

@@ -4,7 +4,7 @@
 
 ```text
 Buat Campaign (draft)
-  ├─ Basic Info (judul, kategori, platform, deskripsi)
+  ├─ Basic Info (judul, kategori, platform TikTok, deskripsi)
   ├─ Upload Asset
   │    ├─ Internal (storage) — upload via File Manager, terikat kuota 100 MB
   │    └─ External URL — link Google Drive / Dropbox / CDN, bebas kuota
@@ -29,7 +29,7 @@ Pilih Campaign → Claim
 ↓
 Validasi: profil lengkap, belum claim, claim limit tersedia
 ↓
-Buat Konten → Submit
+Buat Konten TikTok → Submit URL TikTok
 ↓
 Fraud Check (otomatis)
 ↓

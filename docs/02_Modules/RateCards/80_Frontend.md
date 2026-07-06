@@ -23,7 +23,7 @@
 
 ### Discovery / Browse Creators
 
-- Filter: platform social account, kota.
+- Filter: TikTok social account dan kota pada MVP.
 - List creator dengan rating, totalFollowers, city.
 - Klik → lihat profil + rate card.
 

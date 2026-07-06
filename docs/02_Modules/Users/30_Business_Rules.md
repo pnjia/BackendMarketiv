@@ -3,17 +3,32 @@
 ## Kelengkapan Profil
 
 - Setiap profil memiliki flag `isProfileCompleted`.
-  - UMKM: default-nya dapat dianggap lengkap setelah onboarding wizard.
+  - UMKM: default-nya dapat dianggap lengkap setelah onboarding wizard, tanpa mewajibkan social media.
   - Creator: `isProfileCompleted` awalnya `false`; menjadi `true` setelah profil dilengkapi.
 - Profil yang belum lengkap dapat memblokir aksi tertentu (mis. claim campaign membutuhkan profil lengkap).
+
+## Atribut Opsional di Onboarding
+
+- Upload logo UMKM bersifat opsional saat onboarding.
+- Tambah portfolio Creator bersifat opsional saat onboarding.
+- Kedua data tersebut dapat dilengkapi nanti dari halaman profil.
 
 ## Data Pre-filled dari Registrasi
 
 - **UMKM**: `businessName`, `category`, dan `phone` diisi saat Register dan ditampilkan pre-filled di onboarding.
 
+## Social Media UMKM
+
+- Social media UMKM bersifat **opsional** karena tidak semua UMKM memiliki akun social media saat mendaftar.
+- Untuk MVP, field social media UMKM yang tersedia hanya TikTok.
+- Kelengkapan profil UMKM tidak boleh bergantung pada ada/tidaknya akun TikTok.
+- Website tidak menjadi field profil UMKM pada MVP.
+
 ## Akun Sosial Creator
 
-- Satu creator dapat memiliki **banyak** akun sosial (`creator_social_accounts`), satu per platform (tiktok, instagram, youtube, dst.).
+- Untuk MVP, satu creator hanya dapat memiliki **akun TikTok** pada `creator_social_accounts`.
+- Platform selain TikTok (Instagram, Facebook, YouTube, dan lainnya) tidak dapat dipilih atau disimpan pada MVP; platform tersebut masuk future scope.
+- Collection tetap menggunakan pola satu akun per platform agar ekspansi multi-platform setelah MVP tetap mudah.
 - Tiap akun menyimpan `followers` dan `engagementRate`.
 
 ## Data Denormalisasi (disengaja)

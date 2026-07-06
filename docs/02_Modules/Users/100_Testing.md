@@ -12,15 +12,21 @@
 - Upload logo/avatar → file tersimpan di Storage.
 - Hanya pemilik yang dapat mengedit profilnya.
 
+## Onboarding
+
+- UMKM dapat menyelesaikan onboarding tanpa upload logo.
+- Creator dapat menyelesaikan onboarding tanpa menambah portfolio.
+- Logo UMKM dan portfolio Creator dapat ditambahkan dari halaman profil setelah onboarding.
+
 ## Social Accounts
 
-- Creator menambah akun sosial → tersimpan.
-- Creator menghapus akun sosial → terhapus.
-- Creator dapat memiliki banyak akun (satu per platform).
+- Creator menambah akun TikTok → tersimpan.
+- Creator menghapus akun TikTok → terhapus.
+- Creator tidak dapat menambah platform selain TikTok pada MVP.
 
 ## Discovery
 
-- Pencarian Creator berdasarkan platform → hasil sesuai.
+- Pencarian Creator berdasarkan platform TikTok → hasil sesuai.
 - Pencarian Creator berdasarkan kota → hasil sesuai.
 - Creator dengan profil tidak lengkap tidak muncul di discovery (opsional).
 - Data denormalisasi (`totalFollowers`, `totalOrders`, `rating`) akurat setelah event.

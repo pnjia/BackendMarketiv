@@ -59,12 +59,13 @@ category            # diisi saat Register
 description
 city
 address
-instagram
 tiktok
-website
 logoUrl
 isProfileCompleted
 ```
+
+`tiktok` bersifat opsional dan tidak menentukan `isProfileCompleted`. Website tidak disimpan sebagai field profil UMKM pada MVP.
+`logoUrl` bersifat opsional saat onboarding dan dapat diisi dari halaman profil.
 
 ### Index
 
@@ -128,13 +129,13 @@ Public: read
 
 ## 4. `creator_social_accounts`
 
-Relasi: `creator_profiles` 1 ── N `creator_social_accounts`. Satu creator bisa punya banyak akun.
+Relasi: `creator_profiles` 1 ── N `creator_social_accounts`. Untuk MVP hanya akun TikTok yang valid. Struktur N dipertahankan agar ekspansi Instagram, Facebook, YouTube, dan platform lain dapat ditambahkan setelah MVP tanpa redesign skema.
 
 ### Attributes
 
 ```text
 creatorId
-platform            # tiktok | instagram | youtube | ...
+platform            # MVP: tiktok only; future: instagram | facebook | youtube | ...
 username
 followers
 engagementRate
@@ -170,6 +171,8 @@ description
 thumbnailUrl
 portfolioUrl
 ```
+
+Portfolio creator bersifat opsional saat onboarding. Creator dapat memiliki nol atau banyak portfolio, dan menambahkannya nanti dari halaman profil.
 
 ### Index
 

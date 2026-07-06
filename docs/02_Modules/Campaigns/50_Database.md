@@ -17,7 +17,7 @@ Koleksi terbesar MVP. Relasi: UMKM (1) → Campaign (N).
 | umkmId               | string   | yes      | FK → users                                |
 | title                | string   | yes      |                                           |
 | category             | string   | yes      |                                           |
-| platforms            | string[] | yes      | mis. `["tiktok","instagram"]`             |
+| platforms            | string[] | yes      | MVP hanya `["tiktok"]`; platform lain future scope |
 | description          | string   | no       |                                           |
 | budget               | integer  | yes      |                                           |
 | rewardPer1000Views   | integer  | yes      | basis perhitungan reward (CPM)            |
@@ -112,7 +112,7 @@ Konten yang dikirim creator. Dipakai AI Fraud Detection. Relasi: Claim (1) → S
 | claimId     | string  | yes      | FK → campaign_claims             |
 | campaignId  | string  | yes      | FK → campaigns                   |
 | creatorId   | string  | yes      | FK → users                       |
-| platform    | enum    | yes      | mis. `tiktok`                    |
+| platform    | enum    | yes      | MVP hanya `tiktok`               |
 | postUrl     | string  | yes      | URL konten                       |
 | caption     | string  | no       |                                  |
 | views       | integer | yes      | basis perhitungan reward         |

@@ -1,5 +1,7 @@
 # AI — Backend
 
+Dokumen ini khusus untuk Appwrite Functions AI dan aturan integrasinya. Kontrak pemanggilan dari frontend dibahas di [60_API.md](60_API.md).
+
 ## Appwrite Functions
 
 ### ai-brief

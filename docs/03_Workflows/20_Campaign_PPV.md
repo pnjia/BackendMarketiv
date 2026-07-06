@@ -37,7 +37,7 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 
 ### Tahap 1: Create Campaign (UMKM)
 
-1. **Campaigns** — UMKM isi **Basic Info**: title, category, platforms[], description.
+1. **Campaigns** — UMKM isi **Basic Info**: title, category, platforms[], description. Untuk MVP, `platforms[]` wajib hanya berisi `tiktok`.
 2. **Campaigns** — **Upload Asset** (dua opsi):
    - **Internal (storage)**: via File Manager (`uploadFile()` dengan `purpose = campaign_asset`, `referenceId = campaignId`). File disimpan di Appwrite Storage. Metadata di `user_files` + `campaign_assets` (`source = storage`). Terikat kuota 100 MB user.
    - **External URL**: input link Google Drive/Dropbox/CDN publik. Dicatat di `campaign_assets` (`source = external_url`). Tidak terikat kuota. Hanya protokol `https`.
@@ -67,7 +67,7 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 
 ### Tahap 4: Submit Content (Creator)
 
-16. **Campaigns** — Creator produksi konten & posting ke platform (TikTok/Instagram/dll).
+16. **Campaigns** — Creator produksi konten & posting ke TikTok. Instagram, Facebook, YouTube, dan platform lain berada di luar MVP.
 17. **Campaigns** — `createSubmission({ claimId, campaignId, platform, postUrl, caption?, views, engagement? })`.
 18. **Campaigns** — Buat `campaign_submissions`: `{ ..., status: 'pending' }`.
 19. **Event `campaign_submissions.create`** memicu function **`ai-fraud-precheck`**.
@@ -75,7 +75,7 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 
 ### Tahap 5: Fraud Check & Review
 
-21. **AI** — `ai-fraud-precheck` menjalankan validasi: URL valid, dapat diakses, tidak duplikat, cocok platform.
+21. **AI** — `ai-fraud-precheck` menjalankan validasi: URL valid, dapat diakses, tidak duplikat, cocok platform TikTok.
 22. **AI** — Hitung `fraudScore` (0–100). Tulis `fraud_checks` + update `campaign_submissions.fraudScore/fraudStatus`.
 23. **Routing berdasarkan score:**
     - **0–30 (Low Risk)**: auto-approve → submission langsung `approved`.
@@ -123,10 +123,12 @@ WALLET:      pendingBalance += reward → (later → available)
 | Upload asset storage | `usedBytes + file.size ≤ quotaBytes` | Error "Kuota penuh" |
 | Upload asset storage | `file.size ≤ 20 MB`, `fileCount < 100` | Error batas file |
 | Upload asset external | URL harus `https://` | Error format URL |
+| Create campaign | `platforms[]` hanya berisi `tiktok` pada MVP | Error platform belum didukung |
 | Claim campaign | `isProfileCompleted === true` | Error "Lengkapi profil dulu" |
 | Claim campaign | `totalClaims < claimLimit` | Error "Claim limit penuh" |
 | Claim campaign | Unique `campaignId + creatorId` | Error "Sudah claim" |
 | Create submission | Claim harus `claimed` status | Error |
+| Create submission | `platform = tiktok` dan URL domain TikTok valid | Error platform/URL belum didukung |
 | Approve/reject submission | Submission harus `pending` | Error status |
 | Calculate reward | `remainingBudget > 0` | Reward = 0 jika budget habis |
 

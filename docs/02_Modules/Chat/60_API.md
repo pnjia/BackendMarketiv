@@ -39,7 +39,7 @@ UI penerima subscribe ke channel dokumen `messages` percakapan terkait; saat ada
 
 ## Appwrite Functions (Server-side)
 
-Module ini tidak memiliki Appwrite Functions sendiri.
+Module ini tidak memiliki REST API publik sendiri. Sinkronisasi server-side untuk Chat dijalankan lewat Appwrite Functions dan didokumentasikan di [70_Backend.md](70_Backend.md).
 
 ---
 

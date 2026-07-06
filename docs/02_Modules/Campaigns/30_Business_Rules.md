@@ -10,6 +10,8 @@
 
 ## Aturan Claim
 
+- Campaign PPV MVP hanya mendukung platform `tiktok`. Campaign dengan platform Instagram, Facebook, YouTube, atau platform lain ditolak sampai fase ekspansi multi-platform.
+
 - **Unik**: satu creator hanya boleh claim sebuah campaign satu kali — kombinasi `campaignId + creatorId` harus unik (divalidasi di backend).
 - **Profil lengkap**: creator wajib `isProfileCompleted = true`.
 - **Campaign aktif**: campaign harus berstatus `active`.
@@ -23,6 +25,7 @@ Status submission: `pending | approved | rejected`.
 
 - Submission dibuat dengan status `pending` dan langsung memicu AI Fraud Detection (lihat `90_Events.md`).
 - Submission terhubung 1—1 dengan claim (`claimId`).
+- Submission MVP wajib `platform = tiktok` dan `postUrl` harus URL TikTok yang valid.
 - UMKM mereview submission `pending` lalu approve atau reject.
 
 ## Aturan Fraud

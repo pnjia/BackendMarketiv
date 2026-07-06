@@ -1,6 +1,6 @@
 # AI — API
 
-Module ini **khusus Appwrite Functions**. Tidak ada service layer yang dipanggil langsung dari frontend. Semua fungsi berjalan server-side di Appwrite Cloud.
+Fungsi AI berjalan server-side di Appwrite Cloud. Tidak ada service layer yang dipanggil langsung dari frontend.
 
 ## Service Layer (Client SDK)
 

@@ -13,6 +13,7 @@ Dimiliki UMKM. Inti alur PPV.
 #### `createCampaign()` — [Client SDK]
 
 - **Input**: `{ title, category, platforms[], budget, rewardPer1000Views, minViews?, maxViews?, claimLimit }`
+- **Validasi MVP**: `platforms[]` hanya boleh berisi `"tiktok"`. Instagram, Facebook, YouTube, dan platform lain ditolak sampai fase ekspansi multi-platform.
 - **Proses**: buat dokumen `campaigns` dengan `status = draft`.
 - **Akses**: UMKM (owner).
 
@@ -30,7 +31,7 @@ Dimiliki UMKM. Inti alur PPV.
 
 #### `getCampaigns(filter)` — [Client SDK]
 
-- **Input**: `{ platform?, category?, sort? }` (mis. `sort=latest`).
+- **Input**: `{ platform?, category?, sort? }` (mis. `sort=latest`). Pada MVP, `platform` hanya `tiktok`.
 - **Proses**: query job board, default `status = active ORDER BY publishedAt DESC`.
 - **Akses**: Public.
 
@@ -80,6 +81,7 @@ Dimiliki Creator.
 #### `createSubmission()` — [Client SDK]
 
 - **Input**: `{ claimId, campaignId, platform, postUrl, caption?, views, engagement? }`
+- **Validasi MVP**: `platform` wajib `tiktok` dan `postUrl` harus URL TikTok yang valid.
 - **Proses**: buat `campaign_submissions` (`status = pending`). Memicu event Submission Created → AI Fraud (lihat `90_Events.md`).
 - **Akses**: Creator (owner claim).
 

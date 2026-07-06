@@ -37,7 +37,7 @@ Event `campaign_submissions.create` — terpicu saat creator submit hasil campai
 4. **AI** — Function `ai-fraud-precheck` menjalankan serangkaian validasi terhadap submission:
    - **URL validation**: format URL valid, tidak kosong.
    - **Accessibility**: URL dapat diakses (tidak 404, tidak private/requires login).
-   - **Platform match**: domain URL cocok dengan platform yang diklaim (mis. tiktok.com → platform: tiktok).
+   - **Platform match**: untuk MVP, domain URL harus cocok dengan TikTok (mis. tiktok.com atau vm.tiktok.com → platform: tiktok).
    - **Deduplication**: URL belum pernah disubmit untuk campaign yang sama (cek `campaign_submissions.postUrl`).
    - **Content analysis** (via Gemini API):
      - Apakah video menampilkan logo/produk yang sesuai?
@@ -125,6 +125,7 @@ approved approved rejected
 | URL validation | URL format valid | Score += 30 |
 | URL accessibility | URL dapat diakses (200 OK) | Score += 25 |
 | Platform match | Domain cocok platform | Score += 20 |
+| Platform MVP | Platform harus `tiktok`; platform lain belum didukung MVP | Score += 20 / reject sesuai rule |
 | Deduplication | URL belum pernah submit | Score += 25 (langsung flag) |
 | Content analysis | Konten sesuai brief | Score += variable |
 | Admin approve/reject | Submission harus `fraudStatus: review` | Error status |

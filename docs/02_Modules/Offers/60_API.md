@@ -28,7 +28,7 @@ Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Cl
 
 ## Appwrite Functions (Server-side)
 
-Module ini tidak memiliki Appwrite Functions sendiri. Order creation dipicu oleh event `offers.status` → `accepted` dan ditangani oleh function `create-order` di modul **Orders** — lihat `../Orders/90_Events.md`.
+Module ini tidak memiliki REST API publik sendiri. Order creation dipicu oleh event `offers.status` → `accepted` dan ditangani oleh function `create-order` di modul **Orders** — lihat `../Orders/90_Events.md`.
 
 ---
 

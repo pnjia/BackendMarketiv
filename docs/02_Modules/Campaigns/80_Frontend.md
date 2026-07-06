@@ -4,7 +4,7 @@
 
 ### Create Campaign
 
-- Form: title, category, platforms, budget, rewardPer1000Views, claimLimit.
+- Form: title, category, platform MVP (TikTok, fixed/selected by default), budget, rewardPer1000Views, claimLimit.
 - Opsi Generate Brief dengan AI.
 - Upload campaign assets.
 
@@ -23,7 +23,7 @@
 
 ### Job Board
 
-- Daftar campaign active dengan filter platform, kategori.
+- Daftar campaign active dengan filter platform MVP (TikTok) dan kategori.
 - Detail campaign (brief, reward, claim limit).
 
 ### My Claims
