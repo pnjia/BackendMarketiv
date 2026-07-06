@@ -65,7 +65,7 @@ Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Mod
 
 ## Appwrite Functions (`functions/`)
 
-`create-wallet`, `create-order`, `process-payment`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
+`create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
 
 ## Storage Buckets (`storage/`)
 
@@ -86,8 +86,10 @@ NEXT_PUBLIC_CREATOR_COLLECTION=
 NEXT_PUBLIC_CAMPAIGN_COLLECTION=
 NEXT_PUBLIC_ORDER_COLLECTION=
 NEXT_PUBLIC_WALLET_COLLECTION=
+NEXT_PUBLIC_PAYMENT_COLLECTION=
 NEXT_PUBLIC_STORAGE_BUCKET=
 NEXT_PUBLIC_AI_FUNCTION_ID=
+NEXT_PUBLIC_MIDTRANS_CLIENT_KEY=
 ```
 
 Deploy & env: [`80_Deployment.md`](80_Deployment.md).

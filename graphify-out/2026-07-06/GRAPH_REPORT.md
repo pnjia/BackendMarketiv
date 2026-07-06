@@ -1,11 +1,11 @@
 # Graph Report - BackendMarketiv  (2026-07-06)
 
 ## Corpus Check
-- 169 files · ~36,242 words
+- 169 files · ~36,333 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1106 nodes · 1113 edges · 134 communities (124 shown, 10 thin omitted)
+- 1107 nodes · 1114 edges · 142 communities (125 shown, 17 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -39,6 +39,7 @@
 - [[_COMMUNITY_Authentication — API (Auth Service)|Authentication — API (Auth Service)]]
 - [[_COMMUNITY_Campaigns — Business Rules|Campaigns — Business Rules]]
 - [[_COMMUNITY_Campaigns — Database|Campaigns — Database]]
+- [[_COMMUNITY_Community 24|Community 24]]
 - [[_COMMUNITY_Notification Service|Notification Service]]
 - [[_COMMUNITY_Appwrite Functions|Appwrite Functions]]
 - [[_COMMUNITY_Halaman|Halaman]]
@@ -53,8 +54,11 @@
 - [[_COMMUNITY_Chat — Backend|Chat — Backend]]
 - [[_COMMUNITY_00_Index|00_Index.md]]
 - [[_COMMUNITY_Orders — Testing|Orders — Testing]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
 - [[_COMMUNITY_Visi Marketiv|Visi Marketiv]]
 - [[_COMMUNITY_Aturan Kerja Proyek|Aturan Kerja Proyek]]
+- [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_30_Naming_Convention|30_Naming_Convention]]
 - [[_COMMUNITY_60_Error_Handling|60_Error_Handling]]
 - [[_COMMUNITY_70_Testing_Strategy|70_Testing_Strategy]]
@@ -66,16 +70,20 @@
 - [[_COMMUNITY_Campaigns — Concepts|Campaigns — Concepts]]
 - [[_COMMUNITY_Chat — Testing|Chat — Testing]]
 - [[_COMMUNITY_Chat — Business Rules|Chat — Business Rules]]
+- [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Chat — Frontend|Chat — Frontend]]
 - [[_COMMUNITY_`notifications`|`notifications`]]
 - [[_COMMUNITY_Notifications — Backend|Notifications — Backend]]
 - [[_COMMUNITY_Offers — Business Rules|Offers — Business Rules]]
+- [[_COMMUNITY_Community 60|Community 60]]
 - [[_COMMUNITY_Komponen|Komponen]]
 - [[_COMMUNITY_Orders — Business Rules|Orders — Business Rules]]
 - [[_COMMUNITY_Appwrite Functions|Appwrite Functions]]
 - [[_COMMUNITY_Payments — Testing|Payments — Testing]]
 - [[_COMMUNITY_Payments — Concepts|Payments — Concepts]]
 - [[_COMMUNITY_Payments — Business Rules|Payments — Business Rules]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
 - [[_COMMUNITY_Rate Cards — Testing|Rate Cards — Testing]]
 - [[_COMMUNITY_Users — Testing|Users — Testing]]
 - [[_COMMUNITY_Users — Business Rules|Users — Business Rules]]
@@ -155,7 +163,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (134 total, 10 thin omitted)
+## Communities (142 total, 17 thin omitted)
 
 ### Community 0 - "00_Index.md"
 Cohesion: 0.05
@@ -176,10 +184,6 @@ Nodes (19): 00_Project, 01_Global, 02_Modules, 03_Workflows, 04_Decisions, 99_Te
 ### Community 4 - "Campaign Service"
 Cohesion: 0.09
 Nodes (23): `addCampaignAsset()` — [Client SDK], `ai-fraud-precheck` — [Appwrite Function], `approveSubmission()` — [Client SDK], Appwrite Functions (Server-side), `calculate-campaign-reward` — [Appwrite Function], `campaign-claimed` — [Appwrite Function], `campaign-published` — [Appwrite Function], Campaign Service (+15 more)
-
-### Community 5 - "30_RateCard_Order.md"
-Cohesion: 0.07
-Nodes (24): 10_Glossary, Aktor, Campaign & Konten, Finansial, Fraud, Daftar Dokumen, Modul AI, Daftar Dokumen (+16 more)
 
 ### Community 6 - "20_Campaign_PPV.md"
 Cohesion: 0.50
@@ -233,6 +237,10 @@ Nodes (39): AI — Business Rules, Brief Generator, Fraud Detection, Threshold, 
 Cohesion: 0.67
 Nodes (3): Authentication — Events, Lihat Juga, User Registered
 
+### Community 24 - "Community 24"
+Cohesion: 0.33
+Nodes (5): 10_Glossary, Aktor, Campaign & Konten, Finansial, Fraud
+
 ### Community 25 - "Notification Service"
 Cohesion: 0.22
 Nodes (9): Appwrite Functions (Server-side), `createNotification()` — [Internal/System], `getNotifications()` — [Client SDK], Lihat Juga, `markAllAsRead()` — [Client SDK], `markAsRead()` — [Client SDK], Notifications — API, Service Layer (Client SDK) (+1 more)
@@ -284,6 +292,10 @@ Nodes (6): Appwrite Functions, Appwrite Realtime, Aturan Backend, Chat — Backe
 ### Community 38 - "Orders — Testing"
 Cohesion: 0.29
 Nodes (6): Approve, Create Order, Deliverable, Orders — Testing, Revision, Status Flow
+
+### Community 39 - "Community 39"
+Cohesion: 0.40
+Nodes (5): 03_Workflows — Index, Daftar Workflow, Lihat Juga, Prinsip Penulisan, Relasi Antar Workflow
 
 ### Community 41 - "Visi Marketiv"
 Cohesion: 0.25
@@ -386,8 +398,8 @@ Cohesion: 0.33
 Nodes (5): Discovery, Profil, Social Accounts, Update Profil, Users — Testing
 
 ### Community 72 - "Users — Business Rules"
-Cohesion: 0.29
-Nodes (7): Akun Sosial Creator, Data Denormalisasi (disengaja), Data Pre-filled dari Registrasi, Kelengkapan Profil, Lihat Juga, Storage Kuota, Users — Business Rules
+Cohesion: 0.25
+Nodes (8): Akun Sosial Creator, Data Denormalisasi (disengaja), Data Pre-filled dari Registrasi, Kelengkapan Profil, Lihat Juga, Social Media UMKM, Storage Kuota, Users — Business Rules
 
 ### Community 73 - "Users — API (Profile Service)"
 Cohesion: 0.15
@@ -602,9 +614,9 @@ Cohesion: 0.33
 Nodes (5): ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux, Consequences, Context, Decision, Status
 
 ## Knowledge Gaps
-- **684 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `collections` (+679 more)
+- **685 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `collections` (+680 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -614,7 +626,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Users — API` connect `Users — API (Profile Service)` to `00_Index.md`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `$schema`, `plugin`, `@opencode-ai/plugin` to the rest of the system?**
-  _684 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _685 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `00_Index.md` be split into smaller, more focused modules?**
   _Cohesion score 0.04521276595744681 - nodes in this community are weakly interconnected._
 - **Should `AGENTS.md` be split into smaller, more focused modules?**

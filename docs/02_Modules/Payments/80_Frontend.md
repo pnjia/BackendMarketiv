@@ -11,7 +11,9 @@
 ### Top Up
 
 - Form input amount.
-- Integrasi payment gateway.
+- Panggil `createPayment()` untuk membuat payment Midtrans.
+- Redirect/open Snap Midtrans menggunakan `snapToken` atau `redirectUrl` dari server.
+- Tampilkan status menunggu sampai webhook Midtrans mengubah payment menjadi `paid`.
 
 ### Withdrawal
 

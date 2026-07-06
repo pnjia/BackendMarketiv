@@ -680,18 +680,18 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/30_Business_Rules.md": {
-    "mtime": 1783294663.6821291,
-    "ast_hash": "d31489a71ba5809169201fa81ceada2d",
+    "mtime": 1783295611.895401,
+    "ast_hash": "25ce5228b9f1145c1f489923b20e6f92",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/40_User_Flow.md": {
-    "mtime": 1783294663.7211256,
-    "ast_hash": "623d67769f59b3518e509ad344f22539",
+    "mtime": 1783295611.896401,
+    "ast_hash": "5254b89deff8c561f1c49f5f9c7907b1",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/50_Database.md": {
-    "mtime": 1783294663.7541223,
-    "ast_hash": "cbb3beee491aea7d252fa6b2fd6eb431",
+    "mtime": 1783295611.8974009,
+    "ast_hash": "2238c146d176b2ad862a985415dd2b01",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/60_API.md": {
@@ -705,8 +705,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/80_Frontend.md": {
-    "mtime": 1783294663.756122,
-    "ast_hash": "bbb3986da721e69e02cb97bda3485642",
+    "mtime": 1783295611.8984008,
+    "ast_hash": "19db678909dc52abaf38bf8f456565cb",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/90_Events.md": {
@@ -720,8 +720,8 @@
     "semantic_hash": ""
   },
   "docs/03_Workflows/10_Registration.md": {
-    "mtime": 1783234682.4418566,
-    "ast_hash": "8acacc3f7c03144dae7be0321847e188",
+    "mtime": 1783295611.8994007,
+    "ast_hash": "60cd7f5d8291e9617ed1470e0ca403bb",
     "semantic_hash": ""
   },
   "docs/03_Workflows/20_Campaign_PPV.md": {

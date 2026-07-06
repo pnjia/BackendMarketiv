@@ -11,7 +11,7 @@ Alur pesanan rate card dengan escrow: UMKM menemukan creator, lalu memesan langs
 - [Offers](../02_Modules/Offers/00_Index.md) — custom offer & accept/reject (untuk jalur Custom Offer).
 - [Orders](../02_Modules/Orders/00_Index.md) — aggregate order, deliverable, revisi.
 - [Users](../02_Modules/Users/00_Index.md) — file manager & storage kuota (upload deliverable).
-- [Payments](../02_Modules/Payments/00_Index.md) — payment gateway, escrow, wallet, transaksi.
+- [Payments](../02_Modules/Payments/00_Index.md) — Midtrans payment gateway, escrow, wallet, transaksi.
 - [Notifications](../02_Modules/Notifications/00_Index.md) — notifikasi di setiap tahap.
 
 ## Trigger
@@ -46,9 +46,11 @@ UMKM buka `Creator Discovery` → profil creator → lihat rate card → pilih j
 3. **RateCards** — Pilih paket → klik "Pesan".
 4. **Orders** — Sistem buat `orders`: `{ umkmId, creatorId, packageId, amount: package.price, status: 'pending_payment' }`.
 5. **Notifications** — Notifikasi ke UMKM: "Order menunggu pembayaran".
-6. **Payments** — UMKM bayar via payment gateway:
+6. **Payments** — UMKM bayar via Midtrans:
    - Input: amount sesuai harga paket.
-   - Payment sukses → `payments.status: pending → paid`.
+   - Appwrite Function `create-payment` membuat transaksi Midtrans dan mengembalikan `snapToken`/`redirectUrl`.
+   - UMKM menyelesaikan pembayaran di Midtrans.
+   - Webhook `midtrans-webhook` tervalidasi → `payments.status: pending → paid`.
 6b. **Frontend** — UMKM melihat **modal sukses**:
    - Title: "Pembayaran Berhasil!"
    - Body: "Pesanan #{orderId} sedang diproses. Tunggu Creator mengirimkan deliverable."

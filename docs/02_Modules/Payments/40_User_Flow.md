@@ -5,7 +5,11 @@
 ```text
 UMKM checkout order (pending_payment)
 ↓
-Bayar → payment success
+Buat payment Midtrans → redirect/Snap token
+↓
+UMKM bayar di Midtrans
+↓
+Webhook Midtrans tervalidasi → payment success
 ↓
 Escrow hold → dana ditahan
 ↓
@@ -38,7 +42,11 @@ Klik "Top Up"
 ↓
 Input amount
 ↓
-Bayar via payment gateway
+Buat payment Midtrans → redirect/Snap token
+↓
+UMKM bayar di Midtrans
+↓
+Webhook Midtrans tervalidasi
 ↓
 Saldo bertambah (deposit transaction)
 ```

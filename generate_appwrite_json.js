@@ -281,6 +281,32 @@ const collections = [
         ]
     },
     {
+        $id: "payments",
+        name: "Payments",
+        $permissions: ["read(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("user_id", true),
+            createStringAttr("order_id", false),
+            createIntAttr("amount", true),
+            createStringAttr("purpose", true, 50),
+            createStringAttr("gateway", true, 50, "midtrans"),
+            createStringAttr("gateway_reference", true, 255),
+            createStringAttr("snap_token", false, 255),
+            createStringAttr("redirect_url", false, 2048),
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("paid_at", false)
+        ],
+        indexes: [
+            createIndex("idx_gateway_reference", "unique", ["gateway_reference"]),
+            createIndex("idx_order_id", "key", ["order_id"]),
+            createIndex("idx_user_id", "key", ["user_id"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_purpose", "key", ["purpose"])
+        ]
+    },
+    {
         $id: "wallet_transactions",
         name: "Wallet Transactions",
         $permissions: ["read(\"users\")", "create(\"users\")", "update(\"users\")"],
@@ -445,11 +471,39 @@ const functions = [
         path: "functions/create-order"
     },
     {
+        $id: "create-payment",
+        name: "Create Payment",
+        runtime: "node-18.0",
+        execute: ["users"],
+        events: [],
+        schedule: "",
+        timeout: 30,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/create-payment"
+    },
+    {
+        $id: "midtrans-webhook",
+        name: "Midtrans Webhook",
+        runtime: "node-18.0",
+        execute: ["any"],
+        events: [],
+        schedule: "",
+        timeout: 30,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/midtrans-webhook"
+    },
+    {
         $id: "create-escrow",
         name: "Create Escrow",
         runtime: "node-18.0",
         execute: [],
-        events: [], // Assumed webhook or custom triggered
+        events: ["databases.marketiv_db.collections.payments.documents.*.update"],
         schedule: "",
         timeout: 15,
         enabled: true,

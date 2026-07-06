@@ -1,5 +1,14 @@
 # Payments — Business Rules
 
+## Payment Gateway
+
+- Marketiv menggunakan **Midtrans** sebagai payment gateway resmi untuk MVP.
+- Frontend tidak boleh memanggil Midtrans menggunakan secret key; semua request pembuatan transaksi dilakukan lewat Appwrite Function.
+- Payment order/top up dibuat dengan status awal `pending` dan `gateway = midtrans`.
+- `gatewayReference` harus berisi `order_id` Midtrans dan unik untuk mencegah duplikasi webhook.
+- Status `paid` hanya boleh diset oleh Appwrite Function setelah signature webhook Midtrans valid dan nominal pembayaran sesuai.
+- Webhook Midtrans harus idempotent: notifikasi berulang untuk `gatewayReference` yang sama tidak boleh menggandakan escrow, deposit, atau transaksi ledger.
+
 ## Balance vs Pending Balance
 
 - `balance` — saldo tersedia, dapat ditarik (withdraw).

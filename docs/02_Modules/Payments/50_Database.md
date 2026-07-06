@@ -1,6 +1,6 @@
 # Payments — Database
 
-Sumber kebenaran skema koleksi milik modul Payments. Satu fakta = satu lokasi. Escrow & transactions sengaja **dipisah**.
+Sumber kebenaran skema koleksi milik modul Payments. Satu fakta = satu lokasi. Payments, escrow & transactions sengaja **dipisah**.
 
 ---
 
@@ -17,6 +17,29 @@ Satu wallet per user. Relasi: User (1) → Wallet (1); Wallet (1) → Transactio
 **Index**: `userId (unique)`.
 
 **Permission**: Owner read · Admin write (user tidak boleh ubah saldo sendiri).
+
+---
+
+## payments
+
+Payment intent lokal untuk pembayaran yang diproses oleh Midtrans. Relasi: Order (0..1) → Payment (1), User/UMKM (1) → Payments (N).
+
+| Attribute        | Type    | Required | Catatan                                                       |
+| ---------------- | ------- | -------- | ------------------------------------------------------------- |
+| userId           | string  | yes      | FK → users, pembayar                                          |
+| orderId          | string  | no       | FK → orders untuk pembayaran order                            |
+| amount           | integer | yes      | nominal dalam Rupiah                                          |
+| purpose          | enum    | yes      | `order\|topup`                                                |
+| gateway          | enum    | yes      | `midtrans`                                                    |
+| gatewayReference | string  | yes      | `order_id` Midtrans, unik                                     |
+| snapToken        | string  | no       | token Snap Midtrans                                           |
+| redirectUrl      | string  | no       | URL pembayaran Midtrans                                       |
+| status           | enum    | yes      | `pending\|paid\|failed\|expired\|cancelled`                 |
+| paidAt           | datetime| no       | waktu status berubah ke `paid`                                |
+
+**Index**: `gatewayReference (unique)`, `orderId`, `userId`, `status`, `purpose`, `createdAt DESC`.
+
+**Permission**: Owner read · System write · Admin read.
 
 ---
 

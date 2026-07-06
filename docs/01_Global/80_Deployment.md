@@ -19,8 +19,10 @@ NEXT_PUBLIC_CREATOR_COLLECTION=
 NEXT_PUBLIC_CAMPAIGN_COLLECTION=
 NEXT_PUBLIC_ORDER_COLLECTION=
 NEXT_PUBLIC_WALLET_COLLECTION=
+NEXT_PUBLIC_PAYMENT_COLLECTION=
 NEXT_PUBLIC_STORAGE_BUCKET=
 NEXT_PUBLIC_AI_FUNCTION_ID=
+NEXT_PUBLIC_MIDTRANS_CLIENT_KEY=
 ```
 
 - Set semua `NEXT_PUBLIC_*` di Vercel Project Settings (Environment Variables).
@@ -38,6 +40,7 @@ NEXT_PUBLIC_AI_FUNCTION_ID=
 
 ## Deploy Appwrite Functions
 
-- Functions: `create-wallet`, `create-order`, `process-payment`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`.
-- Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)) dan secret Gemini sebagai function environment variables — tidak pernah di frontend.
-- Hubungkan function ke Appwrite Event yang relevan (mis. user registered → create-wallet, submission created → fraud-detection).
+- Functions: `create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`.
+- Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)), secret Gemini, dan Midtrans server key sebagai function environment variables — tidak pernah di frontend.
+- Env Midtrans untuk function: `MIDTRANS_SERVER_KEY`, `MIDTRANS_CLIENT_KEY`, `MIDTRANS_ENV` (`sandbox`/`production`).
+- Hubungkan function ke Appwrite Event yang relevan (mis. user registered → create-user-wallet, submission created → fraud-detection).

@@ -1,5 +1,13 @@
 # Payments — Testing
 
+## Midtrans Payment Gateway
+
+- `create-payment` membuat dokumen `payments` status `pending` dan mengembalikan `snapToken`/`redirectUrl` Midtrans.
+- Frontend tidak menerima atau menyimpan Midtrans secret key.
+- Webhook Midtrans dengan signature valid mengubah status payment menjadi `paid`.
+- Webhook Midtrans dengan signature/amount invalid ditolak dan tidak mengubah payment.
+- Webhook berulang untuk `gatewayReference` yang sama tidak menggandakan escrow, deposit, atau ledger transaction.
+
 ## Wallet
 
 - Wallet terbuat otomatis saat user register.
