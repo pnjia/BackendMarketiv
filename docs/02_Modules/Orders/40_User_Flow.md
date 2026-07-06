@@ -9,6 +9,10 @@ Order dibuat (pending_payment)
 ↓
 UMKM bayar → Payment Success
 ↓
+[Modal Sukses] "Pembayaran Berhasil!"
+↓
+Redirect ke Order Detail (/orders/{orderId})
+↓
 Escrow Hold → Order in_progress
 ↓
 Creator upload Deliverable

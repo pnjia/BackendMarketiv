@@ -32,7 +32,7 @@ Dimiliki Creator.
 
 ### Discovery Creator
 
-`searchCreators({ platform, city })` digunakan untuk menemukan creator beserta rate card-nya. Pada MVP, `platform` hanya `tiktok`. Service ini **dibagi dengan modul Users** — lihat `../Users/` (jangan diduplikasi di sini).
+`searchCreators({ city, minPrice?, maxPrice?, sortBy?, order? })` digunakan untuk menemukan creator beserta rate card-nya. Filter platform tidak ada karena MVP hanya TikTok. Service ini **dibagi dengan modul Users** — lihat `../Users/` (jangan diduplikasi di sini).
 
 ---
 

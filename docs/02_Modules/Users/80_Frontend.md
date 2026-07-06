@@ -32,7 +32,8 @@
 ### Browse Creator
 
 - Grid/list card Creator.
-- Filter: platform MVP (TikTok), kota.
+- Filter: kota, range harga (minPrice — maxPrice).
+- Sort by: harga terendah, harga tertinggi, rating tertinggi, pesanan terbanyak.
 - Search bar.
 
 ## Komponen

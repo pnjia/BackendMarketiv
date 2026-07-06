@@ -5,7 +5,7 @@ Tim 4 orang, target MVP siap soft launch dalam 6 sprint (12 minggu). Urutan impl
 ## 6 Sprint (12 Minggu)
 
 - **Sprint 1 — Foundation & Authentication**: setup Appwrite, auth, role system (UMKM/Creator/Admin), wallet otomatis saat registrasi, upload avatar/media, landing + login/register/onboarding.
-- **Sprint 2 — Creator Profile & Rate Card**: edit profil creator, TikTok social account, niche, portfolio, rate card; UMKM creator discovery (search + filter TikTok/kota).
+- **Sprint 2 — Creator Profile & Rate Card**: edit profil creator, TikTok social account, niche, portfolio, rate card; UMKM creator discovery (search + filter kota/range harga + sort by harga/rating/totalOrders).
 - **Sprint 3 — Campaign Module (Core)**: create campaign TikTok-only + upload raw video, AI Brief Assistant, budget setup; creator browse/claim/submit; status campaign & submission.
 - **Sprint 4 — Chat, Offer, Order & Escrow**: chat dasar untuk negosiasi offer, custom offer, accept offer, order creation, escrow, revision & delivery system; wallet deposit/withdraw/history.
 - **Sprint 5 — AI Fraud & Analytics**: verifikasi URL submission, view tracking, deteksi pola mencurigakan, fraud score; analytics UMKM & creator.

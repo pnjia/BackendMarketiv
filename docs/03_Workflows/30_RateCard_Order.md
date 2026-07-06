@@ -41,7 +41,7 @@ UMKM buka `Creator Discovery` → profil creator → lihat rate card → pilih j
 
 ### Step-by-step Flow
 
-1. **RateCards** — UMKM browse/search/filter creator di halaman Creator Discovery. Filter MVP: TikTok, kota, harga.
+1. **RateCards** — UMKM browse/search/filter creator di halaman Creator Discovery. Filter MVP: kota, range harga. Sort: harga terendah/tertinggi, rating tertinggi, pesanan terbanyak.
 2. **RateCards** — Buka profil creator → lihat rate card + paket yang `published`.
 3. **RateCards** — Pilih paket → klik "Pesan".
 4. **Orders** — Sistem buat `orders`: `{ umkmId, creatorId, packageId, amount: package.price, status: 'pending_payment' }`.
@@ -49,6 +49,15 @@ UMKM buka `Creator Discovery` → profil creator → lihat rate card → pilih j
 6. **Payments** — UMKM bayar via payment gateway:
    - Input: amount sesuai harga paket.
    - Payment sukses → `payments.status: pending → paid`.
+6b. **Frontend** — UMKM melihat **modal sukses**:
+   - Title: "Pembayaran Berhasil!"
+   - Body: "Pesanan #{orderId} sedang diproses. Tunggu Creator mengirimkan deliverable."
+   - Tombol: "Lihat Pesanan" → redirect ke halaman **Order Detail** (`/orders/{orderId}`).
+   - Atau auto-redirect setelah 3 detik ke Order Detail.
+6c. **Frontend** — Halaman **Order Detail** menampilkan:
+   - Status badge: `in_progress`.
+   - Informasi Creator, paket, amount.
+   - CTA: "Menunggu deliverable dari Creator..." (belum ada tombol upload/review).
 7. **Event `payments.status (pending→paid)`** memicu function **`create-escrow`**.
 8. **Payments** — Buat `escrows`: `{ orderId, amount, status: 'held' }`.
 9. **Payments** — Update wallet: `wallets.escrowBalance += amount` (dana UMKM ditahan).

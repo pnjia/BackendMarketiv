@@ -39,7 +39,7 @@ Pemesanan langsung jasa creator melalui paket layanan yang sudah ditetapkan.
 **Cara kerja:**
 
 1. **Creator** membuat **Rate Card** — etalase layanan berisi paket-paket (Basic/Standard/Premium) dengan harga, output, durasi pengerjaan, dan batas revisi.
-2. **UMKM** menemukan creator lewat discovery (filter TikTok/kota pada MVP), lalu melihat rate card-nya.
+2. **UMKM** menemukan creator lewat discovery (filter kota, range harga, sort by harga/rating/totalOrders pada MVP), lalu melihat rate card-nya.
 3. **Pemesanan** bisa melalui dua jalur:
    - **Direct Order** — UMKM langsung memesan paket rate card tanpa negosiasi.
    - **Custom Offer** — UMKM dan creator bernegosiasi via chat, lalu UMKM membuat offer khusus. Jika diterima creator, offer berubah jadi order.

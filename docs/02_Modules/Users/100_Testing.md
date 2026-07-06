@@ -26,7 +26,8 @@
 
 ## Discovery
 
-- Pencarian Creator berdasarkan platform TikTok → hasil sesuai.
 - Pencarian Creator berdasarkan kota → hasil sesuai.
+- Pencarian Creator berdasarkan range harga → hasil sesuai.
+- Sort by harga/rating/totalOrders → urutan sesuai.
 - Creator dengan profil tidak lengkap tidak muncul di discovery (opsional).
 - Data denormalisasi (`totalFollowers`, `totalOrders`, `rating`) akurat setelah event.

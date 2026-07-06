@@ -26,16 +26,25 @@ Mengelola entri `creator_social_accounts`. Pada MVP hanya `platform = "tiktok"` 
 
 ### `searchCreators(filter)` — [Client SDK]
 
-Contoh filter:
+```typescript
+type SearchFilter = {
+  city?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sortBy?: 'price_asc' | 'price_desc' | 'rating_desc' | 'orders_desc';
+};
+```
+
+Contoh:
 
 ```json
 {
-  "platform": "tiktok",
-  "city": "sukabumi"
+  "city": "sukabumi",
+  "sortBy": "rating_desc"
 }
 ```
 
-Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `creator_social_accounts` (platform, followers). Pada MVP nilai `platform` hanya `tiktok`.
+Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `rate_card_packages` (price). Filter platform tidak diperlukan karena MVP hanya TikTok.
 
 ---
 

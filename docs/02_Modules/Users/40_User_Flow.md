@@ -59,9 +59,9 @@ Hapus File
 ```text
 UMKM buka halaman Browse Creator
 ↓
-Filter: platform MVP (TikTok), kota
+Filter & Urutkan: kota, range harga, sort by harga/rating/totalOrders
 ↓
-Hasil: card Creator (avatar, name, city, rating, followers)
+Hasil: card Creator (avatar, name, city, rating, followers, harga termurah)
 ↓
 Klik profil → lihat detail + rate card
 ```

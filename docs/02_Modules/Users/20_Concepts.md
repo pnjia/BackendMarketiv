@@ -7,7 +7,7 @@
 - **Creator Profile** — profil Content Creator (display name, bio, rating, dll).
 - **Social Account** — akun media sosial Creator. Untuk MVP hanya **TikTok**; Instagram, Facebook, YouTube, dan platform lain berada di luar MVP namun tetap menjadi rencana ekspansi.
 - **Portfolio** — portofolio hasil kerja Creator.
-- **Discovery** — pencarian & filter Creator berdasarkan platform MVP (TikTok) dan kota.
+- **Discovery** — pencarian & filter Creator berdasarkan kota, range harga, dan sort by harga/rating/totalOrders.
 
 ## Konsep
 

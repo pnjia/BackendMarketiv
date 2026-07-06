@@ -4,8 +4,18 @@
 
 `draft | published`
 
-- Rate card dibuat sebagai `draft`.
-- Hanya rate card `published` yang tampil di profil & discovery.
+**Draft:**
+- Status awal saat rate card dibuat.
+- Rate card dapat diedit (title, description, packages).
+- **Tidak tampil** di profil Creator & discovery UMKM.
+- Creator dapat menyimpan draft tanpa wajib memiliki paket.
+
+**Published:**
+- Transisi dari draft → published via aksi "Publish" oleh creator.
+- **Syarat publish:** minimal 1 paket telah ditambahkan.
+- Setelah published, rate card **tampil** di profil Creator & discovery UMKM.
+- Creator masih bisa mengedit rate card yang sudah published (paket bisa ditambah/diubah).
+- Tidak ada mekanisme auto-publish; publish selalu manual oleh creator.
 
 ## Kepemilikan
 
