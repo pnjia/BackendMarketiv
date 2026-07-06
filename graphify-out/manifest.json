@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "appwrite.json": {
-    "mtime": 1783323894.485205,
-    "ast_hash": "b7f0691de1279657f49209c1780bb4b4",
+    "mtime": 1783326324.4136622,
+    "ast_hash": "7b360bfa4c364363354b995412c41c65",
     "semantic_hash": ""
   },
   "generate_appwrite_json.js": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "docs/01_Global/40_Folder_Structure.md": {
-    "mtime": 1783323960.1826785,
-    "ast_hash": "58ec11acd5a50ad9267eff672925e40c",
+    "mtime": 1783326369.9286,
+    "ast_hash": "4146375baaeaaac77a3d744343258bb5",
     "semantic_hash": ""
   },
   "docs/01_Global/50_Security_Guidelines.md": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "docs/01_Global/80_Deployment.md": {
-    "mtime": 1783323999.926761,
-    "ast_hash": "1e9041322e38fb8076c921e5e96d8c94",
+    "mtime": 1783325434.2779195,
+    "ast_hash": "ada9af42350d2404fb1860eedc436ea1",
     "semantic_hash": ""
   },
   "docs/01_Global/90_Design_System.md": {
@@ -555,8 +555,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/100_Testing.md": {
-    "mtime": 1783323836.339556,
-    "ast_hash": "709e0b4a170cf80d36b39ffe2f69e804",
+    "mtime": 1783325434.2779195,
+    "ast_hash": "e32aa819ed1d71b4538ec595f280e428",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/10_Overview.md": {
@@ -565,13 +565,13 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/20_Concepts.md": {
-    "mtime": 1783323836.3215563,
-    "ast_hash": "dd490309727e5aded6b06826b5adc32c",
+    "mtime": 1783325434.2729197,
+    "ast_hash": "5aa449061b66cf593e8a4de773eaf145",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/30_Business_Rules.md": {
-    "mtime": 1783323836.3225563,
-    "ast_hash": "ee0542ba7ba7c10245bd25654c57deb6",
+    "mtime": 1783325434.2739198,
+    "ast_hash": "de924eac60c7b8d66c605f76bdbc8ee9",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/40_User_Flow.md": {
@@ -580,18 +580,18 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/50_Database.md": {
-    "mtime": 1783323836.3245564,
-    "ast_hash": "6222787ed259b9a3c847373bb9237c33",
+    "mtime": 1783325434.2759197,
+    "ast_hash": "812ada360176b7df1c5473339be528f8",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/60_API.md": {
-    "mtime": 1783323836.336556,
-    "ast_hash": "fd66687b97f48483858dad81bd78463b",
+    "mtime": 1783325434.2769196,
+    "ast_hash": "1a8ad192736213390633b6f74705d7b4",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/70_Backend.md": {
-    "mtime": 1783323836.337556,
-    "ast_hash": "f72fbbda53e5f5abab5b10c76ee7788c",
+    "mtime": 1783325434.2769196,
+    "ast_hash": "5bef8507b154428afade38111a0b0475",
     "semantic_hash": ""
   },
   "docs/02_Modules/Payments/80_Frontend.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/70_Backend.md": {
-    "mtime": 1783314061.5082848,
-    "ast_hash": "17f722890b73299efc7047276e18ee48",
+    "mtime": 1783326386.8832045,
+    "ast_hash": "a4d37ae1e1aebaf956c9f4407918d241",
     "semantic_hash": ""
   },
   "docs/02_Modules/Users/80_Frontend.md": {
@@ -842,6 +842,46 @@
   "Cara_Baca.md": {
     "mtime": 1783152777.1658216,
     "ast_hash": "7a686ce9e3a1e011b2eda5601df7f7fc",
+    "semantic_hash": ""
+  },
+  "functions/midtrans-webhook/package.json": {
+    "mtime": 1783325359.4046059,
+    "ast_hash": "196d9007d83717b4e1d5534d3fbe71e0",
+    "semantic_hash": ""
+  },
+  "functions/midtrans-webhook/src/main.js": {
+    "mtime": 1783325543.572458,
+    "ast_hash": "ea0fd1665add8038b2eb4733c9c93e50",
+    "semantic_hash": ""
+  },
+  "functions/create-user-profile/package.json": {
+    "mtime": 1783326324.3226643,
+    "ast_hash": "c736127c5db03c6840c8b06eb25548b0",
+    "semantic_hash": ""
+  },
+  "functions/create-user-profile/src/main.js": {
+    "mtime": 1783326324.4056623,
+    "ast_hash": "14e4dd18faa0b1a7d8c320030016bc6c",
+    "semantic_hash": ""
+  },
+  "functions/delete-file/package.json": {
+    "mtime": 1783326324.411662,
+    "ast_hash": "50bfcf45d71e1765b4af2017e03d25cb",
+    "semantic_hash": ""
+  },
+  "functions/delete-file/src/main.js": {
+    "mtime": 1783326457.7605505,
+    "ast_hash": "042b892c74a0b902a3f635b92469d510",
+    "semantic_hash": ""
+  },
+  "functions/validate-and-upload/package.json": {
+    "mtime": 1783326324.4086623,
+    "ast_hash": "2953e2fa1dbdec94fe6f8dc76dbeb8d4",
+    "semantic_hash": ""
+  },
+  "functions/validate-and-upload/src/main.js": {
+    "mtime": 1783326457.7595506,
+    "ast_hash": "96b999c3e5e7360d64c9d0fbe8d57487",
     "semantic_hash": ""
   }
 }

@@ -12,6 +12,8 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 ### validate-and-upload
 
 - **Trigger**: dipanggil API `uploadFile()`.
+- **Execute**: authenticated users.
+- **Input**: `{ fileName, mimeType, sizeBytes, purpose, referenceId?, bucketId?, contentBase64 }`.
 - **Aksi**:
   1. Baca `user_storage_usage` milik user.
   2. Validasi kuota: `usedBytes + file.size ≤ quotaBytes`.
@@ -23,6 +25,8 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 ### delete-file
 
 - **Trigger**: dipanggil API `deleteFile()`.
+- **Execute**: authenticated users.
+- **Input**: `{ fileId }`.
 - **Aksi**:
   1. Validasi `user_files.$id` milik user yang memanggil.
   2. Hapus file dari Appwrite Storage.

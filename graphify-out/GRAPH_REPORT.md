@@ -1,16 +1,16 @@
 # Graph Report - BackendMarketiv  (2026-07-06)
 
 ## Corpus Check
-- 169 files · ~38,548 words
+- 177 files · ~41,019 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1121 nodes · 1141 edges · 134 communities (126 shown, 8 thin omitted)
+- 1196 nodes · 1216 edges · 148 communities (138 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cb23b38f`
+- Built from commit: `6207581b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -70,15 +70,20 @@
 - [[_COMMUNITY_Campaigns — Concepts|Campaigns — Concepts]]
 - [[_COMMUNITY_Chat — Testing|Chat — Testing]]
 - [[_COMMUNITY_Chat — Business Rules|Chat — Business Rules]]
+- [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Chat — Frontend|Chat — Frontend]]
 - [[_COMMUNITY_`notifications`|`notifications`]]
 - [[_COMMUNITY_Notifications — Backend|Notifications — Backend]]
 - [[_COMMUNITY_Offers — Business Rules|Offers — Business Rules]]
+- [[_COMMUNITY_Community 60|Community 60]]
 - [[_COMMUNITY_Komponen|Komponen]]
 - [[_COMMUNITY_Orders — Business Rules|Orders — Business Rules]]
+- [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Payments — Testing|Payments — Testing]]
 - [[_COMMUNITY_Payments — Concepts|Payments — Concepts]]
 - [[_COMMUNITY_Payments — Business Rules|Payments — Business Rules]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
 - [[_COMMUNITY_Rate Cards — Testing|Rate Cards — Testing]]
 - [[_COMMUNITY_Users — Testing|Users — Testing]]
 - [[_COMMUNITY_Users — Business Rules|Users — Business Rules]]
@@ -89,11 +94,14 @@
 - [[_COMMUNITY_Roadmap Pengembangan|Roadmap Pengembangan]]
 - [[_COMMUNITY_50_Security_Guidelines|50_Security_Guidelines]]
 - [[_COMMUNITY_AI — Overview|AI — Overview]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
 - [[_COMMUNITY_Komponen|Komponen]]
 - [[_COMMUNITY_AI — Events|AI — Events]]
 - [[_COMMUNITY_Authentication — Overview|Authentication — Overview]]
 - [[_COMMUNITY_Authentication — User Flow|Authentication — User Flow]]
 - [[_COMMUNITY_Campaigns — Overview|Campaigns — Overview]]
+- [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Chat — Overview|Chat — Overview]]
 - [[_COMMUNITY_Chat — User Flow|Chat — User Flow]]
 - [[_COMMUNITY_Chat — Events|Chat — Events]]
@@ -104,8 +112,11 @@
 - [[_COMMUNITY_Offers — Testing|Offers — Testing]]
 - [[_COMMUNITY_Offers — Overview|Offers — Overview]]
 - [[_COMMUNITY_Offers — Concepts|Offers — Concepts]]
+- [[_COMMUNITY_Community 99|Community 99]]
 - [[_COMMUNITY_Orders — Overview|Orders — Overview]]
 - [[_COMMUNITY_Orders — Concepts|Orders — Concepts]]
+- [[_COMMUNITY_Community 102|Community 102]]
+- [[_COMMUNITY_Community 103|Community 103]]
 - [[_COMMUNITY_Payments — Overview|Payments — Overview]]
 - [[_COMMUNITY_Payments — User Flow|Payments — User Flow]]
 - [[_COMMUNITY_Rate Cards — Overview|Rate Cards — Overview]]
@@ -119,6 +130,7 @@
 - [[_COMMUNITY_ADR-001 — Gunakan Appwrite BaaS, Bukan Backend Custom|ADR-001 — Gunakan Appwrite BaaS, Bukan Backend Custom]]
 - [[_COMMUNITY_ADR-002 — Abstraksi Service Layer Wajib|ADR-002 — Abstraksi Service Layer Wajib]]
 - [[_COMMUNITY_ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux|ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux]]
+- [[_COMMUNITY_Community 121|Community 121]]
 - [[_COMMUNITY_Domain Model — ERD Tingkat Tinggi|Domain Model — ERD Tingkat Tinggi]]
 - [[_COMMUNITY_AI — Testing|AI — Testing]]
 - [[_COMMUNITY_AI — Concepts|AI — Concepts]]
@@ -126,12 +138,13 @@
 - [[_COMMUNITY_Authentication — Concepts|Authentication — Concepts]]
 - [[_COMMUNITY_Campaigns — User Flow|Campaigns — User Flow]]
 - [[_COMMUNITY_Chat — Concepts|Chat — Concepts]]
+- [[_COMMUNITY_Community 129|Community 129]]
 - [[_COMMUNITY_Notifications — Concepts|Notifications — Concepts]]
 - [[_COMMUNITY_Notifications — User Flow|Notifications — User Flow]]
 - [[_COMMUNITY_Orders — User Flow|Orders — User Flow]]
 - [[_COMMUNITY_Rate Cards — User Flow|Rate Cards — User Flow]]
+- [[_COMMUNITY_Community 134|Community 134]]
 - [[_COMMUNITY_Users — Concepts|Users — Concepts]]
-- [[_COMMUNITY_AI — Database|AI — Database]]
 - [[_COMMUNITY_Notifications — Events|Notifications — Events]]
 - [[_COMMUNITY_Offers — User Flow|Offers — User Flow]]
 - [[_COMMUNITY_Community 150|Community 150]]
@@ -155,7 +168,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (134 total, 8 thin omitted)
+## Communities (148 total, 10 thin omitted)
 
 ### Community 0 - "00_Index.md"
 Cohesion: 0.05
@@ -178,8 +191,8 @@ Cohesion: 0.25
 Nodes (8): `addCampaignAsset()` — [Client SDK], Campaign Service, `createCampaign()` — [Client SDK], `generateBrief()` — [Client SDK] *(memanggil Appwrite Function `ai-brief` di belakang)*, `getCampaignById()` — [Client SDK], `getCampaigns(filter)` — [Client SDK], `publishCampaign()` — [Client SDK], `removeCampaignAsset()` — [Client SDK]
 
 ### Community 5 - "30_RateCard_Order.md"
-Cohesion: 0.06
-Nodes (27): 10_Glossary, Aktor, Campaign & Konten, Finansial, Fraud, 02 — Modules, Daftar Modul, Lihat Juga (+19 more)
+Cohesion: 0.20
+Nodes (6): Daftar Dokumen, Modul AI, Daftar Dokumen, Modul Orders, Daftar Dokumen, Modul Payments
 
 ### Community 6 - "20_Campaign_PPV.md"
 Cohesion: 0.50
@@ -189,13 +202,13 @@ Nodes (4): Dikecualikan dari MVP, Referensi, Ruang Lingkup MVP, Termasuk dalam M
 Cohesion: 0.17
 Nodes (12): 40_Folder_Structure, Appwrite Config (`src/lib/appwrite/`), Appwrite Functions (`functions/`), Environment Variables, Modules (`src/modules/`), Service Layer (`src/services/`), Shared Components (`src/components/`), Stack (+4 more)
 
-### Community 8 - "00_Index.md"
-Cohesion: 0.27
-Nodes (4): Authentication, Dokumen, Aturan Backend, Payments — Backend
-
 ### Community 9 - "generate_appwrite_json.js"
 Cohesion: 0.17
 Nodes (5): appwriteJson, buckets, collections, fs, functions
+
+### Community 11 - "00_Index.md"
+Cohesion: 0.24
+Nodes (4): 00_Project — Index, Daftar Dokumen, 04_Decisions — Index, Daftar ADR
 
 ### Community 12 - "90_Design_System"
 Cohesion: 0.20
@@ -225,6 +238,10 @@ Nodes (8): Create/Edit Rate Card, Creator Profile, Discovery / Browse Creators, 
 Cohesion: 0.25
 Nodes (4): Aturan Backend, Backend Helpers, Campaigns — Backend, upload-campaign-asset
 
+### Community 19 - "00_Index.md"
+Cohesion: 0.26
+Nodes (4): AI — Database, ai_requests, Dokumen, Users
+
 ### Community 20 - "Authentication — Business Rules"
 Cohesion: 0.33
 Nodes (6): Authentication — Business Rules, Data Registrasi per Role, Google OAuth, Lihat Juga, Reset Password, Role & Routing
@@ -250,8 +267,8 @@ Cohesion: 0.22
 Nodes (9): Appwrite Functions (Server-side), `createNotification()` — [Internal/System], `getNotifications()` — [Client SDK], Lihat Juga, `markAllAsRead()` — [Client SDK], `markAsRead()` — [Client SDK], Notifications — API, Service Layer (Client SDK) (+1 more)
 
 ### Community 26 - "Appwrite Functions"
-Cohesion: 0.29
-Nodes (7): Appwrite Functions, create-escrow, create-payment, create-user-wallet, midtrans-webhook, process-withdrawal (Admin), release-escrow
+Cohesion: 0.22
+Nodes (9): Appwrite Functions, Aturan Backend, create-escrow, create-payment, create-user-wallet, midtrans-webhook, Payments — Backend, process-withdrawal (Admin) (+1 more)
 
 ### Community 27 - "Halaman"
 Cohesion: 0.25
@@ -361,6 +378,10 @@ Nodes (6): Chat — Testing, Conversation, Di Luar MVP, Offer dari Chat, Pesan, 
 Cohesion: 0.08
 Nodes (22): Attachment Terbatas, Chat — Business Rules, Denormalisasi, Realtime & Akses, Satu Percakapan per Pasangan, Tipe Pesan, Chat — Database, conversations (+14 more)
 
+### Community 55 - "Community 55"
+Cohesion: 0.17
+Nodes (3): isValidSignature(), TERMINAL_STATUSES, timingSafeEqual()
+
 ### Community 56 - "Chat — Frontend"
 Cohesion: 0.33
 Nodes (5): Chat — Frontend, Chat List, Chat Room, Halaman, Komponen
@@ -377,6 +398,10 @@ Nodes (5): Appwrite Functions, Arsitektur, Integrasi Eksternal, Notifications �
 Cohesion: 0.08
 Nodes (20): Accept → Create Order, Field, Kepemilikan, Offers — Business Rules, Status Offer, offers, Offers — Database, `acceptOffer()` — [Client SDK] *(memicu Appwrite Function `create-order`)* (+12 more)
 
+### Community 60 - "Community 60"
+Cohesion: 0.15
+Nodes (5): ALLOWED_MIME_PREFIXES, ALLOWED_MIME_TYPES, ALLOWED_PURPOSES, isAllowedMimeType(), validatePayload()
+
 ### Community 61 - "Komponen"
 Cohesion: 0.33
 Nodes (5): Komponen, OfferCard, OfferForm, Offers — Frontend, OfferStatusBadge
@@ -384,6 +409,10 @@ Nodes (5): Komponen, OfferCard, OfferForm, Offers — Frontend, OfferStatusBadge
 ### Community 62 - "Orders — Business Rules"
 Cohesion: 0.06
 Nodes (31): Approve → Release Escrow, Deliverable, Orders — Business Rules, Revisi, Status Order, deliverables, orders, Orders — Database (+23 more)
+
+### Community 63 - "Community 63"
+Cohesion: 0.26
+Nodes (6): ensureCreatorProfile(), ensureStorageUsage(), ensureUmkmProfile(), ensureUserMirror(), findByUserId(), publicOwnerPermissions()
 
 ### Community 64 - "Payments — Testing"
 Cohesion: 0.29
@@ -396,6 +425,14 @@ Nodes (6): Istilah, Konsep, Payments — Concepts, Status Escrow, Status Payment
 ### Community 66 - "Payments — Business Rules"
 Cohesion: 0.06
 Nodes (32): Balance vs Pending Balance, Escrow, Payment Gateway, Payments — Business Rules, Tipe Transaksi, Withdraw, escrows, payments (+24 more)
+
+### Community 67 - "Community 67"
+Cohesion: 0.29
+Nodes (6): dependencies, node-appwrite, main, name, type, version
+
+### Community 68 - "Community 68"
+Cohesion: 0.33
+Nodes (5): 10_Glossary, Aktor, Campaign & Konten, Finansial, Fraud
 
 ### Community 70 - "Rate Cards — Testing"
 Cohesion: 0.33
@@ -414,15 +451,15 @@ Cohesion: 0.15
 Nodes (13): `addSocialAccount()` — [Client SDK], Appwrite Functions (Server-side), `deleteFile()` — [Client SDK], `getMyFiles(filter)` — [Client SDK], `getProfile(userId)` — [Client SDK], `getStorageUsage()` — [Client SDK], Lihat Juga, `removeSocialAccount()` — [Client SDK] (+5 more)
 
 ### Community 74 - "ADR-003 — `orders` sebagai Aggregate Utama Alur Rate Card"
-Cohesion: 0.20
-Nodes (7): 04_Decisions — Index, Daftar ADR, ADR-003 — `orders` sebagai Aggregate Utama Alur Rate Card, Consequences, Context, Decision, Status
+Cohesion: 0.33
+Nodes (5): ADR-003 — `orders` sebagai Aggregate Utama Alur Rate Card, Consequences, Context, Decision, Status
 
 ### Community 75 - "ADR-004 — Pisahkan `fraud_checks` dari `campaign_submissions`"
 Cohesion: 0.33
 Nodes (5): ADR-004 — Pisahkan `fraud_checks` dari `campaign_submissions`, Consequences, Context, Decision, Status
 
 ### Community 76 - "ADR-005 — Simpan Counter Denormalisasi di `campaigns`"
-Cohesion: 0.40
+Cohesion: 0.33
 Nodes (5): ADR-005 — Simpan Counter Denormalisasi di `campaigns`, Consequences, Context, Decision, Status
 
 ### Community 78 - "Roadmap Pengembangan"
@@ -436,6 +473,14 @@ Nodes (5): 50_Security_Guidelines, Function API Key Scope, Permission Matrix (CR
 ### Community 80 - "AI — Overview"
 Cohesion: 0.40
 Nodes (4): AI — Overview, Batas Tanggung Jawab, Fitur, Koleksi yang Dimiliki
+
+### Community 81 - "Community 81"
+Cohesion: 0.40
+Nodes (5): 03_Workflows — Index, Daftar Workflow, Lihat Juga, Prinsip Penulisan, Relasi Antar Workflow
+
+### Community 82 - "Community 82"
+Cohesion: 0.29
+Nodes (6): dependencies, node-appwrite, main, name, type, version
 
 ### Community 83 - "Komponen"
 Cohesion: 0.40
@@ -456,6 +501,10 @@ Nodes (7): Authentication — User Flow, Creator, Forgot Password, Lihat Juga, L
 ### Community 87 - "Campaigns — Overview"
 Cohesion: 0.40
 Nodes (4): Aktor, Alur End-to-End, Campaigns — Overview, Koleksi yang Dimiliki
+
+### Community 88 - "Community 88"
+Cohesion: 0.50
+Nodes (3): 02 — Modules, Daftar Modul, Lihat Juga
 
 ### Community 89 - "Chat — Overview"
 Cohesion: 0.40
@@ -505,6 +554,10 @@ Nodes (4): Alur, Inti, Orders — Overview, Tautan
 Cohesion: 0.40
 Nodes (4): Istilah, Konsep, Orders — Concepts, Status Order
 
+### Community 103 - "Community 103"
+Cohesion: 0.29
+Nodes (6): dependencies, node-appwrite, main, name, type, version
+
 ### Community 104 - "Payments — Overview"
 Cohesion: 0.40
 Nodes (4): Komponen, Payments — Overview, Prinsip, Tautan
@@ -534,7 +587,7 @@ Cohesion: 0.40
 Nodes (5): Collection yang Dimiliki, Ketergantungan, Lihat Juga, Ringkasan, Users — Overview
 
 ### Community 111 - "Users — User Flow"
-Cohesion: 0.40
+Cohesion: 0.33
 Nodes (5): Discovery Creator, File Manager, Onboarding Creator, Onboarding UMKM, Users — User Flow
 
 ### Community 112 - "Users — Backend"
@@ -552,6 +605,10 @@ Nodes (5): ADR-001 — Gunakan Appwrite BaaS, Bukan Backend Custom, Consequences
 ### Community 115 - "ADR-002 — Abstraksi Service Layer Wajib"
 Cohesion: 0.40
 Nodes (5): ADR-002 — Abstraksi Service Layer Wajib, Consequences, Context, Decision, Status
+
+### Community 121 - "Community 121"
+Cohesion: 0.29
+Nodes (6): dependencies, node-appwrite, main, name, type, version
 
 ### Community 122 - "Domain Model — ERD Tingkat Tinggi"
 Cohesion: 0.50
@@ -606,28 +663,28 @@ Cohesion: 0.67
 Nodes (3): Lihat Juga, Notifications — Events, Pola Implementasi
 
 ### Community 152 - "Community 152"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (5): ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux, Consequences, Context, Decision, Status
 
 ## Knowledge Gaps
-- **697 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `collections` (+692 more)
+- **721 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `name`, `version` (+716 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Campaigns — API` connect `Community 43` to `40_Tech_Stack.md`, `Community 39`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `Users — Database` connect `Users — Database` to `00_Index.md`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
-- **Why does `Workflow: Campaign Pay-Per-View (PPV)` connect `Workflow: Campaign Pay-Per-View (PPV)` to `30_RateCard_Order.md`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+- **Why does `Service Layer (Client SDK)` connect `Community 43` to `Community 40`, `Campaign Service`?**
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **What connects `$schema`, `plugin`, `@opencode-ai/plugin` to the rest of the system?**
-  _697 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _721 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `00_Index.md` be split into smaller, more focused modules?**
   _Cohesion score 0.04521276595744681 - nodes in this community are weakly interconnected._
 - **Should `AGENTS.md` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Users — Database` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
-- **Should `README.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._

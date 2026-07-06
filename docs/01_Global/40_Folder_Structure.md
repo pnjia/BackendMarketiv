@@ -65,7 +65,7 @@ Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Mod
 
 ## Appwrite Functions (`functions/`)
 
-`create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
+`create-user-profile`, `validate-and-upload`, `delete-file`, `create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
 
 ## Storage Buckets (`storage/`)
 

@@ -1704,6 +1704,54 @@
   ],
   "functions": [
     {
+      "$id": "create-user-profile",
+      "name": "Create User Profile",
+      "runtime": "node-18.0",
+      "execute": [],
+      "events": [
+        "users.*.create"
+      ],
+      "schedule": "",
+      "timeout": 15,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "functions/create-user-profile"
+    },
+    {
+      "$id": "validate-and-upload",
+      "name": "Validate and Upload",
+      "runtime": "node-18.0",
+      "execute": [
+        "users"
+      ],
+      "events": [],
+      "schedule": "",
+      "timeout": 30,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "functions/validate-and-upload"
+    },
+    {
+      "$id": "delete-file",
+      "name": "Delete File",
+      "runtime": "node-18.0",
+      "execute": [
+        "users"
+      ],
+      "events": [],
+      "schedule": "",
+      "timeout": 15,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "functions/delete-file"
+    },
+    {
       "$id": "create-user-wallet",
       "name": "Create User Wallet",
       "runtime": "node-18.0",

@@ -43,4 +43,5 @@ NEXT_PUBLIC_MIDTRANS_CLIENT_KEY=
 - Functions: `create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`.
 - Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)), secret Gemini, dan Midtrans server key sebagai function environment variables — tidak pernah di frontend.
 - Env Midtrans untuk function: `MIDTRANS_SERVER_KEY`, `MIDTRANS_CLIENT_KEY`, `MIDTRANS_ENV` (`sandbox`/`production`).
+- Env Appwrite untuk function webhook: `APPWRITE_API_KEY`, `APPWRITE_DATABASE_ID`, `PAYMENTS_COLLECTION_ID`.
 - Hubungkan function ke Appwrite Event yang relevan (mis. user registered → create-user-wallet, submission created → fraud-detection).

@@ -6,7 +6,8 @@
 - Frontend tidak menerima atau menyimpan Midtrans secret key.
 - Webhook Midtrans dengan signature valid mengubah status payment menjadi `paid`.
 - Webhook Midtrans dengan signature/amount invalid ditolak dan tidak mengubah payment.
-- Webhook berulang untuk `gatewayReference` yang sama tidak menggandakan escrow, deposit, atau ledger transaction.
+- Webhook berulang untuk `gateway_reference` yang sama tidak menggandakan escrow, deposit, atau ledger transaction.
+- Webhook untuk payment yang sudah final tidak menurunkan status payment.
 
 ## Wallet
 

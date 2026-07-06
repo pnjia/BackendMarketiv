@@ -26,18 +26,18 @@ Payment intent lokal untuk pembayaran yang diproses oleh Midtrans. Relasi: Order
 
 | Attribute        | Type    | Required | Catatan                                                       |
 | ---------------- | ------- | -------- | ------------------------------------------------------------- |
-| userId           | string  | yes      | FK → users, pembayar                                          |
-| orderId          | string  | no       | FK → orders untuk pembayaran order                            |
+| user_id          | string  | yes      | FK → users, pembayar                                          |
+| order_id         | string  | no       | FK → orders untuk pembayaran order                            |
 | amount           | integer | yes      | nominal dalam Rupiah                                          |
 | purpose          | enum    | yes      | `order\|topup`                                                |
 | gateway          | enum    | yes      | `midtrans`                                                    |
-| gatewayReference | string  | yes      | `order_id` Midtrans, unik                                     |
-| snapToken        | string  | no       | token Snap Midtrans                                           |
-| redirectUrl      | string  | no       | URL pembayaran Midtrans                                       |
+| gateway_reference| string  | yes      | `order_id` Midtrans, unik                                     |
+| snap_token       | string  | no       | token Snap Midtrans                                           |
+| redirect_url     | string  | no       | URL pembayaran Midtrans                                       |
 | status           | enum    | yes      | `pending\|paid\|failed\|expired\|cancelled`                 |
-| paidAt           | datetime| no       | waktu status berubah ke `paid`                                |
+| paid_at          | datetime| no       | waktu status berubah ke `paid`                                |
 
-**Index**: `gatewayReference (unique)`, `orderId`, `userId`, `status`, `purpose`, `createdAt DESC`.
+**Index**: `gateway_reference (unique)`, `order_id`, `user_id`, `status`, `purpose`, `createdAt DESC`.
 
 **Permission**: Owner read · System write · Admin read.
 

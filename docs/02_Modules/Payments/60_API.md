@@ -36,7 +36,7 @@ Payment dibuat lewat Appwrite Function agar Midtrans secret key tidak pernah kel
   - Jika `purpose = order`, `orderId` wajib dan order harus milik UMKM yang login dengan status `pending_payment`.
   - Amount harus sama dengan nilai order untuk payment order.
 - **Proses**:
-  - Buat dokumen `payments` dengan `gateway = midtrans`, `status = pending`, dan `gatewayReference` unik.
+  - Buat dokumen `payments` dengan `gateway = midtrans`, `status = pending`, dan `gateway_reference` unik.
   - Buat transaksi ke Midtrans dari server.
   - Simpan `snapToken` dan/atau `redirectUrl` dari Midtrans.
 - **Output**: `{ paymentId, gateway: 'midtrans', snapToken, redirectUrl, status: 'pending' }`
@@ -57,7 +57,7 @@ Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud** dan dipicu oleh **event da
 ### `midtrans-webhook` — [Appwrite Function]
 
 - **Trigger**: HTTP webhook/notification dari Midtrans.
-- **Validasi**: signature Midtrans, `gatewayReference`, amount, dan status transaksi.
+- **Validasi**: signature Midtrans (`SHA512(order_id + status_code + gross_amount + MIDTRANS_SERVER_KEY)`), `gateway_reference`, amount, dan status transaksi.
 - **Aksi**: update `payments.status` dari `pending` menjadi `paid | failed | expired | cancelled` secara idempotent.
 - **Catatan**: function ini adalah satu-satunya jalur untuk menandai payment sebagai `paid`.
 

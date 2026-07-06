@@ -25,7 +25,7 @@
 
 - Satu user = satu wallet.
 - Satu pembayaran order/top up = satu dokumen `payments` dengan `gateway = midtrans`.
-- `gatewayReference` menyimpan `order_id` Midtrans dan harus unik.
+- `gateway_reference` menyimpan `order_id` Midtrans dan harus unik.
 - Payment dianggap sukses hanya setelah webhook Midtrans tervalidasi dan status internal berubah menjadi `paid`.
 - Escrow & transactions dipisah secara skema (domain sensitif vs ledger).
 - User tidak bisa mengubah saldo sendiri; mutasi hanya oleh sistem/admin.
