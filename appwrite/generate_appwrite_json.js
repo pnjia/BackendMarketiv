@@ -199,6 +199,7 @@ const collections = [
         indexes: [
             createIndex("idx_umkm_id", "key", ["umkm_id"]),
             createIndex("idx_creator_id", "key", ["creator_id"]),
+            createIndex("idx_umkm_creator", "unique", ["umkm_id", "creator_id"]),
             createIndex("idx_offer_id", "key", ["offer_id"])
         ]
     },
@@ -213,7 +214,11 @@ const collections = [
             createStringAttr("sender_id", true),
             createStringAttr("message_type", true, 50),
             createStringAttr("content", false, 2000),
-            createStringAttr("attachment_url", false, 2048)
+            createStringAttr("offer_id", false, 255),
+            createStringAttr("attachment_url", false, 2048),
+            createStringAttr("attachment_name", false, 255),
+            createIntAttr("attachment_size", false),
+            createStringAttr("attachment_mime", false, 255)
         ],
         indexes: [
             createIndex("idx_conversation_id", "key", ["conversation_id"]),
@@ -371,6 +376,26 @@ const collections = [
             createIndex("idx_userId", "key", ["userId"]),
             createIndex("idx_status", "key", ["status"]),
             createIndex("idx_payoutMethod", "key", ["payoutMethod"])
+        ]
+    },
+    {
+        $id: "notifications",
+        name: "Notifications",
+        $permissions: [],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("userId", true),
+            createStringAttr("title", true, 255),
+            createStringAttr("message", true, 1000),
+            createStringAttr("type", true, 50),
+            createBoolAttr("isRead", false, false),
+            createDatetimeAttr("createdAt", true)
+        ],
+        indexes: [
+            createIndex("idx_userId", "key", ["userId"]),
+            createIndex("idx_isRead", "key", ["isRead"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
         ]
     }
 ];
@@ -631,6 +656,20 @@ const functions = [
         entrypoint: "src/main.js",
         commands: "npm install",
         path: "../functions/release-escrow"
+    },
+    {
+        $id: "send-chat-notification",
+        name: "Send Chat Notification",
+        runtime: "node-18.0",
+        execute: [],
+        events: [`databases.${databaseId}.collections.messages.documents.*.create`],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "../functions/send-chat-notification"
     }
 ];
 

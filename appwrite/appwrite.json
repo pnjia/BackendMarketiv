@@ -844,6 +844,19 @@
           ]
         },
         {
+          "key": "idx_umkm_creator",
+          "type": "unique",
+          "status": "available",
+          "orders": [
+            "ASC",
+            "ASC"
+          ],
+          "columns": [
+            "umkm_id",
+            "creator_id"
+          ]
+        },
+        {
           "key": "idx_offer_id",
           "type": "key",
           "status": "available",
@@ -901,11 +914,42 @@
           "default": null
         },
         {
+          "key": "offer_id",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
           "key": "attachment_url",
           "type": "string",
           "required": false,
           "array": false,
           "size": 2048,
+          "default": null
+        },
+        {
+          "key": "attachment_name",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "attachment_size",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "attachment_mime",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
           "default": null
         }
       ],
@@ -1696,6 +1740,97 @@
           ]
         }
       ]
+    },
+    {
+      "$id": "notifications",
+      "name": "Notifications",
+      "$permissions": [],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "userId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "title",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "message",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 1000,
+          "default": null
+        },
+        {
+          "key": "type",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "isRead",
+          "type": "boolean",
+          "required": false,
+          "array": false,
+          "default": false
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "array": false,
+          "default": null
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_userId",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "userId"
+          ]
+        },
+        {
+          "key": "idx_isRead",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "isRead"
+          ]
+        },
+        {
+          "key": "idx_createdAt",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "DESC"
+          ],
+          "columns": [
+            "createdAt"
+          ]
+        }
+      ]
     }
   ],
   "buckets": [
@@ -2020,6 +2155,22 @@
       "entrypoint": "src/main.js",
       "commands": "npm install",
       "path": "../functions/release-escrow"
+    },
+    {
+      "$id": "send-chat-notification",
+      "name": "Send Chat Notification",
+      "runtime": "node-18.0",
+      "execute": [],
+      "events": [
+        "databases.6a4c8598001da3b0d7f0.collections.messages.documents.*.create"
+      ],
+      "schedule": "",
+      "timeout": 15,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "../functions/send-chat-notification"
     }
   ]
 }
