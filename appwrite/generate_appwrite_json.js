@@ -3,22 +3,23 @@ const path = require('path');
 
 const appwriteJsonPath = path.join(__dirname, 'appwrite.json');
 
-const databaseId = "6a3110bf000de5a04844";
+const databaseId = "6a4c8598001da3b0d7f0";
+const databaseName = "prod_marketiv_db";
 
 const createStringAttr = (key, required = false, size = 255, def = null, array = false) => ({
-    key, type: "string", status: "available", required, array, size, default: def
+    key, type: "string", required, array, size, default: def
 });
 const createIntAttr = (key, required = false, def = null, array = false) => ({
-    key, type: "integer", status: "available", required, array, default: def
+    key, type: "integer", required, array, default: def
 });
 const createFloatAttr = (key, required = false, def = null, array = false) => ({
-    key, type: "double", status: "available", required, array, default: def
+    key, type: "double", required, array, default: def
 });
 const createBoolAttr = (key, required = false, def = null, array = false) => ({
-    key, type: "boolean", status: "available", required, array, default: def
+    key, type: "boolean", required, array, default: def
 });
 const createDatetimeAttr = (key, required = false, array = false) => ({
-    key, type: "datetime", status: "available", required, array
+    key, type: "datetime", required, array, default: null
 });
 
 const createIndex = (key, type, attributes, orders = []) => {
@@ -276,8 +277,8 @@ const collections = [
         enabled: true,
         attributes: [
             createStringAttr("userId", true),
-            createIntAttr("balance", true, 0),
-            createIntAttr("pendingBalance", true, 0)
+            createIntAttr("balance", false, 0),
+            createIntAttr("pendingBalance", false, 0)
         ],
         indexes: [
             createIndex("idx_userId", "unique", ["userId"])
@@ -294,7 +295,7 @@ const collections = [
             createStringAttr("order_id", false),
             createIntAttr("amount", true),
             createStringAttr("purpose", true, 50),
-            createStringAttr("gateway", true, 50, "midtrans"),
+            createStringAttr("gateway", false, 50, "midtrans"),
             createStringAttr("gateway_reference", true, 255),
             createStringAttr("snap_token", false, 255),
             createStringAttr("redirect_url", false, 2048),
@@ -373,6 +374,21 @@ const collections = [
         ]
     }
 ];
+
+const tables = collections.map((collection) => {
+    const { documentSecurity, attributes = [], indexes = [], ...table } = collection;
+
+    return {
+        ...table,
+        databaseId,
+        rowSecurity: documentSecurity,
+        columns: attributes,
+        indexes: indexes.map(({ attributes: indexAttributes, ...index }) => ({
+            ...index,
+            columns: indexAttributes
+        }))
+    };
+});
 
 const buckets = [
     {
@@ -474,7 +490,7 @@ const functions = [
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/create-user-profile"
+        path: "../functions/create-user-profile"
     },
     {
         $id: "validate-and-upload",
@@ -488,7 +504,7 @@ const functions = [
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/validate-and-upload"
+        path: "../functions/validate-and-upload"
     },
     {
         $id: "delete-file",
@@ -502,7 +518,7 @@ const functions = [
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/delete-file"
+        path: "../functions/delete-file"
     },
     {
         $id: "create-user-wallet",
@@ -516,49 +532,49 @@ const functions = [
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/create-user-wallet"
+        path: "../functions/create-user-wallet"
     },
     {
         $id: "campaign-published",
         name: "Campaign Published",
         runtime: "node-18.0",
         execute: [],
-        events: ["databases.marketiv_db.collections.campaigns.documents.*.update"],
+        events: [`databases.${databaseId}.collections.campaigns.documents.*.update`],
         schedule: "",
         timeout: 15,
         enabled: true,
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/campaign-published"
+        path: "../functions/campaign-published"
     },
     {
         $id: "ai-fraud-precheck",
         name: "AI Fraud Precheck",
         runtime: "node-18.0",
         execute: [],
-        events: ["databases.marketiv_db.collections.submissions.documents.*.create"],
+        events: [`databases.${databaseId}.collections.submissions.documents.*.create`],
         schedule: "",
         timeout: 60,
         enabled: true,
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/ai-fraud-precheck"
+        path: "../functions/ai-fraud-precheck"
     },
     {
         $id: "create-order",
         name: "Create Order",
         runtime: "node-18.0",
         execute: [],
-        events: ["databases.marketiv_db.collections.offers.documents.*.update"],
+        events: [`databases.${databaseId}.collections.offers.documents.*.update`],
         schedule: "",
         timeout: 15,
         enabled: true,
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/create-order"
+        path: "../functions/create-order"
     },
     {
         $id: "create-payment",
@@ -572,7 +588,7 @@ const functions = [
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/create-payment"
+        path: "../functions/create-payment"
     },
     {
         $id: "midtrans-webhook",
@@ -586,35 +602,35 @@ const functions = [
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/midtrans-webhook"
+        path: "../functions/midtrans-webhook"
     },
     {
         $id: "create-escrow",
         name: "Create Escrow",
         runtime: "node-18.0",
         execute: [],
-        events: ["databases.marketiv_db.collections.payments.documents.*.update"],
+        events: [`databases.${databaseId}.collections.payments.documents.*.update`],
         schedule: "",
         timeout: 15,
         enabled: true,
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/create-escrow"
+        path: "../functions/create-escrow"
     },
     {
         $id: "release-escrow",
         name: "Release Escrow",
         runtime: "node-18.0",
         execute: [],
-        events: ["databases.marketiv_db.collections.deliverables.documents.*.update"],
+        events: [`databases.${databaseId}.collections.deliverables.documents.*.update`],
         schedule: "",
         timeout: 15,
         enabled: true,
         logging: true,
         entrypoint: "src/main.js",
         commands: "npm install",
-        path: "functions/release-escrow"
+        path: "../functions/release-escrow"
     }
 ];
 
@@ -634,16 +650,16 @@ try {
 const appwriteJson = {
     projectId: existingProjectId,
     projectName: existingProjectName,
-    endpoint: "https://ap-southeast-1.cloud.appwrite.io/v1",
-    databases: [
+    endpoint: "https://sgp.cloud.appwrite.io/v1",
+    tablesDB: [
         {
             $id: databaseId,
-            name: "Marketiv Database",
-            collections: collections
+            name: databaseName
         }
     ],
-    storage: buckets,
-    functions: functions
+    tables,
+    buckets,
+    functions: functions.filter((fn) => fs.existsSync(path.join(__dirname, fn.path)))
 };
 
 fs.writeFileSync(appwriteJsonPath, JSON.stringify(appwriteJson, null, 2));
