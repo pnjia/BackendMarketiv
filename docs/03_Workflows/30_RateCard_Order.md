@@ -100,7 +100,7 @@ UMKM buka `Creator Discovery` → profil creator → lihat rate card → pilih j
 ## Tahap Bersama: Deliverable & Review
 
 14. **Orders** — Creator `uploadDeliverable()`:
-    - **Internal (storage)**: via File Manager (`purpose = deliverable`, `referenceId = orderId`). File terikat kuota creator (100 MB).
+    - **Internal (storage)**: upload file via File Manager (`uploadFile({ file })`). File Manager hanya menyimpan file umum dan metadata storage; relasi ke order dicatat di `deliverables.fileId`. File terikat kuota creator (100 MB).
     - **External URL**: link Google Drive/Dropbox/CDN (`https` saja). Bebas kuota.
     - Deliverable tersimpan: `{ orderId, source, fileUrl, version: n+1, status: 'submitted' }`.
 15. **Event `deliverables.create`** memicu function **`notify-client-review`**.

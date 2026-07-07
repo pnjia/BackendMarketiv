@@ -39,7 +39,7 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 
 1. **Campaigns** — UMKM isi **Basic Info**: title, category, platforms[], description. Untuk MVP, `platforms[]` wajib hanya berisi `tiktok`.
 2. **Campaigns** — **Upload Asset** (dua opsi):
-   - **Internal (storage)**: via File Manager (`uploadFile()` dengan `purpose = campaign_asset`, `referenceId = campaignId`). File disimpan di Appwrite Storage. Metadata di `user_files` + `campaign_assets` (`source = storage`). Terikat kuota 100 MB user.
+   - **Internal (storage)**: upload file via File Manager (`uploadFile({ file })`). File Manager hanya menyimpan file umum dan metadata storage; relasi ke campaign dicatat di `campaign_assets.fileId` (`source = storage`). Terikat kuota 100 MB user.
    - **External URL**: input link Google Drive/Dropbox/CDN publik. Dicatat di `campaign_assets` (`source = external_url`). Tidak terikat kuota. Hanya protokol `https`.
 3. **AI** (opsional) — UMKM klik "Generate Brief": `generateBrief()` → AI hasilkan Hook, CTA, Hashtag, Script, Guideline. UMKM dapat edit lalu simpan ke `campaign_briefs`.
 4. **Campaigns** — Atur **Reward**: budget, rewardPer1000Views (CPM), minViews?, maxViews?, claimLimit.

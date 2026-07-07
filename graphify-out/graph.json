@@ -84,6 +84,1036 @@
       "norm_label": "graphifyplugin()"
     },
     {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_ai_fraud_precheck_package",
+      "community": 158,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_ai_fraud_precheck_package_name",
+      "community": 158,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_ai_fraud_precheck_package_version",
+      "community": 158,
+      "norm_label": "version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_ai_fraud_precheck_package_main",
+      "community": 158,
+      "norm_label": "main"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/ai-fraud-precheck/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_ai_fraud_precheck_src_main",
+      "community": 164,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_campaign_published_package",
+      "community": 159,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_campaign_published_package_name",
+      "community": 159,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_campaign_published_package_version",
+      "community": 159,
+      "norm_label": "version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_campaign_published_package_main",
+      "community": 159,
+      "norm_label": "main"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/campaign-published/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_campaign_published_src_main",
+      "community": 165,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_escrow_package",
+      "community": 160,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_escrow_package_name",
+      "community": 160,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_escrow_package_version",
+      "community": 160,
+      "norm_label": "version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_escrow_package_main",
+      "community": 160,
+      "norm_label": "main"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-escrow/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_escrow_src_main",
+      "community": 166,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_order_package",
+      "community": 161,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_order_package_name",
+      "community": 161,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_order_package_version",
+      "community": 161,
+      "norm_label": "version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_order_package_main",
+      "community": 161,
+      "norm_label": "main"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-order/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_order_src_main",
+      "community": 167,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package",
+      "community": 153,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package_name",
+      "community": 153,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package_version",
+      "community": 153,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package_type",
+      "community": 153,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package_main",
+      "community": 153,
+      "norm_label": "main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package_dependencies",
+      "community": 153,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "node-appwrite",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_package_dependencies_node_appwrite",
+      "community": 153,
+      "norm_label": "node-appwrite"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main",
+      "community": 139,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "getEnv()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_getenv",
+      "community": 139,
+      "norm_label": "getenv()"
+    },
+    {
+      "label": "createDatabasesClient()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_createdatabasesclient",
+      "community": 139,
+      "norm_label": "createdatabasesclient()"
+    },
+    {
+      "label": "getEventUser()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_geteventuser",
+      "community": 139,
+      "norm_label": "geteventuser()"
+    },
+    {
+      "label": "getUserRole()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_getuserrole",
+      "community": 139,
+      "norm_label": "getuserrole()"
+    },
+    {
+      "label": "ensureUserMirror()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_ensureusermirror",
+      "community": 139,
+      "norm_label": "ensureusermirror()"
+    },
+    {
+      "label": "ensureUmkmProfile()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_ensureumkmprofile",
+      "community": 139,
+      "norm_label": "ensureumkmprofile()"
+    },
+    {
+      "label": "ensureCreatorProfile()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_ensurecreatorprofile",
+      "community": 139,
+      "norm_label": "ensurecreatorprofile()"
+    },
+    {
+      "label": "ensureStorageUsage()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_ensurestorageusage",
+      "community": 139,
+      "norm_label": "ensurestorageusage()"
+    },
+    {
+      "label": "findByUserId()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L166",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_findbyuserid",
+      "community": 139,
+      "norm_label": "findbyuserid()"
+    },
+    {
+      "label": "publicOwnerPermissions()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_publicownerpermissions",
+      "community": 139,
+      "norm_label": "publicownerpermissions()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_profile_src_main_json",
+      "community": 139,
+      "norm_label": "json()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_wallet_package",
+      "community": 162,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_wallet_package_name",
+      "community": 162,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_wallet_package_version",
+      "community": 162,
+      "norm_label": "version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_wallet_package_main",
+      "community": 162,
+      "norm_label": "main"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/create-user-wallet/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_create_user_wallet_src_main",
+      "community": 168,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package",
+      "community": 155,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package_name",
+      "community": 155,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package_version",
+      "community": 155,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package_type",
+      "community": 155,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package_main",
+      "community": 155,
+      "norm_label": "main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package_dependencies",
+      "community": 155,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "node-appwrite",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_package_dependencies_node_appwrite",
+      "community": 155,
+      "norm_label": "node-appwrite"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main",
+      "community": 144,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "getEnv()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_getenv",
+      "community": 144,
+      "norm_label": "getenv()"
+    },
+    {
+      "label": "createDatabasesClient()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_createdatabasesclient",
+      "community": 144,
+      "norm_label": "createdatabasesclient()"
+    },
+    {
+      "label": "createStorageClient()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_createstorageclient",
+      "community": 144,
+      "norm_label": "createstorageclient()"
+    },
+    {
+      "label": "getUserId()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_getuserid",
+      "community": 144,
+      "norm_label": "getuserid()"
+    },
+    {
+      "label": "parseBody()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_parsebody",
+      "community": 144,
+      "norm_label": "parsebody()"
+    },
+    {
+      "label": "getStorageUsage()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_getstorageusage",
+      "community": 144,
+      "norm_label": "getstorageusage()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "appwrite_functions_delete_file_src_main_json",
+      "community": 144,
+      "norm_label": "json()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package",
+      "community": 156,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package_name",
+      "community": 156,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package_version",
+      "community": 156,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package_type",
+      "community": 156,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package_main",
+      "community": 156,
+      "norm_label": "main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package_dependencies",
+      "community": 156,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "node-appwrite",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_package_dependencies_node_appwrite",
+      "community": 156,
+      "norm_label": "node-appwrite"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main",
+      "community": 135,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "TERMINAL_STATUSES",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_terminal_statuses",
+      "community": 135,
+      "norm_label": "terminal_statuses"
+    },
+    {
+      "label": "getEnv()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_getenv",
+      "community": 135,
+      "norm_label": "getenv()"
+    },
+    {
+      "label": "createDatabasesClient()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_createdatabasesclient",
+      "community": 135,
+      "norm_label": "createdatabasesclient()"
+    },
+    {
+      "label": "parseBody()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L110",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_parsebody",
+      "community": 135,
+      "norm_label": "parsebody()"
+    },
+    {
+      "label": "validateRequiredPayload()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_validaterequiredpayload",
+      "community": 135,
+      "norm_label": "validaterequiredpayload()"
+    },
+    {
+      "label": "isValidSignature()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_isvalidsignature",
+      "community": 135,
+      "norm_label": "isvalidsignature()"
+    },
+    {
+      "label": "timingSafeEqual()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_timingsafeequal",
+      "community": 135,
+      "norm_label": "timingsafeequal()"
+    },
+    {
+      "label": "mapMidtransStatus()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L166",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_mapmidtransstatus",
+      "community": 135,
+      "norm_label": "mapmidtransstatus()"
+    },
+    {
+      "label": "findPayment()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_findpayment",
+      "community": 135,
+      "norm_label": "findpayment()"
+    },
+    {
+      "label": "isAmountEqual()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L197",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_isamountequal",
+      "community": 135,
+      "norm_label": "isamountequal()"
+    },
+    {
+      "label": "toIsoDate()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L208",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_toisodate",
+      "community": 135,
+      "norm_label": "toisodate()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L221",
+      "_origin": "ast",
+      "id": "appwrite_functions_midtrans_webhook_src_main_json",
+      "community": 135,
+      "norm_label": "json()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_release_escrow_package",
+      "community": 163,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_release_escrow_package_name",
+      "community": 163,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_release_escrow_package_version",
+      "community": 163,
+      "norm_label": "version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_release_escrow_package_main",
+      "community": 163,
+      "norm_label": "main"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/release-escrow/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_release_escrow_src_main",
+      "community": 169,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package",
+      "community": 157,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package_name",
+      "community": 157,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package_version",
+      "community": 157,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package_type",
+      "community": 157,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package_main",
+      "community": 157,
+      "norm_label": "main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package_dependencies",
+      "community": 157,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "node-appwrite",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_package_dependencies_node_appwrite",
+      "community": 157,
+      "norm_label": "node-appwrite"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main",
+      "community": 140,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "ALLOWED_MIME_PREFIXES",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_allowed_mime_prefixes",
+      "community": 140,
+      "norm_label": "allowed_mime_prefixes"
+    },
+    {
+      "label": "ALLOWED_MIME_TYPES",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_allowed_mime_types",
+      "community": 140,
+      "norm_label": "allowed_mime_types"
+    },
+    {
+      "label": "getEnv()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_getenv",
+      "community": 140,
+      "norm_label": "getenv()"
+    },
+    {
+      "label": "createDatabasesClient()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_createdatabasesclient",
+      "community": 140,
+      "norm_label": "createdatabasesclient()"
+    },
+    {
+      "label": "createStorageClient()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_createstorageclient",
+      "community": 140,
+      "norm_label": "createstorageclient()"
+    },
+    {
+      "label": "getUserId()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_getuserid",
+      "community": 140,
+      "norm_label": "getuserid()"
+    },
+    {
+      "label": "parseBody()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_parsebody",
+      "community": 140,
+      "norm_label": "parsebody()"
+    },
+    {
+      "label": "validatePayload()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_validatepayload",
+      "community": 140,
+      "norm_label": "validatepayload()"
+    },
+    {
+      "label": "isAllowedMimeType()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_isallowedmimetype",
+      "community": 140,
+      "norm_label": "isallowedmimetype()"
+    },
+    {
+      "label": "getStorageUsage()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_getstorageusage",
+      "community": 140,
+      "norm_label": "getstorageusage()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "appwrite_functions_validate_and_upload_src_main_json",
+      "community": 140,
+      "norm_label": "json()"
+    },
+    {
       "label": "generate_appwrite_json.js",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
@@ -127,7 +1157,7 @@
       "label": "createStringAttr()",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_createstringattr",
       "community": 9,
@@ -137,7 +1167,7 @@
       "label": "createIntAttr()",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L11",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_createintattr",
       "community": 9,
@@ -147,7 +1177,7 @@
       "label": "createFloatAttr()",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_createfloatattr",
       "community": 9,
@@ -157,7 +1187,7 @@
       "label": "createBoolAttr()",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_createboolattr",
       "community": 9,
@@ -167,7 +1197,7 @@
       "label": "createDatetimeAttr()",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_createdatetimeattr",
       "community": 9,
@@ -177,7 +1207,7 @@
       "label": "createIndex()",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_createindex",
       "community": 9,
@@ -187,17 +1217,27 @@
       "label": "collections",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_collections",
       "community": 9,
       "norm_label": "collections"
     },
     {
+      "label": "tables",
+      "file_type": "code",
+      "source_file": "appwrite/generate_appwrite_json.js",
+      "source_location": "L378",
+      "_origin": "ast",
+      "id": "appwrite_generate_appwrite_json_tables",
+      "community": 9,
+      "norm_label": "tables"
+    },
+    {
       "label": "buckets",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L377",
+      "source_location": "L393",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_buckets",
       "community": 9,
@@ -207,7 +1247,7 @@
       "label": "functions",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L464",
+      "source_location": "L480",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_functions",
       "community": 9,
@@ -217,7 +1257,7 @@
       "label": "appwriteJson",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L634",
+      "source_location": "L650",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_appwritejson",
       "community": 9,
@@ -2724,6 +3764,426 @@
       "norm_label": "cara_baca.md"
     },
     {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill",
+      "community": 26,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Appwrite CLI",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "community": 26,
+      "norm_label": "appwrite cli"
+    },
+    {
+      "label": "Installation",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_installation",
+      "community": 26,
+      "norm_label": "installation"
+    },
+    {
+      "label": "Login & Initialization",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_login_initialization",
+      "community": 26,
+      "norm_label": "login & initialization"
+    },
+    {
+      "label": "Configuration",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_configuration",
+      "community": 26,
+      "norm_label": "configuration"
+    },
+    {
+      "label": "appwrite.config.json",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_appwrite_config_json",
+      "community": 26,
+      "norm_label": "appwrite.config.json"
+    },
+    {
+      "label": "Pull and push project configuration",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_pull_and_push_project_configuration",
+      "community": 26,
+      "norm_label": "pull and push project configuration"
+    },
+    {
+      "label": "Deploying Functions",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "community": 26,
+      "norm_label": "deploying functions"
+    },
+    {
+      "label": "Function configuration in appwrite.config.json",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_function_configuration_in_appwrite_config_json",
+      "community": 26,
+      "norm_label": "function configuration in appwrite.config.json"
+    },
+    {
+      "label": "Function commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_function_commands",
+      "community": 26,
+      "norm_label": "function commands"
+    },
+    {
+      "label": "List functions with flag-based queries",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L234",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_list_functions_with_flag_based_queries",
+      "community": 26,
+      "norm_label": "list functions with flag-based queries"
+    },
+    {
+      "label": "Trigger a function with body",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L252",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_trigger_a_function_with_body",
+      "community": 26,
+      "norm_label": "trigger a function with body"
+    },
+    {
+      "label": "Local development",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L260",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_local_development",
+      "community": 26,
+      "norm_label": "local development"
+    },
+    {
+      "label": "Deployment activation",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L266",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_deployment_activation",
+      "community": 26,
+      "norm_label": "deployment activation"
+    },
+    {
+      "label": "Function variables",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L276",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_function_variables",
+      "community": 26,
+      "norm_label": "function variables"
+    },
+    {
+      "label": "Deploying Sites",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L295",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_deploying_sites",
+      "community": 26,
+      "norm_label": "deploying sites"
+    },
+    {
+      "label": "Site configuration in appwrite.config.json",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L308",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_site_configuration_in_appwrite_config_json",
+      "community": 26,
+      "norm_label": "site configuration in appwrite.config.json"
+    },
+    {
+      "label": "Site commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L354",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_site_commands",
+      "community": 26,
+      "norm_label": "site commands"
+    },
+    {
+      "label": "Site variables",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L381",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_site_variables",
+      "community": 26,
+      "norm_label": "site variables"
+    },
+    {
+      "label": "Managing Tables (Databases)",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L395",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "community": 26,
+      "norm_label": "managing tables (databases)"
+    },
+    {
+      "label": "Table configuration in appwrite.config.json",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L408",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_table_configuration_in_appwrite_config_json",
+      "community": 26,
+      "norm_label": "table configuration in appwrite.config.json"
+    },
+    {
+      "label": "Database commands (TablesDB)",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L441",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_database_commands_tablesdb",
+      "community": 26,
+      "norm_label": "database commands (tablesdb)"
+    },
+    {
+      "label": "Column type commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L457",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_column_type_commands",
+      "community": 26,
+      "norm_label": "column type commands"
+    },
+    {
+      "label": "Row operations",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L479",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_row_operations",
+      "community": 26,
+      "norm_label": "row operations"
+    },
+    {
+      "label": "List rows and documents with query flags",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L497",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_list_rows_and_documents_with_query_flags",
+      "community": 26,
+      "norm_label": "list rows and documents with query flags"
+    },
+    {
+      "label": "Managing Buckets (Storage)",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L522",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_managing_buckets_storage",
+      "community": 26,
+      "norm_label": "managing buckets (storage)"
+    },
+    {
+      "label": "Storage commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L535",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_storage_commands",
+      "community": 26,
+      "norm_label": "storage commands"
+    },
+    {
+      "label": "Managing Teams",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L552",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_managing_teams",
+      "community": 26,
+      "norm_label": "managing teams"
+    },
+    {
+      "label": "Team commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L565",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_team_commands",
+      "community": 26,
+      "norm_label": "team commands"
+    },
+    {
+      "label": "Managing Webhooks",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L581",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_managing_webhooks",
+      "community": 26,
+      "norm_label": "managing webhooks"
+    },
+    {
+      "label": "Webhook configuration in `appwrite/webhooks.json`",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L591",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_webhook_configuration_in_appwrite_webhooks_json",
+      "community": 26,
+      "norm_label": "webhook configuration in `appwrite/webhooks.json`"
+    },
+    {
+      "label": "Webhook commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L606",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_webhook_commands",
+      "community": 26,
+      "norm_label": "webhook commands"
+    },
+    {
+      "label": "Managing Topics (Messaging)",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L616",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_managing_topics_messaging",
+      "community": 26,
+      "norm_label": "managing topics (messaging)"
+    },
+    {
+      "label": "Messaging commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L629",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_messaging_commands",
+      "community": 26,
+      "norm_label": "messaging commands"
+    },
+    {
+      "label": "User Management",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L648",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_user_management",
+      "community": 26,
+      "norm_label": "user management"
+    },
+    {
+      "label": "Project Management",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L665",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_project_management",
+      "community": 26,
+      "norm_label": "project management"
+    },
+    {
+      "label": "Generate Type-Safe SDK",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L687",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_generate_type_safe_sdk",
+      "community": 26,
+      "norm_label": "generate type-safe sdk"
+    },
+    {
+      "label": "Non-Interactive / CI/CD Mode",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L749",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_non_interactive_ci_cd_mode",
+      "community": 26,
+      "norm_label": "non-interactive / ci/cd mode"
+    },
+    {
+      "label": "Deploy non-interactively",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L753",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_deploy_non_interactively",
+      "community": 26,
+      "norm_label": "deploy non-interactively"
+    },
+    {
+      "label": "Global Command Options",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L770",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_global_command_options",
+      "community": 26,
+      "norm_label": "global command options"
+    },
+    {
+      "label": "Maintenance Commands",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L785",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_maintenance_commands",
+      "community": 26,
+      "norm_label": "maintenance commands"
+    },
+    {
+      "label": "Examples",
+      "file_type": "document",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L798",
+      "_origin": "ast",
+      "id": "appwrite_agents_skills_appwrite_cli_skill_examples",
+      "community": 26,
+      "norm_label": "examples"
+    },
+    {
       "label": "00_Index.md",
       "file_type": "document",
       "source_file": "docs/00_Project/00_Index.md",
@@ -5080,7 +6540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_90_events_authentication_events",
-      "community": 8,
+      "community": 143,
       "norm_label": "authentication \u2014 events"
     },
     {
@@ -5090,7 +6550,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_90_events_user_registered",
-      "community": 8,
+      "community": 143,
       "norm_label": "user registered"
     },
     {
@@ -5100,7 +6560,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_90_events_lihat_juga",
-      "community": 8,
+      "community": 143,
       "norm_label": "lihat juga"
     },
     {
@@ -8660,7 +10120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules",
-      "community": 153,
+      "community": 134,
       "norm_label": "30_business_rules.md"
     },
     {
@@ -8670,7 +10130,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_payments_business_rules",
-      "community": 140,
+      "community": 134,
       "norm_label": "payments \u2014 business rules"
     },
     {
@@ -8680,7 +10140,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_payment_gateway",
-      "community": 140,
+      "community": 134,
       "norm_label": "payment gateway"
     },
     {
@@ -8690,7 +10150,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_balance_vs_pending_balance",
-      "community": 140,
+      "community": 134,
       "norm_label": "balance vs pending balance"
     },
     {
@@ -8700,7 +10160,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_tipe_transaksi",
-      "community": 140,
+      "community": 134,
       "norm_label": "tipe transaksi"
     },
     {
@@ -8710,7 +10170,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_escrow",
-      "community": 140,
+      "community": 134,
       "norm_label": "escrow"
     },
     {
@@ -8720,7 +10180,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_withdraw",
-      "community": 140,
+      "community": 134,
       "norm_label": "withdraw"
     },
     {
@@ -8780,7 +10240,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database",
-      "community": 139,
+      "community": 134,
       "norm_label": "50_database.md"
     },
     {
@@ -8790,7 +10250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_payments_database",
-      "community": 139,
+      "community": 134,
       "norm_label": "payments \u2014 database"
     },
     {
@@ -8800,7 +10260,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_wallets",
-      "community": 139,
+      "community": 134,
       "norm_label": "wallets"
     },
     {
@@ -8810,7 +10270,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_payments",
-      "community": 139,
+      "community": 134,
       "norm_label": "payments"
     },
     {
@@ -8820,7 +10280,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_transactions",
-      "community": 139,
+      "community": 134,
       "norm_label": "transactions"
     },
     {
@@ -8830,7 +10290,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_escrows",
-      "community": 139,
+      "community": 134,
       "norm_label": "escrows"
     },
     {
@@ -8840,7 +10300,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_withdrawals",
-      "community": 139,
+      "community": 134,
       "norm_label": "withdrawals"
     },
     {
@@ -8850,7 +10310,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api",
-      "community": 153,
+      "community": 134,
       "norm_label": "60_api.md"
     },
     {
@@ -8880,7 +10340,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_wallet_service",
-      "community": 144,
+      "community": 134,
       "norm_label": "wallet service"
     },
     {
@@ -8890,7 +10350,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_getwallet_client_sdk",
-      "community": 144,
+      "community": 134,
       "norm_label": "`getwallet()` \u2014 [client sdk]"
     },
     {
@@ -8900,7 +10360,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_gettransactions_client_sdk",
-      "community": 144,
+      "community": 134,
       "norm_label": "`gettransactions()` \u2014 [client sdk]"
     },
     {
@@ -8910,7 +10370,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_getwithdrawals_client_sdk",
-      "community": 144,
+      "community": 134,
       "norm_label": "`getwithdrawals()` \u2014 [client sdk]"
     },
     {
@@ -8920,7 +10380,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_requestwithdraw_client_sdk",
-      "community": 144,
+      "community": 134,
       "norm_label": "`requestwithdraw()` \u2014 [client sdk]"
     },
     {
@@ -8970,7 +10430,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_appwrite_functions_server_side",
-      "community": 143,
+      "community": 134,
       "norm_label": "appwrite functions (server-side)"
     },
     {
@@ -8980,7 +10440,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_create_user_wallet_appwrite_function",
-      "community": 143,
+      "community": 134,
       "norm_label": "`create-user-wallet` \u2014 [appwrite function]"
     },
     {
@@ -8990,7 +10450,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_midtrans_webhook_appwrite_function",
-      "community": 143,
+      "community": 134,
       "norm_label": "`midtrans-webhook` \u2014 [appwrite function]"
     },
     {
@@ -9000,7 +10460,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_create_escrow_appwrite_function",
-      "community": 143,
+      "community": 134,
       "norm_label": "`create-escrow` \u2014 [appwrite function]"
     },
     {
@@ -9010,7 +10470,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api_release_escrow_appwrite_function",
-      "community": 143,
+      "community": 134,
       "norm_label": "`release-escrow` \u2014 [appwrite function]"
     },
     {
@@ -9030,7 +10490,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_70_backend",
-      "community": 153,
+      "community": 8,
       "norm_label": "70_backend.md"
     },
     {
@@ -9210,7 +10670,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events",
-      "community": 135,
+      "community": 134,
       "norm_label": "90_events.md"
     },
     {
@@ -9220,7 +10680,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_payments_events",
-      "community": 135,
+      "community": 134,
       "norm_label": "payments \u2014 events"
     },
     {
@@ -9230,7 +10690,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_user_registered_create_wallet",
-      "community": 135,
+      "community": 134,
       "norm_label": "user registered \u2192 create wallet"
     },
     {
@@ -9240,7 +10700,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_checkout_created_midtrans_payment",
-      "community": 135,
+      "community": 134,
       "norm_label": "checkout created \u2192 midtrans payment"
     },
     {
@@ -9250,7 +10710,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_midtrans_notification_payment_status",
-      "community": 135,
+      "community": 134,
       "norm_label": "midtrans notification \u2192 payment status"
     },
     {
@@ -9260,7 +10720,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_payment_success_escrow_hold",
-      "community": 135,
+      "community": 134,
       "norm_label": "payment success \u2192 escrow hold"
     },
     {
@@ -9270,7 +10730,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_deliverable_approved_release_escrow",
-      "community": 135,
+      "community": 134,
       "norm_label": "deliverable approved \u2192 release escrow"
     },
     {
@@ -9280,7 +10740,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_withdraw_requested_admin_review",
-      "community": 135,
+      "community": 134,
       "norm_label": "withdraw requested \u2192 admin review"
     },
     {
@@ -10180,7 +11640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_40_user_flow",
-      "community": 19,
+      "community": 111,
       "norm_label": "40_user_flow.md"
     },
     {
@@ -10700,7 +12160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_70_backend",
-      "community": 19,
+      "community": 8,
       "norm_label": "70_backend.md"
     },
     {
@@ -10970,7 +12430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_03_workflows_10_registration",
-      "community": 19,
+      "community": 5,
       "norm_label": "10_registration.md"
     },
     {
@@ -12410,7 +13870,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007",
-      "community": 153,
+      "community": 134,
       "norm_label": "adr-007.md"
     },
     {
@@ -12420,7 +13880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_adr_007_minimum_withdraw_dipasang_sebagai_konstanta_sistem_rp50_000",
-      "community": 26,
+      "community": 134,
       "norm_label": "adr-007 \u2014 minimum withdraw dipasang sebagai konstanta sistem (= rp50.000)"
     },
     {
@@ -12430,7 +13890,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_status",
-      "community": 26,
+      "community": 134,
       "norm_label": "status"
     },
     {
@@ -12440,7 +13900,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_context",
-      "community": 26,
+      "community": 134,
       "norm_label": "context"
     },
     {
@@ -12450,7 +13910,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_decision",
-      "community": 26,
+      "community": 134,
       "norm_label": "decision"
     },
     {
@@ -12460,7 +13920,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_consequences",
-      "community": 26,
+      "community": 134,
       "norm_label": "consequences"
     },
     {
@@ -13198,8 +14658,926 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_ai_fraud_precheck_package",
+      "target": "appwrite_functions_ai_fraud_precheck_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_ai_fraud_precheck_package",
+      "target": "appwrite_functions_ai_fraud_precheck_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/ai-fraud-precheck/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_ai_fraud_precheck_package",
+      "target": "appwrite_functions_ai_fraud_precheck_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_campaign_published_package",
+      "target": "appwrite_functions_campaign_published_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_campaign_published_package",
+      "target": "appwrite_functions_campaign_published_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/campaign-published/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_campaign_published_package",
+      "target": "appwrite_functions_campaign_published_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_escrow_package",
+      "target": "appwrite_functions_create_escrow_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_escrow_package",
+      "target": "appwrite_functions_create_escrow_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-escrow/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_escrow_package",
+      "target": "appwrite_functions_create_escrow_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_order_package",
+      "target": "appwrite_functions_create_order_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_order_package",
+      "target": "appwrite_functions_create_order_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-order/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_order_package",
+      "target": "appwrite_functions_create_order_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_package",
+      "target": "appwrite_functions_create_user_profile_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_package",
+      "target": "appwrite_functions_create_user_profile_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_package",
+      "target": "appwrite_functions_create_user_profile_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_package",
+      "target": "appwrite_functions_create_user_profile_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_package",
+      "target": "appwrite_functions_create_user_profile_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_package_dependencies",
+      "target": "appwrite_functions_create_user_profile_package_dependencies_node_appwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_createdatabasesclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_ensurecreatorprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_ensurestorageusage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_ensureumkmprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_ensureusermirror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_findbyuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_getenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_geteventuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_getuserrole",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main",
+      "target": "appwrite_functions_create_user_profile_src_main_publicownerpermissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main_ensureusermirror",
+      "target": "appwrite_functions_create_user_profile_src_main_findbyuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main_ensureumkmprofile",
+      "target": "appwrite_functions_create_user_profile_src_main_findbyuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main_ensureumkmprofile",
+      "target": "appwrite_functions_create_user_profile_src_main_publicownerpermissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main_ensurecreatorprofile",
+      "target": "appwrite_functions_create_user_profile_src_main_findbyuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main_ensurecreatorprofile",
+      "target": "appwrite_functions_create_user_profile_src_main_publicownerpermissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-profile/src/main.js",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_profile_src_main_ensurestorageusage",
+      "target": "appwrite_functions_create_user_profile_src_main_findbyuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_wallet_package",
+      "target": "appwrite_functions_create_user_wallet_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_wallet_package",
+      "target": "appwrite_functions_create_user_wallet_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/create-user-wallet/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_create_user_wallet_package",
+      "target": "appwrite_functions_create_user_wallet_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_package",
+      "target": "appwrite_functions_delete_file_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_package",
+      "target": "appwrite_functions_delete_file_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_package",
+      "target": "appwrite_functions_delete_file_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_package",
+      "target": "appwrite_functions_delete_file_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_package",
+      "target": "appwrite_functions_delete_file_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_package_dependencies",
+      "target": "appwrite_functions_delete_file_package_dependencies_node_appwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_createdatabasesclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_createstorageclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_getenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_getstorageusage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_getuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/delete-file/src/main.js",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "appwrite_functions_delete_file_src_main",
+      "target": "appwrite_functions_delete_file_src_main_parsebody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_package",
+      "target": "appwrite_functions_midtrans_webhook_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_package",
+      "target": "appwrite_functions_midtrans_webhook_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_package",
+      "target": "appwrite_functions_midtrans_webhook_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_package",
+      "target": "appwrite_functions_midtrans_webhook_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_package",
+      "target": "appwrite_functions_midtrans_webhook_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_package_dependencies",
+      "target": "appwrite_functions_midtrans_webhook_package_dependencies_node_appwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_createdatabasesclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_findpayment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_getenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_isamountequal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_isvalidsignature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_mapmidtransstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_parsebody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_terminal_statuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_timingsafeequal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_toisodate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main",
+      "target": "appwrite_functions_midtrans_webhook_src_main_validaterequiredpayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/midtrans-webhook/src/main.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "appwrite_functions_midtrans_webhook_src_main_isvalidsignature",
+      "target": "appwrite_functions_midtrans_webhook_src_main_timingsafeequal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_release_escrow_package",
+      "target": "appwrite_functions_release_escrow_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_release_escrow_package",
+      "target": "appwrite_functions_release_escrow_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/release-escrow/package.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "appwrite_functions_release_escrow_package",
+      "target": "appwrite_functions_release_escrow_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_package",
+      "target": "appwrite_functions_validate_and_upload_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_package",
+      "target": "appwrite_functions_validate_and_upload_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_package",
+      "target": "appwrite_functions_validate_and_upload_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_package",
+      "target": "appwrite_functions_validate_and_upload_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_package",
+      "target": "appwrite_functions_validate_and_upload_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_package_dependencies",
+      "target": "appwrite_functions_validate_and_upload_package_dependencies_node_appwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_allowed_mime_prefixes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_allowed_mime_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_createdatabasesclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_createstorageclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_getenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_getstorageusage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_getuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_isallowedmimetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_parsebody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main",
+      "target": "appwrite_functions_validate_and_upload_src_main_validatepayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/functions/validate-and-upload/src/main.js",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "appwrite_functions_validate_and_upload_src_main_validatepayload",
+      "target": "appwrite_functions_validate_and_upload_src_main_isallowedmimetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L634",
+      "source_location": "L650",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_appwritejson",
@@ -13219,7 +15597,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L377",
+      "source_location": "L393",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_buckets",
@@ -13229,7 +15607,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_collections",
@@ -13239,7 +15617,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_createboolattr",
@@ -13249,7 +15627,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_createdatetimeattr",
@@ -13259,7 +15637,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_createfloatattr",
@@ -13269,7 +15647,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_createindex",
@@ -13279,7 +15657,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_createintattr",
@@ -13289,7 +15667,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_createstringattr",
@@ -13309,7 +15687,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L464",
+      "source_location": "L480",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_functions",
@@ -13323,6 +15701,16 @@
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/generate_appwrite_json.js",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "appwrite_generate_appwrite_json",
+      "target": "appwrite_generate_appwrite_json_tables",
       "confidence_score": 1.0
     },
     {
@@ -16929,6 +19317,416 @@
       "weight": 1.0,
       "source": "agents_golden_rule",
       "target": "agents_graphify_407",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_appwrite_config_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_deploying_sites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L798",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_examples",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L687",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_generate_type_safe_sdk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L770",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_global_command_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_installation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_login_initialization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L785",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_maintenance_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L522",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_managing_buckets_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L395",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L552",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_managing_teams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L616",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_managing_topics_messaging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L581",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_managing_webhooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L749",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_non_interactive_ci_cd_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L665",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_project_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L648",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_cli",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_user_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_appwrite_config_json",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_pull_and_push_project_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_deployment_activation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_function_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_function_configuration_in_appwrite_config_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_function_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_list_functions_with_flag_based_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_local_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_functions",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_trigger_a_function_with_body",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_sites",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_site_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_sites",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_site_configuration_in_appwrite_config_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L381",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_deploying_sites",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_site_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L457",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_column_type_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L441",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_database_commands_tablesdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L497",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_list_rows_and_documents_with_query_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L479",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_row_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L408",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_tables_databases",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_table_configuration_in_appwrite_config_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L535",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_buckets_storage",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_storage_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L565",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_teams",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_team_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L606",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_webhooks",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_webhook_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L591",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_webhooks",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_webhook_configuration_in_appwrite_webhooks_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L629",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_managing_topics_messaging",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_messaging_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "appwrite/.agents/skills/appwrite-cli/SKILL.md",
+      "source_location": "L753",
+      "weight": 1.0,
+      "source": "appwrite_agents_skills_appwrite_cli_skill_non_interactive_ci_cd_mode",
+      "target": "appwrite_agents_skills_appwrite_cli_skill_deploy_non_interactively",
       "confidence_score": 1.0
     },
     {
@@ -27763,5 +30561,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8091a9504e21a200e73123dd9a748f88abfc64cd"
+  "built_at_commit": "adc8cd361f33a260dafd7bc7795547a316088b63"
 }

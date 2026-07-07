@@ -1,16 +1,16 @@
 # Graph Report - BackendMarketiv  (2026-07-07)
 
 ## Corpus Check
-- 185 files · ~46,254 words
+- 185 files · ~45,692 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1317 nodes · 1452 edges · 151 communities (144 shown, 7 thin omitted)
+- 1315 nodes · 1450 edges · 153 communities (143 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8091a950`
+- Built from commit: `adc8cd36`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -152,9 +152,11 @@
 - [[_COMMUNITY_Community 140|Community 140]]
 - [[_COMMUNITY_Notifications — Events|Notifications — Events]]
 - [[_COMMUNITY_Offers — User Flow|Offers — User Flow]]
+- [[_COMMUNITY_Community 143|Community 143]]
 - [[_COMMUNITY_wallet.service.js|wallet.service.js]]
 - [[_COMMUNITY_Community 150|Community 150]]
 - [[_COMMUNITY_Community 152|Community 152]]
+- [[_COMMUNITY_Community 154|Community 154]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Workflow: Rate Card Order (Escrow)` - 14 edges
@@ -179,7 +181,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (151 total, 7 thin omitted)
+## Communities (153 total, 10 thin omitted)
 
 ### Community 0 - "00_Index.md"
 Cohesion: 0.05
@@ -213,13 +215,9 @@ Nodes (4): Dikecualikan dari MVP, Referensi, Ruang Lingkup MVP, Termasuk dalam M
 Cohesion: 0.15
 Nodes (13): 40_Folder_Structure, Appwrite Config (`src/lib/appwrite/`), Appwrite Functions (`functions/`), Appwrite Project Config (`appwrite/`), Environment Variables, Modules (`src/modules/`), Service Layer (`src/services/`), Shared Components (`src/components/`) (+5 more)
 
-### Community 8 - "00_Index.md"
-Cohesion: 0.24
-Nodes (5): Authentication, Dokumen, Authentication — Events, Lihat Juga, User Registered
-
 ### Community 9 - "generate_appwrite_json.js"
-Cohesion: 0.14
-Nodes (7): appwriteJson, appwriteJsonPath, buckets, collections, fs, functions, path
+Cohesion: 0.13
+Nodes (8): appwriteCollections, appwriteJson, appwriteJsonPath, buckets, collections, fs, functions, path
 
 ### Community 11 - "00_Index.md"
 Cohesion: 0.24
@@ -252,10 +250,6 @@ Nodes (8): Create/Edit Rate Card, Creator Profile, Discovery / Browse Creators, 
 ### Community 18 - "40_Tech_Stack.md"
 Cohesion: 0.25
 Nodes (4): Aturan Backend, Backend Helpers, Campaigns — Backend, upload-campaign-asset
-
-### Community 19 - "00_Index.md"
-Cohesion: 0.27
-Nodes (4): AI — Database, ai_requests, Dokumen, Users
 
 ### Community 20 - "Authentication — Business Rules"
 Cohesion: 0.33
@@ -414,8 +408,8 @@ Cohesion: 0.08
 Nodes (20): Accept → Create Order, Field, Kepemilikan, Offers — Business Rules, Status Offer, offers, Offers — Database, `acceptOffer()` — [Client SDK] *(memicu Appwrite Function `create-order`)* (+12 more)
 
 ### Community 60 - "Community 60"
-Cohesion: 0.15
-Nodes (5): ALLOWED_MIME_PREFIXES, ALLOWED_MIME_TYPES, ALLOWED_PURPOSES, isAllowedMimeType(), validatePayload()
+Cohesion: 0.18
+Nodes (4): ALLOWED_MIME_PREFIXES, ALLOWED_MIME_TYPES, isAllowedMimeType(), validatePayload()
 
 ### Community 61 - "Komponen"
 Cohesion: 0.33
@@ -623,7 +617,7 @@ Nodes (5): ADR-002 — Abstraksi Service Layer Wajib, Consequences, Context, Dec
 
 ### Community 120 - "user.service.js"
 Cohesion: 0.09
-Nodes (38): addSocialAccount(), AddSocialAccountInput, CreatorProfile, CreatorSocialAccount, deleteFile(), FilePurpose, fileToBase64(), getByUserId() (+30 more)
+Nodes (37): addSocialAccount(), AddSocialAccountInput, CreatorProfile, CreatorSocialAccount, deleteFile(), fileToBase64(), getByUserId(), getCreatorIdsByRateCardPrice() (+29 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.29
@@ -705,6 +699,10 @@ Nodes (6): Balance vs Pending Balance, Escrow, Payment Gateway, Payments — Bus
 Cohesion: 0.67
 Nodes (3): Lihat Juga, Notifications — Events, Pola Implementasi
 
+### Community 143 - "Community 143"
+Cohesion: 0.67
+Nodes (3): Authentication — Events, Lihat Juga, User Registered
+
 ### Community 147 - "wallet.service.js"
 Cohesion: 0.11
 Nodes (23): getBalance(), getPendingBalance(), getPendingWithdrawals(), getTransactions(), GetTransactionsOptions, getWallet(), getWithdrawals(), GetWithdrawalsOptions (+15 more)
@@ -714,21 +712,21 @@ Cohesion: 0.40
 Nodes (5): ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux, Consequences, Context, Decision, Status
 
 ## Knowledge Gaps
-- **769 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `path` (+764 more)
+- **768 isolated node(s):** `$schema`, `plugin`, `@opencode-ai/plugin`, `fs`, `path` (+763 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Campaigns — API` connect `Community 43` to `40_Tech_Stack.md`, `Community 39`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Why does `Workflow: Campaign Pay-Per-View (PPV)` connect `Workflow: Campaign Pay-Per-View (PPV)` to `30_RateCard_Order.md`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `Users — Database` connect `Users — Database` to `00_Index.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Workflow: Rate Card Order (Escrow)` connect `Workflow: Rate Card Order (Escrow)` to `30_RateCard_Order.md`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `$schema`, `plugin`, `@opencode-ai/plugin` to the rest of the system?**
-  _769 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _768 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `00_Index.md` be split into smaller, more focused modules?**
   _Cohesion score 0.04521276595744681 - nodes in this community are weakly interconnected._
 - **Should `AGENTS.md` be split into smaller, more focused modules?**
