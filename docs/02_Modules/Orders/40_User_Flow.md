@@ -31,7 +31,7 @@ UMKM Review
 ## Alur Deliverable
 
 ```text
-Creator upload file via File Manager (purpose = deliverable)
+Creator upload file via File Manager
   atau input external URL
 ↓
 Deliverable tersimpan (version: n+1)

@@ -20,7 +20,7 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 
 - **Trigger**: dipanggil API `uploadDeliverable()`.
 - **Aksi**:
-  - Jika `source = storage`: panggil File Manager (`Users/validate-and-upload`) dengan `purpose = deliverable` dan `referenceId = orderId`, lalu catat `fileId` di deliverable.
+  - Jika `source = storage`: panggil File Manager (`Users/validate-and-upload`) hanya dengan file, lalu catat `fileId` di deliverable.
   - Jika `source = external_url`: simpan URL langsung, tidak terikat kuota.
   - Buat deliverable dengan version auto-increment.
 - **Catatan**: helper ini bukan Appwrite Function event-driven.
