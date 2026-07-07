@@ -34,11 +34,11 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 ### process-withdrawal (Admin)
 
 - **Manual/Trigger**: admin approve.
-- **Aksi**: set withdrawal `processed`, kurangi balance, kirim dana.
+- **Aksi**: validasi withdrawal `pending`, set withdrawal `processed`, catat admin pemroses/waktu/bukti transfer, dan kirim dana manual ke bank atau e-wallet sesuai `payoutMethod`.
 
 ## Aturan Backend
 
-- Minimum withdrawal amount (konfigurabel).
+- `MINIMUM_WITHDRAW = 50000` (Rp50.000) — **konstanta sistem**, hardcode di Appwrite Function `process-withdrawal`; tidak dapat diubah dari admin panel. Lihat [ADR-007](../../04_Decisions/ADR-007.md).
 - Secret key Midtrans hanya disimpan sebagai environment variable Appwrite Function.
 - Webhook Midtrans wajib valid signature dan nominal sebelum mengubah status payment.
 - Handler webhook wajib idempotent terhadap notifikasi berulang.
@@ -46,3 +46,4 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 - `balance` tidak boleh negatif.
 - Escrow hanya bisa diubah oleh system/admin — tidak ada akses user.
 - Setiap mutasi saldo harus tercatat di `transactions`.
+- Admin wajib mengisi `rejectionReason` saat menolak withdrawal.

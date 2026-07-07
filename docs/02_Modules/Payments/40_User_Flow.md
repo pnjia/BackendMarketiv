@@ -25,11 +25,13 @@ Creator buka Wallet
 ↓
 Klik "Tarik Dana"
 ↓
-Input: amount, bank, account number, account name
+Pilih metode: bank atau e-wallet
+↓
+Input: amount, provider name, account number/phone, account name
 ↓
 Submit → status pending (tunggu admin review)
 ↓
-Admin approve → dana transfer → status processed
+Admin approve → dana ditransfer manual → status processed
    atau Admin reject → status rejected
 ```
 

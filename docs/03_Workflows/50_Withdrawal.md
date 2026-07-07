@@ -12,7 +12,7 @@ Creator menarik saldo available dari wallet ke bank/e-wallet, dengan validasi sa
 
 ## Trigger
 
-Creator submit form `Tarik Dana` dari halaman Wallet (input: bankName, accountNumber, accountName, amount).
+Creator submit form `Tarik Dana` dari halaman Wallet (input: payoutMethod, providerName, accountNumber, accountName, amount).
 
 ## Data Model — Collection yang Terlibat
 
@@ -28,14 +28,16 @@ Creator submit form `Tarik Dana` dari halaman Wallet (input: bankName, accountNu
 ### Tahap 1: Request Withdrawal
 
 1. **Payments** — Creator buka halaman Wallet → klik "Tarik Dana".
-2. **Payments** — Tampilkan saldo available (`wallet.balance`), minimum withdraw amount.
-3. **Payments** — Creator isi form: `{ bankName, accountNumber, accountName, amount }`.
+2. **Payments** — Tampilkan saldo available (`wallet.balance`), minimum withdraw amount (**Rp50.000**, konstanta sistem — lihat [ADR-007](../04_Decisions/ADR-007.md)).
+3. **Payments** — Creator isi form: `{ payoutMethod, providerName, accountNumber, accountName, amount }`.
 4. **Payments** — `requestWithdraw()` menjalankan validasi:
    - `wallet.balance >= amount`
-   - `amount >= MINIMUM_WITHDRAW` (konstanta sistem, mis. Rp50.000)
+   - `amount >= MINIMUM_WITHDRAW` (konstanta sistem = `Rp50.000` / `50.000`, lihat [ADR-007](../04_Decisions/ADR-007.md))
    - `amount > 0`
+   - `payoutMethod` adalah `bank` atau `ewallet`
+   - `providerName`, `accountNumber`, dan `accountName` terisi
 5. **Jika validasi gagal** — tampilkan error: "Saldo tidak mencukupi" / "Minimum penarikan Rp50.000".
-6. **Jika validasi lolos** — Buat `withdrawals`: `{ userId, amount, bankName, accountNumber, accountName, status: 'pending' }`.
+6. **Jika validasi lolos** — Buat `withdrawals`: `{ userId, amount, payoutMethod, providerName, accountNumber, accountName, status: 'pending' }`.
 7. **Payments** — Kurangi `wallet.balance -= amount` (dana di-hold, tidak bisa dipakai transaksi lain).
 8. **Event `withdrawals.create`** — (tidak memicu function spesifik; cukup trigger notifikasi).
 
@@ -44,24 +46,24 @@ Creator submit form `Tarik Dana` dari halaman Wallet (input: bankName, accountNu
 9. **Notifications** — Notifikasi ke admin: "Withdrawal request baru — Rp{amount} oleh {creatorName}".
 10. **Admin** — Buka **Withdrawal Queue** → lihat daftar request `status: pending`.
 11. **Admin** — Review detail:
-    - Data bank: nama, nomor rekening, nama pemilik.
+    - Data tujuan pencairan: metode, provider bank/e-wallet, nomor rekening/akun, nama pemilik.
     - Riwayat withdrawal creator sebelumnya.
     - Saldo creator saat ini.
 12. **Admin** — Keputusan:
 
     | Keputusan | Aksi Sistem |
     |---|---|
-    | **Approve** | Admin transfer manual via bank → `withdrawals.status: pending → processed` |
+    | **Approve** | Admin transfer manual via bank/e-wallet → `withdrawals.status: pending → processed` |
     | **Reject** | Beri alasan → `withdrawals.status: pending → rejected` |
 
 ### Tahap 3: Complete / Reject
 
 13. **Jika Approve:**
-    - Admin konfirmasi transfer sudah dilakukan.
+    - Admin konfirmasi transfer sudah dilakukan dan dapat mengisi `adminNote`/`transferProofUrl`.
     - **Event `withdrawals.status (pending→processed)`** memicu function **`complete-withdrawal`**.
     - **Payments** — Update `wallet.withdrawn += amount` (opsional, tracking total penarikan).
     - **Payments** — Buat `transactions`: `{ userId, amount: -amount, type: 'withdrawal', referenceType: 'withdrawal', referenceId: withdrawalId }`.
-    - **Notifications** — Notifikasi ke creator: "Penarikan Rp{amount} berhasil diproses — cek rekeningmu".
+    - **Notifications** — Notifikasi ke creator: "Penarikan Rp{amount} berhasil diproses — cek rekening/akunmu".
 
 14. **Jika Reject:**
     - **Payments** — Kembalikan saldo: `wallet.balance += amount` (dana hold dikembalikan).
@@ -92,7 +94,8 @@ WALLET:      balance -= amount (saat request) → balance += amount (jika reject
 | Request withdrawal | `wallet.balance >= amount` | Error "Saldo tidak mencukupi" |
 | Request withdrawal | `amount >= MINIMUM_WITHDRAW` | Error "Minimum withdraw Rp50.000" |
 | Request withdrawal | `amount > 0` | Error "Jumlah tidak valid" |
-| Request withdrawal | Data bank lengkap | Error "Lengkapi data bank" |
+| Request withdrawal | `payoutMethod` valid (`bank` atau `ewallet`) | Error "Metode penarikan tidak valid" |
+| Request withdrawal | Data tujuan pencairan lengkap | Error "Lengkapi data penarikan" |
 | Admin approve | Withdrawal harus `pending` | Error status |
 | Admin reject | Admin wajib isi alasan | Form tidak bisa submit |
 
@@ -101,7 +104,7 @@ WALLET:      balance -= amount (saat request) → balance += amount (jika reject
 | Titik | Notifikasi | Penerima |
 |---|---|---|
 | Withdrawal requested | "Withdrawal request baru — Rp{amount}" | Admin |
-| Withdrawal approved | "Penarikan Rp{amount} berhasil diproses — cek rekening" | Creator |
+| Withdrawal approved | "Penarikan Rp{amount} berhasil diproses — cek rekening/akun" | Creator |
 | Withdrawal rejected | "Penarikan ditolak: {reason}" | Creator |
 
 ## Edge Cases
@@ -111,7 +114,7 @@ WALLET:      balance -= amount (saat request) → balance += amount (jika reject
 - **Reject admin** — saldo wajib dikembalikan penuh ke `wallet.balance` (invariant: tidak ada saldo hilang).
 - **Hanya saldo available yang bisa ditarik** — `pendingBalance` dan `escrowBalance` tidak bisa ditarik.
 - **Pending withdrawal ganda** — creator bisa memiliki banyak withdrawal request, tetapi total amount pending tidak boleh melebihi `wallet.balance`.
-- **Transfer bank gagal** — jika admin sudah approve tetapi transfer gagal (rekening salah, bank offline), admin dapat membatalkan: `withdrawals.status → rejected` dengan alasan "Transfer gagal", saldo dikembalikan.
+- **Transfer bank/e-wallet gagal** — jika admin sudah approve tetapi transfer gagal (rekening/akun salah, provider offline), admin dapat membatalkan: `withdrawals.status → rejected` dengan alasan "Transfer gagal", saldo dikembalikan.
 - **Withdrawal diakses saat wallet dibekukan** — jika user `status: suspended`, withdrawal tidak bisa diajukan.
 
 ## Links

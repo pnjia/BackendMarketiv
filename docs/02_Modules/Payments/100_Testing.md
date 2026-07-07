@@ -32,5 +32,8 @@
 
 - Withdrawal valid (balance cukup, min amount terpenuhi) → status `pending`.
 - Withdrawal invalid (balance kurang) → error.
+- Withdrawal invalid (payout method tidak valid atau data tujuan pencairan tidak lengkap) → error.
+- Withdrawal bank dan e-wallet menyimpan `payoutMethod`, `providerName`, `accountNumber`, dan `accountName`.
 - Admin approve → balance berkurang, status `processed`.
 - Admin reject → balance dikembalikan, status `rejected`.
+- Admin reject tanpa `rejectionReason` → error.

@@ -16,10 +16,23 @@ Dimiliki pemilik wallet.
 - **Proses**: ambil `balance` & `pendingBalance` wallet user.
 - **Akses**: Owner read · Admin.
 
+#### `getTransactions()` — [Client SDK]
+
+- **Input**: `{ userId }` (own).
+- **Proses**: ambil daftar mutasi saldo dari `transactions`, urut terbaru.
+- **Akses**: Owner read · Admin.
+
+#### `getWithdrawals()` — [Client SDK]
+
+- **Input**: `{ userId, status? }` (own).
+- **Proses**: ambil daftar withdrawal creator dari `withdrawals`, bisa difilter status.
+- **Akses**: Owner read · Admin.
+
 #### `requestWithdraw()` — [Client SDK]
 
-- **Input**: `{ amount, bankName, accountNumber, accountName }`
-- **Validasi**: `amount ≥ minimum withdraw` dan `balance ≥ amount`.
+- **Input**: `{ amount, payoutMethod, providerName, accountNumber, accountName }`
+- **payoutMethod**: `bank | ewallet`.
+- **Validasi**: `amount ≥ MINIMUM_WITHDRAW` (`Rp50.000` — konstanta sistem, lihat [ADR-007](../../04_Decisions/ADR-007.md)), `balance ≥ amount`, dan data tujuan pencairan lengkap.
 - **Proses**: buat dokumen `withdrawals` (`status = pending`); menunggu **persetujuan admin**.
 - **Akses**: Owner (user).
 
@@ -41,6 +54,18 @@ Payment dibuat lewat Appwrite Function agar Midtrans secret key tidak pernah kel
   - Simpan `snapToken` dan/atau `redirectUrl` dari Midtrans.
 - **Output**: `{ paymentId, gateway: 'midtrans', snapToken, redirectUrl, status: 'pending' }`
 - **Akses**: Authenticated UMKM.
+
+#### `getPayment()` — [Client SDK]
+
+- **Input**: `{ paymentId }`.
+- **Proses**: ambil detail payment milik user.
+- **Akses**: Owner read · Admin.
+
+#### `getPayments()` — [Client SDK]
+
+- **Input**: `{ status? }`.
+- **Proses**: ambil daftar payment milik user, bisa difilter status.
+- **Akses**: Owner read · Admin.
 
 ---
 

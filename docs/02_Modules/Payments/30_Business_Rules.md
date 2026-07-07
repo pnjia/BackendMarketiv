@@ -46,8 +46,10 @@
 
 Permintaan withdraw valid bila:
 
-- Jumlah ≥ **minimum withdraw**.
+- Jumlah ≥ **minimum withdraw** = `Rp50.000` (`50.000`) — **konstanta sistem**, lihat [ADR-007](../../04_Decisions/ADR-007.md).
 - `balance ≥ amount`.
+- Tujuan pencairan wajib memakai `payoutMethod = bank` atau `ewallet`.
+- `providerName`, `accountNumber`, dan `accountName` wajib terisi untuk bank maupun e-wallet.
 - Memerlukan **persetujuan admin** (admin gate) sebelum dana ditransfer.
 
 > Escrow & transactions disimpan terpisah (`50_Database.md`). Aggregate order: `../../04_Decisions/ADR-003.md`.

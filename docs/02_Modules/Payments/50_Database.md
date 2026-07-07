@@ -82,16 +82,22 @@ Dana ditahan per order. Relasi: Order (1) → Escrow (1).
 
 Permintaan pencairan dana. Relasi: merujuk user (FK → users).
 
-| Attribute     | Type    | Required | Catatan                       |
-| ------------- | ------- | -------- | ----------------------------- |
-| userId        | string  | yes      | FK → users                    |
-| amount        | integer | yes      |                               |
-| bankName      | string  | yes      |                               |
-| accountNumber | string  | yes      |                               |
-| accountName   | string  | yes      |                               |
-| status        | enum    | yes      | `pending\|processed\|rejected`|
+| Attribute        | Type     | Required | Catatan                                      |
+| ---------------- | -------- | -------- | -------------------------------------------- |
+| userId           | string   | yes      | FK → users                                   |
+| amount           | integer  | yes      | nominal dalam Rupiah                         |
+| payoutMethod     | enum     | yes      | `bank\|ewallet`                              |
+| providerName     | string   | yes      | nama bank atau provider e-wallet             |
+| accountNumber    | string   | yes      | nomor rekening atau nomor akun/HP e-wallet   |
+| accountName      | string   | yes      | nama pemilik rekening atau akun e-wallet     |
+| status           | enum     | yes      | `pending\|processed\|rejected`               |
+| adminNote        | string   | no       | catatan admin saat proses/review             |
+| rejectionReason  | string   | no       | alasan jika withdrawal ditolak               |
+| processedAt      | datetime | no       | waktu status berubah ke `processed`          |
+| processedBy      | string   | no       | FK → users admin yang memproses              |
+| transferProofUrl | string   | no       | URL bukti transfer manual jika tersedia      |
 
-**Index**: `userId`, `status`, `createdAt DESC`.
+**Index**: `userId`, `status`, `payoutMethod`, `createdAt DESC`.
 
 **Permission**: User create · Admin approve.
 
