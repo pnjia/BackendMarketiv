@@ -13,12 +13,12 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 
 - **Trigger**: dipanggil API `uploadFile()`.
 - **Execute**: authenticated users.
-- **Input**: `{ fileName, mimeType, sizeBytes, purpose, referenceId?, bucketId?, contentBase64 }`.
+- **Input**: `{ fileName, mimeType, sizeBytes, contentBase64 }`.
 - **Aksi**:
   1. Baca `user_storage_usage` milik user.
   2. Validasi kuota: `usedBytes + file.size ≤ quotaBytes`.
   3. Validasi batas file: `fileCount < 100`.
-  4. Upload file ke Appwrite Storage bucket sesuai `purpose`.
+  4. Upload file ke Appwrite Storage bucket default File Manager.
   5. Buat metadata di `user_files` dengan `status = active`.
   6. Increment `usedBytes` dan `fileCount` di `user_storage_usage`.
 

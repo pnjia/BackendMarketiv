@@ -226,12 +226,10 @@ Riwayat metadata setiap file yang diupload user ke Appwrite Storage. Relasi: `us
 ```text
 userId            # FK → users
 storageFileId     # Appwrite Storage file ID
-bucketId          # bucket Appwrite tujuan
+bucketId          # bucket Appwrite penyimpanan
 fileName          # nama file asli
 mimeType          # tipe file
 sizeBytes         # ukuran file dalam byte
-purpose           # campaign_asset | chat_attachment | portfolio | deliverable
-referenceId       # id dokumen terkait (campaignId, conversationId, dll.)
 status            # active | deleted
 createdAt
 deletedAt         # null jika masih aktif
@@ -242,7 +240,6 @@ deletedAt         # null jika masih aktif
 ```text
 userId, status
 storageFileId (unique)
-purpose, referenceId
 status, createdAt DESC
 ```
 

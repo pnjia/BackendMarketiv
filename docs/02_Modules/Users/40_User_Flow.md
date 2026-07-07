@@ -41,12 +41,11 @@ Logo UMKM dan portfolio Creator yang tidak diisi saat onboarding dapat ditambahk
 ```text
 Buka File Manager
 ↓
-Lihat daftar file (nama, ukuran, tujuan, status)
+Lihat daftar file (nama, ukuran, status)
    └─ Indikator kuota: usedBytes / quotaBytes (default 100 MB)
 ↓
 Upload File
   ├─ Pilih file (max 20 MB, total max 100 file)
-  ├─ Pilih tujuan: campaign_asset / portfolio / chat_attachment / deliverable
   └─ Upload → sistem cek kuota → simpan ke Storage
 ↓
 Hapus File

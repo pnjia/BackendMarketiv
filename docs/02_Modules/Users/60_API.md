@@ -50,7 +50,7 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `rate_c
 
 ### `uploadFile()` — [Client SDK]
 
-- **Input**: `{ file, purpose, referenceId? }`
+- **Input**: `{ file }`
 - **Proses**: validasi kuota → upload ke Appwrite Storage → catat metadata ke `user_files` → update `user_storage_usage`.
 - **Validasi**:
   - `usedBytes + file.size ≤ quotaBytes`.
@@ -67,7 +67,7 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `rate_c
 
 ### `getMyFiles(filter)` — [Client SDK]
 
-- **Input**: `{ purpose?, status? }`
+- **Input**: `{ status? }`
 - **Proses**: list file milik user.
 - **Akses**: Authenticated user (owner).
 
