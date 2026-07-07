@@ -1,4 +1,4 @@
-export const DATABASE_ID = process.env.NEXT_PUBLIC_DB_ID || '6a3110bf000de5a04844';
+export const DATABASE_ID = process.env.NEXT_PUBLIC_DB_ID || '6a4c8598001da3b0d7f0';
 
 export const COLLECTIONS = {
   users: process.env.NEXT_PUBLIC_USER_COLLECTION || 'users',
