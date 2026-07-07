@@ -12,14 +12,16 @@ Dimiliki UMKM. Inti alur PPV.
 
 #### `createCampaign()` — [Client SDK]
 
-- **Input**: `{ title, category, platforms[], budget, rewardPer1000Views, minViews?, maxViews?, claimLimit }`
-- **Validasi MVP**: `platforms[]` hanya boleh berisi `"tiktok"`. Instagram, Facebook, YouTube, dan platform lain ditolak sampai fase ekspansi multi-platform.
+- **Input**: `{ title, category, type, platforms[], budget, rewardPer1000Views, minViews?, maxViews?, claimLimit }`
+- **Validasi MVP**:
+  - `type` wajib `ugc` atau `clipping`.
+  - `platforms[]` hanya boleh berisi `"tiktok"`. Instagram, Facebook, YouTube, dan platform lain ditolak sampai fase ekspansi multi-platform.
 - **Proses**: buat dokumen `campaigns` dengan `status = draft`.
 - **Akses**: UMKM (owner).
 
 #### `generateBrief()` — [Client SDK] *(memanggil Appwrite Function `ai-brief` di belakang)*
 
-- **Input**: `{ campaignId, description, materials[] }`
+- **Input**: `{ campaignId, description, type, materials[] }`
 - **Proses**: panggil AI Function → tulis ke `campaign_briefs`. Brief dapat diedit & disimpan ulang.
 - **Akses**: UMKM (owner). Kontrak fungsi AI di `../AI/60_API.md`.
 

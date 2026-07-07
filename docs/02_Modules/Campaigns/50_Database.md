@@ -17,6 +17,7 @@ Koleksi terbesar MVP. Relasi: UMKM (1) → Campaign (N).
 | umkmId               | string   | yes      | FK → users                                |
 | title                | string   | yes      |                                           |
 | category             | string   | yes      |                                           |
+| type                 | enum     | yes      | `ugc\|clipping` (tipe kreasi konten)      |
 | platforms            | string[] | yes      | MVP hanya `["tiktok"]`; platform lain future scope |
 | description          | string   | no       |                                           |
 | budget               | integer  | yes      |                                           |

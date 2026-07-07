@@ -18,7 +18,7 @@ Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud**. Aturan input/output & thr
 
 **Endpoint**: `POST /functions/ai-brief`
 
-- **Input**: `{ campaignId }`
+- **Input**: `{ campaignId, description, type, materials[] }`
 - **Return**: `{ brief }` — brief terstruktur (objective, content angle, CTA, detail, do & don't).
 - **Efek**: hasil dapat disimpan ke `campaign_briefs` (lihat `../Campaigns/50_Database.md`).
 - **Pemanggil**: dipanggil oleh service layer `generateBrief()` dari modul **Campaigns**.
