@@ -2,7 +2,6 @@ import { Client, Databases, ID, InputFile, Permission, Query, Role, Storage } fr
 
 const MAX_FILE_SIZE_BYTES = 20 * 1024 * 1024;
 const MAX_ACTIVE_FILES = 100;
-const ALLOWED_PURPOSES = new Set(["campaign_asset", "chat_attachment", "portfolio", "deliverable"]);
 const ALLOWED_MIME_PREFIXES = ["image/", "video/"];
 const ALLOWED_MIME_TYPES = new Set([
   "application/pdf",
@@ -41,7 +40,7 @@ export default async ({ req, res, log, error }) => {
       return json(res, { error: "Storage quota exceeded" }, 409);
     }
 
-    const bucketId = payload.bucketId || bucketForPurpose(env, payload.purpose);
+    const bucketId = env.defaultBucketId;
     const uploaded = await storage.createFile(
       bucketId,
       ID.unique(),
@@ -60,8 +59,6 @@ export default async ({ req, res, log, error }) => {
         fileName: payload.fileName,
         mimeType: payload.mimeType,
         sizeBytes: fileBuffer.length,
-        purpose: payload.purpose,
-        referenceId: payload.referenceId || null,
         status: "active",
         createdAt: new Date().toISOString(),
         deletedAt: null
@@ -91,10 +88,6 @@ function getEnv() {
     userFilesCollectionId: process.env.USER_FILES_COLLECTION_ID || "user_files",
     storageUsageCollectionId: process.env.USER_STORAGE_USAGE_COLLECTION_ID || "user_storage_usage",
     defaultBucketId: process.env.DEFAULT_STORAGE_BUCKET_ID || process.env.NEXT_PUBLIC_STORAGE_BUCKET,
-    campaignAssetsBucketId: process.env.CAMPAIGN_ASSETS_BUCKET_ID,
-    chatAttachmentsBucketId: process.env.CHAT_ATTACHMENTS_BUCKET_ID,
-    portfolioBucketId: process.env.PORTFOLIO_BUCKET_ID,
-    deliverablesBucketId: process.env.DELIVERABLES_BUCKET_ID
   };
 
   const required = ["appwriteEndpoint", "appwriteProjectId", "appwriteApiKey", "databaseId", "defaultBucketId"];
@@ -127,10 +120,9 @@ function parseBody(req) {
 }
 
 function validatePayload(payload) {
-  const required = ["fileName", "mimeType", "sizeBytes", "purpose", "contentBase64"];
+  const required = ["fileName", "mimeType", "sizeBytes", "contentBase64"];
   const missing = required.filter((field) => !payload?.[field]);
   if (missing.length > 0) return `Missing required fields: ${missing.join(", ")}`;
-  if (!ALLOWED_PURPOSES.has(payload.purpose)) return "Invalid file purpose";
   if (!isAllowedMimeType(payload.mimeType)) return "File type is not allowed";
   if (!Number.isFinite(Number(payload.sizeBytes)) || Number(payload.sizeBytes) <= 0) return "Invalid file size";
   if (Number(payload.sizeBytes) > MAX_FILE_SIZE_BYTES) return "File exceeds 20 MB limit";
@@ -144,17 +136,6 @@ function isAllowedMimeType(mimeType) {
 async function getStorageUsage(databases, env, userId) {
   const result = await databases.listDocuments(env.databaseId, env.storageUsageCollectionId, [Query.equal("userId", userId), Query.limit(1)]);
   return result.documents[0] || null;
-}
-
-function bucketForPurpose(env, purpose) {
-  const buckets = {
-    campaign_asset: env.campaignAssetsBucketId,
-    chat_attachment: env.chatAttachmentsBucketId,
-    portfolio: env.portfolioBucketId,
-    deliverable: env.deliverablesBucketId
-  };
-
-  return buckets[purpose] || env.defaultBucketId;
 }
 
 function json(res, body, statusCode = 200) {
