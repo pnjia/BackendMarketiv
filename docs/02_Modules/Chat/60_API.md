@@ -15,7 +15,7 @@ Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Cl
 ### `sendMessage()` — [Client SDK]
 
 - **Input**: `{ conversationId, type?, content?, offerId?, attachmentUrl?, attachmentName?, attachmentSize?, attachmentMime? }` — `type` default `text`.
-- **Proses**: validasi participant, tipe pesan, dan batas attachment; buat dokumen `messages`; update `lastMessage` & `lastMessageAt` pada conversation induk.
+- **Proses**: validasi participant, tipe pesan, dan batas attachment; buat dokumen `messages`; update `last_message` & `last_message_at` pada conversation induk.
 - **Akses**: Participant.
 
 ---
@@ -31,6 +31,10 @@ Receiver UI Update
 ```
 
 UI penerima subscribe ke channel dokumen `messages` percakapan terkait; saat ada pesan baru, UI langsung ter-update tanpa polling.
+
+## Push Notification
+
+Pesan chat tidak dikirim lewat Appwrite Messaging sebagai data utama. Setelah `messages.create`, function `send-chat-notification` membuat notifikasi penerima dan mengirim push notification Appwrite Messaging jika target push user tersedia.
 
 > Pesan bertipe `offer` merujuk custom offer yang dibuat UMKM — lihat `../Offers/`.
 > Pesan bertipe `image`/`file` memakai file yang sudah di-upload ke bucket `chat-attachments` dan harus lolos whitelist ukuran/format.

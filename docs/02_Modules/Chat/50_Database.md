@@ -10,14 +10,15 @@ Ruang chat antara satu UMKM dan satu creator. Relasi: Conversation (1) → Messa
 
 | Attribute          | Type    | Required | Catatan                              |
 | ------------------ | ------- | -------- | ------------------------------------ |
-| umkmId             | string  | yes      | FK → users                           |
-| creatorId          | string  | yes      | FK → users                           |
-| lastMessage        | string  | no       | denormalisasi pesan terakhir         |
-| lastMessageAt      | string  | no       | denormalisasi waktu pesan terakhir   |
+| umkm_id            | string  | yes      | FK → users                           |
+| creator_id         | string  | yes      | FK → users                           |
+| offer_id           | string  | no       | FK → offers terakhir/terkait         |
+| last_message       | string  | no       | denormalisasi pesan terakhir         |
+| last_message_at    | datetime| no       | denormalisasi waktu pesan terakhir   |
 
-**Index**: `umkmId`, `creatorId`, `lastMessageAt DESC`.
+**Index**: `umkm_id`, `creator_id`, unique `umkm_id + creator_id`, `offer_id`.
 
-**Constraint**: kombinasi `umkmId + creatorId` unik (satu percakapan per pasangan — lihat `30_Business_Rules.md`).
+**Constraint**: kombinasi `umkm_id + creator_id` unik (satu percakapan per pasangan — lihat `30_Business_Rules.md`).
 
 **Permission**: Participant only.
 
@@ -27,19 +28,19 @@ Ruang chat antara satu UMKM dan satu creator. Relasi: Conversation (1) → Messa
 
 Pesan dalam sebuah percakapan. Relasi: Conversation (1) → Messages (N).
 
-| Attribute      | Type   | Required | Catatan                            |
-| -------------- | ------ | -------- | ---------------------------------- |
-| conversationId | string | yes      | FK → conversations                 |
-| senderId       | string | yes      | FK → users                         |
-| type           | enum    | yes      | `text\|image\|file\|offer\|system` |
-| content        | string  | no       | isi pesan (untuk `text`/`system`)    |
-| offerId        | string  | no       | FK → offers untuk tipe `offer`       |
-| attachmentUrl  | string  | no       | URL Storage untuk `image`/`file`     |
-| attachmentName | string  | no       | nama file asli                       |
-| attachmentSize | integer | no       | ukuran file dalam byte               |
-| attachmentMime | string  | no       | MIME type file                       |
+| Attribute       | Type   | Required | Catatan                            |
+| --------------- | ------ | -------- | ---------------------------------- |
+| conversation_id | string  | yes      | FK → conversations                 |
+| sender_id       | string  | yes      | FK → users                         |
+| message_type    | string  | yes      | `text\|image\|file\|offer\|system` |
+| content         | string  | no       | isi pesan (untuk `text`/`system`)    |
+| offer_id        | string  | no       | FK → offers untuk tipe `offer`       |
+| attachment_url  | string  | no       | URL Storage untuk `image`/`file`     |
+| attachment_name | string  | no       | nama file asli                       |
+| attachment_size | integer | no       | ukuran file dalam byte               |
+| attachment_mime | string  | no       | MIME type file                       |
 
-**Index**: `conversationId`, `createdAt DESC`, `senderId`.
+**Index**: `conversation_id`, `sender_id`.
 
 **Permission**: Participant only.
 

@@ -9,10 +9,11 @@ Dokumen ini khusus untuk Appwrite Functions, Realtime, dan aturan backend. Kontr
 
 ## Appwrite Functions
 
-### update-conversation-on-message
+### send-chat-notification
 
 - **Trigger**: `messages.create`.
-- **Aksi**: update `lastMessage` dan `lastMessageAt` pada conversation induk.
+- **Aksi**: identifikasi penerima dari `conversations.umkm_id`/`creator_id`, buat record `notifications`, lalu kirim push notification via Appwrite Messaging jika user memiliki target push.
+- **Catatan**: isi percakapan tetap bersumber dari collection `messages`; Messaging hanya kanal notifikasi.
 
 ## Storage
 
@@ -25,7 +26,7 @@ Dokumen ini khusus untuk Appwrite Functions, Realtime, dan aturan backend. Kontr
 ## Aturan Backend
 
 - Validasi participant: hanya UMKM & creator yang terlibat dapat mengirim/membaca pesan.
-- Unique constraint `umkmId + creatorId` pada conversation.
+- Unique constraint `umkm_id + creator_id` pada conversation.
 - Tipe `offer`: validasi bahwa pengirim adalah UMKM dan `offerId` merujuk offer dalam conversation yang sama.
 - Tipe `image`/`file`: validasi ukuran, MIME type, ekstensi, dan kepemilikan file di bucket `chat-attachments`.
 - Read receipt, unread counter, typing indicator, multi-file upload, dan voice note dikecualikan dari MVP chat dasar.

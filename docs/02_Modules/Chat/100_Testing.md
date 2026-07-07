@@ -22,6 +22,12 @@
 
 - UI penerima update dalam 1 detik setelah pesan dikirim.
 
+## Notifikasi
+
+- Pesan baru membuat record `notifications` untuk participant penerima.
+- Push notification Appwrite Messaging terkirim jika user penerima memiliki target push yang valid.
+- Kegagalan push tidak membatalkan penyimpanan pesan atau pembuatan notifikasi in-app.
+
 ## Di Luar MVP
 
 - Multi-file upload tidak tersedia.
