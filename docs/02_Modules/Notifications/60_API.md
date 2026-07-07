@@ -38,7 +38,7 @@ Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Cl
 
 ## Appwrite Functions (Server-side)
 
-Module ini tidak memiliki REST API publik sendiri. Notifikasi dibuat oleh Appwrite Functions dari modul lain (Campaigns, Orders, Payments) yang memanggil `createNotification()`.
+Module ini tidak memiliki REST API publik sendiri. Notifikasi dibuat oleh Appwrite Functions dari modul lain (Chat, Campaigns, Orders, Payments) yang memanggil `createNotification()` atau menulis langsung ke collection `notifications` dengan API key.
 
 ---
 
