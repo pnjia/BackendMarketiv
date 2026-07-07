@@ -299,6 +299,37 @@ Relevant ADR
 
 ---
 
+# Agent Skills
+
+Agents may use repository-local skills installed under:
+
+```text
+.agents/skills/<skill-name>/SKILL.md
+```
+
+Use a skill only when the task matches its purpose. Read the selected `SKILL.md` before applying its workflow.
+
+Available skills:
+
+- `appwrite-cli` — Appwrite CLI project management, deployments, config, and CI/CD mode.
+- `api-designer` — REST or GraphQL API design, OpenAPI specs, API architecture.
+- `code-documenter` — technical documentation, docstrings, OpenAPI/Swagger, user guides.
+- `code-reviewer` — code review, bug risk, security risk, maintainability, test coverage.
+- `database-optimizer` — slow query analysis, indexes, query optimization, database performance.
+- `devops-engineer` — Docker, CI/CD, Kubernetes, Terraform, deployment automation.
+- `find-skills` — discover or install additional agent skills.
+- `fullstack-guardian` — full-stack feature implementation with frontend, backend, and security.
+- `nestjs-expert` — NestJS modules, controllers, services, DTOs, guards, interceptors, tests.
+
+Skill usage rules:
+
+- Project documentation remains the source of truth.
+- Skill instructions complement project documentation; they do not override it.
+- If a skill conflicts with `docs/` or this `AGENTS.md`, follow the project documentation and note the conflict.
+- Do not load every skill by default. Load only the smallest relevant skill for the task.
+
+---
+
 # Module Ownership
 
 Every business capability belongs to exactly one Module.
