@@ -271,16 +271,16 @@ const collections = [
     {
         $id: "wallets",
         name: "Wallets",
-        $permissions: ["read(\"users\")", "create(\"users\")", "update(\"users\")"],
+        $permissions: ["read(\"users\")"],
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("user_id", true),
-            createIntAttr("available_balance", false, 0),
-            createIntAttr("pending_balance", false, 0)
+            createStringAttr("userId", true),
+            createIntAttr("balance", true, 0),
+            createIntAttr("pendingBalance", true, 0)
         ],
         indexes: [
-            createIndex("idx_user_id", "unique", ["user_id"])
+            createIndex("idx_userId", "unique", ["userId"])
         ]
     },
     {
@@ -310,21 +310,66 @@ const collections = [
         ]
     },
     {
-        $id: "wallet_transactions",
-        name: "Wallet Transactions",
-        $permissions: ["read(\"users\")", "create(\"users\")", "update(\"users\")"],
+        $id: "transactions",
+        name: "Transactions",
+        $permissions: ["read(\"users\")"],
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("wallet_id", true),
-            createStringAttr("type", true, 50),
+            createStringAttr("userId", true),
             createIntAttr("amount", true),
-            createStringAttr("reference_type", true, 50),
-            createStringAttr("reference_id", true)
+            createStringAttr("type", true, 50),
+            createStringAttr("referenceId", false),
+            createStringAttr("referenceType", false, 50),
+            createStringAttr("status", true, 50)
         ],
         indexes: [
-            createIndex("idx_wallet_id", "key", ["wallet_id"]),
-            createIndex("idx_type", "key", ["type"])
+            createIndex("idx_userId", "key", ["userId"]),
+            createIndex("idx_referenceId", "key", ["referenceId"]),
+            createIndex("idx_referenceType", "key", ["referenceType"]),
+            createIndex("idx_status", "key", ["status"])
+        ]
+    },
+    {
+        $id: "escrows",
+        name: "Escrows",
+        $permissions: [],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("orderId", true),
+            createIntAttr("amount", true),
+            createStringAttr("status", true, 50)
+        ],
+        indexes: [
+            createIndex("idx_orderId", "unique", ["orderId"]),
+            createIndex("idx_status", "key", ["status"])
+        ]
+    },
+    {
+        $id: "withdrawals",
+        name: "Withdrawals",
+        $permissions: ["read(\"users\")", "create(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("userId", true),
+            createIntAttr("amount", true),
+            createStringAttr("payoutMethod", true, 50),
+            createStringAttr("providerName", true, 100),
+            createStringAttr("accountNumber", true, 100),
+            createStringAttr("accountName", true, 255),
+            createStringAttr("status", true, 50),
+            createStringAttr("adminNote", false, 1000),
+            createStringAttr("rejectionReason", false, 1000),
+            createDatetimeAttr("processedAt", false),
+            createStringAttr("processedBy", false),
+            createStringAttr("transferProofUrl", false, 2048)
+        ],
+        indexes: [
+            createIndex("idx_userId", "key", ["userId"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_payoutMethod", "key", ["payoutMethod"])
         ]
     }
 ];
@@ -417,6 +462,48 @@ const buckets = [
 ];
 
 const functions = [
+    {
+        $id: "create-user-profile",
+        name: "Create User Profile",
+        runtime: "node-18.0",
+        execute: ["users"],
+        events: ["users.*.create"],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/create-user-profile"
+    },
+    {
+        $id: "validate-and-upload",
+        name: "Validate And Upload",
+        runtime: "node-18.0",
+        execute: ["users"],
+        events: [],
+        schedule: "",
+        timeout: 30,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/validate-and-upload"
+    },
+    {
+        $id: "delete-file",
+        name: "Delete File",
+        runtime: "node-18.0",
+        execute: ["users"],
+        events: [],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "functions/delete-file"
+    },
     {
         $id: "create-user-wallet",
         name: "Create User Wallet",

@@ -1272,15 +1272,13 @@
           "$id": "wallets",
           "name": "Wallets",
           "$permissions": [
-            "read(\"users\")",
-            "create(\"users\")",
-            "update(\"users\")"
+            "read(\"users\")"
           ],
           "documentSecurity": true,
           "enabled": true,
           "attributes": [
             {
-              "key": "user_id",
+              "key": "userId",
               "type": "string",
               "status": "available",
               "required": true,
@@ -1289,29 +1287,29 @@
               "default": null
             },
             {
-              "key": "available_balance",
+              "key": "balance",
               "type": "integer",
               "status": "available",
-              "required": false,
+              "required": true,
               "array": false,
               "default": 0
             },
             {
-              "key": "pending_balance",
+              "key": "pendingBalance",
               "type": "integer",
               "status": "available",
-              "required": false,
+              "required": true,
               "array": false,
               "default": 0
             }
           ],
           "indexes": [
             {
-              "key": "idx_user_id",
+              "key": "idx_userId",
               "type": "unique",
               "status": "available",
               "attributes": [
-                "user_id"
+                "userId"
               ],
               "orders": [
                 "ASC"
@@ -1475,23 +1473,29 @@
           ]
         },
         {
-          "$id": "wallet_transactions",
-          "name": "Wallet Transactions",
+          "$id": "transactions",
+          "name": "Transactions",
           "$permissions": [
-            "read(\"users\")",
-            "create(\"users\")",
-            "update(\"users\")"
+            "read(\"users\")"
           ],
           "documentSecurity": true,
           "enabled": true,
           "attributes": [
             {
-              "key": "wallet_id",
+              "key": "userId",
               "type": "string",
               "status": "available",
               "required": true,
               "array": false,
               "size": 255,
+              "default": null
+            },
+            {
+              "key": "amount",
+              "type": "integer",
+              "status": "available",
+              "required": true,
+              "array": false,
               "default": null
             },
             {
@@ -1504,6 +1508,97 @@
               "default": null
             },
             {
+              "key": "referenceId",
+              "type": "string",
+              "status": "available",
+              "required": false,
+              "array": false,
+              "size": 255,
+              "default": null
+            },
+            {
+              "key": "referenceType",
+              "type": "string",
+              "status": "available",
+              "required": false,
+              "array": false,
+              "size": 50,
+              "default": null
+            },
+            {
+              "key": "status",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 50,
+              "default": null
+            }
+          ],
+          "indexes": [
+            {
+              "key": "idx_userId",
+              "type": "key",
+              "status": "available",
+              "attributes": [
+                "userId"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            },
+            {
+              "key": "idx_referenceId",
+              "type": "key",
+              "status": "available",
+              "attributes": [
+                "referenceId"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            },
+            {
+              "key": "idx_referenceType",
+              "type": "key",
+              "status": "available",
+              "attributes": [
+                "referenceType"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            },
+            {
+              "key": "idx_status",
+              "type": "key",
+              "status": "available",
+              "attributes": [
+                "status"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            }
+          ]
+        },
+        {
+          "$id": "escrows",
+          "name": "Escrows",
+          "$permissions": [],
+          "documentSecurity": true,
+          "enabled": true,
+          "attributes": [
+            {
+              "key": "orderId",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 255,
+              "default": null
+            },
+            {
               "key": "amount",
               "type": "integer",
               "status": "available",
@@ -1512,7 +1607,69 @@
               "default": null
             },
             {
-              "key": "reference_type",
+              "key": "status",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 50,
+              "default": null
+            }
+          ],
+          "indexes": [
+            {
+              "key": "idx_orderId",
+              "type": "unique",
+              "status": "available",
+              "attributes": [
+                "orderId"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            },
+            {
+              "key": "idx_status",
+              "type": "key",
+              "status": "available",
+              "attributes": [
+                "status"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            }
+          ]
+        },
+        {
+          "$id": "withdrawals",
+          "name": "Withdrawals",
+          "$permissions": [
+            "read(\"users\")",
+            "create(\"users\")"
+          ],
+          "documentSecurity": true,
+          "enabled": true,
+          "attributes": [
+            {
+              "key": "userId",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 255,
+              "default": null
+            },
+            {
+              "key": "amount",
+              "type": "integer",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "default": null
+            },
+            {
+              "key": "payoutMethod",
               "type": "string",
               "status": "available",
               "required": true,
@@ -1521,33 +1678,114 @@
               "default": null
             },
             {
-              "key": "reference_id",
+              "key": "providerName",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 100,
+              "default": null
+            },
+            {
+              "key": "accountNumber",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 100,
+              "default": null
+            },
+            {
+              "key": "accountName",
               "type": "string",
               "status": "available",
               "required": true,
               "array": false,
               "size": 255,
               "default": null
+            },
+            {
+              "key": "status",
+              "type": "string",
+              "status": "available",
+              "required": true,
+              "array": false,
+              "size": 50,
+              "default": null
+            },
+            {
+              "key": "adminNote",
+              "type": "string",
+              "status": "available",
+              "required": false,
+              "array": false,
+              "size": 1000,
+              "default": null
+            },
+            {
+              "key": "rejectionReason",
+              "type": "string",
+              "status": "available",
+              "required": false,
+              "array": false,
+              "size": 1000,
+              "default": null
+            },
+            {
+              "key": "processedAt",
+              "type": "datetime",
+              "status": "available",
+              "required": false,
+              "array": false
+            },
+            {
+              "key": "processedBy",
+              "type": "string",
+              "status": "available",
+              "required": false,
+              "array": false,
+              "size": 255,
+              "default": null
+            },
+            {
+              "key": "transferProofUrl",
+              "type": "string",
+              "status": "available",
+              "required": false,
+              "array": false,
+              "size": 2048,
+              "default": null
             }
           ],
           "indexes": [
             {
-              "key": "idx_wallet_id",
+              "key": "idx_userId",
               "type": "key",
               "status": "available",
               "attributes": [
-                "wallet_id"
+                "userId"
               ],
               "orders": [
                 "ASC"
               ]
             },
             {
-              "key": "idx_type",
+              "key": "idx_status",
               "type": "key",
               "status": "available",
               "attributes": [
-                "type"
+                "status"
+              ],
+              "orders": [
+                "ASC"
+              ]
+            },
+            {
+              "key": "idx_payoutMethod",
+              "type": "key",
+              "status": "available",
+              "attributes": [
+                "payoutMethod"
               ],
               "orders": [
                 "ASC"
@@ -1703,6 +1941,56 @@
     }
   ],
   "functions": [
+    {
+      "$id": "create-user-profile",
+      "name": "Create User Profile",
+      "runtime": "node-18.0",
+      "execute": [
+        "users"
+      ],
+      "events": [
+        "users.*.create"
+      ],
+      "schedule": "",
+      "timeout": 15,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "functions/create-user-profile"
+    },
+    {
+      "$id": "validate-and-upload",
+      "name": "Validate And Upload",
+      "runtime": "node-18.0",
+      "execute": [
+        "users"
+      ],
+      "events": [],
+      "schedule": "",
+      "timeout": 30,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "functions/validate-and-upload"
+    },
+    {
+      "$id": "delete-file",
+      "name": "Delete File",
+      "runtime": "node-18.0",
+      "execute": [
+        "users"
+      ],
+      "events": [],
+      "schedule": "",
+      "timeout": 15,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "functions/delete-file"
+    },
     {
       "$id": "create-user-wallet",
       "name": "Create User Wallet",
