@@ -51,7 +51,9 @@ Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Mod
 
 ## Service Layer (`src/services/`)
 
-`authService.js`, `userService.js`, `creatorService.js`, `campaignService.js`, `submissionService.js`, `chatService.js`, `offerService.js`, `orderService.js`, `walletService.js`, `paymentService.js`, `aiService.js`. Aturan akses: lihat [`20_Coding_Standards.md`](20_Coding_Standards.md).
+Service layer global wajib menggunakan TypeScript (`.ts`). Service membungkus akses Appwrite SDK untuk aplikasi dan tidak boleh berisi implementasi Appwrite Function.
+
+Contoh: `auth.service.ts`, `user.service.ts`, `creator.service.ts`, `campaign.service.ts`, `submission.service.ts`, `chat.service.ts`, `offer.service.ts`, `order.service.ts`, `wallet.service.ts`, `claim.service.ts`, `notification.service.ts`. Aturan akses: lihat [`20_Coding_Standards.md`](20_Coding_Standards.md).
 
 ## Appwrite Config (`src/lib/appwrite/`)
 
@@ -66,6 +68,16 @@ Tiap modul: `components/`, `services/`, `hooks/`, `validators/`, `store.js`. Mod
 ## Appwrite Functions (`functions/`)
 
 `create-user-profile`, `validate-and-upload`, `delete-file`, `create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
+
+Kode Appwrite Function wajib berada di `functions/<function-id>/`. Setiap function memiliki source dan dependency sendiri di folder tersebut. Entrypoint default adalah `functions/<function-id>/src/main.js`, dan file dependency function diletakkan di `functions/<function-id>/package.json`.
+
+Jangan menulis implementasi Appwrite Function di `src/` atau root proyek.
+
+## Appwrite Project Config (`appwrite/`)
+
+- `appwrite/appwrite.json`: konfigurasi Appwrite yang dihasilkan untuk project, database, storage, dan functions.
+- `appwrite/generate_appwrite_json.js`: script generator untuk membuat ulang `appwrite/appwrite.json`.
+- Saat menambah, menghapus, atau mengganti nama function, sinkronkan `functions/<function-id>/`, `appwrite/appwrite.json`, dan `appwrite/generate_appwrite_json.js`.
 
 ## Storage Buckets (`storage/`)
 
