@@ -22,6 +22,21 @@
 - Hanya **creator** yang dapat memiliki dan mengubah rate card miliknya sendiri.
 - UMKM hanya dapat membaca (read) untuk discovery & order.
 
+## Platform Fee
+
+Fee platform **5%** dipotong dari pendapatan creator saat escrow release.
+
+```text
+UMKM bayar: hargaPaket (sesuai rate card)
+Creator terima: hargaPaket - floor(hargaPaket × 5%)
+Platform: floor(hargaPaket × 5%) sebagai fee
+```
+
+- UMKM membayar **persis sesuai harga paket** — tidak ada biaya tambahan.
+- Creator menerima harga paket **dikurangi fee 5%**.
+- Fee dicatat sebagai transaksi `fee` di ledger.
+- Creator perlu mempertimbangkan fee 5% saat menentukan harga paket rate card.
+
 ## Field Wajib Paket
 
 Setiap paket (`rate_card_packages`) **wajib** memiliki:

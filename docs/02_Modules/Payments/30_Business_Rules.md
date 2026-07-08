@@ -42,6 +42,44 @@
 - `refunded` — dikembalikan ke UMKM (mis. order dibatalkan).
 - Escrow tidak boleh disentuh user (Admin/System only).
 
+## Platform Fee
+
+Marketiv membebankan **biaya platform 5%** dengan model berbeda per modul (lihat ADR-008):
+
+### Rate Card Order (Seller Side)
+
+Fee dipotong dari pendapatan creator saat escrow release.
+
+```text
+UMKM bayar:  Rp200.000 (harga paket)
+Escrow:      Rp200.000
+Saat rilis:
+  Creator:   Rp200.000 - Rp10.000 = Rp190.000
+  Platform:  Rp10.000 (fee 5%)
+```
+
+### Campaign Top-Up (Buyer Side)
+
+Fee ditambahkan ke total pembayaran UMKM saat top-up.
+
+```text
+UMKM bayar:  Rp100.000 + Rp5.000 = Rp105.000
+Budget:      Rp100.000 (penuh untuk reward)
+Platform:    Rp5.000 (fee 5%)
+```
+
+**Aturan umum:**
+- Fee dicatat sebagai transaksi `fee` di ledger (`transactions`) tanpa memengaruhi wallet user.
+- Perubahan nilai fee di masa depan memerlukan update kode + redeploy (konstanta sistem, lihat ADR-008).
+
+## Minimum Campaign Budget
+
+Setiap campaign PPV wajib memiliki **minimum budget Rp50.000** (`50.000`).
+
+- Validasi dilakukan saat `createCampaign()` — budget < Rp50.000 ditolak.
+- Budget + fee 5% = total yang dibayar UMKM saat top-up.
+- Konsisten dengan minimum withdraw Rp50.000 (ADR-007).
+
 ## Withdraw
 
 Permintaan withdraw valid bila:

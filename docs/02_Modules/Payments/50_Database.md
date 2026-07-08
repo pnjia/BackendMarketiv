@@ -28,8 +28,11 @@ Payment intent lokal untuk pembayaran yang diproses oleh Midtrans. Relasi: Order
 | ---------------- | ------- | -------- | ------------------------------------------------------------- |
 | user_id          | string  | yes      | FK → users, pembayar                                          |
 | order_id         | string  | no       | FK → orders untuk pembayaran order                            |
-| amount           | integer | yes      | nominal dalam Rupiah                                          |
-| purpose          | enum    | yes      | `order\|topup`                                                |
+| campaign_id      | string  | no       | FK → campaigns untuk top-up campaign                          |
+| amount           | integer | yes      | nominal transaksi (sebelum fee)                                |
+| total_amount     | integer | yes      | nominal + fee platform (yang dibayar ke Midtrans)             |
+| fee_amount       | integer | no       | jumlah fee platform (5% dari amount)                          |
+| purpose          | enum    | yes      | `order\|topup\|campaign`                                      |
 | gateway          | enum    | yes      | `midtrans`                                                    |
 | gateway_reference| string  | yes      | `order_id` Midtrans, unik                                     |
 | snap_token       | string  | no       | token Snap Midtrans                                           |
@@ -37,7 +40,7 @@ Payment intent lokal untuk pembayaran yang diproses oleh Midtrans. Relasi: Order
 | status           | enum    | yes      | `pending\|paid\|failed\|expired\|cancelled`                 |
 | paid_at          | datetime| no       | waktu status berubah ke `paid`                                |
 
-**Index**: `gateway_reference (unique)`, `order_id`, `user_id`, `status`, `purpose`, `createdAt DESC`.
+**Index**: `gateway_reference (unique)`, `order_id`, `campaign_id`, `user_id`, `status`, `purpose`, `createdAt DESC`.
 
 **Permission**: Owner read · System write · Admin read.
 
