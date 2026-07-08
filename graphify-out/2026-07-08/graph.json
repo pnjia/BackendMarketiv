@@ -247,7 +247,7 @@
       "label": "appwriteJson",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L689",
+      "source_location": "L703",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_appwritejson",
       "community": 9,
@@ -1741,6 +1741,156 @@
       "_origin": "ast",
       "id": "functions_send_chat_notification_src_main_json",
       "community": 144,
+      "norm_label": "json()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package",
+      "community": 155,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package_name",
+      "community": 155,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package_version",
+      "community": 155,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package_type",
+      "community": 155,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package_main",
+      "community": 155,
+      "norm_label": "main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package_dependencies",
+      "community": 155,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "node-appwrite",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_package_dependencies_node_appwrite",
+      "community": 155,
+      "norm_label": "node-appwrite"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main",
+      "community": 134,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "RULES",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_rules",
+      "community": 134,
+      "norm_label": "rules"
+    },
+    {
+      "label": "getEnv()",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_getenv",
+      "community": 134,
+      "norm_label": "getenv()"
+    },
+    {
+      "label": "createClient()",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_createclient",
+      "community": 134,
+      "norm_label": "createclient()"
+    },
+    {
+      "label": "getUserId()",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_getuserid",
+      "community": 134,
+      "norm_label": "getuserid()"
+    },
+    {
+      "label": "parseBody()",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_parsebody",
+      "community": 134,
+      "norm_label": "parsebody()"
+    },
+    {
+      "label": "validatePayload()",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_validatepayload",
+      "community": 134,
+      "norm_label": "validatepayload()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "functions_upload_chat_attachment_src_main_json",
+      "community": 134,
       "norm_label": "json()"
     },
     {
@@ -13414,6 +13564,16 @@
       "norm_label": "graphify"
     },
     {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 159,
+      "norm_label": "claude.md"
+    },
+    {
       "label": "Cara_Baca.md",
       "file_type": "document",
       "source_file": "Cara_Baca.md",
@@ -13694,10 +13854,20 @@
       "norm_label": "backend (baas)"
     },
     {
-      "label": "AI Layer",
+      "label": "Payment Gateway",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
       "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_00_project_40_tech_stack_payment_gateway",
+      "community": 14,
+      "norm_label": "payment gateway"
+    },
+    {
+      "label": "AI Layer",
+      "file_type": "document",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_ai_layer",
       "community": 14,
@@ -13707,7 +13877,7 @@
       "label": "State Management",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L20",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_state_management",
       "community": 14,
@@ -13717,7 +13887,7 @@
       "label": "Validation",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L24",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_validation",
       "community": 14,
@@ -13727,7 +13897,7 @@
       "label": "Testing",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_testing",
       "community": 14,
@@ -13737,7 +13907,7 @@
       "label": "Deployment",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L32",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_deployment",
       "community": 14,
@@ -13747,7 +13917,7 @@
       "label": "Referensi",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L37",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_referensi",
       "community": 14,
@@ -14247,7 +14417,7 @@
       "label": "Pola Document-Level Permission",
       "file_type": "document",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "docs_01_global_50_security_guidelines_pola_document_level_permission",
       "community": 79,
@@ -14257,7 +14427,7 @@
       "label": "Function API Key Scope",
       "file_type": "document",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L68",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "docs_01_global_50_security_guidelines_function_api_key_scope",
       "community": 79,
@@ -14667,7 +14837,7 @@
       "label": "Catatan Pemodelan",
       "file_type": "document",
       "source_file": "docs/02_Modules/10_Domain_Model.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_catatan_pemodelan",
       "community": 157,
@@ -16230,7 +16400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_campaigns_api",
-      "community": 155,
+      "community": 153,
       "norm_label": "campaigns \u2014 api"
     },
     {
@@ -16240,7 +16410,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_service_layer_client_sdk",
-      "community": 155,
+      "community": 153,
       "norm_label": "service layer (client sdk)"
     },
     {
@@ -16330,7 +16500,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_claim_service",
-      "community": 155,
+      "community": 153,
       "norm_label": "claim service"
     },
     {
@@ -16340,7 +16510,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_claimcampaign_client_sdk",
-      "community": 155,
+      "community": 153,
       "norm_label": "`claimcampaign()` \u2014 [client sdk]"
     },
     {
@@ -16450,7 +16620,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_lihat_juga",
-      "community": 155,
+      "community": 153,
       "norm_label": "lihat juga"
     },
     {
@@ -17214,10 +17384,20 @@
       "norm_label": "send-chat-notification"
     },
     {
-      "label": "Storage",
+      "label": "upload-chat-attachment",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
       "source_location": "L18",
+      "_origin": "ast",
+      "id": "docs_02_modules_chat_70_backend_upload_chat_attachment",
+      "community": 54,
+      "norm_label": "upload-chat-attachment"
+    },
+    {
+      "label": "Storage",
+      "file_type": "document",
+      "source_file": "docs/02_Modules/Chat/70_Backend.md",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "docs_02_modules_chat_70_backend_storage",
       "community": 54,
@@ -17227,7 +17407,7 @@
       "label": "Aturan Backend",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L26",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "docs_02_modules_chat_70_backend_aturan_backend",
       "community": 54,
@@ -19400,7 +19580,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules",
-      "community": 232,
+      "community": 224,
       "norm_label": "30_business_rules.md"
     },
     {
@@ -19410,7 +19590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_payments_business_rules",
-      "community": 153,
+      "community": 224,
       "norm_label": "payments \u2014 business rules"
     },
     {
@@ -19420,7 +19600,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_payment_gateway",
-      "community": 153,
+      "community": 224,
       "norm_label": "payment gateway"
     },
     {
@@ -19430,7 +19610,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_balance_vs_pending_balance",
-      "community": 153,
+      "community": 224,
       "norm_label": "balance vs pending balance"
     },
     {
@@ -19440,7 +19620,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_tipe_transaksi",
-      "community": 153,
+      "community": 224,
       "norm_label": "tipe transaksi"
     },
     {
@@ -19450,7 +19630,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_escrow",
-      "community": 153,
+      "community": 224,
       "norm_label": "escrow"
     },
     {
@@ -19460,7 +19640,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_withdraw",
-      "community": 153,
+      "community": 224,
       "norm_label": "withdraw"
     },
     {
@@ -19520,7 +19700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database",
-      "community": 232,
+      "community": 224,
       "norm_label": "50_database.md"
     },
     {
@@ -19530,7 +19710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_payments_database",
-      "community": 232,
+      "community": 224,
       "norm_label": "payments \u2014 database"
     },
     {
@@ -19540,7 +19720,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_wallets",
-      "community": 232,
+      "community": 224,
       "norm_label": "wallets"
     },
     {
@@ -19550,7 +19730,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_payments",
-      "community": 232,
+      "community": 224,
       "norm_label": "payments"
     },
     {
@@ -19560,7 +19740,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_transactions",
-      "community": 232,
+      "community": 224,
       "norm_label": "transactions"
     },
     {
@@ -19570,7 +19750,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_escrows",
-      "community": 232,
+      "community": 224,
       "norm_label": "escrows"
     },
     {
@@ -19580,7 +19760,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_withdrawals",
-      "community": 232,
+      "community": 224,
       "norm_label": "withdrawals"
     },
     {
@@ -19590,7 +19770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_60_api",
-      "community": 232,
+      "community": 224,
       "norm_label": "60_api.md"
     },
     {
@@ -19770,7 +19950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_70_backend",
-      "community": 232,
+      "community": 8,
       "norm_label": "70_backend.md"
     },
     {
@@ -19950,7 +20130,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events",
-      "community": 134,
+      "community": 224,
       "norm_label": "90_events.md"
     },
     {
@@ -19960,7 +20140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_payments_events",
-      "community": 134,
+      "community": 224,
       "norm_label": "payments \u2014 events"
     },
     {
@@ -19970,7 +20150,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_user_registered_create_wallet",
-      "community": 134,
+      "community": 224,
       "norm_label": "user registered \u2192 create wallet"
     },
     {
@@ -19980,7 +20160,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_checkout_created_midtrans_payment",
-      "community": 134,
+      "community": 224,
       "norm_label": "checkout created \u2192 midtrans payment"
     },
     {
@@ -19990,7 +20170,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_midtrans_notification_payment_status",
-      "community": 134,
+      "community": 224,
       "norm_label": "midtrans notification \u2192 payment status"
     },
     {
@@ -20000,7 +20180,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_payment_success_escrow_hold",
-      "community": 134,
+      "community": 224,
       "norm_label": "payment success \u2192 escrow hold"
     },
     {
@@ -20010,7 +20190,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_deliverable_approved_release_escrow",
-      "community": 134,
+      "community": 224,
       "norm_label": "deliverable approved \u2192 release escrow"
     },
     {
@@ -20020,7 +20200,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "docs_02_modules_payments_90_events_withdraw_requested_admin_review",
-      "community": 134,
+      "community": 224,
       "norm_label": "withdraw requested \u2192 admin review"
     },
     {
@@ -21997,7 +22177,7 @@
       "label": "Tahap 6: Reward Calculation",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L87",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_tahap_6_reward_calculation",
       "community": 30,
@@ -22007,7 +22187,7 @@
       "label": "State Transitions",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L100",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_state_transitions",
       "community": 30,
@@ -22017,7 +22197,7 @@
       "label": "Events / Functions",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L110",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_events_functions",
       "community": 30,
@@ -22027,7 +22207,7 @@
       "label": "Validation Rules per Langkah",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L119",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_validation_rules_per_langkah",
       "community": 30,
@@ -22037,7 +22217,7 @@
       "label": "Notifikasi",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L135",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_notifikasi",
       "community": 30,
@@ -22047,7 +22227,7 @@
       "label": "Edge Cases",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L146",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_edge_cases",
       "community": 30,
@@ -22057,7 +22237,7 @@
       "label": "Links",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L158",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_links",
       "community": 30,
@@ -22760,7 +22940,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index",
-      "community": 11,
+      "community": 115,
       "norm_label": "00_index.md"
     },
     {
@@ -22770,7 +22950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index_04_decisions_index",
-      "community": 11,
+      "community": 115,
       "norm_label": "04_decisions \u2014 index"
     },
     {
@@ -22780,7 +22960,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index_daftar_adr",
-      "community": 11,
+      "community": 115,
       "norm_label": "daftar adr"
     },
     {
@@ -22790,7 +22970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_001",
-      "community": 11,
+      "community": 115,
       "norm_label": "adr-001.md"
     },
     {
@@ -22850,7 +23030,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_002",
-      "community": 11,
+      "community": 115,
       "norm_label": "adr-002.md"
     },
     {
@@ -23090,7 +23270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006",
-      "community": 11,
+      "community": 152,
       "norm_label": "adr-006.md"
     },
     {
@@ -23150,7 +23330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007",
-      "community": 232,
+      "community": 224,
       "norm_label": "adr-007.md"
     },
     {
@@ -23160,7 +23340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_adr_007_minimum_withdraw_dipasang_sebagai_konstanta_sistem_rp50_000",
-      "community": 232,
+      "community": 224,
       "norm_label": "adr-007 \u2014 minimum withdraw dipasang sebagai konstanta sistem (= rp50.000)"
     },
     {
@@ -23170,7 +23350,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_status",
-      "community": 232,
+      "community": 224,
       "norm_label": "status"
     },
     {
@@ -23180,7 +23360,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_context",
-      "community": 232,
+      "community": 224,
       "norm_label": "context"
     },
     {
@@ -23190,7 +23370,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_decision",
-      "community": 232,
+      "community": 224,
       "norm_label": "decision"
     },
     {
@@ -23200,7 +23380,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_007_consequences",
-      "community": 232,
+      "community": 224,
       "norm_label": "consequences"
     },
     {
@@ -23959,7 +24139,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L689",
+      "source_location": "L703",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_appwritejson",
@@ -25478,6 +25658,136 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_package",
+      "target": "functions_upload_chat_attachment_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_package",
+      "target": "functions_upload_chat_attachment_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_package",
+      "target": "functions_upload_chat_attachment_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_package",
+      "target": "functions_upload_chat_attachment_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_package",
+      "target": "functions_upload_chat_attachment_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_package_dependencies",
+      "target": "functions_upload_chat_attachment_package_dependencies_node_appwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_createclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_getenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_getuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_parsebody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/upload-chat-attachment/src/main.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "functions_upload_chat_attachment_src_main",
+      "target": "functions_upload_chat_attachment_src_main_validatepayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "functions/validate-and-upload/package.json",
       "source_location": "L6",
       "weight": 1.0,
@@ -26978,7 +27288,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L181",
+      "source_location": "L182",
       "weight": 1.0,
       "source": "src_services_chat_service_sendmessage",
       "target": "src_services_chat_service_mapmessage",
@@ -27000,7 +27310,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L183",
+      "source_location": "L184",
       "weight": 1.0,
       "source": "src_services_chat_service_sendmessage",
       "target": "src_services_chat_service_maperror",
@@ -27044,7 +27354,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L177",
+      "source_location": "L178",
       "weight": 1.0,
       "source": "src_services_chat_service_sendmessage",
       "target": "src_services_chat_service_buildlastmessage",
@@ -38199,7 +38509,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L40",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack",
       "target": "docs_00_project_50_project_rules",
@@ -38209,20 +38519,10 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L39",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack",
-      "target": "docs_04_decisions_adr_001",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "docs_00_project_40_tech_stack",
-      "target": "docs_04_decisions_adr_002",
+      "target": "docs_01_global_80_deployment",
       "confidence_score": 1.0
     },
     {
@@ -38232,6 +38532,36 @@
       "source_location": "L22",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack",
+      "target": "docs_02_modules_ai_00_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack",
+      "target": "docs_04_decisions_adr_001",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack",
+      "target": "docs_04_decisions_adr_002",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack",
       "target": "docs_04_decisions_adr_006",
       "confidence_score": 1.0
     },
@@ -38239,7 +38569,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L16",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_ai_layer",
@@ -38259,7 +38589,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L32",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_deployment",
@@ -38279,7 +38609,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L37",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack_tech_stack",
+      "target": "docs_00_project_40_tech_stack_payment_gateway",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_referensi",
@@ -38289,7 +38629,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L20",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_state_management",
@@ -38299,7 +38639,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_testing",
@@ -38309,7 +38649,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L24",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_validation",
@@ -38909,7 +39249,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L68",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "docs_01_global_50_security_guidelines_50_security_guidelines",
       "target": "docs_01_global_50_security_guidelines_function_api_key_scope",
@@ -38929,7 +39269,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "docs_01_global_50_security_guidelines_50_security_guidelines",
       "target": "docs_01_global_50_security_guidelines_pola_document_level_permission",
@@ -39419,7 +39759,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/10_Domain_Model.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "docs_02_modules_10_domain_model_domain_model_erd_tingkat_tinggi",
       "target": "docs_02_modules_10_domain_model_catatan_pemodelan",
@@ -41969,7 +42309,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L26",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "docs_02_modules_chat_70_backend_chat_backend",
       "target": "docs_02_modules_chat_70_backend_aturan_backend",
@@ -41979,7 +42319,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L18",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "docs_02_modules_chat_70_backend_chat_backend",
       "target": "docs_02_modules_chat_70_backend_storage",
@@ -41993,6 +42333,16 @@
       "weight": 1.0,
       "source": "docs_02_modules_chat_70_backend_appwrite_functions",
       "target": "docs_02_modules_chat_70_backend_send_chat_notification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Chat/70_Backend.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "docs_02_modules_chat_70_backend_appwrite_functions",
+      "target": "docs_02_modules_chat_70_backend_upload_chat_attachment",
       "confidence_score": 1.0
     },
     {
@@ -46769,7 +47119,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L155",
+      "source_location": "L152",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv",
       "target": "docs_03_workflows_60_dispute",
@@ -46789,7 +47139,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L146",
+      "source_location": "L143",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_edge_cases",
@@ -46799,7 +47149,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L110",
+      "source_location": "L107",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_events_functions",
@@ -46809,7 +47159,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L158",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_links",
@@ -46829,7 +47179,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L135",
+      "source_location": "L132",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_notifikasi",
@@ -46849,7 +47199,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L100",
+      "source_location": "L97",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_state_transitions",
@@ -46879,7 +47229,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L119",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_validation_rules_per_langkah",
@@ -46939,7 +47289,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L87",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_step_by_step_flow",
       "target": "docs_03_workflows_20_campaign_ppv_tahap_6_reward_calculation",
@@ -48787,5 +49137,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "02aa11ef704bf4ff2acc605df71c0201fdbabbd8"
+  "built_at_commit": "843607d7806e4050bae21deef94e0007d3c40d63"
 }

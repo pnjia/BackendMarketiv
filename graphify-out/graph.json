@@ -13854,10 +13854,20 @@
       "norm_label": "backend (baas)"
     },
     {
-      "label": "AI Layer",
+      "label": "Payment Gateway",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
       "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_00_project_40_tech_stack_payment_gateway",
+      "community": 14,
+      "norm_label": "payment gateway"
+    },
+    {
+      "label": "AI Layer",
+      "file_type": "document",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_ai_layer",
       "community": 14,
@@ -13867,7 +13877,7 @@
       "label": "State Management",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L20",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_state_management",
       "community": 14,
@@ -13877,7 +13887,7 @@
       "label": "Validation",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L24",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_validation",
       "community": 14,
@@ -13887,7 +13897,7 @@
       "label": "Testing",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_testing",
       "community": 14,
@@ -13897,7 +13907,7 @@
       "label": "Deployment",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L32",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_deployment",
       "community": 14,
@@ -13907,7 +13917,7 @@
       "label": "Referensi",
       "file_type": "document",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L37",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "docs_00_project_40_tech_stack_referensi",
       "community": 14,
@@ -14407,7 +14417,7 @@
       "label": "Pola Document-Level Permission",
       "file_type": "document",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "docs_01_global_50_security_guidelines_pola_document_level_permission",
       "community": 79,
@@ -14417,7 +14427,7 @@
       "label": "Function API Key Scope",
       "file_type": "document",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L68",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "docs_01_global_50_security_guidelines_function_api_key_scope",
       "community": 79,
@@ -14827,7 +14837,7 @@
       "label": "Catatan Pemodelan",
       "file_type": "document",
       "source_file": "docs/02_Modules/10_Domain_Model.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_catatan_pemodelan",
       "community": 157,
@@ -15000,7 +15010,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules",
-      "community": 156,
+      "community": 22,
       "norm_label": "30_business_rules.md"
     },
     {
@@ -15010,7 +15020,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules_ai_business_rules",
-      "community": 156,
+      "community": 22,
       "norm_label": "ai \u2014 business rules"
     },
     {
@@ -15020,7 +15030,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules_brief_generator",
-      "community": 156,
+      "community": 22,
       "norm_label": "brief generator"
     },
     {
@@ -15030,7 +15040,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules_fraud_detection",
-      "community": 156,
+      "community": 22,
       "norm_label": "fraud detection"
     },
     {
@@ -15040,7 +15050,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules_threshold",
-      "community": 156,
+      "community": 22,
       "norm_label": "threshold"
     },
     {
@@ -15130,7 +15140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_api",
-      "community": 153,
+      "community": 22,
       "norm_label": "ai \u2014 api"
     },
     {
@@ -15140,7 +15150,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_service_layer_client_sdk",
-      "community": 153,
+      "community": 22,
       "norm_label": "service layer (client sdk)"
     },
     {
@@ -15150,7 +15160,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_appwrite_functions_server_side",
-      "community": 153,
+      "community": 22,
       "norm_label": "appwrite functions (server-side)"
     },
     {
@@ -15160,18 +15170,18 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_brief_appwrite_function",
-      "community": 153,
+      "community": 22,
       "norm_label": "`ai-brief` \u2014 [appwrite function]"
     },
     {
-      "label": "`fraud-detection` \u2014 [Appwrite Function]",
+      "label": "`ai-fraud-precheck` \u2014 [Appwrite Function]",
       "file_type": "document",
       "source_file": "docs/02_Modules/AI/60_API.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "docs_02_modules_ai_60_api_fraud_detection_appwrite_function",
-      "community": 153,
-      "norm_label": "`fraud-detection` \u2014 [appwrite function]"
+      "id": "docs_02_modules_ai_60_api_ai_fraud_precheck_appwrite_function",
+      "community": 22,
+      "norm_label": "`ai-fraud-precheck` \u2014 [appwrite function]"
     },
     {
       "label": "`ai_requests`",
@@ -15180,7 +15190,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_requests",
-      "community": 153,
+      "community": 22,
       "norm_label": "`ai_requests`"
     },
     {
@@ -15190,7 +15200,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_lihat_juga",
-      "community": 153,
+      "community": 22,
       "norm_label": "lihat juga"
     },
     {
@@ -15234,14 +15244,14 @@
       "norm_label": "ai-brief"
     },
     {
-      "label": "fraud-detection",
+      "label": "ai-fraud-precheck",
       "file_type": "document",
       "source_file": "docs/02_Modules/AI/70_Backend.md",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "docs_02_modules_ai_70_backend_fraud_detection",
+      "id": "docs_02_modules_ai_70_backend_ai_fraud_precheck",
       "community": 22,
-      "norm_label": "fraud-detection"
+      "norm_label": "ai-fraud-precheck"
     },
     {
       "label": "Integrasi Eksternal",
@@ -16170,7 +16180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_30_business_rules",
-      "community": 36,
+      "community": 18,
       "norm_label": "30_business_rules.md"
     },
     {
@@ -16300,7 +16310,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_50_database",
-      "community": 36,
+      "community": 18,
       "norm_label": "50_database.md"
     },
     {
@@ -16380,7 +16390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api",
-      "community": 36,
+      "community": 18,
       "norm_label": "60_api.md"
     },
     {
@@ -16390,7 +16400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_campaigns_api",
-      "community": 39,
+      "community": 153,
       "norm_label": "campaigns \u2014 api"
     },
     {
@@ -16400,7 +16410,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_service_layer_client_sdk",
-      "community": 40,
+      "community": 153,
       "norm_label": "service layer (client sdk)"
     },
     {
@@ -16490,7 +16500,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_claim_service",
-      "community": 40,
+      "community": 153,
       "norm_label": "claim service"
     },
     {
@@ -16500,7 +16510,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_claimcampaign_client_sdk",
-      "community": 40,
+      "community": 153,
       "norm_label": "`claimcampaign()` \u2014 [client sdk]"
     },
     {
@@ -16610,7 +16620,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_lihat_juga",
-      "community": 39,
+      "community": 153,
       "norm_label": "lihat juga"
     },
     {
@@ -16640,7 +16650,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_appwrite_functions",
-      "community": 18,
+      "community": 156,
       "norm_label": "appwrite functions"
     },
     {
@@ -16650,7 +16660,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_campaign_published",
-      "community": 18,
+      "community": 156,
       "norm_label": "campaign-published"
     },
     {
@@ -16660,7 +16670,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_campaign_claimed",
-      "community": 18,
+      "community": 156,
       "norm_label": "campaign-claimed"
     },
     {
@@ -16670,7 +16680,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_ai_fraud_precheck",
-      "community": 18,
+      "community": 156,
       "norm_label": "ai-fraud-precheck"
     },
     {
@@ -16680,7 +16690,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_calculate_campaign_reward",
-      "community": 18,
+      "community": 156,
       "norm_label": "calculate-campaign-reward"
     },
     {
@@ -20014,14 +20024,14 @@
       "norm_label": "release-escrow"
     },
     {
-      "label": "process-withdrawal (Admin)",
+      "label": "complete-withdrawal (Admin)",
       "file_type": "document",
       "source_file": "docs/02_Modules/Payments/70_Backend.md",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "docs_02_modules_payments_70_backend_process_withdrawal_admin",
+      "id": "docs_02_modules_payments_70_backend_complete_withdrawal_admin",
       "community": 129,
-      "norm_label": "process-withdrawal (admin)"
+      "norm_label": "complete-withdrawal (admin)"
     },
     {
       "label": "Aturan Backend",
@@ -22167,7 +22177,7 @@
       "label": "Tahap 6: Reward Calculation",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L87",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_tahap_6_reward_calculation",
       "community": 30,
@@ -22177,7 +22187,7 @@
       "label": "State Transitions",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L100",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_state_transitions",
       "community": 30,
@@ -22187,7 +22197,7 @@
       "label": "Events / Functions",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L110",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_events_functions",
       "community": 30,
@@ -22197,7 +22207,7 @@
       "label": "Validation Rules per Langkah",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L119",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_validation_rules_per_langkah",
       "community": 30,
@@ -22207,7 +22217,7 @@
       "label": "Notifikasi",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L135",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_notifikasi",
       "community": 30,
@@ -22217,7 +22227,7 @@
       "label": "Edge Cases",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L146",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_edge_cases",
       "community": 30,
@@ -22227,7 +22237,7 @@
       "label": "Links",
       "file_type": "document",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L158",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "docs_03_workflows_20_campaign_ppv_links",
       "community": 30,
@@ -22930,7 +22940,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index",
-      "community": 11,
+      "community": 74,
       "norm_label": "00_index.md"
     },
     {
@@ -22940,7 +22950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index_04_decisions_index",
-      "community": 11,
+      "community": 74,
       "norm_label": "04_decisions \u2014 index"
     },
     {
@@ -22950,7 +22960,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_04_decisions_00_index_daftar_adr",
-      "community": 11,
+      "community": 74,
       "norm_label": "daftar adr"
     },
     {
@@ -23200,7 +23210,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_005",
-      "community": 76,
+      "community": 74,
       "norm_label": "adr-005.md"
     },
     {
@@ -23260,7 +23270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_decisions_adr_006",
-      "community": 11,
+      "community": 152,
       "norm_label": "adr-006.md"
     },
     {
@@ -38499,7 +38509,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L40",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack",
       "target": "docs_00_project_50_project_rules",
@@ -38509,20 +38519,10 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L39",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack",
-      "target": "docs_04_decisions_adr_001",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "docs_00_project_40_tech_stack",
-      "target": "docs_04_decisions_adr_002",
+      "target": "docs_01_global_80_deployment",
       "confidence_score": 1.0
     },
     {
@@ -38532,6 +38532,36 @@
       "source_location": "L22",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack",
+      "target": "docs_02_modules_ai_00_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack",
+      "target": "docs_04_decisions_adr_001",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack",
+      "target": "docs_04_decisions_adr_002",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack",
       "target": "docs_04_decisions_adr_006",
       "confidence_score": 1.0
     },
@@ -38539,7 +38569,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L16",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_ai_layer",
@@ -38559,7 +38589,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L32",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_deployment",
@@ -38579,7 +38609,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L37",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "docs_00_project_40_tech_stack_tech_stack",
+      "target": "docs_00_project_40_tech_stack_payment_gateway",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/00_Project/40_Tech_Stack.md",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_referensi",
@@ -38589,7 +38629,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L20",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_state_management",
@@ -38599,7 +38639,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L28",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_testing",
@@ -38609,7 +38649,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/00_Project/40_Tech_Stack.md",
-      "source_location": "L24",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "docs_00_project_40_tech_stack_tech_stack",
       "target": "docs_00_project_40_tech_stack_validation",
@@ -39209,7 +39249,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L68",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "docs_01_global_50_security_guidelines_50_security_guidelines",
       "target": "docs_01_global_50_security_guidelines_function_api_key_scope",
@@ -39229,7 +39269,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/01_Global/50_Security_Guidelines.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "docs_01_global_50_security_guidelines_50_security_guidelines",
       "target": "docs_01_global_50_security_guidelines_pola_document_level_permission",
@@ -39719,7 +39759,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/10_Domain_Model.md",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "docs_02_modules_10_domain_model_domain_model_erd_tingkat_tinggi",
       "target": "docs_02_modules_10_domain_model_catatan_pemodelan",
@@ -40059,20 +40099,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L37",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "docs_02_modules_ai_60_api_appwrite_functions_server_side",
-      "target": "docs_02_modules_ai_60_api_ai_requests",
+      "target": "docs_02_modules_ai_60_api_ai_fraud_precheck_appwrite_function",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L26",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "docs_02_modules_ai_60_api_appwrite_functions_server_side",
-      "target": "docs_02_modules_ai_60_api_fraud_detection_appwrite_function",
+      "target": "docs_02_modules_ai_60_api_ai_requests",
       "confidence_score": 1.0
     },
     {
@@ -40122,7 +40162,7 @@
       "source_location": "L13",
       "weight": 1.0,
       "source": "docs_02_modules_ai_70_backend_appwrite_functions",
-      "target": "docs_02_modules_ai_70_backend_fraud_detection",
+      "target": "docs_02_modules_ai_70_backend_ai_fraud_precheck",
       "confidence_score": 1.0
     },
     {
@@ -44919,6 +44959,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Payments/70_Backend.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_02_modules_payments_70_backend_appwrite_functions",
+      "target": "docs_02_modules_payments_70_backend_complete_withdrawal_admin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Payments/70_Backend.md",
       "source_location": "L24",
       "weight": 1.0,
       "source": "docs_02_modules_payments_70_backend_appwrite_functions",
@@ -44953,16 +45003,6 @@
       "weight": 1.0,
       "source": "docs_02_modules_payments_70_backend_appwrite_functions",
       "target": "docs_02_modules_payments_70_backend_midtrans_webhook",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/02_Modules/Payments/70_Backend.md",
-      "source_location": "L34",
-      "weight": 1.0,
-      "source": "docs_02_modules_payments_70_backend_appwrite_functions",
-      "target": "docs_02_modules_payments_70_backend_process_withdrawal_admin",
       "confidence_score": 1.0
     },
     {
@@ -47079,7 +47119,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L155",
+      "source_location": "L152",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv",
       "target": "docs_03_workflows_60_dispute",
@@ -47099,7 +47139,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L146",
+      "source_location": "L143",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_edge_cases",
@@ -47109,7 +47149,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L110",
+      "source_location": "L107",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_events_functions",
@@ -47119,7 +47159,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L158",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_links",
@@ -47139,7 +47179,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L135",
+      "source_location": "L132",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_notifikasi",
@@ -47159,7 +47199,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L100",
+      "source_location": "L97",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_state_transitions",
@@ -47189,7 +47229,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L119",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_workflow_campaign_pay_per_view_ppv",
       "target": "docs_03_workflows_20_campaign_ppv_validation_rules_per_langkah",
@@ -47249,7 +47289,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/03_Workflows/20_Campaign_PPV.md",
-      "source_location": "L87",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "docs_03_workflows_20_campaign_ppv_step_by_step_flow",
       "target": "docs_03_workflows_20_campaign_ppv_tahap_6_reward_calculation",
@@ -49097,5 +49137,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1a2e73a4dd90ce7f89fe1a4e3c1f68b6944126a5"
+  "built_at_commit": "843607d7806e4050bae21deef94e0007d3c40d63"
 }
