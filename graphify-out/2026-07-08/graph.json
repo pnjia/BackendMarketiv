@@ -217,7 +217,7 @@
       "label": "tables",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L378",
+      "source_location": "L403",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_tables",
       "community": 9,
@@ -227,7 +227,7 @@
       "label": "buckets",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L393",
+      "source_location": "L418",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_buckets",
       "community": 9,
@@ -237,7 +237,7 @@
       "label": "functions",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L480",
+      "source_location": "L505",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_functions",
       "community": 9,
@@ -247,7 +247,7 @@
       "label": "appwriteJson",
       "file_type": "code",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L650",
+      "source_location": "L689",
       "_origin": "ast",
       "id": "appwrite_generate_appwrite_json_appwritejson",
       "community": 9,
@@ -1606,6 +1606,146 @@
     {
       "label": "package.json",
       "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package",
+      "community": 43,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package_name",
+      "community": 43,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package_version",
+      "community": 43,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package_type",
+      "community": 43,
+      "norm_label": "type"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package_main",
+      "community": 43,
+      "norm_label": "main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package_dependencies",
+      "community": 43,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "node-appwrite",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_package_dependencies_node_appwrite",
+      "community": 43,
+      "norm_label": "node-appwrite"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main",
+      "community": 144,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "getEnv()",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main_getenv",
+      "community": 144,
+      "norm_label": "getenv()"
+    },
+    {
+      "label": "createClient()",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main_createclient",
+      "community": 144,
+      "norm_label": "createclient()"
+    },
+    {
+      "label": "parseBody()",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main_parsebody",
+      "community": 144,
+      "norm_label": "parsebody()"
+    },
+    {
+      "label": "getReceiverId()",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main_getreceiverid",
+      "community": 144,
+      "norm_label": "getreceiverid()"
+    },
+    {
+      "label": "createNotificationBody()",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main_createnotificationbody",
+      "community": 144,
+      "norm_label": "createnotificationbody()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L110",
+      "_origin": "ast",
+      "id": "functions_send_chat_notification_src_main_json",
+      "community": 144,
+      "norm_label": "json()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
       "source_file": "functions/validate-and-upload/package.json",
       "source_location": "L1",
       "_origin": "ast",
@@ -1857,7 +1997,7 @@
       "label": "FUNCTIONS",
       "file_type": "code",
       "source_file": "src/lib/appwrite/collections.ts",
-      "source_location": "L19",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "src_lib_appwrite_collections_functions",
       "community": 122,
@@ -2204,10 +2344,140 @@
       "norm_label": "chat.service.ts"
     },
     {
+      "label": "MessageType",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_services_chat_service_messagetype",
+      "community": 145,
+      "norm_label": "messagetype"
+    },
+    {
+      "label": "Conversation",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_services_chat_service_conversation",
+      "community": 145,
+      "norm_label": "conversation"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_services_chat_service_chatmessage",
+      "community": 145,
+      "norm_label": "chatmessage"
+    },
+    {
+      "label": "CreateConversationInput",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "src_services_chat_service_createconversationinput",
+      "community": 145,
+      "norm_label": "createconversationinput"
+    },
+    {
+      "label": "SendMessageInput",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "src_services_chat_service_sendmessageinput",
+      "community": 145,
+      "norm_label": "sendmessageinput"
+    },
+    {
+      "label": "ChatServiceError",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "src_services_chat_service_chatserviceerror",
+      "community": 145,
+      "norm_label": "chatserviceerror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "src_services_chat_service_chatserviceerror_constructor",
+      "community": 145,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "mapConversation()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "src_services_chat_service_mapconversation",
+      "community": 145,
+      "norm_label": "mapconversation()"
+    },
+    {
+      "label": "mapMessage()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "src_services_chat_service_mapmessage",
+      "community": 145,
+      "norm_label": "mapmessage()"
+    },
+    {
+      "label": "mapError()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "src_services_chat_service_maperror",
+      "community": 145,
+      "norm_label": "maperror()"
+    },
+    {
+      "label": "requireText()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "src_services_chat_service_requiretext",
+      "community": 145,
+      "norm_label": "requiretext()"
+    },
+    {
+      "label": "ensureParticipant()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "src_services_chat_service_ensureparticipant",
+      "community": 145,
+      "norm_label": "ensureparticipant()"
+    },
+    {
+      "label": "buildLastMessage()",
+      "file_type": "code",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "src_services_chat_service_buildlastmessage",
+      "community": 145,
+      "norm_label": "buildlastmessage()"
+    },
+    {
       "label": "createConversation()",
       "file_type": "code",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L1",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "src_services_chat_service_createconversation",
       "community": 145,
@@ -2217,7 +2487,7 @@
       "label": "sendMessage()",
       "file_type": "code",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L2",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "src_services_chat_service_sendmessage",
       "community": 145,
@@ -2304,10 +2574,60 @@
       "norm_label": "notification.service.ts"
     },
     {
+      "label": "Notification",
+      "file_type": "code",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_services_notification_service_notification",
+      "community": 146,
+      "norm_label": "notification"
+    },
+    {
+      "label": "NotificationServiceError",
+      "file_type": "code",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_services_notification_service_notificationserviceerror",
+      "community": 146,
+      "norm_label": "notificationserviceerror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_services_notification_service_notificationserviceerror_constructor",
+      "community": 146,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "mapNotification()",
+      "file_type": "code",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "src_services_notification_service_mapnotification",
+      "community": 146,
+      "norm_label": "mapnotification()"
+    },
+    {
+      "label": "mapError()",
+      "file_type": "code",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_services_notification_service_maperror",
+      "community": 146,
+      "norm_label": "maperror()"
+    },
+    {
       "label": "getNotifications()",
       "file_type": "code",
       "source_file": "src/services/notification.service.ts",
-      "source_location": "L1",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "src_services_notification_service_getnotifications",
       "community": 146,
@@ -2317,11 +2637,21 @@
       "label": "markAsRead()",
       "file_type": "code",
       "source_file": "src/services/notification.service.ts",
-      "source_location": "L2",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "src_services_notification_service_markasread",
       "community": 146,
       "norm_label": "markasread()"
+    },
+    {
+      "label": "markAllAsRead()",
+      "file_type": "code",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "src_services_notification_service_markallasread",
+      "community": 146,
+      "norm_label": "markallasread()"
     },
     {
       "label": "offer.service.ts",
@@ -14310,7 +14640,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_domain_model_erd_tingkat_tinggi",
-      "community": 19,
+      "community": 157,
       "norm_label": "domain model \u2014 erd tingkat tinggi"
     },
     {
@@ -14320,7 +14650,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_kelompok_domain_modul_pemilik",
-      "community": 19,
+      "community": 157,
       "norm_label": "kelompok domain & modul pemilik"
     },
     {
@@ -14330,7 +14660,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_erd_sederhana_relationship_tree",
-      "community": 19,
+      "community": 157,
       "norm_label": "erd sederhana (relationship tree)"
     },
     {
@@ -14340,7 +14670,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_catatan_pemodelan",
-      "community": 19,
+      "community": 157,
       "norm_label": "catatan pemodelan"
     },
     {
@@ -14640,7 +14970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_api",
-      "community": 15,
+      "community": 22,
       "norm_label": "ai \u2014 api"
     },
     {
@@ -14650,7 +14980,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_service_layer_client_sdk",
-      "community": 15,
+      "community": 22,
       "norm_label": "service layer (client sdk)"
     },
     {
@@ -14660,7 +14990,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_appwrite_functions_server_side",
-      "community": 15,
+      "community": 22,
       "norm_label": "appwrite functions (server-side)"
     },
     {
@@ -14670,7 +15000,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_brief_appwrite_function",
-      "community": 15,
+      "community": 22,
       "norm_label": "`ai-brief` \u2014 [appwrite function]"
     },
     {
@@ -14680,7 +15010,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_fraud_detection_appwrite_function",
-      "community": 15,
+      "community": 22,
       "norm_label": "`fraud-detection` \u2014 [appwrite function]"
     },
     {
@@ -14690,7 +15020,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_requests",
-      "community": 15,
+      "community": 22,
       "norm_label": "`ai_requests`"
     },
     {
@@ -14700,7 +15030,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_lihat_juga",
-      "community": 15,
+      "community": 22,
       "norm_label": "lihat juga"
     },
     {
@@ -14710,7 +15040,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ai_70_backend",
-      "community": 43,
+      "community": 22,
       "norm_label": "70_backend.md"
     },
     {
@@ -14720,7 +15050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_ai_70_backend_ai_backend",
-      "community": 43,
+      "community": 22,
       "norm_label": "ai \u2014 backend"
     },
     {
@@ -14730,7 +15060,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_ai_70_backend_appwrite_functions",
-      "community": 43,
+      "community": 22,
       "norm_label": "appwrite functions"
     },
     {
@@ -14740,7 +15070,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_ai_70_backend_ai_brief",
-      "community": 43,
+      "community": 22,
       "norm_label": "ai-brief"
     },
     {
@@ -14750,7 +15080,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "docs_02_modules_ai_70_backend_fraud_detection",
-      "community": 43,
+      "community": 22,
       "norm_label": "fraud-detection"
     },
     {
@@ -14760,7 +15090,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "docs_02_modules_ai_70_backend_integrasi_eksternal",
-      "community": 43,
+      "community": 22,
       "norm_label": "integrasi eksternal"
     },
     {
@@ -15360,7 +15690,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend",
-      "community": 21,
+      "community": 15,
       "norm_label": "80_frontend.md"
     },
     {
@@ -15370,7 +15700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_authentication_frontend",
-      "community": 21,
+      "community": 15,
       "norm_label": "authentication \u2014 frontend"
     },
     {
@@ -15380,7 +15710,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_halaman",
-      "community": 21,
+      "community": 15,
       "norm_label": "halaman"
     },
     {
@@ -15390,7 +15720,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_landing_page",
-      "community": 21,
+      "community": 15,
       "norm_label": "landing page"
     },
     {
@@ -15400,7 +15730,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_register",
-      "community": 21,
+      "community": 15,
       "norm_label": "register"
     },
     {
@@ -15410,7 +15740,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_login",
-      "community": 21,
+      "community": 15,
       "norm_label": "login"
     },
     {
@@ -15420,7 +15750,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_forgot_password",
-      "community": 21,
+      "community": 15,
       "norm_label": "forgot password"
     },
     {
@@ -15430,7 +15760,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "docs_02_modules_authentication_80_frontend_komponen",
-      "community": 21,
+      "community": 15,
       "norm_label": "komponen"
     },
     {
@@ -15680,7 +16010,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_30_business_rules",
-      "community": 36,
+      "community": 18,
       "norm_label": "30_business_rules.md"
     },
     {
@@ -15810,7 +16140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_50_database",
-      "community": 36,
+      "community": 18,
       "norm_label": "50_database.md"
     },
     {
@@ -15890,7 +16220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api",
-      "community": 36,
+      "community": 18,
       "norm_label": "60_api.md"
     },
     {
@@ -15900,7 +16230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_campaigns_api",
-      "community": 39,
+      "community": 155,
       "norm_label": "campaigns \u2014 api"
     },
     {
@@ -15910,7 +16240,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_service_layer_client_sdk",
-      "community": 40,
+      "community": 155,
       "norm_label": "service layer (client sdk)"
     },
     {
@@ -16000,7 +16330,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_claim_service",
-      "community": 40,
+      "community": 155,
       "norm_label": "claim service"
     },
     {
@@ -16010,7 +16340,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_claimcampaign_client_sdk",
-      "community": 40,
+      "community": 155,
       "norm_label": "`claimcampaign()` \u2014 [client sdk]"
     },
     {
@@ -16120,7 +16450,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_60_api_lihat_juga",
-      "community": 39,
+      "community": 155,
       "norm_label": "lihat juga"
     },
     {
@@ -16150,7 +16480,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_appwrite_functions",
-      "community": 18,
+      "community": 156,
       "norm_label": "appwrite functions"
     },
     {
@@ -16160,7 +16490,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_campaign_published",
-      "community": 18,
+      "community": 156,
       "norm_label": "campaign-published"
     },
     {
@@ -16170,7 +16500,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_campaign_claimed",
-      "community": 18,
+      "community": 156,
       "norm_label": "campaign-claimed"
     },
     {
@@ -16180,7 +16510,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_ai_fraud_precheck",
-      "community": 18,
+      "community": 156,
       "norm_label": "ai-fraud-precheck"
     },
     {
@@ -16190,7 +16520,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "docs_02_modules_campaigns_70_backend_calculate_campaign_reward",
-      "community": 18,
+      "community": 156,
       "norm_label": "calculate-campaign-reward"
     },
     {
@@ -16474,10 +16804,20 @@
       "norm_label": "realtime"
     },
     {
-      "label": "Di Luar MVP",
+      "label": "Notifikasi",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/100_Testing.md",
       "source_location": "L25",
+      "_origin": "ast",
+      "id": "docs_02_modules_chat_100_testing_notifikasi",
+      "community": 53,
+      "norm_label": "notifikasi"
+    },
+    {
+      "label": "Di Luar MVP",
+      "file_type": "document",
+      "source_file": "docs/02_Modules/Chat/100_Testing.md",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "docs_02_modules_chat_100_testing_di_luar_mvp",
       "community": 53,
@@ -16727,7 +17067,7 @@
       "label": "messages",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/50_Database.md",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "docs_02_modules_chat_50_database_messages",
       "community": 54,
@@ -16794,10 +17134,20 @@
       "norm_label": "realtime"
     },
     {
+      "label": "Push Notification",
+      "file_type": "document",
+      "source_file": "docs/02_Modules/Chat/60_API.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_02_modules_chat_60_api_push_notification",
+      "community": 54,
+      "norm_label": "push notification"
+    },
+    {
       "label": "Appwrite Functions (Server-side)",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L40",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "docs_02_modules_chat_60_api_appwrite_functions_server_side",
       "community": 54,
@@ -16807,7 +17157,7 @@
       "label": "Lihat Juga",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L46",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "docs_02_modules_chat_60_api_lihat_juga",
       "community": 54,
@@ -16854,20 +17204,20 @@
       "norm_label": "appwrite functions"
     },
     {
-      "label": "update-conversation-on-message",
+      "label": "send-chat-notification",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "docs_02_modules_chat_70_backend_update_conversation_on_message",
+      "id": "docs_02_modules_chat_70_backend_send_chat_notification",
       "community": 54,
-      "norm_label": "update-conversation-on-message"
+      "norm_label": "send-chat-notification"
     },
     {
       "label": "Storage",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "docs_02_modules_chat_70_backend_storage",
       "community": 54,
@@ -16877,7 +17227,7 @@
       "label": "Aturan Backend",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_chat_70_backend_aturan_backend",
       "community": 54,
@@ -16984,10 +17334,20 @@
       "norm_label": "event yang dikonsumsi"
     },
     {
-      "label": "Lihat Juga",
+      "label": "Integrasi Notifications",
       "file_type": "document",
       "source_file": "docs/02_Modules/Chat/90_Events.md",
       "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_02_modules_chat_90_events_integrasi_notifications",
+      "community": 91,
+      "norm_label": "integrasi notifications"
+    },
+    {
+      "label": "Lihat Juga",
+      "file_type": "document",
+      "source_file": "docs/02_Modules/Chat/90_Events.md",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "docs_02_modules_chat_90_events_lihat_juga",
       "community": 91,
@@ -17207,7 +17567,7 @@
       "label": "Kanal",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_30_business_rules_kanal",
       "community": 94,
@@ -17217,7 +17577,7 @@
       "label": "Status Baca",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_30_business_rules_status_baca",
       "community": 94,
@@ -17227,7 +17587,7 @@
       "label": "Lihat Juga",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L31",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_30_business_rules_lihat_juga",
       "community": 94,
@@ -17484,10 +17844,20 @@
       "norm_label": "send-notification"
     },
     {
+      "label": "send-chat-notification",
+      "file_type": "document",
+      "source_file": "docs/02_Modules/Notifications/70_Backend.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_02_modules_notifications_70_backend_send_chat_notification",
+      "community": 58,
+      "norm_label": "send-chat-notification"
+    },
+    {
       "label": "Arsitektur",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/70_Backend.md",
-      "source_location": "L15",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_70_backend_arsitektur",
       "community": 58,
@@ -17497,7 +17867,7 @@
       "label": "Integrasi Eksternal",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/70_Backend.md",
-      "source_location": "L25",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_70_backend_integrasi_eksternal",
       "community": 58,
@@ -17577,7 +17947,7 @@
       "label": "Pola Implementasi",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/90_Events.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_90_events_pola_implementasi",
       "community": 37,
@@ -17587,7 +17957,7 @@
       "label": "Lihat Juga",
       "file_type": "document",
       "source_file": "docs/02_Modules/Notifications/90_Events.md",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_90_events_lihat_juga",
       "community": 37,
@@ -19040,7 +19410,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_payments_business_rules",
-      "community": 232,
+      "community": 153,
       "norm_label": "payments \u2014 business rules"
     },
     {
@@ -19050,7 +19420,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_payment_gateway",
-      "community": 232,
+      "community": 153,
       "norm_label": "payment gateway"
     },
     {
@@ -19060,7 +19430,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_balance_vs_pending_balance",
-      "community": 232,
+      "community": 153,
       "norm_label": "balance vs pending balance"
     },
     {
@@ -19070,7 +19440,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_tipe_transaksi",
-      "community": 232,
+      "community": 153,
       "norm_label": "tipe transaksi"
     },
     {
@@ -19080,7 +19450,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_escrow",
-      "community": 232,
+      "community": 153,
       "norm_label": "escrow"
     },
     {
@@ -19090,7 +19460,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "docs_02_modules_payments_30_business_rules_withdraw",
-      "community": 232,
+      "community": 153,
       "norm_label": "withdraw"
     },
     {
@@ -19150,7 +19520,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database",
-      "community": 223,
+      "community": 232,
       "norm_label": "50_database.md"
     },
     {
@@ -19160,7 +19530,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_payments_database",
-      "community": 223,
+      "community": 232,
       "norm_label": "payments \u2014 database"
     },
     {
@@ -19170,7 +19540,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_wallets",
-      "community": 223,
+      "community": 232,
       "norm_label": "wallets"
     },
     {
@@ -19180,7 +19550,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_payments",
-      "community": 223,
+      "community": 232,
       "norm_label": "payments"
     },
     {
@@ -19190,7 +19560,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_transactions",
-      "community": 223,
+      "community": 232,
       "norm_label": "transactions"
     },
     {
@@ -19200,7 +19570,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_escrows",
-      "community": 223,
+      "community": 232,
       "norm_label": "escrows"
     },
     {
@@ -19210,7 +19580,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "docs_02_modules_payments_50_database_withdrawals",
-      "community": 223,
+      "community": 232,
       "norm_label": "withdrawals"
     },
     {
@@ -20410,7 +20780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts",
-      "community": 19,
+      "community": 158,
       "norm_label": "20_concepts.md"
     },
     {
@@ -20420,7 +20790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts_users_concepts",
-      "community": 19,
+      "community": 158,
       "norm_label": "users \u2014 concepts"
     },
     {
@@ -20430,7 +20800,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts_istilah",
-      "community": 19,
+      "community": 158,
       "norm_label": "istilah"
     },
     {
@@ -20440,7 +20810,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts_konsep",
-      "community": 19,
+      "community": 158,
       "norm_label": "konsep"
     },
     {
@@ -20550,7 +20920,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_40_user_flow",
-      "community": 111,
+      "community": 19,
       "norm_label": "40_user_flow.md"
     },
     {
@@ -21070,7 +21440,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_70_backend",
-      "community": 8,
+      "community": 19,
       "norm_label": "70_backend.md"
     },
     {
@@ -21340,7 +21710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_03_workflows_10_registration",
-      "community": 8,
+      "community": 19,
       "norm_label": "10_registration.md"
     },
     {
@@ -23589,7 +23959,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L650",
+      "source_location": "L689",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_appwritejson",
@@ -23609,7 +23979,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L393",
+      "source_location": "L418",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_buckets",
@@ -23699,7 +24069,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L480",
+      "source_location": "L505",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_functions",
@@ -23719,7 +24089,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "appwrite/generate_appwrite_json.js",
-      "source_location": "L378",
+      "source_location": "L403",
       "weight": 1.0,
       "source": "appwrite_generate_appwrite_json",
       "target": "appwrite_generate_appwrite_json_tables",
@@ -24988,6 +25358,126 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_package",
+      "target": "functions_send_chat_notification_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_package",
+      "target": "functions_send_chat_notification_package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_package",
+      "target": "functions_send_chat_notification_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_package",
+      "target": "functions_send_chat_notification_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_package",
+      "target": "functions_send_chat_notification_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_package_dependencies",
+      "target": "functions_send_chat_notification_package_dependencies_node_appwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_src_main",
+      "target": "functions_send_chat_notification_src_main_createclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_src_main",
+      "target": "functions_send_chat_notification_src_main_createnotificationbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_src_main",
+      "target": "functions_send_chat_notification_src_main_getenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_src_main",
+      "target": "functions_send_chat_notification_src_main_getreceiverid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_src_main",
+      "target": "functions_send_chat_notification_src_main_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "functions/send-chat-notification/src/main.js",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "functions_send_chat_notification_src_main",
+      "target": "functions_send_chat_notification_src_main_parsebody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "functions/validate-and-upload/package.json",
       "source_location": "L6",
       "weight": 1.0,
@@ -25235,6 +25725,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_lib_appwrite_account_account",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_lib_appwrite_account_account",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/payment.service.ts",
       "source_location": "L2",
       "weight": 1.0,
@@ -25354,7 +25866,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/appwrite/collections.ts",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "src_lib_appwrite_collections",
       "target": "src_lib_appwrite_collections_functions",
@@ -25390,6 +25902,28 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "src_services_auth_service",
+      "target": "src_lib_appwrite_collections_collections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_lib_appwrite_collections_collections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
       "target": "src_lib_appwrite_collections_collections",
       "confidence_score": 1.0
     },
@@ -25517,6 +26051,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_lib_appwrite_database_databases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_lib_appwrite_database_databases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/payment.service.ts",
       "source_location": "L2",
       "weight": 1.0,
@@ -25619,6 +26175,28 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "src_services_auth_service",
+      "target": "src_lib_appwrite_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_lib_appwrite_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
       "target": "src_lib_appwrite_index",
       "confidence_score": 1.0
     },
@@ -26227,7 +26805,47 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L1",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_buildlastmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_chatserviceerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_conversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L110",
       "weight": 1.0,
       "source": "src_services_chat_service",
       "target": "src_services_chat_service_createconversation",
@@ -26237,10 +26855,199 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/chat.service.ts",
-      "source_location": "L2",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_createconversationinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_ensureparticipant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_mapconversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_maperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_mapmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_messagetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_requiretext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "src_services_chat_service",
       "target": "src_services_chat_service_sendmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "src_services_chat_service",
+      "target": "src_services_chat_service_sendmessageinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "src_services_chat_service_chatserviceerror",
+      "target": "src_services_chat_service_chatserviceerror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_services_chat_service_createconversation",
+      "target": "src_services_chat_service_mapconversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "src_services_chat_service_sendmessage",
+      "target": "src_services_chat_service_mapconversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "src_services_chat_service_sendmessage",
+      "target": "src_services_chat_service_mapmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "src_services_chat_service_createconversation",
+      "target": "src_services_chat_service_maperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "src_services_chat_service_sendmessage",
+      "target": "src_services_chat_service_maperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "src_services_chat_service_createconversation",
+      "target": "src_services_chat_service_requiretext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "src_services_chat_service_sendmessage",
+      "target": "src_services_chat_service_requiretext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "src_services_chat_service_sendmessage",
+      "target": "src_services_chat_service_ensureparticipant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/chat.service.ts",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "src_services_chat_service_sendmessage",
+      "target": "src_services_chat_service_buildlastmessage",
       "confidence_score": 1.0
     },
     {
@@ -26297,7 +27104,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/notification.service.ts",
-      "source_location": "L1",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "src_services_notification_service",
       "target": "src_services_notification_service_getnotifications",
@@ -26307,10 +27114,114 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/services/notification.service.ts",
-      "source_location": "L2",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_services_notification_service_maperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_services_notification_service_mapnotification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_services_notification_service_markallasread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "src_services_notification_service",
       "target": "src_services_notification_service_markasread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_services_notification_service_notification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_services_notification_service",
+      "target": "src_services_notification_service_notificationserviceerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_services_notification_service_notificationserviceerror",
+      "target": "src_services_notification_service_notificationserviceerror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_services_notification_service_markasread",
+      "target": "src_services_notification_service_mapnotification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_services_notification_service_getnotifications",
+      "target": "src_services_notification_service_maperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_services_notification_service_markasread",
+      "target": "src_services_notification_service_maperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/notification.service.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "src_services_notification_service_markallasread",
+      "target": "src_services_notification_service_getnotifications",
       "confidence_score": 1.0
     },
     {
@@ -40668,10 +41579,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/100_Testing.md",
-      "source_location": "L25",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "docs_02_modules_chat_100_testing_chat_testing",
       "target": "docs_02_modules_chat_100_testing_di_luar_mvp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Chat/100_Testing.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "docs_02_modules_chat_100_testing_chat_testing",
+      "target": "docs_02_modules_chat_100_testing_notifikasi",
       "confidence_score": 1.0
     },
     {
@@ -40788,7 +41709,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L49",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "docs_02_modules_chat_60_api",
       "target": "docs_02_modules_chat_30_business_rules",
@@ -40898,7 +41819,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L48",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "docs_02_modules_chat_60_api",
       "target": "docs_02_modules_chat_50_database",
@@ -40918,7 +41839,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/50_Database.md",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "docs_02_modules_chat_50_database_chat_database",
       "target": "docs_02_modules_chat_50_database_messages",
@@ -40938,7 +41859,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L42",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "docs_02_modules_chat_60_api",
       "target": "docs_02_modules_chat_70_backend",
@@ -40948,7 +41869,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L40",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "docs_02_modules_chat_60_api_chat_api",
       "target": "docs_02_modules_chat_60_api_appwrite_functions_server_side",
@@ -40958,10 +41879,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/60_API.md",
-      "source_location": "L46",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "docs_02_modules_chat_60_api_chat_api",
       "target": "docs_02_modules_chat_60_api_lihat_juga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Chat/60_API.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "docs_02_modules_chat_60_api_chat_api",
+      "target": "docs_02_modules_chat_60_api_push_notification",
       "confidence_score": 1.0
     },
     {
@@ -41038,7 +41969,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "docs_02_modules_chat_70_backend_chat_backend",
       "target": "docs_02_modules_chat_70_backend_aturan_backend",
@@ -41048,7 +41979,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/70_Backend.md",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "docs_02_modules_chat_70_backend_chat_backend",
       "target": "docs_02_modules_chat_70_backend_storage",
@@ -41061,7 +41992,7 @@
       "source_location": "L12",
       "weight": 1.0,
       "source": "docs_02_modules_chat_70_backend_appwrite_functions",
-      "target": "docs_02_modules_chat_70_backend_update_conversation_on_message",
+      "target": "docs_02_modules_chat_70_backend_send_chat_notification",
       "confidence_score": 1.0
     },
     {
@@ -41125,6 +42056,16 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Notifications/90_Events.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "docs_02_modules_notifications_90_events",
+      "target": "docs_02_modules_chat_90_events",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/90_Events.md",
@@ -41149,6 +42090,16 @@
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Chat/90_Events.md",
       "source_location": "L13",
+      "weight": 1.0,
+      "source": "docs_02_modules_chat_90_events_chat_events",
+      "target": "docs_02_modules_chat_90_events_integrasi_notifications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Chat/90_Events.md",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "docs_02_modules_chat_90_events_chat_events",
       "target": "docs_02_modules_chat_90_events_lihat_juga",
@@ -41488,7 +42439,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_30_business_rules",
       "target": "docs_02_modules_notifications_50_database",
@@ -41498,7 +42449,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_30_business_rules",
       "target": "docs_02_modules_notifications_90_events",
@@ -41518,7 +42469,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_30_business_rules_notifications_business_rules",
       "target": "docs_02_modules_notifications_30_business_rules_kanal",
@@ -41528,7 +42479,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_30_business_rules_notifications_business_rules",
       "target": "docs_02_modules_notifications_30_business_rules_lihat_juga",
@@ -41538,7 +42489,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/30_Business_Rules.md",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_30_business_rules_notifications_business_rules",
       "target": "docs_02_modules_notifications_30_business_rules_status_baca",
@@ -41788,7 +42739,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/70_Backend.md",
-      "source_location": "L15",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_70_backend_notifications_backend",
       "target": "docs_02_modules_notifications_70_backend_arsitektur",
@@ -41798,10 +42749,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/70_Backend.md",
-      "source_location": "L25",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_70_backend_notifications_backend",
       "target": "docs_02_modules_notifications_70_backend_integrasi_eksternal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02_Modules/Notifications/70_Backend.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "docs_02_modules_notifications_70_backend_appwrite_functions",
+      "target": "docs_02_modules_notifications_70_backend_send_chat_notification",
       "confidence_score": 1.0
     },
     {
@@ -41868,7 +42829,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/90_Events.md",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_90_events_notifications_events",
       "target": "docs_02_modules_notifications_90_events_lihat_juga",
@@ -41878,7 +42839,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/Notifications/90_Events.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "docs_02_modules_notifications_90_events_notifications_events",
       "target": "docs_02_modules_notifications_90_events_pola_implementasi",
@@ -47826,5 +48787,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "031867500d31f8f7a13be11d91ad3c4b76a198ea"
+  "built_at_commit": "02aa11ef704bf4ff2acc605df71c0201fdbabbd8"
 }

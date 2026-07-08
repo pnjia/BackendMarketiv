@@ -265,57 +265,57 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/00_Index.md": {
-    "mtime": 1783149053.3197806,
+    "mtime": 1783468391.6477067,
     "ast_hash": "175ca1d65460870c61836483fadf34fa",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/100_Testing.md": {
-    "mtime": 1783466014.290172,
+    "mtime": 1783468391.648708,
     "ast_hash": "26a83aba8c406c3efe6bbfabb342514f",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/10_Overview.md": {
-    "mtime": 1783149053.3207805,
+    "mtime": 1783468391.649662,
     "ast_hash": "0e5610edc45952d5fed30847f9991f1b",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/20_Concepts.md": {
-    "mtime": 1783149053.3217807,
-    "ast_hash": "e0723102713ec4b1fa9f520a9d64cd6a",
+    "mtime": 1783468391.6507163,
+    "ast_hash": "b80846cf48597814b19f51db5a5842cd",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/30_Business_Rules.md": {
-    "mtime": 1783149053.3217807,
-    "ast_hash": "e896789560e617dd24c1c8e0875b9f3f",
+    "mtime": 1783468391.6509042,
+    "ast_hash": "d65da70108a6dd287ace8e37b10a92a2",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/40_User_Flow.md": {
-    "mtime": 1783149053.3217807,
+    "mtime": 1783468391.651904,
     "ast_hash": "470d0664e07aa9943b24232a1233be12",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/50_Database.md": {
-    "mtime": 1783466014.2851722,
-    "ast_hash": "e236c35237403df8d0d8f5b25f0b8b2d",
+    "mtime": 1783468391.652904,
+    "ast_hash": "a2c37bd0278eef7f0616ccde9fbece2e",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/60_API.md": {
-    "mtime": 1783466014.2861722,
-    "ast_hash": "d4a880276659cc084451c8a25fcf25f8",
+    "mtime": 1783468391.6547992,
+    "ast_hash": "375f47a6ccfd03aeb82c4455790e92e1",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/70_Backend.md": {
-    "mtime": 1783466014.288172,
-    "ast_hash": "ae58d5b049d820974c5affcd14ec3324",
+    "mtime": 1783468417.753386,
+    "ast_hash": "756ba789e6fb5b5caea09ee1486fe1be",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/80_Frontend.md": {
-    "mtime": 1783149053.3507798,
+    "mtime": 1783468391.6564927,
     "ast_hash": "05a9643a686f421fe2708b77e97845d4",
     "semantic_hash": ""
   },
   "docs/02_Modules/Chat/90_Events.md": {
-    "mtime": 1783466014.289172,
+    "mtime": 1783468391.6573339,
     "ast_hash": "5a007afc3eaca21c10aec7013998b90f",
     "semantic_hash": ""
   },
@@ -350,8 +350,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/Notifications/50_Database.md": {
-    "mtime": 1783466056.8885403,
-    "ast_hash": "41aaa0dbc6ff6bb5c64e09c99fea296f",
+    "mtime": 1783466165.088536,
+    "ast_hash": "f17e5f1fe1b00c9d581476e1264bd5db",
     "semantic_hash": ""
   },
   "docs/02_Modules/Notifications/60_API.md": {
@@ -765,8 +765,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1782871470.8207643,
-    "ast_hash": "ae816b9b0f7508bf072c669ae1bc6a76",
+    "mtime": 1783468484.3610642,
+    "ast_hash": "189b691eb591a24a2b8ca60cc62f132c",
     "semantic_hash": ""
   },
   ".opencode/package.json": {
@@ -825,13 +825,13 @@
     "semantic_hash": ""
   },
   "appwrite/appwrite.json": {
-    "mtime": 1783466080.0533254,
-    "ast_hash": "4f21b8ccaa540251dd6369230a39c067",
+    "mtime": 1783468365.6924193,
+    "ast_hash": "1a08b273f38fe7f7ad62627066dd8ea7",
     "semantic_hash": ""
   },
   "appwrite/generate_appwrite_json.js": {
-    "mtime": 1783465972.441026,
-    "ast_hash": "8fdd64c53e511965355e85eb3b00deeb",
+    "mtime": 1783468348.02877,
+    "ast_hash": "ef1d5a9540065cc70912d858481917b8",
     "semantic_hash": ""
   },
   "src/services/auth.service.ts": {
@@ -845,8 +845,8 @@
     "semantic_hash": ""
   },
   "src/services/chat.service.ts": {
-    "mtime": 1783465972.4530258,
-    "ast_hash": "9c638888a79d5fe92d16d5fa3704c41a",
+    "mtime": 1783466165.0865362,
+    "ast_hash": "923f4b0945e79d396042db00d7564514",
     "semantic_hash": ""
   },
   "src/services/claim.service.ts": {
@@ -1287,6 +1287,21 @@
   "functions/send-chat-notification/src/main.js": {
     "mtime": 1783465885.065809,
     "ast_hash": "86b407fb118073f969278ba875a5f796",
+    "semantic_hash": ""
+  },
+  "functions/upload-chat-attachment/package.json": {
+    "mtime": 1783468304.244639,
+    "ast_hash": "89d968e866c6ab6d322aa8c9c2775d9d",
+    "semantic_hash": ""
+  },
+  "functions/upload-chat-attachment/src/main.js": {
+    "mtime": 1783468329.0901458,
+    "ast_hash": "aa19738e896c9a047371f28bb3ed7cdc",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1783466906.876918,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
     "semantic_hash": ""
   }
 }
