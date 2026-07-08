@@ -4,9 +4,17 @@
 
 ### Create Campaign
 
-- Form: title, category, platform MVP (TikTok, fixed/selected by default), budget, rewardPer1000Views, claimLimit.
-- Opsi Generate Brief dengan AI.
-- Upload campaign assets.
+- **Pilih Tipe**: UGC (buat video baru) / Clipping (edit video panjang).
+- **Basic Info**: judul, kategori, platform (TikTok, fixed).
+- **Upload Asset**: internal (storage) / external URL.
+- **Generate Brief** via AI (opsional).
+- **Atur Reward** (form disederhanakan):
+  - `budget` — input nominal (min Rp50.000).
+  - `claimLimit` — input "Jumlah kreator".
+  - `rewardPer1000Views` — radio button: Rp1.000 / Rp2.000 / Rp3.000 / Rp5.000.
+  - Ringkasan otomatis: total bayar (budget + fee), contoh penghasilan kreator.
+- Top-Up Budget via Midtrans.
+- Publish.
 
 ### My Campaigns
 

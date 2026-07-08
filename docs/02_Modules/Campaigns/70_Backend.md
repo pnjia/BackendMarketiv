@@ -23,6 +23,15 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 
 - **Trigger**: `campaign_submissions.status` `pending → approved`.
 - **Aksi**: hitung reward, update `spentAmount` & `remainingBudget`, buat transaksi ke pending balance creator.
+- **Catatan**: Fee platform sudah dipotong di awal saat top-up — tidak ada potongan lagi di sini. Creator menerima full reward sesuai rumus.
+
+### expire-stale-claims
+
+- **Trigger**: scheduled function (setiap 6 jam) + dipanggil di `claimCampaign()`.
+- **Aksi**: query `campaign_claims` dengan `status = claimed` dan `claimedAt + submissionDays < now`.
+  - Ubah status claim menjadi `expired`.
+  - Kurangi `campaigns.totalClaims` untuk campaign terkait.
+  - Notifikasi ke kreator: "Claim-mu expired karena melebihi batas waktu submit".
 
 ## Backend Helpers
 

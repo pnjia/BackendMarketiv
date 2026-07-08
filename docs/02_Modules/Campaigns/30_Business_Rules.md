@@ -18,6 +18,12 @@
   - UMKM wajib menyediakan aset digital yang cukup pada `campaign_assets` (file upload atau external link) agar creator dapat mengerjakan konten.
   - Creator tidak berhak meminta pengiriman barang fisik. Semua deliverable dikerjakan menggunakan materi digital yang terlampir.
 
+## Aturan Budget
+
+- **Minimum budget**: setiap campaign wajib memiliki budget minimal **Rp50.000** (`50.000`).
+- Validasi dilakukan saat `createCampaign()` — budget < Rp50.000 ditolak.
+- Budget adalah total dana yang tersedia untuk reward creator (belum termasuk fee platform).
+
 ## Aturan Claim
 
 - Campaign PPV MVP hanya mendukung platform `tiktok`. Campaign dengan platform Instagram, Facebook, YouTube, atau platform lain ditolak sampai fase ekspansi multi-platform.
@@ -27,7 +33,15 @@
 - **Campaign aktif**: campaign harus berstatus `active`.
 - **Claim limit**: jumlah claim tidak boleh melebihi `claimLimit` campaign (First Come First Serve).
 
-Status claim: `claimed | submitted | approved | rejected`.
+Status claim: `claimed | submitted | approved | rejected | expired`.
+
+## Aturan Auto-Expire Claim
+
+- Setiap claim memiliki batas waktu submit (`submissionDays`, default 7 hari sejak claim).
+- Jika creator tidak membuat submission dalam batas waktu tersebut, claim otomatis berubah status menjadi `expired`.
+- **Dampak**: `campaigns.totalClaims -= 1` — slot kembali ke pool dan bisa di-claim kreator lain.
+- Pengecekan expire dilakukan oleh scheduled function `expire-stale-claims` (berjalan periodik).
+- Validasi expire juga dilakukan saat `claimCampaign()` dipanggil — claim yang expired akan di-reclaim sebelum cek claim limit.
 
 ## Aturan Submission
 
@@ -68,6 +82,14 @@ Reward dihitung saat submission di-approve dan masuk ke **pending balance** wall
 - External URL hanya menerima protokol `https`.
 - `type = link` dipakai untuk referensi umum seperti folder Google Drive; `image`, `video`, `document` untuk asset spesifik.
 - Saat campaign dihapus, asset tidak otomatis dihapus dari `user_files` (user harus mengelola sendiri lewat File Manager).
+
+## Platform Fee
+
+Platform Marketiv membebankan **fee 5%** kepada UMKM saat melakukan top-up budget campaign (lihat modul Payments).
+
+- Creator menerima **full reward** sesuai rumus — fee tidak dipotong dari pendapatan creator.
+- Total yang dibayar UMKM = `budget + floor(budget × 5 / 100)`.
+- Fee dicatat sebagai transaksi `fee` di ledger.
 
 ## Data Denormalisasi
 

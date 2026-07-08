@@ -12,12 +12,19 @@ Dimiliki UMKM. Inti alur PPV.
 
 #### `createCampaign()` — [Client SDK]
 
-- **Input**: `{ title, category, type, platforms[], budget, rewardPer1000Views, minViews?, maxViews?, claimLimit }`
+- **Input**: `{ title, category, type, platforms[], budget, rewardPer1000Views, claimLimit, submissionDays? }`
 - **Validasi MVP**:
   - `type` wajib `ugc` atau `clipping`.
   - `platforms[]` hanya boleh berisi `"tiktok"`. Instagram, Facebook, YouTube, dan platform lain ditolak sampai fase ekspansi multi-platform.
+  - **`budget` minimal Rp50.000** — nilai < 50000 ditolak.
+  - **`claimLimit`** wajib diisi dan > 0.
 - **Proses**: buat dokumen `campaigns` dengan `status = draft`.
 - **Akses**: UMKM (owner).
+- **Catatan UI** — form input disederhanakan untuk UMKM:
+  - `rewardPer1000Views` ditampilkan sebagai **radio button**: Rp1.000 / Rp2.000 / Rp3.000 / Rp5.000 dengan label "Penghasilan kreator per 1.000 tayangan".
+  - `claimLimit` ditampilkan sebagai **"Jumlah kreator"**.
+  - `minViews` dan `maxViews` tidak ditampilkan di form utama (tersedia sebagai pengaturan lanjutan jika diperlukan).
+  - Ringkasan otomatis: budget, fee, total bayar, dan contoh penghasilan kreator.
 
 #### `generateBrief()` — [Client SDK] *(memanggil Appwrite Function `ai-brief` di belakang)*
 
@@ -30,6 +37,17 @@ Dimiliki UMKM. Inti alur PPV.
 - **Input**: `{ campaignId }`
 - **Proses**: `status: draft → active`, set `publishedAt`. Memicu event Campaign Published (lihat `90_Events.md`).
 - **Akses**: UMKM (owner).
+
+#### `topUpCampaign()` — [Client SDK]
+
+- **Input**: `{ campaignId, snapToken? }`
+- **Proses**: Buat payment dengan `purpose = campaign`, amount = `budget`, total = `budget + floor(budget × 5%)`. Redirect ke Midtrans Snap.
+- **Validasi**:
+  - Campaign harus milik UMKM yang sama.
+  - Campaign harus `draft` — hanya bisa top-up sebelum publish (atau saat masih draft).
+  - `remainingBudget` harus 0 (belum pernah di-top-up sebelumnya).
+- **Akses**: UMKM (owner campaign).
+- **Catatan**: Function `midtrans-webhook` akan memproses konfirmasi pembayaran dan meng-update status campaign menjadi siap publish.
 
 #### `getCampaigns(filter)` — [Client SDK]
 

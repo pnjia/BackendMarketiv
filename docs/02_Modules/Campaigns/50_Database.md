@@ -20,12 +20,11 @@ Koleksi terbesar MVP. Relasi: UMKM (1) → Campaign (N).
 | type                 | enum     | yes      | `ugc\|clipping` (tipe kreasi konten)      |
 | platforms            | string[] | yes      | MVP hanya `["tiktok"]`; platform lain future scope |
 | description          | string   | no       |                                           |
-| budget               | integer  | yes      |                                           |
+| budget               | integer  | yes      | minimal Rp50.000 (validasi backend)       |
 | rewardPer1000Views   | integer  | yes      | basis perhitungan reward (CPM)            |
-| minViews             | integer  | no       |                                           |
-| maxViews             | integer  | no       |                                           |
 | status               | enum     | yes      | `draft\|active\|paused\|completed`        |
 | claimLimit           | integer  | yes      | batas jumlah claim                        |
+| submissionDays       | integer  | yes      | batas waktu submit (hari), default 7      |
 | totalClaims          | integer  | yes      | denormalisasi (ADR-005)                   |
 | spentAmount          | integer  | yes      | denormalisasi (ADR-005)                   |
 | remainingBudget      | integer  | yes      | denormalisasi (ADR-005)                   |
@@ -89,7 +88,7 @@ Creator mengambil campaign. Relasi: Campaign (1) → Claims (N); Creator (1) →
 | ---------- | -------- | -------- | -------------------------------------- |
 | campaignId | string   | yes      | FK → campaigns                         |
 | creatorId  | string   | yes      | FK → users                             |
-| status     | enum     | yes      | `claimed\|submitted\|approved\|rejected` |
+| status     | enum     | yes      | `claimed\|submitted\|approved\|rejected\|expired` |
 | claimedAt  | datetime | yes      |                                        |
 
 **Index**: `campaignId`, `creatorId`, `status`, `claimedAt DESC`.
