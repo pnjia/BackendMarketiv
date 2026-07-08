@@ -24,7 +24,6 @@ Koleksi terbesar MVP. Relasi: UMKM (1) → Campaign (N).
 | rewardPer1000Views   | integer  | yes      | basis perhitungan reward (CPM)            |
 | minViews             | integer  | no       |                                           |
 | maxViews             | integer  | no       |                                           |
-| brief                | string   | no       | brief tersimpan (lihat `campaign_briefs`) |
 | status               | enum     | yes      | `draft\|active\|paused\|completed`        |
 | claimLimit           | integer  | yes      | batas jumlah claim                        |
 | totalClaims          | integer  | yes      | denormalisasi (ADR-005)                   |
@@ -61,27 +60,24 @@ Satu campaign dapat memiliki banyak asset. Relasi: Campaign (1) → Assets (N).
 
 ## campaign_briefs
 
-Brief campaign (hasil AI Brief Generator atau input manual UMKM). Relasi: Campaign (1) → Brief.
+Brief campaign (hasil AI Brief Generator atau input manual UMKM). Relasi: Campaign (1) → Brief (1).
 
-| Attribute         | Type    | Required | Catatan                          |
-| ----------------- | ------- | -------- | -------------------------------- |
-| campaignId        | string  | yes      | FK → campaigns                   |
-| targetAudience    | string  | no       |                                  |
-| goal              | string  | no       | tujuan / objective campaign      |
-| cta               | string  | no       | call to action                   |
-| requiredElements  | string  | no       | elemen wajib konten              |
-| captionRequired   | boolean | no       |                                  |
-| hashtags          | string  | no       |                                  |
-| allowedContent    | string  | no       | do (boleh dilakukan)             |
-| forbiddenContent  | string  | no       | don't (tidak boleh)              |
-| materialsJson     | string  | no       | material referensi (JSON)        |
-| generatedByAi     | boolean | yes      | `true` bila dihasilkan AI        |
+| Attribute      | Type    | Required | Catatan                                                                 |
+| -------------- | ------- | -------- | ----------------------------------------------------------------------- |
+| campaignId     | string  | yes      | FK → campaigns                                                          |
+| objective      | string  | no       | tujuan kreatif campaign (output AI: `objective`)                        |
+| contentAngle   | string  | no       | arah/format konten; berbeda antara `ugc` dan `clipping` (output AI: `contentAngle`) |
+| cta            | string  | no       | call to action (output AI: `cta`)                                       |
+| briefDetail    | string  | no       | arahan kreatif lengkap, termasuk penggunaan aset digital (output AI: `briefDetail`) |
+| doAndDont      | string  | no       | JSON: `{ do: string[], dont: string[] }` (output AI: `doAndDont`)       |
+| materialsJson  | string  | no       | referensi aset produk dari `campaign_assets` yang dipakai saat generate |
+| generatedByAi  | boolean | yes      | `true` bila dihasilkan AI Brief Generator                               |
 
 **Index**: `campaignId`.
 
 **Permission**: Campaign owner write · Public read.
 
-> Kontrak fungsi AI yang mengisi brief ini ada di `../AI/60_API.md`.
+> Field-field di atas merupakan pemetaan 1-to-1 dari output AI di `../AI/30_Business_Rules.md`. Kontrak fungsi AI ada di `../AI/60_API.md`.
 
 ---
 
