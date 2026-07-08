@@ -238,7 +238,7 @@ export const requestRevision = async (input: RequestRevisionInput): Promise<Revi
 
     if (order.offerId) {
       const offer = await databases.getDocument(DATABASE_ID, COLLECTIONS.offers, order.offerId);
-      revisionLimit = offer.revision_limit;
+      revisionLimit = offer.revisionLimit;
     } else if (order.packageId) {
       const pkg = await databases.getDocument(DATABASE_ID, COLLECTIONS.rateCardPackages, order.packageId);
       revisionLimit = pkg.revisionLimit;
