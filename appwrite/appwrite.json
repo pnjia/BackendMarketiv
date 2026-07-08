@@ -736,7 +736,7 @@
       "rowSecurity": true,
       "columns": [
         {
-          "key": "umkm_id",
+          "key": "umkmId",
           "type": "string",
           "required": true,
           "array": false,
@@ -752,14 +752,6 @@
           "default": null
         },
         {
-          "key": "type",
-          "type": "string",
-          "required": true,
-          "array": false,
-          "size": 50,
-          "default": null
-        },
-        {
           "key": "category",
           "type": "string",
           "required": true,
@@ -768,43 +760,38 @@
           "default": null
         },
         {
-          "key": "thumbnail_url",
+          "key": "type",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "platforms",
+          "type": "string",
+          "required": true,
+          "array": true,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "description",
           "type": "string",
           "required": false,
           "array": false,
-          "size": 2048,
+          "size": 2000,
           "default": null
         },
         {
-          "key": "budget_total",
+          "key": "budget",
           "type": "integer",
           "required": true,
           "array": false,
           "default": null
         },
         {
-          "key": "budget_used",
-          "type": "integer",
-          "required": false,
-          "array": false,
-          "default": 0
-        },
-        {
-          "key": "cpm",
-          "type": "integer",
-          "required": true,
-          "array": false,
-          "default": null
-        },
-        {
-          "key": "min_views",
-          "type": "integer",
-          "required": true,
-          "array": false,
-          "default": null
-        },
-        {
-          "key": "max_views",
+          "key": "rewardPer1000Views",
           "type": "integer",
           "required": true,
           "array": false,
@@ -819,21 +806,42 @@
           "default": null
         },
         {
-          "key": "submission_count",
+          "key": "claimLimit",
           "type": "integer",
-          "required": false,
+          "required": true,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "submissionDays",
+          "type": "integer",
+          "required": true,
+          "array": false,
+          "default": 7
+        },
+        {
+          "key": "totalClaims",
+          "type": "integer",
+          "required": true,
           "array": false,
           "default": 0
         },
         {
-          "key": "approved_count",
+          "key": "spentAmount",
           "type": "integer",
-          "required": false,
+          "required": true,
           "array": false,
           "default": 0
         },
         {
-          "key": "created_at",
+          "key": "remainingBudget",
+          "type": "integer",
+          "required": true,
+          "array": false,
+          "default": 0
+        },
+        {
+          "key": "publishedAt",
           "type": "datetime",
           "required": false,
           "array": false,
@@ -842,14 +850,14 @@
       ],
       "indexes": [
         {
-          "key": "idx_umkm_id",
+          "key": "idx_umkmId",
           "type": "key",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "umkm_id"
+            "umkmId"
           ]
         },
         {
@@ -872,6 +880,179 @@
           ],
           "columns": [
             "category"
+          ]
+        },
+        {
+          "key": "idx_publishedAt",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "DESC"
+          ],
+          "columns": [
+            "publishedAt"
+          ]
+        },
+        {
+          "key": "idx_remainingBudget",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "remainingBudget"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "campaign_assets",
+      "name": "Campaign Assets",
+      "$permissions": [
+        "read(\"any\")",
+        "create(\"users\")",
+        "update(\"users\")"
+      ],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "campaignId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "source",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "type",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "fileUrl",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 2048,
+          "default": null
+        },
+        {
+          "key": "fileId",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "fileName",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
+          "default": null
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_campaignId",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "campaignId"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "fraud_checks",
+      "name": "Fraud Checks",
+      "$permissions": [],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "submissionId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "score",
+          "type": "integer",
+          "required": true,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "result",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "reason",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2000,
+          "default": null
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_submissionId",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "submissionId"
+          ]
+        },
+        {
+          "key": "idx_result",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "result"
+          ]
+        },
+        {
+          "key": "idx_createdAt",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "DESC"
+          ],
+          "columns": [
+            "createdAt"
           ]
         }
       ]
@@ -939,7 +1120,7 @@
       "rowSecurity": true,
       "columns": [
         {
-          "key": "campaign_id",
+          "key": "campaignId",
           "type": "string",
           "required": true,
           "array": false,
@@ -947,7 +1128,7 @@
           "default": null
         },
         {
-          "key": "creator_id",
+          "key": "creatorId",
           "type": "string",
           "required": true,
           "array": false,
@@ -955,55 +1136,71 @@
           "default": null
         },
         {
-          "key": "claim_status",
+          "key": "status",
           "type": "string",
           "required": true,
           "array": false,
           "size": 50,
           "default": null
+        },
+        {
+          "key": "claimedAt",
+          "type": "datetime",
+          "required": true,
+          "array": false,
+          "default": null
         }
       ],
       "indexes": [
         {
-          "key": "idx_campaign_creator",
-          "type": "unique",
-          "status": "available",
-          "orders": [
-            "ASC",
-            "ASC"
-          ],
-          "columns": [
-            "campaign_id",
-            "creator_id"
-          ]
-        },
-        {
-          "key": "idx_campaign_id",
+          "key": "idx_campaignId",
           "type": "key",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "campaign_id"
+            "campaignId"
           ]
         },
         {
-          "key": "idx_creator_id",
+          "key": "idx_creatorId",
           "type": "key",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "creator_id"
+            "creatorId"
+          ]
+        },
+        {
+          "key": "idx_status",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "status"
+          ]
+        },
+        {
+          "key": "idx_claimedAt",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "DESC"
+          ],
+          "columns": [
+            "claimedAt"
           ]
         }
       ]
     },
     {
-      "$id": "submissions",
-      "name": "Submissions",
+      "$id": "campaign_submissions",
+      "name": "Campaign Submissions",
       "$permissions": [
         "read(\"any\")",
         "create(\"users\")",
@@ -1014,7 +1211,7 @@
       "rowSecurity": true,
       "columns": [
         {
-          "key": "claim_id",
+          "key": "claimId",
           "type": "string",
           "required": true,
           "array": false,
@@ -1022,7 +1219,7 @@
           "default": null
         },
         {
-          "key": "creator_id",
+          "key": "campaignId",
           "type": "string",
           "required": true,
           "array": false,
@@ -1030,7 +1227,7 @@
           "default": null
         },
         {
-          "key": "creator_name",
+          "key": "creatorId",
           "type": "string",
           "required": true,
           "array": false,
@@ -1046,7 +1243,7 @@
           "default": null
         },
         {
-          "key": "video_url",
+          "key": "postUrl",
           "type": "string",
           "required": true,
           "array": false,
@@ -1062,18 +1259,32 @@
           "default": null
         },
         {
-          "key": "current_views",
+          "key": "views",
+          "type": "integer",
+          "required": true,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "engagement",
           "type": "integer",
           "required": false,
           "array": false,
-          "default": 0
+          "default": null
         },
         {
-          "key": "analytics_file",
+          "key": "fraudScore",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "fraudStatus",
           "type": "string",
           "required": false,
           "array": false,
-          "size": 2048,
+          "size": 50,
           "default": null
         },
         {
@@ -1083,44 +1294,40 @@
           "array": false,
           "size": 50,
           "default": null
-        },
-        {
-          "key": "fraud_score",
-          "type": "double",
-          "required": false,
-          "array": false,
-          "default": null
-        },
-        {
-          "key": "fraud_result",
-          "type": "string",
-          "required": false,
-          "array": false,
-          "size": 50,
-          "default": null
         }
       ],
       "indexes": [
         {
-          "key": "idx_claim_id",
+          "key": "idx_claimId",
           "type": "unique",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "claim_id"
+            "claimId"
           ]
         },
         {
-          "key": "idx_creator_id",
+          "key": "idx_campaignId",
           "type": "key",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "creator_id"
+            "campaignId"
+          ]
+        },
+        {
+          "key": "idx_creatorId",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "creatorId"
           ]
         },
         {
@@ -1132,6 +1339,17 @@
           ],
           "columns": [
             "status"
+          ]
+        },
+        {
+          "key": "idx_fraudStatus",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "fraudStatus"
           ]
         }
       ]
@@ -2031,11 +2249,33 @@
           "default": null
         },
         {
+          "key": "campaign_id",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
           "key": "amount",
           "type": "integer",
           "required": true,
           "array": false,
           "default": null
+        },
+        {
+          "key": "total_amount",
+          "type": "integer",
+          "required": true,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "fee_amount",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": 0
         },
         {
           "key": "purpose",
@@ -2114,6 +2354,17 @@
           ],
           "columns": [
             "order_id"
+          ]
+        },
+        {
+          "key": "idx_campaign_id",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "campaign_id"
           ]
         },
         {
@@ -2814,7 +3065,7 @@
       "runtime": "node-18.0",
       "execute": [],
       "events": [
-        "databases.6a4c8598001da3b0d7f0.collections.submissions.documents.*.create"
+        "databases.6a4c8598001da3b0d7f0.collections.campaign_submissions.documents.*.create"
       ],
       "schedule": "",
       "timeout": 60,
@@ -2839,6 +3090,52 @@
       "entrypoint": "src/main.js",
       "commands": "npm install",
       "path": "../functions/create-order"
+    },
+    {
+      "$id": "calculate-campaign-reward",
+      "name": "Calculate Campaign Reward",
+      "runtime": "node-18.0",
+      "execute": [],
+      "events": [
+        "databases.6a4c8598001da3b0d7f0.collections.campaign_submissions.documents.*.update"
+      ],
+      "schedule": "",
+      "timeout": 30,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "../functions/calculate-campaign-reward"
+    },
+    {
+      "$id": "campaign-claimed",
+      "name": "Campaign Claimed",
+      "runtime": "node-18.0",
+      "execute": [],
+      "events": [
+        "databases.6a4c8598001da3b0d7f0.collections.campaign_claims.documents.*.create"
+      ],
+      "schedule": "",
+      "timeout": 15,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "../functions/campaign-claimed"
+    },
+    {
+      "$id": "expire-stale-claims",
+      "name": "Expire Stale Claims",
+      "runtime": "node-18.0",
+      "execute": [],
+      "events": [],
+      "schedule": "0 */6 * * *",
+      "timeout": 60,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install",
+      "path": "../functions/expire-stale-claims"
     },
     {
       "$id": "create-payment",

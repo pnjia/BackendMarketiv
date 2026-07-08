@@ -184,25 +184,64 @@ const collections = [
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("umkm_id", true),
+            createStringAttr("umkmId", true),
             createStringAttr("title", true, 255),
-            createStringAttr("type", true, 50),
             createStringAttr("category", true, 100),
-            createStringAttr("thumbnail_url", false, 2048),
-            createIntAttr("budget_total", true),
-            createIntAttr("budget_used", false, 0),
-            createIntAttr("cpm", true),
-            createIntAttr("min_views", true),
-            createIntAttr("max_views", true),
+            createStringAttr("type", true, 50),
+            createStringAttr("platforms", true, 255, null, true),
+            createStringAttr("description", false, 2000),
+            createIntAttr("budget", true),
+            createIntAttr("rewardPer1000Views", true),
             createStringAttr("status", true, 50),
-            createIntAttr("submission_count", false, 0),
-            createIntAttr("approved_count", false, 0),
-            createDatetimeAttr("created_at", false)
+            createIntAttr("claimLimit", true),
+            createIntAttr("submissionDays", true, 7),
+            createIntAttr("totalClaims", true, 0),
+            createIntAttr("spentAmount", true, 0),
+            createIntAttr("remainingBudget", true, 0),
+            createDatetimeAttr("publishedAt", false)
         ],
         indexes: [
-            createIndex("idx_umkm_id", "key", ["umkm_id"]),
+            createIndex("idx_umkmId", "key", ["umkmId"]),
             createIndex("idx_status", "key", ["status"]),
-            createIndex("idx_category", "key", ["category"])
+            createIndex("idx_category", "key", ["category"]),
+            createIndex("idx_publishedAt", "key", ["publishedAt"], ["DESC"]),
+            createIndex("idx_remainingBudget", "key", ["remainingBudget"])
+        ]
+    },
+    {
+        $id: "campaign_assets",
+        name: "Campaign Assets",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("campaignId", true),
+            createStringAttr("source", true, 50),
+            createStringAttr("type", true, 50),
+            createStringAttr("fileUrl", true, 2048),
+            createStringAttr("fileId", false),
+            createStringAttr("fileName", false, 255)
+        ],
+        indexes: [
+            createIndex("idx_campaignId", "key", ["campaignId"])
+        ]
+    },
+    {
+        $id: "fraud_checks",
+        name: "Fraud Checks",
+        $permissions: [],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("submissionId", true),
+            createIntAttr("score", true),
+            createStringAttr("result", true, 50),
+            createStringAttr("reason", false, 2000)
+        ],
+        indexes: [
+            createIndex("idx_submissionId", "key", ["submissionId"]),
+            createIndex("idx_result", "key", ["result"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
         ]
     },
     {
@@ -227,39 +266,43 @@ const collections = [
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("campaign_id", true),
-            createStringAttr("creator_id", true),
-            createStringAttr("claim_status", true, 50)
+            createStringAttr("campaignId", true),
+            createStringAttr("creatorId", true),
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("claimedAt", true)
         ],
         indexes: [
-            createIndex("idx_campaign_creator", "unique", ["campaign_id", "creator_id"]),
-            createIndex("idx_campaign_id", "key", ["campaign_id"]),
-            createIndex("idx_creator_id", "key", ["creator_id"])
+            createIndex("idx_campaignId", "key", ["campaignId"]),
+            createIndex("idx_creatorId", "key", ["creatorId"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_claimedAt", "key", ["claimedAt"], ["DESC"])
         ]
     },
     {
-        $id: "submissions",
-        name: "Submissions",
+        $id: "campaign_submissions",
+        name: "Campaign Submissions",
         $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("claim_id", true),
-            createStringAttr("creator_id", true),
-            createStringAttr("creator_name", true, 255),
+            createStringAttr("claimId", true),
+            createStringAttr("campaignId", true),
+            createStringAttr("creatorId", true),
             createStringAttr("platform", true, 50),
-            createStringAttr("video_url", true, 2048),
+            createStringAttr("postUrl", true, 2048),
             createStringAttr("caption", false, 1000),
-            createIntAttr("current_views", false, 0),
-            createStringAttr("analytics_file", false, 2048),
-            createStringAttr("status", true, 50),
-            createFloatAttr("fraud_score", false),
-            createStringAttr("fraud_result", false, 50)
+            createIntAttr("views", true),
+            createIntAttr("engagement", false),
+            createIntAttr("fraudScore", false),
+            createStringAttr("fraudStatus", false, 50),
+            createStringAttr("status", true, 50)
         ],
         indexes: [
-            createIndex("idx_claim_id", "unique", ["claim_id"]),
-            createIndex("idx_creator_id", "key", ["creator_id"]),
-            createIndex("idx_status", "key", ["status"])
+            createIndex("idx_claimId", "unique", ["claimId"]),
+            createIndex("idx_campaignId", "key", ["campaignId"]),
+            createIndex("idx_creatorId", "key", ["creatorId"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_fraudStatus", "key", ["fraudStatus"])
         ]
     },
     {
@@ -453,7 +496,10 @@ const collections = [
         attributes: [
             createStringAttr("user_id", true),
             createStringAttr("order_id", false),
+            createStringAttr("campaign_id", false),
             createIntAttr("amount", true),
+            createIntAttr("total_amount", true),
+            createIntAttr("fee_amount", false, 0),
             createStringAttr("purpose", true, 50),
             createStringAttr("gateway", false, 50, "midtrans"),
             createStringAttr("gateway_reference", true, 255),
@@ -465,6 +511,7 @@ const collections = [
         indexes: [
             createIndex("idx_gateway_reference", "unique", ["gateway_reference"]),
             createIndex("idx_order_id", "key", ["order_id"]),
+            createIndex("idx_campaign_id", "key", ["campaign_id"]),
             createIndex("idx_user_id", "key", ["user_id"]),
             createIndex("idx_status", "key", ["status"]),
             createIndex("idx_purpose", "key", ["purpose"])
@@ -749,7 +796,7 @@ const functions = [
         name: "AI Fraud Precheck",
         runtime: "node-18.0",
         execute: [],
-        events: [`databases.${databaseId}.collections.submissions.documents.*.create`],
+        events: [`databases.${databaseId}.collections.campaign_submissions.documents.*.create`],
         schedule: "",
         timeout: 60,
         enabled: true,
@@ -771,6 +818,48 @@ const functions = [
         entrypoint: "src/main.js",
         commands: "npm install",
         path: "../functions/create-order"
+    },
+    {
+        $id: "calculate-campaign-reward",
+        name: "Calculate Campaign Reward",
+        runtime: "node-18.0",
+        execute: [],
+        events: [`databases.${databaseId}.collections.campaign_submissions.documents.*.update`],
+        schedule: "",
+        timeout: 30,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "../functions/calculate-campaign-reward"
+    },
+    {
+        $id: "campaign-claimed",
+        name: "Campaign Claimed",
+        runtime: "node-18.0",
+        execute: [],
+        events: [`databases.${databaseId}.collections.campaign_claims.documents.*.create`],
+        schedule: "",
+        timeout: 15,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "../functions/campaign-claimed"
+    },
+    {
+        $id: "expire-stale-claims",
+        name: "Expire Stale Claims",
+        runtime: "node-18.0",
+        execute: [],
+        events: [],
+        schedule: "0 */6 * * *",
+        timeout: 60,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "../functions/expire-stale-claims"
     },
     {
         $id: "create-payment",
