@@ -44,4 +44,4 @@ Pesan dalam sebuah percakapan. Relasi: Conversation (1) → Messages (N).
 
 **Permission**: Participant only.
 
-> Attachment disimpan di Storage bucket `chat-attachments` dan dibatasi oleh aturan di `30_Business_Rules.md`. Read receipt dan unread counter dikecualikan dari MVP chat dasar.
+> Attachment disimpan di Storage bucket `chat-files` dan dibatasi oleh aturan di `30_Business_Rules.md`. Read receipt dan unread counter dikecualikan dari MVP chat dasar.

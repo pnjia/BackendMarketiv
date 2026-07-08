@@ -37,7 +37,7 @@ UI penerima subscribe ke channel dokumen `messages` percakapan terkait; saat ada
 Pesan chat tidak dikirim lewat Appwrite Messaging sebagai data utama. Setelah `messages.create`, function `send-chat-notification` membuat notifikasi penerima dan mengirim push notification Appwrite Messaging jika target push user tersedia.
 
 > Pesan bertipe `offer` merujuk custom offer yang dibuat UMKM — lihat `../Offers/`.
-> Pesan bertipe `image`/`file` memakai file yang sudah di-upload ke bucket `chat-attachments` dan harus lolos whitelist ukuran/format.
+> Pesan bertipe `image`/`file` memakai file yang sudah di-upload ke bucket `chat-files` dan harus lolos whitelist ukuran/format.
 
 ---
 
