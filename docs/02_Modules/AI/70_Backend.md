@@ -10,7 +10,7 @@ Dokumen ini khusus untuk Appwrite Functions AI dan aturan integrasinya. Kontrak 
 - **Proses**: terima `campaignId` → ambil data campaign → kirim ke Gemini API → kembalikan brief terstruktur.
 - **Output**: `{ objective, contentAngle, cta, detail, doAndDont }`.
 
-### fraud-detection
+### ai-fraud-precheck
 
 - **Trigger**: Database event `campaign_submissions.create`.
 - **Proses**: terima `submissionId` → validasi URL, duplikasi, platform → hitung `fraudScore` → tulis `fraud_checks` + update submission.

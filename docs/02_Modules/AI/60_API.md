@@ -23,14 +23,14 @@ Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud**. Aturan input/output & thr
 - **Efek**: hasil dapat disimpan ke `campaign_briefs` (lihat `../Campaigns/50_Database.md`).
 - **Pemanggil**: dipanggil oleh service layer `generateBrief()` dari modul **Campaigns**.
 
-### `fraud-detection` — [Appwrite Function]
+### `ai-fraud-precheck` — [Appwrite Function]
 
-**Endpoint**: `POST /functions/fraud-detection`
+**Endpoint**: `POST /functions/ai-fraud-precheck`
 
 - **Input**: `{ submissionId }`
 - **Return**: `{ score, status }` — `score` 0–100, `status` `safe|review|rejected`.
 - **Efek**: tulis `fraud_checks` + update `fraudScore`/`fraudStatus` pada submission (data di modul Campaigns).
-- **Trigger**: dipanggil otomatis oleh Appwrite Function `ai-fraud-precheck` saat event **Submission Created** — lihat `../Campaigns/90_Events.md`.
+- **Trigger**: dipicu otomatis oleh event **Submission Created** (`campaign_submissions.create`) — lihat `../Campaigns/90_Events.md`.
 
 ---
 

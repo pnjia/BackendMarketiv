@@ -124,7 +124,7 @@ Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud** dan dipicu oleh **event da
 ### `ai-fraud-precheck` — [Appwrite Function]
 
 - **Trigger**: `campaign_submissions.create`.
-- **Aksi**: panggil AI Fraud Detection via function `fraud-detection` (modul AI), tulis hasil ke `fraud_checks` & update submission.
+- **Aksi**: jalankan validasi & AI fraud detection (Gemini via modul AI), tulis hasil ke `fraud_checks` & update submission.
 
 ### `calculate-campaign-reward` — [Appwrite Function]
 
