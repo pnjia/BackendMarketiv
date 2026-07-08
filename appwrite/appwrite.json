@@ -2796,6 +2796,94 @@
           ]
         }
       ]
+    },
+    {
+      "$id": "ai_requests",
+      "name": "AI Requests",
+      "$permissions": [],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "userId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "feature",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "elements": [
+            "brief",
+            "fraud",
+            "landing"
+          ],
+          "default": null
+        },
+        {
+          "key": "prompt",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 10000,
+          "default": null
+        },
+        {
+          "key": "response",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 10000,
+          "default": null
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": false,
+          "array": false,
+          "default": null
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_userId",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "userId"
+          ]
+        },
+        {
+          "key": "idx_feature",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "feature"
+          ]
+        },
+        {
+          "key": "idx_createdAt",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "DESC"
+          ],
+          "columns": [
+            "createdAt"
+          ]
+        }
+      ]
     }
   ],
   "buckets": [

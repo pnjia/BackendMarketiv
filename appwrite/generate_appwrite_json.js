@@ -21,6 +21,9 @@ const createBoolAttr = (key, required = false, def = null, array = false) => ({
 const createDatetimeAttr = (key, required = false, array = false) => ({
     key, type: "datetime", required, array, default: null
 });
+const createEnumAttr = (key, required = false, elements = [], def = null) => ({
+    key, type: "string", required, array: false, elements, default: def
+});
 
 const createIndex = (key, type, attributes, orders = []) => {
     if (orders.length === 0) {
@@ -597,6 +600,26 @@ const collections = [
         indexes: [
             createIndex("idx_userId", "key", ["userId"]),
             createIndex("idx_isRead", "key", ["isRead"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
+        ]
+    },
+    // ── Modul AI ──────────────────────────────────────
+    {
+        $id: "ai_requests",
+        name: "AI Requests",
+        $permissions: [],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("userId", true),
+            createEnumAttr("feature", true, ["brief", "fraud", "landing"]),
+            createStringAttr("prompt", true, 10000),
+            createStringAttr("response", false, 10000),
+            createDatetimeAttr("createdAt", false)
+        ],
+        indexes: [
+            createIndex("idx_userId", "key", ["userId"]),
+            createIndex("idx_feature", "key", ["feature"]),
             createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
         ]
     }
