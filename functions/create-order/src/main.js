@@ -19,8 +19,8 @@ export default async ({ req, res, log, error }) => {
       ID.unique(),
       {
         offerId: offer.$id,
-        creatorId: offer.creator_id,
-        umkmId: offer.umkm_id,
+        creatorId: offer.creatorId,
+        umkmId: offer.umkmId,
         amount: Number(offer.price),
         status: "pending_payment",
       }
