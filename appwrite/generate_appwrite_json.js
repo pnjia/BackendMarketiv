@@ -269,20 +269,36 @@ const collections = [
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("creator_id", true),
+            createStringAttr("creatorId", true),
             createStringAttr("title", true, 255),
-            createStringAttr("platform", true, 50),
-            createStringAttr("content_type", true, 100),
-            createIntAttr("price", true),
-            createIntAttr("delivery_days", true),
-            createIntAttr("revision_limit", true),
             createStringAttr("description", false, 2000),
-            createBoolAttr("is_active", false, true)
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("createdAt", false)
         ],
         indexes: [
-            createIndex("idx_creator_id", "key", ["creator_id"]),
-            createIndex("idx_platform", "key", ["platform"]),
-            createIndex("idx_is_active", "key", ["is_active"])
+            createIndex("idx_creatorId", "key", ["creatorId"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
+        ]
+    },
+    {
+        $id: "rate_card_packages",
+        name: "Rate Card Packages",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("rateCardId", true),
+            createStringAttr("name", true, 100),
+            createStringAttr("description", true, 2000),
+            createStringAttr("output", true, 2000),
+            createIntAttr("deliveryDays", true),
+            createIntAttr("price", true),
+            createIntAttr("revisionLimit", true)
+        ],
+        indexes: [
+            createIndex("idx_rateCardId", "key", ["rateCardId"]),
+            createIndex("idx_price", "key", ["price"])
         ]
     },
     {
@@ -334,21 +350,21 @@ const collections = [
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("conversation_id", true),
-            createStringAttr("creator_id", true),
-            createStringAttr("umkm_id", true),
-            createStringAttr("offer_type", true, 50),
+            createStringAttr("conversationId", true),
+            createStringAttr("umkmId", true),
+            createStringAttr("creatorId", true),
             createStringAttr("title", true, 255),
+            createStringAttr("description", false, 2000),
             createIntAttr("price", true),
-            createDatetimeAttr("deadline", true),
-            createIntAttr("revision_limit", true),
-            createStringAttr("status", true, 50)
+            createStringAttr("deadline", true, 255),
+            createIntAttr("revisionLimit", true),
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("createdAt", false)
         ],
         indexes: [
-            createIndex("idx_conversation_id", "key", ["conversation_id"]),
-            createIndex("idx_creator_id", "key", ["creator_id"]),
-            createIndex("idx_umkm_id", "key", ["umkm_id"]),
-            createIndex("idx_status", "key", ["status"])
+            createIndex("idx_conversationId", "key", ["conversationId"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
         ]
     },
     {
@@ -358,22 +374,59 @@ const collections = [
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("offer_id", true),
-            createStringAttr("creator_id", true),
-            createStringAttr("umkm_id", true),
-            createStringAttr("title", true, 255),
-            createIntAttr("price", true),
-            createDatetimeAttr("deadline", true),
-            createIntAttr("revision_limit", true),
-            createIntAttr("escrow_amount", true),
-            createStringAttr("escrow_status", true, 50),
-            createStringAttr("order_status", true, 50)
+            createStringAttr("offerId", false),
+            createStringAttr("packageId", false),
+            createStringAttr("creatorId", true),
+            createStringAttr("umkmId", true),
+            createIntAttr("amount", true),
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("createdAt", false)
         ],
         indexes: [
-            createIndex("idx_offer_id", "unique", ["offer_id"]),
-            createIndex("idx_creator_id", "key", ["creator_id"]),
-            createIndex("idx_umkm_id", "key", ["umkm_id"]),
-            createIndex("idx_order_status", "key", ["order_status"])
+            createIndex("idx_offerId", "unique", ["offerId"]),
+            createIndex("idx_packageId", "key", ["packageId"]),
+            createIndex("idx_creatorId", "key", ["creatorId"]),
+            createIndex("idx_umkmId", "key", ["umkmId"]),
+            createIndex("idx_status", "key", ["status"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
+        ]
+    },
+    {
+        $id: "deliverables",
+        name: "Deliverables",
+        $permissions: ["read(\"users\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("orderId", true),
+            createStringAttr("source", true, 50),
+            createStringAttr("fileUrl", true, 2048),
+            createStringAttr("fileId", false),
+            createStringAttr("notes", false, 2000),
+            createIntAttr("version", true),
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("createdAt", false)
+        ],
+        indexes: [
+            createIndex("idx_orderId", "key", ["orderId"]),
+            createIndex("idx_createdAt", "key", ["createdAt"], ["DESC"])
+        ]
+    },
+    {
+        $id: "revisions",
+        name: "Revisions",
+        $permissions: ["read(\"users\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("orderId", true),
+            createStringAttr("requestedBy", true),
+            createStringAttr("message", true, 2000),
+            createStringAttr("status", true, 50)
+        ],
+        indexes: [
+            createIndex("idx_orderId", "key", ["orderId"]),
+            createIndex("idx_status", "key", ["status"])
         ]
     },
     {
@@ -584,7 +637,7 @@ const buckets = [
         $permissions: ["read(\"users\")", "create(\"users\")"],
         fileSecurity: true,
         enabled: true,
-        maximumFileSize: 20000000, // 20MB
+        maximumFileSize: 10000000, // 10MB
         allowedFileExtensions: ["jpg", "jpeg", "png", "webp", "pdf", "doc", "docx"],
         compression: "gzip",
         encryption: false,
