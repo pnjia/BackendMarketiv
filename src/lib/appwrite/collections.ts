@@ -17,6 +17,11 @@ export const COLLECTIONS = {
   transactions: process.env.NEXT_PUBLIC_TRANSACTION_COLLECTION || 'transactions',
   escrows: process.env.NEXT_PUBLIC_ESCROW_COLLECTION || 'escrows',
   withdrawals: process.env.NEXT_PUBLIC_WITHDRAWAL_COLLECTION || 'withdrawals',
+  offers: process.env.NEXT_PUBLIC_OFFER_COLLECTION || 'offers',
+  rateCardPackages: process.env.NEXT_PUBLIC_RATE_CARD_PACKAGE_COLLECTION || 'rate_card_packages',
+  orders: process.env.NEXT_PUBLIC_ORDER_COLLECTION || 'orders',
+  deliverables: process.env.NEXT_PUBLIC_DELIVERABLE_COLLECTION || 'deliverables',
+  revisions: process.env.NEXT_PUBLIC_REVISION_COLLECTION || 'revisions',
 } as const;
 
 export const FUNCTIONS = {
