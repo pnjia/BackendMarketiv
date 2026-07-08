@@ -5,7 +5,7 @@ Konvensi penamaan tunggal untuk seluruh Marketiv. Struktur folder di [`40_Folder
 ## Collection (Appwrite)
 
 - `snake_case` jamak (plural).
-- Contoh: `users`, `umkm_profiles`, `creator_profiles`, `creator_social_accounts`, `campaigns`, `campaign_claims`, `campaign_submissions`, `rate_cards`, `rate_card_packages`, `conversations`, `messages`, `offers`, `orders`, `deliverables`, `wallets`, `transactions`, `escrows`, `withdrawals`, `ai_requests`, `fraud_checks`, `notifications`.
+- Contoh: `users`, `umkm_profiles`, `creator_profiles`, `creator_social_accounts`, `campaigns`, `campaign_claims`, `campaign_submissions`, `rate_cards`, `rate_card_packages`, `conversations`, `messages`, `offers`, `orders`, `deliverables`, `payments`, `wallets`, `transactions`, `escrows`, `withdrawals`, `ai_requests`, `fraud_checks`, `notifications`.
 
 ## Attribute (Appwrite)
 
@@ -37,4 +37,4 @@ Konvensi penamaan tunggal untuk seluruh Marketiv. Struktur folder di [`40_Folder
 ## Appwrite Function
 
 - `kebab-case`.
-- Contoh: `create-user-wallet`, `create-order`, `create-escrow`, `release-escrow`, `campaign-published`, `ai-fraud-precheck`, `generate-brief`, `send-notification`.
+- Contoh: `create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `complete-withdrawal`, `campaign-published`, `ai-fraud-precheck`, `generate-brief`, `send-notification`, `send-chat-notification`, `upload-chat-attachment`.

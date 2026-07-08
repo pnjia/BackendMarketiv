@@ -13,9 +13,13 @@
   - **Realtime** — update chat/campaign/order/submission/notification
   - **Functions** — logika server-side berbasis event
 
+## Payment Gateway
+
+- **Midtrans (Snap)** — pembayaran order rate card via Appwrite Function `create-payment` + webhook `midtrans-webhook`. Server key hanya di environment function (lihat [80_Deployment](../01_Global/80_Deployment.md)).
+
 ## AI Layer
 
-- **Gemini API** diakses melalui **Appwrite Function wrapper** (AI Brief Generator, AI Fraud Detection, Landing Assistant).
+- **Gemini API** diakses melalui **Appwrite Function wrapper** (AI Brief Generator, AI Fraud Detection, Landing Assistant). Model spesifik ditetapkan di modul [AI](../02_Modules/AI/00_Index.md).
 
 ## State Management
 

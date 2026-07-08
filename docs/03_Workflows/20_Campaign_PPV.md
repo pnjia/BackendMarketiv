@@ -77,10 +77,7 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 
 21. **AI** — `ai-fraud-precheck` menjalankan validasi: URL valid, dapat diakses, tidak duplikat, cocok platform TikTok.
 22. **AI** — Hitung `fraudScore` (0–100). Tulis `fraud_checks` + update `campaign_submissions.fraudScore/fraudStatus`.
-23. **Routing berdasarkan score:**
-    - **0–30 (Low Risk)**: auto-approve → submission langsung `approved`.
-    - **31–70 (Medium Risk)**: submission tetap `pending`, masuk Fraud Queue Admin.
-    - **71–100 (High Risk)**: auto-reject → submission `rejected`.
+23. **Routing berdasarkan score** — low → auto-approve, medium → Fraud Queue Admin, high → auto-reject. Threshold & detail lengkap dimiliki [40_Submission_Fraud.md](40_Submission_Fraud.md) §Tahap 3.
 24. **Admin** (untuk Medium Risk) — Review Fraud Queue → Approve / Reject / Ban Creator.
 25. **Campaigns** — UMKM juga tetap dapat `approveSubmission()` / `rejectSubmission()` untuk submission yang masih `pending`.
 

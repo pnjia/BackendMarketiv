@@ -67,7 +67,7 @@ Contoh: `auth.service.ts`, `user.service.ts`, `creator.service.ts`, `campaign.se
 
 ## Appwrite Functions (`functions/`)
 
-`create-user-profile`, `validate-and-upload`, `delete-file`, `create-user-wallet`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `update-conversation-on-message`, `generate-brief`, `fraud-detection`, `send-notification`. Penamaan: `kebab-case`.
+`create-user-profile`, `validate-and-upload`, `delete-file`, `create-user-wallet`, `campaign-published`, `ai-fraud-precheck`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `complete-withdrawal`, `update-conversation-on-message`, `generate-brief`, `send-notification`, `send-chat-notification`, `upload-chat-attachment`. Penamaan: `kebab-case`.
 
 Kode Appwrite Function wajib berada di `functions/<function-id>/`. Setiap function memiliki source dan dependency sendiri di folder tersebut. Entrypoint default adalah `functions/<function-id>/src/main.js`, dan file dependency function diletakkan di `functions/<function-id>/package.json`.
 

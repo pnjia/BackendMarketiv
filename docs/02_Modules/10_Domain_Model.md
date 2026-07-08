@@ -11,7 +11,7 @@ Gambaran model data Marketiv dikelompokkan per domain. Dokumen ini hanya menyaji
 | RateCard | `rate_cards`, `rate_card_packages` | [RateCards](RateCards/50_Database.md) |
 | Chat / Offer | `conversations`, `messages`, `offers` | [Chat](Chat/50_Database.md), [Offers](Offers/50_Database.md) |
 | Order | `orders`, `revisions`, `deliverables` | [Orders](Orders/50_Database.md) |
-| Payment | `wallets`, `transactions`, `escrows`, `withdrawals` | [Payments](Payments/50_Database.md) |
+| Payment | `payments`, `wallets`, `transactions`, `escrows`, `withdrawals` | [Payments](Payments/50_Database.md) |
 | AI | `ai_requests` | [AI](AI/50_Database.md) |
 | Storage | `user_storage_usage`, `user_files` | [Users](Users/50_Database.md) |
 | Notification | `notifications` | [Notifications](Notifications/50_Database.md) |
@@ -45,6 +45,7 @@ UMKM_PROFILES
                  └── ORDERS
                          ├── REVISIONS
                          ├── DELIVERABLES
+                         ├── PAYMENTS
                          └── ESCROWS
 
 CREATOR_PROFILES
