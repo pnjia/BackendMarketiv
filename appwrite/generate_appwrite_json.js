@@ -483,7 +483,7 @@ const buckets = [
         fileSecurity: true,
         enabled: true,
         maximumFileSize: 20000000, // 20MB
-        allowedFileExtensions: ["jpg", "jpeg", "png", "pdf", "docx"],
+        allowedFileExtensions: ["jpg", "jpeg", "png", "webp", "pdf", "doc", "docx"],
         compression: "gzip",
         encryption: false,
         antivirus: true
@@ -670,6 +670,20 @@ const functions = [
         entrypoint: "src/main.js",
         commands: "npm install",
         path: "../functions/send-chat-notification"
+    },
+    {
+        $id: "upload-chat-attachment",
+        name: "Upload Chat Attachment",
+        runtime: "node-18.0",
+        execute: ["users"],
+        events: [],
+        schedule: "",
+        timeout: 30,
+        enabled: true,
+        logging: true,
+        entrypoint: "src/main.js",
+        commands: "npm install",
+        path: "../functions/upload-chat-attachment"
     }
 ];
 
