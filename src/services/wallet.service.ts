@@ -2,6 +2,8 @@ import { ID, Permission, Query, Role } from 'appwrite';
 import { account, COLLECTIONS, DATABASE_ID, databases } from '../lib/appwrite';
 
 export const MINIMUM_WITHDRAW = 50000;
+export const MINIMUM_CAMPAIGN_BUDGET = 50000;
+export const PLATFORM_FEE_RATE = 0.05;
 export const WITHDRAW_PAYOUT_METHODS = ['bank', 'ewallet'] as const;
 
 export type WithdrawPayoutMethod = (typeof WITHDRAW_PAYOUT_METHODS)[number];
@@ -126,6 +128,15 @@ const mapError = (err: any, fallbackMessage: string): WalletServiceError => {
 
   return new WalletServiceError(err?.type || 'unknown', fallbackMessage, err);
 };
+
+export const calculatePlatformFee = (nominal: number): number =>
+  Math.floor(nominal * PLATFORM_FEE_RATE);
+
+export const calculateTotalPayment = (nominal: number): number =>
+  nominal + calculatePlatformFee(nominal);
+
+export const calculateCreatorPayout = (nominal: number): number =>
+  nominal - calculatePlatformFee(nominal);
 
 const validateWithdrawAmount = (amount: number): void => {
   if (!Number.isInteger(amount) || amount <= 0) {
