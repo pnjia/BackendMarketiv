@@ -8,6 +8,16 @@
 - Publish mengubah `draft` → `active` (memicu event Campaign Published).
 - `paused` menghentikan sementara visibilitas/claim; `completed` saat budget habis atau campaign ditutup.
 
+## Tipe Campaign & Aturan Tanpa Sampel Fisik
+
+- Campaign wajib memiliki tipe: `ugc` atau `clipping`.
+  - `ugc`: Pembuatan konten dari 0 berbasis aset digital (foto/video produk).
+  - `clipping`: Pemotongan/repurposing video panjang eksternal menjadi klip pendek.
+- **100% Berbasis Aset Digital (No Physical Shipping MVP)**:
+  - Tidak ada fitur atau kewajiban pengiriman sampel produk fisik dari UMKM ke creator.
+  - UMKM wajib menyediakan aset digital yang cukup pada `campaign_assets` (file upload atau external link) agar creator dapat mengerjakan konten.
+  - Creator tidak berhak meminta pengiriman barang fisik. Semua deliverable dikerjakan menggunakan materi digital yang terlampir.
+
 ## Aturan Claim
 
 - Campaign PPV MVP hanya mendukung platform `tiktok`. Campaign dengan platform Instagram, Facebook, YouTube, atau platform lain ditolak sampai fase ekspansi multi-platform.
