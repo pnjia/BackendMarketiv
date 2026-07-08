@@ -7,12 +7,12 @@ export default async ({ req, res, log, error }) => {
     if (!deliverable?.$id) return json(res, { error: "Missing deliverable payload" }, 400);
     if (deliverable.status !== "approved") return json(res, { status: "ignored", reason: "deliverable is not approved" });
 
-    const orderId = deliverable.orderId || deliverable.order_id;
+    const orderId = deliverable.orderId;
     if (!orderId) return json(res, { error: "Missing order id" }, 400);
 
     const databases = createDatabasesClient(env);
     const order = await databases.getDocument(env.databaseId, env.ordersCollectionId, orderId);
-    const creatorId = order.creator_id || order.creatorId;
+    const creatorId = order.creatorId;
     if (!creatorId) return json(res, { error: "Order has no creator" }, 400);
 
     const escrow = await findHeldEscrow(databases, env, orderId);
@@ -26,7 +26,7 @@ export default async ({ req, res, log, error }) => {
       balance: Number(wallet.balance || 0) + Number(escrow.amount)
     });
     await ensureReleaseTransaction(databases, env, creatorId, escrow);
-    await updateOrderCompleted(databases, env, orderId, order);
+    await updateOrderCompleted(databases, env, orderId);
 
     log(`Escrow ${escrow.$id} released to creator ${creatorId}`);
     return json(res, { status: "ok", escrowId: escrow.$id, walletId: wallet.$id });
@@ -102,12 +102,10 @@ async function ensureReleaseTransaction(databases, env, creatorId, escrow) {
   );
 }
 
-async function updateOrderCompleted(databases, env, orderId, order) {
-  const update = {};
-  if (Object.prototype.hasOwnProperty.call(order, "order_status")) update.order_status = "completed";
-  if (Object.prototype.hasOwnProperty.call(order, "status")) update.status = "completed";
-  if (Object.prototype.hasOwnProperty.call(order, "escrow_status")) update.escrow_status = "released";
-  if (Object.keys(update).length > 0) await databases.updateDocument(env.databaseId, env.ordersCollectionId, orderId, update);
+async function updateOrderCompleted(databases, env, orderId) {
+  await databases.updateDocument(env.databaseId, env.ordersCollectionId, orderId, {
+    status: "completed"
+  });
 }
 
 function json(res, body, statusCode = 200) {

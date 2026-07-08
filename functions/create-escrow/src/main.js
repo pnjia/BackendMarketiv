@@ -19,7 +19,6 @@ export default async ({ req, res, log, error }) => {
       return json(res, { error: "Paid payment has invalid purpose/order_id" }, 400);
     }
 
-    const order = await databases.getDocument(env.databaseId, env.ordersCollectionId, payment.order_id);
     const existingEscrow = await findEscrow(databases, env, payment.order_id);
     const escrow = existingEscrow || await databases.createDocument(
       env.databaseId,
@@ -37,7 +36,7 @@ export default async ({ req, res, log, error }) => {
       status: "completed"
     });
 
-    await updateOrderAfterEscrow(databases, env, order.$id, order);
+    await updateOrderAfterEscrow(databases, env, payment.order_id);
     log(`Escrow ${escrow.$id} held for order ${payment.order_id}`);
     return json(res, { status: "ok", escrowId: escrow.$id });
   } catch (err) {
@@ -126,12 +125,10 @@ async function ensureTransaction(databases, env, transaction) {
   return { transaction: transactionDocument, created: true };
 }
 
-async function updateOrderAfterEscrow(databases, env, orderId, order) {
-  const update = {};
-  if (Object.prototype.hasOwnProperty.call(order, "order_status")) update.order_status = "in_progress";
-  if (Object.prototype.hasOwnProperty.call(order, "status")) update.status = "in_progress";
-  if (Object.prototype.hasOwnProperty.call(order, "escrow_status")) update.escrow_status = "held";
-  if (Object.keys(update).length > 0) await databases.updateDocument(env.databaseId, env.ordersCollectionId, orderId, update);
+async function updateOrderAfterEscrow(databases, env, orderId) {
+  await databases.updateDocument(env.databaseId, env.ordersCollectionId, orderId, {
+    status: "in_progress"
+  });
 }
 
 function json(res, body, statusCode = 200) {
