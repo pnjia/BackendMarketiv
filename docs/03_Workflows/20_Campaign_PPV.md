@@ -29,8 +29,9 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 | `user_files` | Users | insert saat upload asset via File Manager |
 | `user_storage_usage` | Users | update kuota |
 | `ai_requests` | AI | insert log request |
+| `payments` | Payments | insert payment top-up campaign |
 | `wallets` | Payments | update pendingBalance |
-| `transactions` | Payments | insert transaksi reward |
+| `transactions` | Payments | insert transaksi reward & fee |
 | `notifications` | Notifications | insert notifikasi |
 
 ## Step-by-step Flow
@@ -42,63 +43,78 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
    - **Internal (storage)**: upload file via File Manager (`uploadFile({ file })`). File Manager hanya menyimpan file umum dan metadata storage; relasi ke campaign dicatat di `campaign_assets.fileId` (`source = storage`). Terikat kuota 100 MB user.
    - **External URL**: input link Google Drive/Dropbox/CDN publik. Dicatat di `campaign_assets` (`source = external_url`). Tidak terikat kuota. Hanya protokol `https`.
 3. **AI** (opsional) — UMKM klik "Generate Brief": `generateBrief()` → AI hasilkan Hook, CTA, Hashtag, Script, Guideline. UMKM dapat edit lalu simpan ke `campaign_briefs`.
-4. **Campaigns** — Atur **Reward**: budget, rewardPer1000Views (CPM), minViews?, maxViews?, claimLimit.
+4. **Campaigns** — Atur **Reward**: budget (min Rp50.000), rewardPer1000Views (CPM), minViews?, maxViews?, claimLimit.
 5. Status awal campaign: `draft`.
 
-### Tahap 2: Publish Campaign
+### Tahap 2: Top-Up Budget
 
-6. **Campaigns** — UMKM `publishCampaign()`: status `draft → active`, set `publishedAt`.
-7. **Event `campaigns.status (draft→active)`** memicu function **`campaign-published`**.
-8. **Notifications** — Buat notifikasi "Campaign baru tersedia" untuk creator eligible (berdasarkan platform/kategori).
-9. **Campaigns** — Campaign tampil di Job Board (query `status = active ORDER BY publishedAt DESC`).
+6. **Payments** — UMKM `topUpCampaign(campaignId)`:
+   - Total bayar = `budget + floor(budget × 5%)` (sudah termasuk fee platform 5%).
+   - `create-payment` Function membuat transaksi Midtrans dengan `purpose = campaign`.
+   - UMKM menyelesaikan pembayaran via Midtrans Snap.
+7. **Event `payments.status (pending→paid)`** dengan `purpose = campaign`:
+   - `midtrans-webhook` mengonfirmasi pembayaran.
+   - `remainingBudget` di-set = `budget` (dana penuh siap pakai untuk reward).
+   - Buat transaksi `fee` di ledger untuk fee platform.
+8. **Notifications** — Notifikasi ke UMKM: "Top-up campaign berhasil — sekarang bisa publish".
 
-### Tahap 3: Claim Campaign (Creator)
+### Tahap 3: Publish Campaign
 
-10. **Campaigns** — Creator browsing Job Board → filter/kategori → klik campaign → baca brief & requirements.
-11. **Campaigns** — Creator `claimCampaign(campaignId)`.
-12. **Validasi backend** (semua harus lolos):
-    - `campaign.status === 'active'`
-    - `creator.isProfileCompleted === true`
-    - Belum ada claim untuk `campaignId + creatorId` (unique constraint).
-    - `campaign.totalClaims < campaign.claimLimit`.
-13. **Campaigns** — Buat `campaign_claims`: `{ campaignId, creatorId, status: 'claimed' }`. Increment `campaign.totalClaims`.
-14. **Event `campaign_claims.create`** memicu function **`campaign-claimed`**.
-15. **Notifications** — Notifikasi ke UMKM: "{creatorName} mengklaim campaign-mu".
+9. **Campaigns** — UMKM `publishCampaign()`: status `draft → active`, set `publishedAt`.
+10. **Event `campaigns.status (draft→active)`** memicu function **`campaign-published`**.
+11. **Notifications** — Buat notifikasi "Campaign baru tersedia" untuk creator eligible (berdasarkan platform/kategori).
+12. **Campaigns** — Campaign tampil di Job Board (query `status = active ORDER BY publishedAt DESC`).
 
-### Tahap 4: Submit Content (Creator)
+### Tahap 4: Claim Campaign (Creator)
 
-16. **Campaigns** — Creator produksi konten & posting ke TikTok. Instagram, Facebook, YouTube, dan platform lain berada di luar MVP.
-17. **Campaigns** — `createSubmission({ claimId, campaignId, platform, postUrl, caption?, views, engagement? })`.
-18. **Campaigns** — Buat `campaign_submissions`: `{ ..., status: 'pending' }`.
-19. **Event `campaign_submissions.create`** memicu function **`ai-fraud-precheck`**.
-20. Lanjut ke [40_Submission_Fraud.md](40_Submission_Fraud.md) untuk detail fraud check.
+13. **Campaigns** — Creator browsing Job Board → filter/kategori → klik campaign → baca brief & requirements.
+14. **Campaigns** — Creator `claimCampaign(campaignId)`.
+15. **Sebelum validasi**, sistem membersihkan expired claims untuk campaign ini: `status = claimed` dengan `claimedAt + submissionDays < now` diubah menjadi `expired` dan `totalClaims` dikurangi.
+16. **Validasi backend** (semua harus lolos):
+     - `campaign.status === 'active'`
+     - `creator.isProfileCompleted === true`
+     - Belum ada claim untuk `campaignId + creatorId` (unique constraint).
+     - `campaign.totalClaims < campaign.claimLimit`.
+17. **Campaigns** — Buat `campaign_claims`: `{ campaignId, creatorId, status: 'claimed', claimedAt: now }`. Increment `campaign.totalClaims`.
+18. **Event `campaign_claims.create`** memicu function **`campaign-claimed`**.
+19. **Notifications** — Notifikasi ke UMKM: "{creatorName} mengklaim campaign-mu".
 
-### Tahap 5: Fraud Check & Review
+### Tahap 5: Submit Content (Creator)
 
-21. **AI** — `ai-fraud-precheck` menjalankan validasi: URL valid, dapat diakses, tidak duplikat, cocok platform TikTok.
-22. **AI** — Hitung `fraudScore` (0–100). Tulis `fraud_checks` + update `campaign_submissions.fraudScore/fraudStatus`.
-23. **Routing berdasarkan score** — low → auto-approve, medium → Fraud Queue Admin, high → auto-reject. Threshold & detail lengkap dimiliki [40_Submission_Fraud.md](40_Submission_Fraud.md) §Tahap 3.
-24. **Admin** (untuk Medium Risk) — Review Fraud Queue → Approve / Reject / Ban Creator.
-25. **Campaigns** — UMKM juga tetap dapat `approveSubmission()` / `rejectSubmission()` untuk submission yang masih `pending`.
+19. **Campaigns** — Creator produksi konten & posting ke TikTok. Instagram, Facebook, YouTube, dan platform lain berada di luar MVP.
+20. **Campaigns** — `createSubmission({ claimId, campaignId, platform, postUrl, caption?, views, engagement? })`.
+21. **Campaigns** — Buat `campaign_submissions`: `{ ..., status: 'pending' }`.
+22. **Event `campaign_submissions.create`** memicu function **`ai-fraud-precheck`**.
+23. Lanjut ke [40_Submission_Fraud.md](40_Submission_Fraud.md) untuk detail fraud check.
 
-### Tahap 6: Reward Calculation
+### Tahap 6: Fraud Check & Review
 
-26. **Event `campaign_submissions.status (pending→approved)`** memicu function **`calculate-campaign-reward`**.
-27. **Payments** — Hitung reward:
-    ```
-    reward = floor((views / 1000) × rewardPer1000Views)
-    // Batasi oleh sisa budget: reward = min(reward, remainingBudget)
-    ```
-28. **Payments** — Update wallet creator: `pendingBalance += reward`.
-29. **Payments** — Buat `transactions`: `{ userId: creatorId, amount: reward, type: 'release', referenceType: 'campaign_submission' }`.
-30. **Campaigns** — Update denormalisasi: `campaigns.spentAmount += reward`, `campaigns.remainingBudget = budget - spentAmount`.
-31. **Notifications** — Notifikasi ke creator: "Reward campaign {title} sudah masuk ke pending balance".
+24. **AI** — `ai-fraud-precheck` menjalankan validasi: URL valid, dapat diakses, tidak duplikat, cocok platform TikTok.
+25. **AI** — Hitung `fraudScore` (0–100). Tulis `fraud_checks` + update `campaign_submissions.fraudScore/fraudStatus`.
+26. **Routing berdasarkan score** — low → auto-approve, medium → Fraud Queue Admin, high → auto-reject. Threshold & detail lengkap dimiliki [40_Submission_Fraud.md](40_Submission_Fraud.md) §Tahap 3.
+27. **Admin** (untuk Medium Risk) — Review Fraud Queue → Approve / Reject / Ban Creator.
+28. **Campaigns** — UMKM juga tetap dapat `approveSubmission()` / `rejectSubmission()` untuk submission yang masih `pending`.
+
+### Tahap 7: Reward Calculation
+
+29. **Event `campaign_submissions.status (pending→approved)`** memicu function **`calculate-campaign-reward`**.
+30. **Payments** — Hitung reward:
+     ```
+     reward = floor((views / 1000) × rewardPer1000Views)
+     // Batasi oleh sisa budget: reward = min(reward, remainingBudget)
+     ```
+31. **Payments** — Update wallet creator: `pendingBalance += reward`.
+32. **Payments** — Buat `transactions`: `{ userId: creatorId, amount: reward, type: 'release', referenceType: 'campaign_submission' }`.
+33. **Campaigns** — Update denormalisasi: `campaigns.spentAmount += reward`, `campaigns.remainingBudget = budget - spentAmount`.
+34. **Notifications** — Notifikasi ke creator: "Reward campaign {title} sudah masuk ke pending balance".
 
 ## State Transitions
 
 ```text
-CAMPAIGN:    draft → active → paused/completed
+CAMPAIGN:    draft → funded → active → paused/completed
+PAYMENT:     pending → paid (purpose=campaign)
 CLAIM:       claimed → submitted → approved | rejected
+           ↘ expired (auto, lewat submissionDays)
 SUBMISSION:  pending → approved | rejected
 FRAUD_CHECK: running → safe | review | rejected
 WALLET:      pendingBalance += reward → (later → available)
@@ -108,10 +124,12 @@ WALLET:      pendingBalance += reward → (later → available)
 
 | Trigger | Function | Aksi |
 |---|---|---|
+| `payments.status (pending→paid)` `purpose=campaign` | `midtrans-webhook` | Konfirmasi top-up, set `remainingBudget`, catat fee |
 | `campaigns.status (draft→active)` | `campaign-published` | Notifikasi creator eligible, update job board |
 | `campaign_claims.create` | `campaign-claimed` | Validasi, notifikasi UMKM |
 | `campaign_submissions.create` | `ai-fraud-precheck` | Fraud detection & routing |
 | `campaign_submissions.status (pending→approved)` | `calculate-campaign-reward` | Hitung reward, update wallet + campaign counters |
+| Scheduled (setiap 6 jam) | `expire-stale-claims` | Expire claim yang lewat `submissionDays`, kurangi `totalClaims` |
 
 ## Validation Rules per Langkah
 
@@ -121,6 +139,9 @@ WALLET:      pendingBalance += reward → (later → available)
 | Upload asset storage | `file.size ≤ 20 MB`, `fileCount < 100` | Error batas file |
 | Upload asset external | URL harus `https://` | Error format URL |
 | Create campaign | `platforms[]` hanya berisi `tiktok` pada MVP | Error platform belum didukung |
+| Create campaign | `budget ≥ 50000` | Error "Minimum budget Rp50.000" |
+| Top-up campaign | Campaign harus milik UMKM | Error 403 |
+| Top-up campaign | `remainingBudget === 0` (belum pernah top-up) | Error "Sudah di-top-up" |
 | Claim campaign | `isProfileCompleted === true` | Error "Lengkapi profil dulu" |
 | Claim campaign | `totalClaims < claimLimit` | Error "Claim limit penuh" |
 | Claim campaign | Unique `campaignId + creatorId` | Error "Sudah claim" |
@@ -133,15 +154,21 @@ WALLET:      pendingBalance += reward → (later → available)
 
 | Titik | Notifikasi | Penerima |
 |---|---|---|
+| Campaign top-up success | "Top-up campaign berhasil — sekarang bisa publish" | UMKM |
 | Campaign published | "Campaign baru tersedia" | Creator eligible |
 | Campaign claimed | "{creator} mengklaim campaign" | UMKM pemilik |
 | Submission created | "Submission baru masuk" | UMKM |
 | Submission approved (auto/admin) | "Submission disetujui" | Creator |
 | Submission rejected (auto/admin) | "Submission ditolak" | Creator |
 | Reward calculated | "Reward {amount} masuk pending wallet" | Creator |
+| Claim expired | "Claim di {campaign} expired — kamu tidak submit dalam {submissionDays} hari" | Creator |
 
 ## Edge Cases
 
+- **Minimum budget** — budget < Rp50.000 ditolak saat create campaign.
+- **Top-up gagal / expired** — pembayaran Midtrans tidak selesai → campaign tetap `draft`, tidak bisa publish.
+- **Claim expire** — claim yang tidak di-submit dalam `submissionDays` (default 7 hari) otomatis expired, `totalClaims` berkurang, slot kembali ke pool.
+- **Claim saat ada expired claims** — `claimCampaign()` membersihkan expired claims terlebih dahulu sebelum cek `totalClaims < claimLimit`.
 - **Claim limit tercapai** → claim baru ditolak dengan error (FCFS).
 - **Campaign di-pause** — `status: paused` → tidak ada claim baru, tracking tetap jalan. Resume → `active` lagi, claim dibuka.
 - **Campaign di-stop** — `status: completed` → tidak ada claim baru, submission existing tetap diproses.
