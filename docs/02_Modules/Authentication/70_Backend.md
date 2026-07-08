@@ -20,3 +20,9 @@ Provisioning profile ditangani oleh `create-user-profile` di modul [Users](../Us
 
 - Role diteruskan via query string; backend membaca `role` untuk routing form & pembuatan profil.
 - Nomor HP UMKM wajib diisi; Creator tidak wajib.
+- Data registrasi (businessName, category, phone, displayName) disimpan sementara ke Appwrite user `prefs` lewat `account.updatePrefs()` sebelum `create-user-profile` dipanggil, sehingga function dapat membaca data tersebut untuk membuat profil.
+
+## Lihat Juga
+
+- Mekanisme provisioning profil: [Users/70_Backend.md](../Users/70_Backend.md).
+- Pembuatan wallet: [Payments/70_Backend.md](../Payments/70_Backend.md).

@@ -37,5 +37,15 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 
 - Setiap user memiliki satu wallet (dibuat oleh modul Payments).
 - `isProfileCompleted` diatur menjadi `true` setelah onboarding wizard selesai.
-- Search creator menggunakan query terindeks pada `creator_profiles` (city, rating, totalFollowers) dan `rate_card_packages` (price).
+- Search creator menggunakan query terindeks pada `creator_profiles` (city, rating, totalFollowers) dan `rate_cards` (price) milik modul [RateCards](../RateCards/50_Database.md).
 - Data denormalisasi (`totalFollowers`, `totalOrders`, `rating`) diperbarui oleh event dari modul terkait (Orders, Campaigns).
+
+## Cross-Module Dependencies
+
+| Modul | Collection | Digunakan Untuk |
+| --- | --- | --- |
+| RateCards | `rate_cards` | Filter & sort harga pada search creator |
+
+## Lihat Juga
+
+- [RateCards/50_Database.md](../RateCards/50_Database.md) — skema `rate_cards`.

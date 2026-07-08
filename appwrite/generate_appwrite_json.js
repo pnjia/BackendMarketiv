@@ -30,49 +30,151 @@ const createIndex = (key, type, attributes, orders = []) => {
 };
 
 const collections = [
+    // ── Modul Users ──────────────────────────────────
     {
-        $id: "profiles",
-        name: "Profiles",
-        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
+        $id: "users",
+        name: "Users",
+        $permissions: ["read(\"users\")"],
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("user_id", true),
+            createStringAttr("userId", true),
             createStringAttr("role", true, 50),
-            createStringAttr("avatar_url", false, 2048),
+            createStringAttr("status", true, 50),
+            createStringAttr("email", true),
             createStringAttr("phone", false, 50),
-            createStringAttr("city", false, 100),
-            createStringAttr("bio", false, 1000),
-            createStringAttr("business_name", false, 255),
-            createStringAttr("business_category", false, 100),
-            createFloatAttr("rating", false, 0),
-            createIntAttr("completed_jobs", false, 0),
-            createStringAttr("status", false, 50)
+            createDatetimeAttr("createdAt", false)
         ],
         indexes: [
-            createIndex("idx_user_id", "unique", ["user_id"]),
+            createIndex("idx_userId", "unique", ["userId"]),
+            createIndex("idx_email", "unique", ["email"]),
             createIndex("idx_role", "key", ["role"]),
-            createIndex("idx_city", "key", ["city"]),
-            createIndex("idx_business_category", "key", ["business_category"])
+            createIndex("idx_status", "key", ["status"])
         ]
     },
     {
-        $id: "social_accounts",
-        name: "Social Accounts",
+        $id: "umkm_profiles",
+        name: "UMKM Profiles",
         $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("user_id", true),
+            createStringAttr("userId", true),
+            createStringAttr("businessName", true, 255),
+            createStringAttr("category", true, 100),
+            createStringAttr("description", false, 2000),
+            createStringAttr("city", false, 100),
+            createStringAttr("address", false, 500),
+            createStringAttr("tiktok", false, 255),
+            createStringAttr("logoUrl", false, 2048),
+            createBoolAttr("isProfileCompleted", false, false)
+        ],
+        indexes: [
+            createIndex("idx_userId", "unique", ["userId"]),
+            createIndex("idx_city", "key", ["city"]),
+            createIndex("idx_category", "key", ["category"]),
+            createIndex("idx_isProfileCompleted", "key", ["isProfileCompleted"])
+        ]
+    },
+    {
+        $id: "creator_profiles",
+        name: "Creator Profiles",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("userId", true),
+            createStringAttr("displayName", true, 255),
+            createStringAttr("bio", false, 2000),
+            createStringAttr("city", false, 100),
+            createStringAttr("avatarUrl", false, 2048),
+            createIntAttr("totalFollowers", false, 0),
+            createIntAttr("totalOrders", false, 0),
+            createFloatAttr("rating", false, 0),
+            createBoolAttr("isProfileCompleted", false, false)
+        ],
+        indexes: [
+            createIndex("idx_userId", "unique", ["userId"]),
+            createIndex("idx_displayName", "key", ["displayName"]),
+            createIndex("idx_city", "key", ["city"]),
+            createIndex("idx_rating", "key", ["rating"]),
+            createIndex("idx_totalFollowers", "key", ["totalFollowers"]),
+            createIndex("idx_isProfileCompleted", "key", ["isProfileCompleted"])
+        ]
+    },
+    {
+        $id: "creator_social_accounts",
+        name: "Creator Social Accounts",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("creatorId", true),
             createStringAttr("platform", true, 50),
             createStringAttr("username", true, 255),
             createIntAttr("followers", false, 0),
-            createBoolAttr("verified", false, false),
-            createFloatAttr("engagement_rate", false, 0.0)
+            createFloatAttr("engagementRate", false, 0)
         ],
         indexes: [
-            createIndex("idx_user_id", "key", ["user_id"]),
-            createIndex("idx_platform", "key", ["platform"])
+            createIndex("idx_creatorId", "key", ["creatorId"]),
+            createIndex("idx_platform", "key", ["platform"]),
+            createIndex("idx_followers", "key", ["followers"])
+        ]
+    },
+    {
+        $id: "creator_portfolios",
+        name: "Creator Portfolios",
+        $permissions: ["read(\"any\")", "create(\"users\")", "update(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("creatorId", true),
+            createStringAttr("title", true, 255),
+            createStringAttr("description", false, 2000),
+            createStringAttr("thumbnailUrl", false, 2048),
+            createStringAttr("portfolioUrl", false, 2048)
+        ],
+        indexes: [
+            createIndex("idx_creatorId", "key", ["creatorId"])
+        ]
+    },
+    {
+        $id: "user_storage_usage",
+        name: "User Storage Usage",
+        $permissions: ["read(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("userId", true),
+            createIntAttr("usedBytes", false, 0),
+            createIntAttr("quotaBytes", false, 104857600),
+            createIntAttr("fileCount", false, 0)
+        ],
+        indexes: [
+            createIndex("idx_userId", "unique", ["userId"])
+        ]
+    },
+    {
+        $id: "user_files",
+        name: "User Files",
+        $permissions: ["read(\"users\")"],
+        documentSecurity: true,
+        enabled: true,
+        attributes: [
+            createStringAttr("userId", true),
+            createStringAttr("storageFileId", true),
+            createStringAttr("bucketId", true),
+            createStringAttr("fileName", true, 255),
+            createStringAttr("mimeType", true, 100),
+            createIntAttr("sizeBytes", true),
+            createStringAttr("status", true, 50),
+            createDatetimeAttr("createdAt", false),
+            createDatetimeAttr("deletedAt", false)
+        ],
+        indexes: [
+            createIndex("idx_userId_status", "key", ["userId", "status"]),
+            createIndex("idx_storageFileId", "unique", ["storageFileId"]),
+            createIndex("idx_status_createdAt", "key", ["status", "createdAt"], ["ASC", "DESC"])
         ]
     },
     {
@@ -496,6 +598,22 @@ const buckets = [
         enabled: true,
         maximumFileSize: 5000000,
         allowedFileExtensions: ["jpg", "jpeg", "png", "pdf"],
+        compression: "gzip",
+        encryption: false,
+        antivirus: true
+    },
+    {
+        $id: "user-files",
+        name: "User Files",
+        $permissions: ["read(\"users\")", "create(\"users\")"],
+        fileSecurity: true,
+        enabled: true,
+        maximumFileSize: 20971520, // 20 MB
+        allowedFileExtensions: [
+            "jpg", "jpeg", "png", "webp", "gif", "svg",
+            "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx",
+            "mp4", "mov", "avi"
+        ],
         compression: "gzip",
         encryption: false,
         antivirus: true

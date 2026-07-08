@@ -10,19 +10,17 @@
   ],
   "tables": [
     {
-      "$id": "profiles",
-      "name": "Profiles",
+      "$id": "users",
+      "name": "Users",
       "$permissions": [
-        "read(\"any\")",
-        "create(\"users\")",
-        "update(\"users\")"
+        "read(\"users\")"
       ],
       "enabled": true,
       "databaseId": "6a4c8598001da3b0d7f0",
       "rowSecurity": true,
       "columns": [
         {
-          "key": "user_id",
+          "key": "userId",
           "type": "string",
           "required": true,
           "array": false,
@@ -38,11 +36,19 @@
           "default": null
         },
         {
-          "key": "avatar_url",
+          "key": "status",
           "type": "string",
-          "required": false,
+          "required": true,
           "array": false,
-          "size": 2048,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "email",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
           "default": null
         },
         {
@@ -54,70 +60,34 @@
           "default": null
         },
         {
-          "key": "city",
-          "type": "string",
+          "key": "createdAt",
+          "type": "datetime",
           "required": false,
           "array": false,
-          "size": 100,
-          "default": null
-        },
-        {
-          "key": "bio",
-          "type": "string",
-          "required": false,
-          "array": false,
-          "size": 1000,
-          "default": null
-        },
-        {
-          "key": "business_name",
-          "type": "string",
-          "required": false,
-          "array": false,
-          "size": 255,
-          "default": null
-        },
-        {
-          "key": "business_category",
-          "type": "string",
-          "required": false,
-          "array": false,
-          "size": 100,
-          "default": null
-        },
-        {
-          "key": "rating",
-          "type": "double",
-          "required": false,
-          "array": false,
-          "default": 0
-        },
-        {
-          "key": "completed_jobs",
-          "type": "integer",
-          "required": false,
-          "array": false,
-          "default": 0
-        },
-        {
-          "key": "status",
-          "type": "string",
-          "required": false,
-          "array": false,
-          "size": 50,
           "default": null
         }
       ],
       "indexes": [
         {
-          "key": "idx_user_id",
+          "key": "idx_userId",
           "type": "unique",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "user_id"
+            "userId"
+          ]
+        },
+        {
+          "key": "idx_email",
+          "type": "unique",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "email"
           ]
         },
         {
@@ -132,6 +102,115 @@
           ]
         },
         {
+          "key": "idx_status",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "status"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "umkm_profiles",
+      "name": "UMKM Profiles",
+      "$permissions": [
+        "read(\"any\")",
+        "create(\"users\")",
+        "update(\"users\")"
+      ],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "userId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "businessName",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "category",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 100,
+          "default": null
+        },
+        {
+          "key": "description",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2000,
+          "default": null
+        },
+        {
+          "key": "city",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 100,
+          "default": null
+        },
+        {
+          "key": "address",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 500,
+          "default": null
+        },
+        {
+          "key": "tiktok",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "logoUrl",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2048,
+          "default": null
+        },
+        {
+          "key": "isProfileCompleted",
+          "type": "boolean",
+          "required": false,
+          "array": false,
+          "default": false
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_userId",
+          "type": "unique",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "userId"
+          ]
+        },
+        {
           "key": "idx_city",
           "type": "key",
           "status": "available",
@@ -143,21 +222,32 @@
           ]
         },
         {
-          "key": "idx_business_category",
+          "key": "idx_category",
           "type": "key",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "business_category"
+            "category"
+          ]
+        },
+        {
+          "key": "idx_isProfileCompleted",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "isProfileCompleted"
           ]
         }
       ]
     },
     {
-      "$id": "social_accounts",
-      "name": "Social Accounts",
+      "$id": "creator_profiles",
+      "name": "Creator Profiles",
       "$permissions": [
         "read(\"any\")",
         "create(\"users\")",
@@ -168,7 +258,157 @@
       "rowSecurity": true,
       "columns": [
         {
-          "key": "user_id",
+          "key": "userId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "displayName",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "bio",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2000,
+          "default": null
+        },
+        {
+          "key": "city",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 100,
+          "default": null
+        },
+        {
+          "key": "avatarUrl",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2048,
+          "default": null
+        },
+        {
+          "key": "totalFollowers",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": 0
+        },
+        {
+          "key": "totalOrders",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": 0
+        },
+        {
+          "key": "rating",
+          "type": "double",
+          "required": false,
+          "array": false,
+          "default": 0
+        },
+        {
+          "key": "isProfileCompleted",
+          "type": "boolean",
+          "required": false,
+          "array": false,
+          "default": false
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_userId",
+          "type": "unique",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "userId"
+          ]
+        },
+        {
+          "key": "idx_displayName",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "displayName"
+          ]
+        },
+        {
+          "key": "idx_city",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "city"
+          ]
+        },
+        {
+          "key": "idx_rating",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "rating"
+          ]
+        },
+        {
+          "key": "idx_totalFollowers",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "totalFollowers"
+          ]
+        },
+        {
+          "key": "idx_isProfileCompleted",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "isProfileCompleted"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "creator_social_accounts",
+      "name": "Creator Social Accounts",
+      "$permissions": [
+        "read(\"any\")",
+        "create(\"users\")",
+        "update(\"users\")"
+      ],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "creatorId",
           "type": "string",
           "required": true,
           "array": false,
@@ -199,14 +439,7 @@
           "default": 0
         },
         {
-          "key": "verified",
-          "type": "boolean",
-          "required": false,
-          "array": false,
-          "default": false
-        },
-        {
-          "key": "engagement_rate",
+          "key": "engagementRate",
           "type": "double",
           "required": false,
           "array": false,
@@ -215,14 +448,14 @@
       ],
       "indexes": [
         {
-          "key": "idx_user_id",
+          "key": "idx_creatorId",
           "type": "key",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "user_id"
+            "creatorId"
           ]
         },
         {
@@ -234,6 +467,258 @@
           ],
           "columns": [
             "platform"
+          ]
+        },
+        {
+          "key": "idx_followers",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "followers"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "creator_portfolios",
+      "name": "Creator Portfolios",
+      "$permissions": [
+        "read(\"any\")",
+        "create(\"users\")",
+        "update(\"users\")"
+      ],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "creatorId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "title",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "description",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2000,
+          "default": null
+        },
+        {
+          "key": "thumbnailUrl",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2048,
+          "default": null
+        },
+        {
+          "key": "portfolioUrl",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2048,
+          "default": null
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_creatorId",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "creatorId"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "user_storage_usage",
+      "name": "User Storage Usage",
+      "$permissions": [
+        "read(\"users\")"
+      ],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "userId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "usedBytes",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": 0
+        },
+        {
+          "key": "quotaBytes",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": 104857600
+        },
+        {
+          "key": "fileCount",
+          "type": "integer",
+          "required": false,
+          "array": false,
+          "default": 0
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_userId",
+          "type": "unique",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "userId"
+          ]
+        }
+      ]
+    },
+    {
+      "$id": "user_files",
+      "name": "User Files",
+      "$permissions": [
+        "read(\"users\")"
+      ],
+      "enabled": true,
+      "databaseId": "6a4c8598001da3b0d7f0",
+      "rowSecurity": true,
+      "columns": [
+        {
+          "key": "userId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "storageFileId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "bucketId",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "fileName",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 255,
+          "default": null
+        },
+        {
+          "key": "mimeType",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 100,
+          "default": null
+        },
+        {
+          "key": "sizeBytes",
+          "type": "integer",
+          "required": true,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "status",
+          "type": "string",
+          "required": true,
+          "array": false,
+          "size": 50,
+          "default": null
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": false,
+          "array": false,
+          "default": null
+        },
+        {
+          "key": "deletedAt",
+          "type": "datetime",
+          "required": false,
+          "array": false,
+          "default": null
+        }
+      ],
+      "indexes": [
+        {
+          "key": "idx_userId_status",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC",
+            "ASC"
+          ],
+          "columns": [
+            "userId",
+            "status"
+          ]
+        },
+        {
+          "key": "idx_storageFileId",
+          "type": "unique",
+          "status": "available",
+          "orders": [
+            "ASC"
+          ],
+          "columns": [
+            "storageFileId"
+          ]
+        },
+        {
+          "key": "idx_status_createdAt",
+          "type": "key",
+          "status": "available",
+          "orders": [
+            "ASC",
+            "DESC"
+          ],
+          "columns": [
+            "status",
+            "createdAt"
           ]
         }
       ]
@@ -1973,6 +2458,38 @@
         "jpeg",
         "png",
         "pdf"
+      ],
+      "compression": "gzip",
+      "encryption": false,
+      "antivirus": true
+    },
+    {
+      "$id": "user-files",
+      "name": "User Files",
+      "$permissions": [
+        "read(\"users\")",
+        "create(\"users\")"
+      ],
+      "fileSecurity": true,
+      "enabled": true,
+      "maximumFileSize": 20971520,
+      "allowedFileExtensions": [
+        "jpg",
+        "jpeg",
+        "png",
+        "webp",
+        "gif",
+        "svg",
+        "pdf",
+        "doc",
+        "docx",
+        "xls",
+        "xlsx",
+        "ppt",
+        "pptx",
+        "mp4",
+        "mov",
+        "avi"
       ],
       "compression": "gzip",
       "encryption": false,

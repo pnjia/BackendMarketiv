@@ -32,25 +32,53 @@ Input:
 }
 ```
 
+Catatan: input `name` disimpan sebagai `displayName` di `creator_profiles` — lihat alur data di bawah.
+
+### `registerUser(data)` — [Client SDK]
+
+Gabungan `registerUMKM` dan `registerCreator` dengan parameter `role`.
+
+Input:
+
+```json
+{
+  "role": "umkm | creator",
+  "businessName": "",    // jika role = umkm
+  "category": "",        // jika role = umkm
+  "phone": "",           // jika role = umkm
+  "name": "",            // jika role = creator
+  "email": "",
+  "password": ""
+}
+```
+
 ### Register Process (kedua role)
 
 ```text
 Create Appwrite Auth User   (kedua role boleh via Google OAuth)
+↓ account.create()
+↓ account.updatePrefs()      # simpan data registrasi ke prefs
 ↓
 Create Profile              (umkm_profiles / creator_profiles)
+↓ create-user-profile        # baca data dari Appwrite user + prefs
 ↓
-Create Wallet
+Create Storage Usage        (user_storage_usage)
+↓
+┌─ Event: users.create ─────────────────────────┐
+│ → create-user-wallet      # async, oleh Payments │
+│ → Send Welcome Notification # async              │
+└─────────────────────────────────────────────────┘
 ```
 
-> Pembuatan Wallet juga dipicu otomatis oleh event `users.create` — lihat [90_Events.md](90_Events.md) dan `../Payments/90_Events.md`.
+Profil dan storage usage dibuat **sinkron** oleh function `create-user-profile`. Wallet dibuat **async** via event `users.create` — lihat [90_Events.md](90_Events.md).
+
+Data registrasi (`businessName`, `category`, `phone`, `displayName`) dialirkan melalui `account.updatePrefs()` dan dibaca oleh `create-user-profile` function.
 
 ---
 
-### `loginUser(email, password, role)` — [Client SDK]
+### `loginUser(email, password, role?)` — [Client SDK]
 
-### `loginWithGoogle()` — [Client SDK]
-
-Khusus Creator.
+Login dengan email + password. Parameter `role` bersifat opsional — jika diberikan, sistem memvalidasi bahwa role user cocok dan status akun aktif.
 
 Return data login:
 
@@ -62,11 +90,30 @@ Return data login:
 }
 ```
 
+### `loginWithGoogle(role?)` — [Client SDK via Appwrite SDK]
+
+Login via Google OAuth menggunakan `account.createOAuth2Session()` dari Appwrite SDK. Tidak ada service function khusus — panggil langsung dari komponen frontend.
+
+- UMKM: setelah redirect, user harus mengisi data tambahan (Nama Usaha, Kategori, Nomor HP)
+- Creator: langsung jadi tanpa isi data tambahan
+
+### `logoutUser()` — [Client SDK]
+
+Hapus session aktif via `account.deleteSession('current')`.
+
+### `getCurrentUser()` — [Client SDK]
+
+Mengembalikan data user dari Appwrite Auth (`account.get()`) atau `null` jika tidak login.
+
 ---
 
-### `forgotPassword(email)` — [Client SDK]
+### `forgotPassword(email, redirectUrl?)` — [Client SDK]
 
-Kirim link reset password.
+Kirim link reset password ke email. `redirectUrl` opsional (default: `/reset-password`).
+
+### `resetPassword(userId, secret, newPassword)` — [Client SDK]
+
+Setel password baru menggunakan token dari email reset password. Parameter `userId` dan `secret` diperoleh dari URL redirect.
 
 ---
 
