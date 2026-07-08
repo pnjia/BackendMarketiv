@@ -39,7 +39,7 @@ NEXT_PUBLIC_MIDTRANS_CLIENT_KEY=
 
 ## Deploy Backend (Appwrite Cloud)
 
-- Buat project, database (`NEXT_PUBLIC_DB_ID`), collections, storage bucket (`chat-attachments` termasuk), dan Functions di Appwrite Cloud.
+- Buat project, database (`NEXT_PUBLIC_DB_ID`), collections, storage bucket (`chat-files` termasuk), dan Functions di Appwrite Cloud.
 - Atur permission per collection sesuai [`50_Security_Guidelines.md`](50_Security_Guidelines.md).
 
 ## Deploy Appwrite Functions

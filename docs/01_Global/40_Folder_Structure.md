@@ -81,7 +81,7 @@ Jangan menulis implementasi Appwrite Function di `src/` atau root proyek.
 
 ## Storage Buckets (`storage/`)
 
-`avatars/`, `logos/`, `campaign-assets/`, `campaign-thumbnails/`, `chat-attachments/`, `submissions/`, `drafts/`, `payment-proofs/`.
+`avatars/`, `logos/`, `campaign-assets/`, `campaign-thumbnails/`, `chat-files/`, `submissions/`, `drafts/`, `payment-proofs/`.
 
 ## Tests (`tests/`)
 

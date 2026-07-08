@@ -54,7 +54,7 @@ Permission.read(Role.user(senderId)),
 Permission.read(Role.user(receiverId))
 ```
 
-**Chat Attachment** (`chat-attachments` bucket):
+**Chat Attachment** (`chat-files` bucket):
 
 ```javascript
 Permission.read(Role.user(senderId)),
