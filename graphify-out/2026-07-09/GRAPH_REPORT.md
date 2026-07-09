@@ -1,11 +1,11 @@
 # Graph Report - BackendMarketiv  (2026-07-09)
 
 ## Corpus Check
-- 270 files · ~110,389 words
+- 270 files · ~110,624 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2516 nodes · 2643 edges · 232 communities (224 shown, 8 thin omitted)
+- 2517 nodes · 2644 edges · 231 communities (222 shown, 9 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -163,7 +163,6 @@
 - [[_COMMUNITY_Community 155|Community 155]]
 - [[_COMMUNITY_Community 156|Community 156]]
 - [[_COMMUNITY_Community 157|Community 157]]
-- [[_COMMUNITY_Community 158|Community 158]]
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 161|Community 161]]
 - [[_COMMUNITY_Community 162|Community 162]]
@@ -255,7 +254,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (232 total, 8 thin omitted)
+## Communities (231 total, 9 thin omitted)
 
 ### Community 0 - "00_Index.md"
 Cohesion: 0.05
@@ -326,8 +325,8 @@ Cohesion: 0.18
 Nodes (10): ai-fraud-precheck, Appwrite Functions, Aturan Backend, Backend Helpers, calculate-campaign-reward, campaign-claimed, campaign-published, Campaigns — Backend (+2 more)
 
 ### Community 19 - "00_Index.md"
-Cohesion: 0.27
-Nodes (4): AI — Database, ai_requests, Dokumen, Users
+Cohesion: 0.13
+Nodes (11): Catatan Pemodelan, Domain Model — ERD Tingkat Tinggi, ERD Sederhana (Relationship Tree), Kelompok Domain & Modul Pemilik, AI — Database, ai_requests, Dokumen, Users (+3 more)
 
 ### Community 20 - "Authentication — Business Rules"
 Cohesion: 0.25
@@ -339,7 +338,7 @@ Nodes (14): Appwrite Functions (Server-side), Authentication — API, `forgotPas
 
 ### Community 22 - "Campaigns — Business Rules"
 Cohesion: 0.07
-Nodes (24): AI — Business Rules, Bobot Skor Validasi, Brief Generator, Fraud Detection, Threshold, AI — API, `ai-brief` — [Appwrite Function], `ai-fraud-precheck` — [Appwrite Function] (+16 more)
+Nodes (25): AI — Business Rules, Bobot Skor Validasi, Brief Generator, Content Analysis — Input & Output Gemini API, Fraud Detection, Threshold, AI — API, `ai-brief` — [Appwrite Function] (+17 more)
 
 ### Community 23 - "Community 23"
 Cohesion: 0.33
@@ -396,10 +395,6 @@ Nodes (7): 20_Coding_Standards, Arsitektur Modul (Feature-Based), Hooks, Konvens
 ### Community 36 - "Community 36"
 Cohesion: 0.25
 Nodes (7): campaign_assets, campaign_briefs, campaign_claims, campaign_submissions, campaigns, Campaigns — Database, fraud_checks
-
-### Community 37 - "00_Index.md"
-Cohesion: 0.29
-Nodes (5): Dokumen, Notifications, Lihat Juga, Notifications — Events, Pola Implementasi
 
 ### Community 38 - "Orders — Testing"
 Cohesion: 0.29
@@ -814,12 +809,8 @@ Cohesion: 0.25
 Nodes (7): dependencies, @google/generative-ai, node-appwrite, main, name, type, version
 
 ### Community 157 - "Community 157"
-Cohesion: 0.50
-Nodes (4): Catatan Pemodelan, Domain Model — ERD Tingkat Tinggi, ERD Sederhana (Relationship Tree), Kelompok Domain & Modul Pemilik
-
-### Community 158 - "Community 158"
-Cohesion: 0.50
-Nodes (3): Istilah, Konsep, Users — Concepts
+Cohesion: 0.67
+Nodes (3): Lihat Juga, Notifications — Events, Pola Implementasi
 
 ### Community 160 - "Community 160"
 Cohesion: 0.29
@@ -1082,9 +1073,9 @@ Cohesion: 0.33
 Nodes (5): Controller with Swagger, Controllers & Routing, Global Prefix & Versioning, Nested Routes, Quick Reference
 
 ## Knowledge Gaps
-- **1556 isolated node(s):** `$schema`, `paths`, `plugin`, `@opencode-ai/plugin`, `fs` (+1551 more)
+- **1557 isolated node(s):** `$schema`, `paths`, `plugin`, `@opencode-ai/plugin`, `fs` (+1552 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -1094,7 +1085,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Campaigns — API` connect `Campaign Service` to `Community 40`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `$schema`, `paths`, `plugin` to the rest of the system?**
-  _1556 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1557 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `00_Index.md` be split into smaller, more focused modules?**
   _Cohesion score 0.04521276595744681 - nodes in this community are weakly interconnected._
 - **Should `AGENTS.md` be split into smaller, more focused modules?**
