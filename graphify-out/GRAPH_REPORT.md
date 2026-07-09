@@ -1,16 +1,16 @@
 # Graph Report - BackendMarketiv  (2026-07-09)
 
 ## Corpus Check
-- 271 files · ~110,421 words
+- 271 files · ~113,203 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2526 nodes · 2652 edges · 231 communities (223 shown, 8 thin omitted)
+- 2564 nodes · 2730 edges · 227 communities (220 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c13758a2`
+- Built from commit: `2fb5886b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -55,6 +55,7 @@
 - [[_COMMUNITY_00_Index|00_Index.md]]
 - [[_COMMUNITY_Orders — Testing|Orders — Testing]]
 - [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
 - [[_COMMUNITY_Visi Marketiv|Visi Marketiv]]
 - [[_COMMUNITY_Aturan Kerja Proyek|Aturan Kerja Proyek]]
 - [[_COMMUNITY_Community 43|Community 43]]
@@ -130,7 +131,9 @@
 - [[_COMMUNITY_ADR-001 — Gunakan Appwrite BaaS, Bukan Backend Custom|ADR-001 — Gunakan Appwrite BaaS, Bukan Backend Custom]]
 - [[_COMMUNITY_ADR-002 — Abstraksi Service Layer Wajib|ADR-002 — Abstraksi Service Layer Wajib]]
 - [[_COMMUNITY_ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux|ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux]]
+- [[_COMMUNITY_creator.service.js|creator.service.js]]
 - [[_COMMUNITY_order.service.js|order.service.js]]
+- [[_COMMUNITY_submission.service.js|submission.service.js]]
 - [[_COMMUNITY_user.service.js|user.service.js]]
 - [[_COMMUNITY_Community 121|Community 121]]
 - [[_COMMUNITY_Community 122|Community 122]]
@@ -141,13 +144,12 @@
 - [[_COMMUNITY_Campaigns — User Flow|Campaigns — User Flow]]
 - [[_COMMUNITY_Chat — Concepts|Chat — Concepts]]
 - [[_COMMUNITY_Community 129|Community 129]]
-- [[_COMMUNITY_Notifications — Concepts|Notifications — Concepts]]
-- [[_COMMUNITY_Notifications — User Flow|Notifications — User Flow]]
 - [[_COMMUNITY_Orders — User Flow|Orders — User Flow]]
 - [[_COMMUNITY_Rate Cards — User Flow|Rate Cards — User Flow]]
 - [[_COMMUNITY_Community 134|Community 134]]
 - [[_COMMUNITY_Community 135|Community 135]]
 - [[_COMMUNITY_auth.service.js|auth.service.js]]
+- [[_COMMUNITY_offer.service.js|offer.service.js]]
 - [[_COMMUNITY_Notifications — Events|Notifications — Events]]
 - [[_COMMUNITY_Offers — User Flow|Offers — User Flow]]
 - [[_COMMUNITY_Community 143|Community 143]]
@@ -161,13 +163,11 @@
 - [[_COMMUNITY_Community 154|Community 154]]
 - [[_COMMUNITY_Community 155|Community 155]]
 - [[_COMMUNITY_Community 156|Community 156]]
-- [[_COMMUNITY_Community 157|Community 157]]
 - [[_COMMUNITY_Community 158|Community 158]]
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 161|Community 161]]
 - [[_COMMUNITY_Community 162|Community 162]]
 - [[_COMMUNITY_Community 163|Community 163]]
-- [[_COMMUNITY_Community 164|Community 164]]
 - [[_COMMUNITY_Community 170|Community 170]]
 - [[_COMMUNITY_Community 171|Community 171]]
 - [[_COMMUNITY_Community 172|Community 172]]
@@ -232,14 +232,14 @@
 ## God Nodes (most connected - your core abstractions)
 1. `Appwrite CLI` - 19 edges
 2. `Platform Engineering` - 17 edges
-3. `OpenAPI 3.1 Specification` - 14 edges
-4. `Express to NestJS Migration Guide` - 14 edges
-5. `Workflow: Rate Card Order (Escrow)` - 14 edges
-6. `Incident Response` - 13 edges
-7. `Release Automation` - 13 edges
-8. `40_Folder_Structure` - 13 edges
-9. `API Error Handling` - 12 edges
-10. `API Versioning Strategies` - 12 edges
+3. `COLLECTIONS` - 14 edges
+4. `databases` - 14 edges
+5. `OpenAPI 3.1 Specification` - 14 edges
+6. `Express to NestJS Migration Guide` - 14 edges
+7. `Workflow: Rate Card Order (Escrow)` - 14 edges
+8. `account` - 13 edges
+9. `Incident Response` - 13 edges
+10. `Release Automation` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `getWalletSafe()` --calls--> `getWallet()`  [EXTRACTED]
@@ -254,7 +254,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (231 total, 8 thin omitted)
+## Communities (227 total, 7 thin omitted)
 
 ### Community 0 - "00_Index.md"
 Cohesion: 0.05
@@ -277,8 +277,8 @@ Cohesion: 0.08
 Nodes (24): `addCampaignAsset()` — [Client SDK], `ai-fraud-precheck` — [Appwrite Function], `approveSubmission()` — [Client SDK], Appwrite Functions (Server-side), `calculate-campaign-reward` — [Appwrite Function], `campaign-claimed` — [Appwrite Function], `campaign-published` — [Appwrite Function], Campaign Service (+16 more)
 
 ### Community 5 - "30_RateCard_Order.md"
-Cohesion: 0.15
-Nodes (10): Daftar Dokumen, Modul AI, Daftar Dokumen, Modul Campaigns, Daftar Dokumen, Modul Chat, Daftar Dokumen, Modul Orders (+2 more)
+Cohesion: 0.09
+Nodes (19): Daftar Dokumen, Modul AI, Daftar Dokumen, Modul Campaigns, Daftar Dokumen, Modul Chat, Daftar Dokumen, Modul Offers (+11 more)
 
 ### Community 6 - "20_Campaign_PPV.md"
 Cohesion: 0.50
@@ -289,8 +289,8 @@ Cohesion: 0.15
 Nodes (13): 40_Folder_Structure, Appwrite Config (`src/lib/appwrite/`), Appwrite Functions (`functions/`), Appwrite Project Config (`appwrite/`), Environment Variables, Modules (`src/modules/`), Service Layer (`src/services/`), Shared Components (`src/components/`) (+5 more)
 
 ### Community 8 - "00_Index.md"
-Cohesion: 0.25
-Nodes (5): Authentication, Dokumen, Authentication — Events, Lihat Juga, User Registered
+Cohesion: 0.16
+Nodes (7): Authentication, Dokumen, rate_card_packages, rate_cards, Rate Cards — Database, Dokumen, Users
 
 ### Community 9 - "generate_appwrite_json.js"
 Cohesion: 0.12
@@ -325,8 +325,8 @@ Cohesion: 0.18
 Nodes (10): ai-fraud-precheck, Appwrite Functions, Aturan Backend, Backend Helpers, calculate-campaign-reward, campaign-claimed, campaign-published, Campaigns — Backend (+2 more)
 
 ### Community 19 - "00_Index.md"
-Cohesion: 0.13
-Nodes (11): Catatan Pemodelan, Domain Model — ERD Tingkat Tinggi, ERD Sederhana (Relationship Tree), Kelompok Domain & Modul Pemilik, AI — Database, ai_requests, Dokumen, Users (+3 more)
+Cohesion: 0.50
+Nodes (4): Catatan Pemodelan, Domain Model — ERD Tingkat Tinggi, ERD Sederhana (Relationship Tree), Kelompok Domain & Modul Pemilik
 
 ### Community 20 - "Authentication — Business Rules"
 Cohesion: 0.25
@@ -396,6 +396,10 @@ Nodes (7): 20_Coding_Standards, Arsitektur Modul (Feature-Based), Hooks, Konvens
 Cohesion: 0.25
 Nodes (7): campaign_assets, campaign_briefs, campaign_claims, campaign_submissions, campaigns, Campaigns — Database, fraud_checks
 
+### Community 37 - "00_Index.md"
+Cohesion: 0.11
+Nodes (15): Dokumen, Notifications, Notifications — Testing, Pembuatan Notifikasi, Pengiriman, Status Baca, Istilah, Konsep (+7 more)
+
 ### Community 38 - "Orders — Testing"
 Cohesion: 0.29
 Nodes (6): Approve, Create Order, Deliverable, Orders — Testing, Revision, Status Flow
@@ -433,8 +437,8 @@ Cohesion: 0.33
 Nodes (6): 80_Deployment, Deploy Appwrite Functions, Deploy Backend (Appwrite Cloud), Deploy Frontend (Vercel), Environment Variables (Frontend / Vercel), Target
 
 ### Community 48 - "Community 48"
-Cohesion: 0.40
-Nodes (4): main, name, type, version
+Cohesion: 0.25
+Nodes (7): dependencies, @google/generative-ai, node-appwrite, main, name, type, version
 
 ### Community 49 - "Authentication — Testing"
 Cohesion: 0.40
@@ -505,8 +509,8 @@ Cohesion: 0.29
 Nodes (6): Istilah, Konsep, Payments — Concepts, Status Escrow, Status Payment, Status Withdrawal
 
 ### Community 66 - "Payments — Business Rules"
-Cohesion: 0.40
-Nodes (5): 03_Workflows — Index, Daftar Workflow, Lihat Juga, Prinsip Penulisan, Relasi Antar Workflow
+Cohesion: 0.16
+Nodes (16): createPayment(), CreatePaymentInput, CreatePaymentResult, getPaidPayments(), getPayment(), getPayments(), GetPaymentsOptions, getPendingPayments() (+8 more)
 
 ### Community 67 - "Community 67"
 Cohesion: 0.29
@@ -545,8 +549,8 @@ Cohesion: 0.33
 Nodes (5): ADR-005 — Simpan Counter Denormalisasi di `campaigns`, Consequences, Context, Decision, Status
 
 ### Community 77 - "campaign.service.js"
-Cohesion: 0.21
-Nodes (12): Campaign, CampaignServiceError, CampaignStatus, CampaignType, createCampaign(), CreateCampaignInput, getCampaignById(), getCampaigns() (+4 more)
+Cohesion: 0.18
+Nodes (15): Campaign, CampaignBrief, CampaignServiceError, CampaignStatus, CampaignType, createCampaign(), CreateCampaignInput, generateBrief() (+7 more)
 
 ### Community 78 - "Roadmap Pengembangan"
 Cohesion: 0.40
@@ -605,8 +609,8 @@ Cohesion: 0.33
 Nodes (5): Chat — Events, Event yang Dikonsumsi, Event yang Diterbitkan, Integrasi Notifications, Lihat Juga
 
 ### Community 92 - "Notifications — Testing"
-Cohesion: 0.40
-Nodes (4): Notifications — Testing, Pembuatan Notifikasi, Pengiriman, Status Baca
+Cohesion: 0.50
+Nodes (3): Istilah, Konsep, Users — Concepts
 
 ### Community 93 - "Notifications — Overview"
 Cohesion: 0.40
@@ -639,6 +643,10 @@ Nodes (4): Alur, Inti, Orders — Overview, Tautan
 ### Community 101 - "Orders — Concepts"
 Cohesion: 0.40
 Nodes (4): Istilah, Konsep, Orders — Concepts, Status Order
+
+### Community 102 - "Community 102"
+Cohesion: 0.67
+Nodes (3): Authentication — Events, Lihat Juga, User Registered
 
 ### Community 103 - "Community 103"
 Cohesion: 0.29
@@ -689,16 +697,24 @@ Cohesion: 0.40
 Nodes (5): ADR-001 — Gunakan Appwrite BaaS, Bukan Backend Custom, Consequences, Context, Decision, Status
 
 ### Community 115 - "ADR-002 — Abstraksi Service Layer Wajib"
-Cohesion: 0.22
-Nodes (7): 04_Decisions — Index, Daftar ADR, ADR-002 — Abstraksi Service Layer Wajib, Consequences, Context, Decision, Status
+Cohesion: 0.40
+Nodes (5): ADR-002 — Abstraksi Service Layer Wajib, Consequences, Context, Decision, Status
 
 ### Community 116 - "ADR-006 — Gunakan Zustand untuk State Management, Bukan Redux"
 Cohesion: 0.40
 Nodes (4): plugin, $schema, skills, paths
 
+### Community 117 - "creator.service.js"
+Cohesion: 0.18
+Nodes (11): createRateCard(), CreateRateCardInput, CreatorServiceError, getRateCards(), mapError(), mapRateCard(), RateCard, RateCardPackage (+3 more)
+
 ### Community 118 - "order.service.js"
 Cohesion: 0.12
 Nodes (18): approveDeliverable(), ApproveDeliverableInput, Deliverable, DeliverableSource, DeliverableStatus, getOrders(), mapDeliverable(), mapError() (+10 more)
+
+### Community 119 - "submission.service.js"
+Cohesion: 0.28
+Nodes (11): approveSubmission(), assertCampaignOwner(), createSubmission(), CreateSubmissionInput, getMySubmissions(), isValidTikTokUrl(), mapError(), mapSubmission() (+3 more)
 
 ### Community 120 - "user.service.js"
 Cohesion: 0.09
@@ -740,14 +756,6 @@ Nodes (3): Chat — Concepts, Istilah, Konsep
 Cohesion: 0.22
 Nodes (9): Appwrite Functions, Aturan Backend, complete-withdrawal (Admin), create-escrow, create-payment, create-user-wallet, midtrans-webhook, Payments — Backend (+1 more)
 
-### Community 130 - "Notifications — Concepts"
-Cohesion: 0.50
-Nodes (3): Istilah, Konsep, Notifications — Concepts
-
-### Community 131 - "Notifications — User Flow"
-Cohesion: 0.50
-Nodes (3): Membaca Notifikasi, Menerima Notifikasi, Notifications — User Flow
-
 ### Community 132 - "Orders — User Flow"
 Cohesion: 0.50
 Nodes (3): Alur Deliverable, Alur Order (Rate Card), Orders — User Flow
@@ -763,6 +771,10 @@ Nodes (6): dependencies, node-appwrite, main, name, type, version
 ### Community 137 - "auth.service.js"
 Cohesion: 0.18
 Nodes (20): AuthResult, AuthServiceError, buildAuthResult(), ensureUserRole(), forgotPassword(), getCurrentUser(), getWalletSafe(), LoginInput (+12 more)
+
+### Community 138 - "offer.service.js"
+Cohesion: 0.35
+Nodes (9): acceptOffer(), createOffer(), CreateOfferInput, getOfferOrThrow(), mapError(), mapOffer(), Offer, OfferServiceError (+1 more)
 
 ### Community 141 - "Notifications — Events"
 Cohesion: 0.05
@@ -781,11 +793,11 @@ Cohesion: 0.33
 Nodes (7): getNotifications(), mapError(), mapNotification(), markAllAsRead(), markAsRead(), Notification, NotificationServiceError
 
 ### Community 147 - "wallet.service.js"
-Cohesion: 0.06
-Nodes (42): createPayment(), CreatePaymentInput, CreatePaymentResult, getPaidPayments(), getPayment(), getPayments(), GetPaymentsOptions, getPendingPayments() (+34 more)
+Cohesion: 0.10
+Nodes (26): calculateCreatorPayout(), calculatePlatformFee(), calculateTotalPayment(), getBalance(), getPendingBalance(), getPendingWithdrawals(), getTransactions(), GetTransactionsOptions (+18 more)
 
 ### Community 149 - "claim.service.js"
-Cohesion: 0.29
+Cohesion: 0.22
 Nodes (6): escrows, payments, Payments — Database, transactions, wallets, withdrawals
 
 ### Community 152 - "Community 152"
@@ -808,16 +820,12 @@ Nodes (6): dependencies, node-appwrite, main, name, type, version
 Cohesion: 0.25
 Nodes (7): dependencies, @google/generative-ai, node-appwrite, main, name, type, version
 
-### Community 157 - "Community 157"
-Cohesion: 0.67
-Nodes (3): Lihat Juga, Notifications — Events, Pola Implementasi
-
 ### Community 158 - "Community 158"
 Cohesion: 0.33
 Nodes (5): dependencies, node-appwrite, name, type, version
 
 ### Community 160 - "Community 160"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (7): Checkout Created → Midtrans Payment, Deliverable Approved → Release Escrow, Midtrans Notification → Payment Status, Payment Success → Escrow Hold, Payments — Events, User Registered → Create Wallet, Withdraw Requested → Admin Review
 
 ### Community 161 - "Community 161"
@@ -831,10 +839,6 @@ Nodes (6): ADR-009 — Minimum Budget Campaign Rp50.000, Consequences, Context, 
 ### Community 163 - "Community 163"
 Cohesion: 0.40
 Nodes (5): ADR-007 — Minimum Withdraw Dipasang sebagai Konstanta Sistem (= Rp50.000), Consequences, Context, Decision, Status
-
-### Community 164 - "Community 164"
-Cohesion: 0.50
-Nodes (3): rate_card_packages, rate_cards, Rate Cards — Database
 
 ### Community 170 - "Community 170"
 Cohesion: 0.07
@@ -1077,24 +1081,24 @@ Cohesion: 0.33
 Nodes (5): Controller with Swagger, Controllers & Routing, Global Prefix & Versioning, Nested Routes, Quick Reference
 
 ## Knowledge Gaps
-- **1563 isolated node(s):** `$schema`, `paths`, `plugin`, `@opencode-ai/plugin`, `fs` (+1558 more)
+- **1576 isolated node(s):** `$schema`, `paths`, `plugin`, `@opencode-ai/plugin`, `fs` (+1571 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Users — Database` connect `Users — Database` to `00_Index.md`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `Workflow: Registration & Onboarding` connect `Workflow: Registration & Onboarding` to `00_Index.md`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `Workflow: Withdrawal` connect `Workflow: Withdrawal` to `30_RateCard_Order.md`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Users — API` connect `Users — API (Profile Service)` to `00_Index.md`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `$schema`, `paths`, `plugin` to the rest of the system?**
-  _1563 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1576 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `00_Index.md` be split into smaller, more focused modules?**
   _Cohesion score 0.04521276595744681 - nodes in this community are weakly interconnected._
 - **Should `AGENTS.md` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
 - **Should `Users — Database` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
-- **Should `README.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
