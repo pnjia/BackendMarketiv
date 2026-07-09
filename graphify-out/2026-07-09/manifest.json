@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/30_Business_Rules.md": {
-    "mtime": 1783558764.246794,
-    "ast_hash": "217f6064579e277eca03248810ef53c2",
+    "mtime": 1783557561.870959,
+    "ast_hash": "d9ab793434f35dab46833a226bd5378f",
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/40_User_Flow.md": {
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/60_API.md": {
-    "mtime": 1783558776.2515886,
-    "ast_hash": "5b0bb615a09290ca5ffbe639bf8d7c19",
+    "mtime": 1783477725.30718,
+    "ast_hash": "edd31db8202224ad17dddeb068f04034",
     "semantic_hash": ""
   },
   "docs/02_Modules/AI/70_Backend.md": {
@@ -670,8 +670,8 @@
     "semantic_hash": ""
   },
   "docs/03_Workflows/40_Submission_Fraud.md": {
-    "mtime": 1783558770.2786908,
-    "ast_hash": "3b2529f0b7664e678990be9fe03328a8",
+    "mtime": 1783557552.5333722,
+    "ast_hash": "0372c84e0a7053c4ac4cb640ad5eaa70",
     "semantic_hash": ""
   },
   "docs/03_Workflows/50_Withdrawal.md": {
@@ -900,8 +900,8 @@
     "semantic_hash": ""
   },
   "src/lib/appwrite/collections.ts": {
-    "mtime": 1783558165.9962902,
-    "ast_hash": "4080361b9fb65087d942a7d42fb2bda5",
+    "mtime": 1783523914.7916203,
+    "ast_hash": "0b874ac2207cb987f20fb625644b5315",
     "semantic_hash": ""
   },
   "src/lib/appwrite/database.ts": {

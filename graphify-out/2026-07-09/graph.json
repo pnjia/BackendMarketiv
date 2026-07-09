@@ -15510,7 +15510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_domain_model_erd_tingkat_tinggi",
-      "community": 19,
+      "community": 157,
       "norm_label": "domain model \u2014 erd tingkat tinggi"
     },
     {
@@ -15520,7 +15520,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_kelompok_domain_modul_pemilik",
-      "community": 19,
+      "community": 157,
       "norm_label": "kelompok domain & modul pemilik"
     },
     {
@@ -15530,7 +15530,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_erd_sederhana_relationship_tree",
-      "community": 19,
+      "community": 157,
       "norm_label": "erd sederhana (relationship tree)"
     },
     {
@@ -15540,7 +15540,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "docs_02_modules_10_domain_model_catatan_pemodelan",
-      "community": 19,
+      "community": 157,
       "norm_label": "catatan pemodelan"
     },
     {
@@ -15744,20 +15744,10 @@
       "norm_label": "fraud detection"
     },
     {
-      "label": "Content Analysis \u2014 Input & Output Gemini API",
-      "file_type": "document",
-      "source_file": "docs/02_Modules/AI/30_Business_Rules.md",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "docs_02_modules_ai_30_business_rules_content_analysis_input_output_gemini_api",
-      "community": 22,
-      "norm_label": "content analysis \u2014 input & output gemini api"
-    },
-    {
       "label": "Bobot Skor Validasi",
       "file_type": "document",
       "source_file": "docs/02_Modules/AI/30_Business_Rules.md",
-      "source_location": "L86",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules_bobot_skor_validasi",
       "community": 22,
@@ -15767,7 +15757,7 @@
       "label": "Threshold",
       "file_type": "document",
       "source_file": "docs/02_Modules/AI/30_Business_Rules.md",
-      "source_location": "L99",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "docs_02_modules_ai_30_business_rules_threshold",
       "community": 22,
@@ -15907,7 +15897,7 @@
       "label": "`ai_requests`",
       "file_type": "document",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L38",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_ai_requests",
       "community": 22,
@@ -15917,7 +15907,7 @@
       "label": "Lihat Juga",
       "file_type": "document",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L55",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "docs_02_modules_ai_60_api_lihat_juga",
       "community": 22,
@@ -19010,7 +19000,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_90_events_notifications_events",
-      "community": 157,
+      "community": 37,
       "norm_label": "notifications \u2014 events"
     },
     {
@@ -19020,7 +19010,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_90_events_pola_implementasi",
-      "community": 157,
+      "community": 37,
       "norm_label": "pola implementasi"
     },
     {
@@ -19030,7 +19020,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "docs_02_modules_notifications_90_events_lihat_juga",
-      "community": 157,
+      "community": 37,
       "norm_label": "lihat juga"
     },
     {
@@ -21900,7 +21890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts",
-      "community": 19,
+      "community": 158,
       "norm_label": "20_concepts.md"
     },
     {
@@ -21910,7 +21900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts_users_concepts",
-      "community": 19,
+      "community": 158,
       "norm_label": "users \u2014 concepts"
     },
     {
@@ -21920,7 +21910,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts_istilah",
-      "community": 19,
+      "community": 158,
       "norm_label": "istilah"
     },
     {
@@ -21930,7 +21920,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_02_modules_users_20_concepts_konsep",
-      "community": 19,
+      "community": 158,
       "norm_label": "konsep"
     },
     {
@@ -42064,7 +42054,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L57",
+      "source_location": "L56",
       "weight": 1.0,
       "source": "docs_02_modules_ai_60_api",
       "target": "docs_02_modules_ai_30_business_rules",
@@ -42094,7 +42084,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/30_Business_Rules.md",
-      "source_location": "L86",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "docs_02_modules_ai_30_business_rules_fraud_detection",
       "target": "docs_02_modules_ai_30_business_rules_bobot_skor_validasi",
@@ -42104,17 +42094,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/30_Business_Rules.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "docs_02_modules_ai_30_business_rules_fraud_detection",
-      "target": "docs_02_modules_ai_30_business_rules_content_analysis_input_output_gemini_api",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/02_Modules/AI/30_Business_Rules.md",
-      "source_location": "L99",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "docs_02_modules_ai_30_business_rules_fraud_detection",
       "target": "docs_02_modules_ai_30_business_rules_threshold",
@@ -42184,7 +42164,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L58",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "docs_02_modules_ai_60_api",
       "target": "docs_02_modules_campaigns_90_events",
@@ -42214,7 +42194,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L55",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "docs_02_modules_ai_60_api_ai_api",
       "target": "docs_02_modules_ai_60_api_lihat_juga",
@@ -42254,7 +42234,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/02_Modules/AI/60_API.md",
-      "source_location": "L38",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "docs_02_modules_ai_60_api_appwrite_functions_server_side",
       "target": "docs_02_modules_ai_60_api_ai_requests",
