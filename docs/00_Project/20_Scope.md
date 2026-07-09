@@ -36,6 +36,7 @@
 - Analytics Advanced
 - Mobile App
 - Platform sosial media selain TikTok, termasuk Instagram, Facebook, YouTube, X/Twitter, dan platform lain. Platform tersebut direncanakan untuk fase setelah MVP.
+- **Analisis visual video** untuk fraud detection (logo detection, product matching, engagement anomaly). MVP content analysis hanya text-based (caption & hashtag via Gemini API). Analisis visual direncanakan untuk fase setelah MVP karena biaya token dan latency yang tinggi.
 
 ## Referensi
 

@@ -14,8 +14,9 @@ Dokumen ini khusus untuk Appwrite Functions AI dan aturan integrasinya. Kontrak 
 ### ai-fraud-precheck
 
 - **Trigger**: Database event `campaign_submissions.create`.
-- **Proses**: terima `submissionId` → validasi URL, duplikasi, platform → hitung `fraudScore` → tulis `fraud_checks` + update submission.
+- **Proses**: terima `submissionId` → validasi URL, duplikasi, platform → content analysis (text-based) via Gemini API → hitung `fraudScore` → tulis `fraud_checks` + update submission.
 - **Output**: `{ score, status }`.
+- **Catatan**: Content analysis MVP hanya memproses caption & hashtag (teks). Analisis visual video adalah future scope.
 
 ## Integrasi Eksternal
 
