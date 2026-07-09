@@ -92,6 +92,7 @@ Return a JSON object with this exact structure (no markdown, no code fences, raw
         .setKey(req.variables?.APPWRITE_FUNCTION_API_KEY);
 
       const databases = new Databases(client);
+
       await databases.createDocument(
         req.variables?.APPWRITE_DATABASE_ID || process.env.APPWRITE_DATABASE_ID,
         "ai_requests",
@@ -103,6 +104,34 @@ Return a JSON object with this exact structure (no markdown, no code fences, raw
           response: JSON.stringify(brief)
         }
       );
+
+      if (campaignId) {
+        const briefCollectionId = process.env.CAMPAIGN_BRIEFS_COLLECTION_ID || "campaign_briefs";
+        const dbId = req.variables?.APPWRITE_DATABASE_ID || process.env.APPWRITE_DATABASE_ID;
+        try {
+          const existing = await databases.listDocuments(dbId, briefCollectionId, [
+            (await import("node-appwrite")).Query.equal("campaignId", campaignId),
+            (await import("node-appwrite")).Query.limit(1)
+          ]);
+          if (existing.documents.length === 0) {
+            await databases.createDocument(
+              dbId, briefCollectionId, "unique()",
+              {
+                campaignId,
+                objective: brief.objective || "",
+                contentAngle: brief.contentAngle || "",
+                cta: brief.cta || "",
+                briefDetail: brief.briefDetail || "",
+                doAndDont: JSON.stringify(brief.doAndDont || { do: [], dont: [] }),
+                generatedByAi: true
+              }
+            );
+            log(`Campaign brief saved for campaign ${campaignId}`);
+          }
+        } catch (briefErr) {
+          error("Failed to save campaign brief:", briefErr.message);
+        }
+      }
     } catch (logError) {
       error("Failed to log to ai_requests:", logError.message);
     }
