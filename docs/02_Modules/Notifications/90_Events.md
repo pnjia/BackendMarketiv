@@ -23,7 +23,7 @@ Domain event di modul X
 ↓
 buat record di `notifications`  (notifications.create)
 ↓
-Function send-notification / send-chat-notification → kirim In-App + Email/Push
+Function send-notification (future — belum diimplementasikan) / send-chat-notification → kirim In-App + Email/Push
 ```
 
 ## Lihat Juga

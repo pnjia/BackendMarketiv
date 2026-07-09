@@ -12,6 +12,7 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
   - In-App: user melihat di notification center.
   - Email: dikirim ke alamat email user untuk event non-chat yang membutuhkan email.
   - Push: dikirim via Appwrite Messaging untuk chat dan event realtime penting jika user punya target push.
+- **Catatan**: **Belum diimplementasikan** — kode function belum dibuat di `functions/send-notification/`.
 
 ### send-chat-notification
 
@@ -24,7 +25,7 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 ```text
 Modul X → notifications.create
 ↓
-Function: send-notification / send-chat-notification
+Function: send-notification (future) / send-chat-notification
 ↓
 In-App + Email/Push
 ```
