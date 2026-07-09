@@ -254,12 +254,17 @@ const collections = [
         documentSecurity: true,
         enabled: true,
         attributes: [
-            createStringAttr("campaign_id", true),
-            createStringAttr("brief_json", true, 10000),
-            createBoolAttr("generated_by_ai", false, false)
+            createStringAttr("campaignId", true),
+            createStringAttr("objective", false, 2000),
+            createStringAttr("contentAngle", false, 2000),
+            createStringAttr("cta", false, 1000),
+            createStringAttr("briefDetail", false, 10000),
+            createStringAttr("doAndDont", false, 5000),
+            createStringAttr("materialsJson", false, 5000),
+            createBoolAttr("generatedByAi", true, false)
         ],
         indexes: [
-            createIndex("idx_campaign_id", "unique", ["campaign_id"])
+            createIndex("idx_campaignId", "unique", ["campaignId"])
         ]
     },
     {
@@ -595,7 +600,7 @@ const collections = [
             createStringAttr("message", true, 1000),
             createStringAttr("type", true, 50),
             createBoolAttr("isRead", false, false),
-            createDatetimeAttr("createdAt", true)
+            createDatetimeAttr("createdAt", false)
         ],
         indexes: [
             createIndex("idx_userId", "key", ["userId"]),

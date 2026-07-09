@@ -1070,7 +1070,7 @@
       "rowSecurity": true,
       "columns": [
         {
-          "key": "campaign_id",
+          "key": "campaignId",
           "type": "string",
           "required": true,
           "array": false,
@@ -1078,31 +1078,71 @@
           "default": null
         },
         {
-          "key": "brief_json",
+          "key": "objective",
           "type": "string",
-          "required": true,
+          "required": false,
+          "array": false,
+          "size": 2000,
+          "default": null
+        },
+        {
+          "key": "contentAngle",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 2000,
+          "default": null
+        },
+        {
+          "key": "cta",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 1000,
+          "default": null
+        },
+        {
+          "key": "briefDetail",
+          "type": "string",
+          "required": false,
           "array": false,
           "size": 10000,
           "default": null
         },
         {
-          "key": "generated_by_ai",
-          "type": "boolean",
+          "key": "doAndDont",
+          "type": "string",
           "required": false,
+          "array": false,
+          "size": 5000,
+          "default": null
+        },
+        {
+          "key": "materialsJson",
+          "type": "string",
+          "required": false,
+          "array": false,
+          "size": 5000,
+          "default": null
+        },
+        {
+          "key": "generatedByAi",
+          "type": "boolean",
+          "required": true,
           "array": false,
           "default": false
         }
       ],
       "indexes": [
         {
-          "key": "idx_campaign_id",
+          "key": "idx_campaignId",
           "type": "unique",
           "status": "available",
           "orders": [
             "ASC"
           ],
           "columns": [
-            "campaign_id"
+            "campaignId"
           ]
         }
       ]
@@ -2756,7 +2796,7 @@
         {
           "key": "createdAt",
           "type": "datetime",
-          "required": true,
+          "required": false,
           "array": false,
           "default": null
         }
