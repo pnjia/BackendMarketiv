@@ -31,6 +31,7 @@ Fungsi-fungsi berikut di-deploy ke **Appwrite Cloud**. Aturan input/output & thr
 - **Return**: `{ score, status }` — `score` 0–100, `status` `safe|review|rejected`.
 - **Efek**: tulis `fraud_checks` + update `fraudScore`/`fraudStatus` pada submission (data di modul Campaigns).
 - **Trigger**: dipicu otomatis oleh event **Submission Created** (`campaign_submissions.create`) — lihat `../Campaigns/90_Events.md`.
+- **Internal Gemini call**: Function memanggil Gemini API untuk content analysis. Detail input/output kontrak Gemini ada di `30_Business_Rules.md`.
 
 ---
 

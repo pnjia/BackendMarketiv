@@ -39,10 +39,10 @@ Event `campaign_submissions.create` — terpicu saat creator submit hasil campai
    - **Accessibility**: URL dapat diakses (tidak 404, tidak private/requires login).
    - **Platform match**: untuk MVP, domain URL harus cocok dengan TikTok (mis. tiktok.com atau vm.tiktok.com → platform: tiktok).
    - **Deduplication**: URL belum pernah disubmit untuk campaign yang sama (cek `campaign_submissions.postUrl`).
-   - **Content analysis** (via Gemini API):
-     - Apakah video menampilkan logo/produk yang sesuai?
-     - Apakah caption/hashtag sesuai brief?
-     - Apakah ada indikasi fraud signal (bot views, engagement anomaly)?
+   - **Content analysis** — Analisis caption/hashtag via Gemini API (detail input/output & aturan di `../02_Modules/AI/30_Business_Rules.md`):
+     - Input: caption, hashtags, brief (objective, contentAngle, cta, briefDetail, doAndDont)
+     - Output: captionRelevance, hashtagRelevance, fraudSignal, overallScore, reason
+     - > **Catatan:** Analisis visual video (logo detection, product matching, engagement anomaly) adalah **future scope**. Saat ini content analysis hanya memproses teks (caption + hashtag).
 5. **AI** — Hitung `fraudScore` (0–100) berdasarkan bobot tiap validasi.
 6. **AI** — Tulis hasil ke `fraud_checks`:
    ```
@@ -127,7 +127,8 @@ approved approved rejected
 | Platform match | Domain cocok platform | Score += 20 |
 | Platform MVP | Platform harus `tiktok`; platform lain belum didukung MVP | Score += 20 / reject sesuai rule |
 | Deduplication | URL belum pernah submit | Score += 25 (langsung flag) |
-| Content analysis | Konten sesuai brief | Score += variable |
+| Content analysis (text) | Caption & hashtag sesuai brief | Score += 20 |
+| Content analysis (visual) | Logo/produk sesuai brief (future scope) | Score += TBD |
 | Admin approve/reject | Submission harus `fraudStatus: review` | Error status |
 | UMKM approve/reject | Submission harus `pending` status | Error status |
 
