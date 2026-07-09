@@ -2,9 +2,9 @@
 
 ## Role & Routing
 
-- Role ditentukan lewat query string saat register: `?role=umkm` atau `?role=creator`.
-  - Register: `/register?role=umkm`, `/register?role=creator`.
-- Login page tidak perlu query role — role sudah tersimpan di database.
+- Role ditentukan lewat parameter `role` saat register di service layer (`auth.service.ts`): `registerUser({ role: 'umkm', ... })` atau `registerUser({ role: 'creator', ... })`.
+  - Register: `/register?role=umkm`, `/register?role=creator` — frontend membaca query string dan meneruskannya ke service.
+- Login page tidak perlu query param — role sudah tersimpan di database.
 - `loginUser()` API menerima parameter `role` opsional untuk validasi tambahan (memastikan role sesuai & status akun aktif).
 
 ## Data Registrasi per Role

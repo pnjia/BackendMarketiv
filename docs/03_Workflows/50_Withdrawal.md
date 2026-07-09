@@ -60,7 +60,7 @@ Creator submit form `Tarik Dana` dari halaman Wallet (input: payoutMethod, provi
 
 13. **Jika Approve:**
     - Admin konfirmasi transfer sudah dilakukan dan dapat mengisi `adminNote`/`transferProofUrl`.
-    - **Event `withdrawals.status (pending→processed)`** memicu function **`complete-withdrawal`**.
+    - **Event `withdrawals.status (pending→processed)`** memicu function **`complete-withdrawal`** (belum diimplementasikan).
     - **Payments** — Update `wallet.withdrawn += amount` (opsional, tracking total penarikan).
     - **Payments** — Buat `transactions`: `{ userId, amount: -amount, type: 'withdrawal', referenceType: 'withdrawal', referenceId: withdrawalId }`.
     - **Notifications** — Notifikasi ke creator: "Penarikan Rp{amount} berhasil diproses — cek rekening/akunmu".
@@ -85,7 +85,7 @@ WALLET:      balance -= amount (saat request) → balance += amount (jika reject
 | Trigger | Function | Aksi |
 |---|---|---|
 | `withdrawals.create` | (notifikasi admin) | Push notifikasi ke admin |
-| `withdrawals.status (pending→processed)` | `complete-withdrawal` | Catat transaksi, notifikasi creator |
+| `withdrawals.status (pending→processed)` | `complete-withdrawal` (belum diimplementasikan) | Catat transaksi, notifikasi creator |
 
 ## Validation Rules per Langkah
 

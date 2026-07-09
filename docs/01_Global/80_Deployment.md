@@ -44,7 +44,7 @@ NEXT_PUBLIC_MIDTRANS_CLIENT_KEY=
 
 ## Deploy Appwrite Functions
 
-- Functions: `create-user-profile`, `create-user-wallet`, `validate-and-upload`, `delete-file`, `campaign-published`, `ai-fraud-precheck`, `create-order`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `complete-withdrawal`, `update-conversation-on-message`, `generate-brief`, `send-notification`, `send-chat-notification`, `upload-chat-attachment`.
+- Functions: `create-user-profile`, `create-user-wallet`, `validate-and-upload`, `delete-file`, `campaign-published`, `ai-brief`, `ai-fraud-precheck`, `create-order`, `calculate-campaign-reward`, `campaign-claimed`, `expire-stale-claims`, `create-payment`, `midtrans-webhook`, `create-escrow`, `release-escrow`, `send-chat-notification`, `upload-chat-attachment`.
 - Set API Key server (scope di [`50_Security_Guidelines.md`](50_Security_Guidelines.md)), secret Gemini, dan Midtrans server key sebagai function environment variables — tidak pernah di frontend.
 - Env Midtrans untuk function: `MIDTRANS_SERVER_KEY`, `MIDTRANS_CLIENT_KEY`, `MIDTRANS_ENV` (`sandbox`/`production`).
 - Env Appwrite untuk function webhook: `APPWRITE_API_KEY`, `APPWRITE_DATABASE_ID`, `PAYMENTS_COLLECTION_ID`.
