@@ -25,7 +25,7 @@ Aggregate utama alur Rate Card. Relasi: Offer (1) → Order (1) **atau** Package
 
 ## deliverables
 
-Draft/hasil kerja creator, berversi. Relasi: Order (1) → Deliverables (N). File dikelola via File Manager (`user_files`, modul Users).
+Draft/hasil kerja creator, berversi. Relasi: Order (1) → Deliverables (N). File dikelola via File Manager (`user_files`, modul Users). ⚠️ `user_files` dormant — tidak dipakai MVP, deliverable source selalu `external_url`.
 
 | Attribute | Type    | Required | Catatan                                      |
 | --------- | ------- | -------- | -------------------------------------------- |

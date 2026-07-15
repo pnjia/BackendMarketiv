@@ -81,7 +81,7 @@ Reward dihitung saat submission di-approve dan masuk ke **pending balance** wall
   - `external_url`: link eksternal (Google Drive, Dropbox, CDN, dll.) — tidak terikat kuota.
 - External URL hanya menerima protokol `https`.
 - `type = link` dipakai untuk referensi umum seperti folder Google Drive; `image`, `video`, `document` untuk asset spesifik.
-- Saat campaign dihapus, asset tidak otomatis dihapus dari `user_files` (user harus mengelola sendiri lewat File Manager).
+- Saat campaign dihapus, asset tidak otomatis dihapus dari `user_files` (user harus mengelola sendiri lewat File Manager). ⚠️ `user_files` dormant — tidak dipakai MVP, semua aset external URL.
 
 ## Platform Fee
 
