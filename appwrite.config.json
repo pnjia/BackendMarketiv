@@ -3229,7 +3229,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/create-user-profile"
+      "path": "functions/create-user-profile"
     },
     {
       "$id": "validate-and-upload",
@@ -3245,7 +3245,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/validate-and-upload"
+      "path": "functions/validate-and-upload"
     },
     {
       "$id": "delete-file",
@@ -3261,7 +3261,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/delete-file"
+      "path": "functions/delete-file"
     },
     {
       "$id": "create-user-wallet",
@@ -3277,7 +3277,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/create-user-wallet"
+      "path": "functions/create-user-wallet"
     },
     {
       "$id": "campaign-published",
@@ -3293,7 +3293,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/campaign-published"
+      "path": "functions/campaign-published"
     },
     {
       "$id": "ai-brief",
@@ -3309,7 +3309,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/ai-brief"
+      "path": "functions/ai-brief"
     },
     {
       "$id": "ai-fraud-precheck",
@@ -3325,7 +3325,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/ai-fraud-precheck"
+      "path": "functions/ai-fraud-precheck"
     },
     {
       "$id": "create-order",
@@ -3341,7 +3341,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/create-order"
+      "path": "functions/create-order"
     },
     {
       "$id": "calculate-campaign-reward",
@@ -3357,7 +3357,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/calculate-campaign-reward"
+      "path": "functions/calculate-campaign-reward"
     },
     {
       "$id": "campaign-claimed",
@@ -3373,7 +3373,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/campaign-claimed"
+      "path": "functions/campaign-claimed"
     },
     {
       "$id": "expire-stale-claims",
@@ -3387,7 +3387,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/expire-stale-claims"
+      "path": "functions/expire-stale-claims"
     },
     {
       "$id": "create-payment",
@@ -3403,7 +3403,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/create-payment"
+      "path": "functions/create-payment"
     },
     {
       "$id": "midtrans-webhook",
@@ -3419,7 +3419,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/midtrans-webhook"
+      "path": "functions/midtrans-webhook"
     },
     {
       "$id": "create-escrow",
@@ -3435,7 +3435,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/create-escrow"
+      "path": "functions/create-escrow"
     },
     {
       "$id": "release-escrow",
@@ -3451,7 +3451,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/release-escrow"
+      "path": "functions/release-escrow"
     },
     {
       "$id": "send-chat-notification",
@@ -3467,7 +3467,7 @@
       "logging": true,
       "entrypoint": "src/main.js",
       "commands": "npm install",
-      "path": "../functions/send-chat-notification"
+      "path": "functions/send-chat-notification"
     }
   ]
 }

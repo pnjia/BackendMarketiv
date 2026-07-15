@@ -7,13 +7,13 @@ const databaseId = "6a4c8598001da3b0d7f0";
 const databaseName = "prod_marketiv_db";
 
 const createStringAttr = (key, required = false, size = 255, def = null, array = false) => ({
-    key, type: "string", required, array, size, default: def
+    key, type: "string", required, array, size, default: def, encrypt: false
 });
 const createIntAttr = (key, required = false, def = null, array = false) => ({
-    key, type: "integer", required, array, default: def
+    key, type: "integer", required, array, default: def, min: 0, max: 999999999
 });
 const createFloatAttr = (key, required = false, def = null, array = false) => ({
-    key, type: "double", required, array, default: def
+    key, type: "double", required, array, default: def, min: 0, max: 999999999
 });
 const createBoolAttr = (key, required = false, def = null, array = false) => ({
     key, type: "boolean", required, array, default: def
@@ -22,7 +22,7 @@ const createDatetimeAttr = (key, required = false, array = false) => ({
     key, type: "datetime", required, array, default: null
 });
 const createEnumAttr = (key, required = false, elements = [], def = null) => ({
-    key, type: "string", required, array: false, elements, default: def
+    key, type: "string", required, array: false, elements, default: def, encrypt: false
 });
 
 const createIndex = (key, type, attributes, orders = []) => {
@@ -197,10 +197,10 @@ const collections = [
             createIntAttr("rewardPer1000Views", true),
             createStringAttr("status", true, 50),
             createIntAttr("claimLimit", true),
-            createIntAttr("submissionDays", true, 7),
-            createIntAttr("totalClaims", true, 0),
-            createIntAttr("spentAmount", true, 0),
-            createIntAttr("remainingBudget", true, 0),
+            createIntAttr("submissionDays", false, 7),
+            createIntAttr("totalClaims", false, 0),
+            createIntAttr("spentAmount", false, 0),
+            createIntAttr("remainingBudget", false, 0),
             createDatetimeAttr("publishedAt", false)
         ],
         indexes: [
@@ -222,7 +222,6 @@ const collections = [
             createStringAttr("source", true, 50),
             createStringAttr("type", true, 50),
             createStringAttr("fileUrl", true, 2048),
-            createStringAttr("fileId", false),
             createStringAttr("fileName", false, 255)
         ],
         indexes: [
@@ -259,9 +258,9 @@ const collections = [
             createStringAttr("contentAngle", false, 2000),
             createStringAttr("cta", false, 1000),
             createStringAttr("briefDetail", false, 10000),
-            createStringAttr("doAndDont", false, 5000),
-            createStringAttr("materialsJson", false, 5000),
-            createBoolAttr("generatedByAi", true, false)
+            createStringAttr("doAndDont", false, 400),
+            createStringAttr("materialsJson", false, 300),
+            createBoolAttr("generatedByAi", false, false)
         ],
         indexes: [
             createIndex("idx_campaignId", "unique", ["campaignId"])
@@ -384,14 +383,12 @@ const collections = [
             createStringAttr("message_type", true, 50),
             createStringAttr("content", false, 2000),
             createStringAttr("offer_id", false, 255),
-            createStringAttr("attachment_url", false, 2048),
-            createStringAttr("attachment_name", false, 255),
-            createIntAttr("attachment_size", false),
-            createStringAttr("attachment_mime", false, 255)
+            createDatetimeAttr("read_at", false)
         ],
         indexes: [
             createIndex("idx_conversation_id", "key", ["conversation_id"]),
-            createIndex("idx_sender_id", "key", ["sender_id"])
+            createIndex("idx_sender_id", "key", ["sender_id"]),
+            createIndex("idx_read_at", "key", ["read_at"])
         ]
     },
     {
@@ -576,16 +573,10 @@ const collections = [
             createStringAttr("accountNumber", true, 100),
             createStringAttr("accountName", true, 255),
             createStringAttr("status", true, 50),
-            createStringAttr("adminNote", false, 1000),
-            createStringAttr("rejectionReason", false, 1000),
-            createDatetimeAttr("processedAt", false),
-            createStringAttr("processedBy", false),
-            createStringAttr("transferProofUrl", false, 2048)
+            createDatetimeAttr("processedAt", true)
         ],
         indexes: [
-            createIndex("idx_userId", "key", ["userId"]),
-            createIndex("idx_status", "key", ["status"]),
-            createIndex("idx_payoutMethod", "key", ["payoutMethod"])
+            createIndex("idx_userId", "key", ["userId"])
         ]
     },
     {
@@ -618,7 +609,7 @@ const collections = [
         attributes: [
             createStringAttr("userId", true),
             createEnumAttr("feature", true, ["brief", "fraud", "landing"]),
-            createStringAttr("prompt", true, 10000),
+            createStringAttr("prompt", true, 5000),
             createStringAttr("response", false, 10000),
             createDatetimeAttr("createdAt", false)
         ],
@@ -707,18 +698,6 @@ const buckets = [
         antivirus: true
     },
     {
-        $id: "chat-files",
-        name: "Chat Files",
-        $permissions: ["read(\"users\")", "create(\"users\")"],
-        fileSecurity: true,
-        enabled: true,
-        maximumFileSize: 10000000, // 10MB
-        allowedFileExtensions: ["jpg", "jpeg", "png", "webp", "pdf", "doc", "docx"],
-        compression: "gzip",
-        encryption: false,
-        antivirus: true
-    },
-    {
         $id: "fraud-evidence",
         name: "Fraud Evidence",
         $permissions: ["read(\"users\")"], // System writes, admin/user reads
@@ -752,7 +731,7 @@ const functions = [
     {
         $id: "create-user-profile",
         name: "Create User Profile",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: ["users"],
         events: ["users.*.create"],
         schedule: "",
@@ -766,7 +745,7 @@ const functions = [
     {
         $id: "validate-and-upload",
         name: "Validate And Upload",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: ["users"],
         events: [],
         schedule: "",
@@ -780,7 +759,7 @@ const functions = [
     {
         $id: "delete-file",
         name: "Delete File",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: ["users"],
         events: [],
         schedule: "",
@@ -794,7 +773,7 @@ const functions = [
     {
         $id: "create-user-wallet",
         name: "Create User Wallet",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: ["users.*.create"],
         schedule: "",
@@ -808,7 +787,7 @@ const functions = [
     {
         $id: "campaign-published",
         name: "Campaign Published",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.campaigns.documents.*.update`],
         schedule: "",
@@ -822,7 +801,7 @@ const functions = [
     {
         $id: "ai-brief",
         name: "AI Brief Generator",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: ["users"],
         events: [],
         schedule: "",
@@ -836,7 +815,7 @@ const functions = [
     {
         $id: "ai-fraud-precheck",
         name: "AI Fraud Precheck",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.campaign_submissions.documents.*.create`],
         schedule: "",
@@ -850,7 +829,7 @@ const functions = [
     {
         $id: "create-order",
         name: "Create Order",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.offers.documents.*.update`],
         schedule: "",
@@ -864,7 +843,7 @@ const functions = [
     {
         $id: "calculate-campaign-reward",
         name: "Calculate Campaign Reward",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.campaign_submissions.documents.*.update`],
         schedule: "",
@@ -878,7 +857,7 @@ const functions = [
     {
         $id: "campaign-claimed",
         name: "Campaign Claimed",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.campaign_claims.documents.*.create`],
         schedule: "",
@@ -892,7 +871,7 @@ const functions = [
     {
         $id: "expire-stale-claims",
         name: "Expire Stale Claims",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [],
         schedule: "0 */6 * * *",
@@ -906,7 +885,7 @@ const functions = [
     {
         $id: "create-payment",
         name: "Create Payment",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: ["users"],
         events: [],
         schedule: "",
@@ -920,7 +899,7 @@ const functions = [
     {
         $id: "midtrans-webhook",
         name: "Midtrans Webhook",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: ["any"],
         events: [],
         schedule: "",
@@ -934,7 +913,7 @@ const functions = [
     {
         $id: "create-escrow",
         name: "Create Escrow",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.payments.documents.*.update`],
         schedule: "",
@@ -948,7 +927,7 @@ const functions = [
     {
         $id: "release-escrow",
         name: "Release Escrow",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.deliverables.documents.*.update`],
         schedule: "",
@@ -962,7 +941,7 @@ const functions = [
     {
         $id: "send-chat-notification",
         name: "Send Chat Notification",
-        runtime: "node-18.0",
+        runtime: "node-22",
         execute: [],
         events: [`databases.${databaseId}.collections.messages.documents.*.create`],
         schedule: "",
@@ -973,20 +952,7 @@ const functions = [
         commands: "npm install",
         path: "../functions/send-chat-notification"
     },
-    {
-        $id: "upload-chat-attachment",
-        name: "Upload Chat Attachment",
-        runtime: "node-18.0",
-        execute: ["users"],
-        events: [],
-        schedule: "",
-        timeout: 30,
-        enabled: true,
-        logging: true,
-        entrypoint: "src/main.js",
-        commands: "npm install",
-        path: "../functions/upload-chat-attachment"
-    }
+
 ];
 
 let existingProjectId = "69f9d45b00315cb0ec2f";
@@ -1001,6 +967,8 @@ try {
 } catch (error) {
     console.log('Could not read existing appwrite.json, using default project details.');
 }
+
+const appwriteConfigPath = path.join(__dirname, '..', 'appwrite.config.json');
 
 const appwriteJson = {
     projectId: existingProjectId,
@@ -1017,5 +985,29 @@ const appwriteJson = {
     functions: functions.filter((fn) => fs.existsSync(path.join(__dirname, fn.path)))
 };
 
+// Legacy format (appwrite/appwrite.json) — uses ../functions/ paths
 fs.writeFileSync(appwriteJsonPath, JSON.stringify(appwriteJson, null, 2));
 console.log(`Successfully generated ${appwriteJsonPath}`);
+
+// CLI v22 format (appwrite.config.json) — uses functions/ paths
+const rootConfig = {
+    projectId: existingProjectId,
+    projectName: existingProjectName,
+    endpoint: "https://sgp.cloud.appwrite.io/v1",
+    tablesDB: [
+        {
+            $id: databaseId,
+            name: databaseName
+        }
+    ],
+    tables,
+    buckets,
+    functions: functions
+        .filter((fn) => fs.existsSync(path.join(__dirname, fn.path)))
+        .map(fn => ({
+            ...fn,
+            path: fn.path.replace('../', '')
+        }))
+};
+fs.writeFileSync(appwriteConfigPath, JSON.stringify(rootConfig, null, 2));
+console.log(`Successfully generated ${appwriteConfigPath}`);
