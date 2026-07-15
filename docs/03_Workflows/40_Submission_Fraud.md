@@ -70,7 +70,7 @@ Event `campaign_submissions.create` — terpicu saat creator submit hasil campai
 9. **Jika Auto-Reject (71–100):**
    - `submission.status: pending → rejected`.
    - **Notifications** — Notifikasi ke creator: "Submission {campaignTitle} ditolak oleh sistem fraud — {reason}".
-   - Creator dapat mengajukan appeal ke admin (di luar scope MVP?).
+   - Creator dapat menghubungi admin via WhatsApp untuk appeal (lihat [60_Dispute.md](60_Dispute.md)).
 
 10. **Jika Manual Review (31–70):**
     - Submission tetap `pending` dengan `fraudStatus: review`.
@@ -149,7 +149,7 @@ approved approved rejected
 - **URL tidak valid / 404** — fraud check tidak bisa lanjut → auto-flag sebagai high risk (score > 70). Creator bisa upload ulang.
 - **Submission duplikat (URL sama)** — langsung flag high risk. Mencegah creator submit konten yang sama ke campaign berbeda atau berkali-kali.
 - **Creator di-ban dari antrian fraud** — submission reject + `users.status = suspended`. Semua claim/submission aktif milik creator jadi invalid.
-- **Creator appeal atas auto-reject** — admin review manual sebagai final decision. Proses appeal di luar workflow utama (manual by admin).
+- **Creator appeal atas auto-reject** — hubungi admin via WhatsApp. Proses appeal di luar platform.
 - **AI function timeout/gagal** — submission tetap `pending`. Admin harus review manual. Sistem memberi flag `fraud_check_failed` di submission.
 - **Fraud check byokas** — jika AI tidak dapat mengakses URL (private account), validasi accessibility gagal, score tinggi. Creator harus memastikan akun publik saat submit.
 - **UMKM approve submission yang auto-reject** — tidak bisa; submission sudah `rejected`. Hanya admin yang bisa override.
@@ -160,4 +160,4 @@ approved approved rejected
 - [Campaigns](../02_Modules/Campaigns/00_Index.md)
 - [AI](../02_Modules/AI/00_Index.md)
 - [Campaign PPV workflow](20_Campaign_PPV.md)
-- [Dispute workflow](60_Dispute.md) — untuk appeal creator
+- [Dispute workflow](60_Dispute.md) — hubungi admin untuk appeal

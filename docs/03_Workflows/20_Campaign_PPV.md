@@ -39,9 +39,10 @@ UMKM klik `Buat Campaign` dari dashboard (tipe Campaign Viral).
 ### Tahap 1: Create Campaign (UMKM)
 
 1. **Campaigns** — UMKM isi **Basic Info**: title, category, platforms[], description. Untuk MVP, `platforms[]` wajib hanya berisi `tiktok`.
-2. **Campaigns** — **Upload Asset** (dua opsi):
-   - **Internal (storage)**: upload file via File Manager (`uploadFile({ file })`). File Manager hanya menyimpan file umum dan metadata storage; relasi ke campaign dicatat di `campaign_assets.fileId` (`source = storage`). Terikat kuota 100 MB user.
-   - **External URL**: input link Google Drive/Dropbox/CDN publik. Dicatat di `campaign_assets` (`source = external_url`). Tidak terikat kuota. Hanya protokol `https`.
+2. **Campaigns** — **Upload Asset** (URL eksternal saja):
+   - Input link Google Drive / Dropbox / CDN publik. Dicatat di `campaign_assets` dengan `source = external_url`.
+   - Tidak ada penyimpanan internal. Hanya protokol `https`.
+   - Lihat [85_Asset_Tutorial.md](../02_Modules/Campaigns/85_Asset_Tutorial.md) untuk panduan upload ke Google Drive.
 3. **AI** (opsional) — UMKM klik "Generate Brief": `generateBrief()` → AI hasilkan Hook, CTA, Hashtag, Script, Guideline. UMKM dapat edit lalu simpan ke `campaign_briefs`.
 4. **Campaigns** — Atur **Reward**: budget (min Rp50.000), rewardPer1000Views (CPM), minViews?, maxViews?, claimLimit.
 5. Status awal campaign: `draft`.
@@ -176,7 +177,7 @@ WALLET:      pendingBalance += reward → (later → available)
 - **Budget habis sebelum max views** → reward dibatasi `remainingBudget`.
 - **Upload asset via File Manager ditolak** jika kuota user penuh. UMKM harus hapus file lama atau beralih ke external URL.
 - **External URL tidak valid** — sistem tetap menyimpan, tetapi tidak ada jaminan aksesibilitas; creator yang akan report jika link rusak.
-- **Creator appeal atas auto-reject** — admin review sebagai dispute terpisah (lihat [60_Dispute.md](60_Dispute.md) untuk pola serupa).
+- **Creator appeal atas auto-reject** — hubungi admin via WhatsApp (lihat [60_Dispute.md](60_Dispute.md)).
 - **Reward < 1** — jika views < 1000 dan rewardPer1000Views kecil → reward dibulatkan ke bawah, minimal 0 (tidak ada transaksi jika 0).
 
 ## Links

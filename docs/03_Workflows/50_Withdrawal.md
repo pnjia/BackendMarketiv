@@ -2,13 +2,12 @@
 
 ## Purpose
 
-Creator menarik saldo available dari wallet ke bank/e-wallet, dengan validasi saldo & minimum amount, review admin, dan transfer manual sebelum status berubah menjadi processed.
+Creator menarik saldo available dari wallet ke bank/e-wallet. Proses langsung cair tanpa review admin.
 
 ## Modules Involved
 
 - [Payments](../02_Modules/Payments/00_Index.md) — wallet, withdrawal, transaksi.
 - [Notifications](../02_Modules/Notifications/00_Index.md) — notifikasi status penarikan.
-- Admin — review & eksekusi transfer.
 
 ## Trigger
 
@@ -18,14 +17,14 @@ Creator submit form `Tarik Dana` dari halaman Wallet (input: payoutMethod, provi
 
 | Collection | Modul | Aksi |
 |---|---|---|
-| `wallets` | Payments | update balance (hold) |
-| `withdrawals` | Payments | insert → update status |
-| `transactions` | Payments | insert saat complete |
+| `wallets` | Payments | kurangi balance |
+| `withdrawals` | Payments | insert record |
+| `transactions` | Payments | insert transaksi |
 | `notifications` | Notifications | insert notifikasi |
 
 ## Step-by-step Flow
 
-### Tahap 1: Request Withdrawal
+### Tahap 1: Request & Process Withdrawal
 
 1. **Payments** — Creator buka halaman Wallet → klik "Tarik Dana".
 2. **Payments** — Tampilkan saldo available (`wallet.balance`), minimum withdraw amount (**Rp50.000**, konstanta sistem — lihat [ADR-007](../04_Decisions/ADR-007.md)).
@@ -37,55 +36,22 @@ Creator submit form `Tarik Dana` dari halaman Wallet (input: payoutMethod, provi
    - `payoutMethod` adalah `bank` atau `ewallet`
    - `providerName`, `accountNumber`, dan `accountName` terisi
 5. **Jika validasi gagal** — tampilkan error: "Saldo tidak mencukupi" / "Minimum penarikan Rp50.000".
-6. **Jika validasi lolos** — Buat `withdrawals`: `{ userId, amount, payoutMethod, providerName, accountNumber, accountName, status: 'pending' }`.
-7. **Payments** — Kurangi `wallet.balance -= amount` (dana di-hold, tidak bisa dipakai transaksi lain).
-8. **Event `withdrawals.create`** — (tidak memicu function spesifik; cukup trigger notifikasi).
-
-### Tahap 2: Admin Review
-
-9. **Notifications** — Notifikasi ke admin: "Withdrawal request baru — Rp{amount} oleh {creatorName}".
-10. **Admin** — Buka **Withdrawal Queue** → lihat daftar request `status: pending`.
-11. **Admin** — Review detail:
-    - Data tujuan pencairan: metode, provider bank/e-wallet, nomor rekening/akun, nama pemilik.
-    - Riwayat withdrawal creator sebelumnya.
-    - Saldo creator saat ini.
-12. **Admin** — Keputusan:
-
-    | Keputusan | Aksi Sistem |
-    |---|---|
-    | **Approve** | Admin transfer manual via bank/e-wallet → `withdrawals.status: pending → processed` |
-    | **Reject** | Beri alasan → `withdrawals.status: pending → rejected` |
-
-### Tahap 3: Complete / Reject
-
-13. **Jika Approve:**
-    - Admin konfirmasi transfer sudah dilakukan dan dapat mengisi `adminNote`/`transferProofUrl`.
-    - **Event `withdrawals.status (pending→processed)`** memicu function **`complete-withdrawal`** (belum diimplementasikan).
-    - **Payments** — Update `wallet.withdrawn += amount` (opsional, tracking total penarikan).
-    - **Payments** — Buat `transactions`: `{ userId, amount: -amount, type: 'withdrawal', referenceType: 'withdrawal', referenceId: withdrawalId }`.
-    - **Notifications** — Notifikasi ke creator: "Penarikan Rp{amount} berhasil diproses — cek rekening/akunmu".
-
-14. **Jika Reject:**
-    - **Payments** — Kembalikan saldo: `wallet.balance += amount` (dana hold dikembalikan).
-    - **Payments** — Tidak ada transaksi dicatat.
-    - **Notifications** — Notifikasi ke creator: "Penarihan ditolak: {alasan admin}".
+6. **Jika validasi lolos** — Proses langsung:
+   - Kurangi `wallet.balance -= amount`.
+   - Buat `withdrawals`: `{ userId, amount, payoutMethod, providerName, accountNumber, accountName, status: 'processed', processedAt: now }`.
+   - Buat `transactions`: `{ userId, amount: -amount, type: 'withdrawal', referenceType: 'withdrawal', referenceId: withdrawalId, status: 'completed' }`.
+7. **Notifications** — Notifikasi ke creator: "Penarikan Rp{amount} berhasil — cek rekeningmu".
 
 ## State Transitions
 
 ```text
-WITHDRAWAL:  pending → processed (approve)
-                    → rejected  (reject)
-
-WALLET:      balance -= amount (saat request) → balance += amount (jika reject)
-                                                  withdrawn += amount (jika approve)
+WITHDRAWAL:  (langsung processed)
+WALLET:      balance -= amount
 ```
 
 ## Events / Functions
 
-| Trigger | Function | Aksi |
-|---|---|---|
-| `withdrawals.create` | (notifikasi admin) | Push notifikasi ke admin |
-| `withdrawals.status (pending→processed)` | `complete-withdrawal` (belum diimplementasikan) | Catat transaksi, notifikasi creator |
+Tidak ada Appwrite Function khusus. Proses sepenuhnya di service layer `wallet.service.ts`.
 
 ## Validation Rules per Langkah
 
@@ -96,26 +62,20 @@ WALLET:      balance -= amount (saat request) → balance += amount (jika reject
 | Request withdrawal | `amount > 0` | Error "Jumlah tidak valid" |
 | Request withdrawal | `payoutMethod` valid (`bank` atau `ewallet`) | Error "Metode penarikan tidak valid" |
 | Request withdrawal | Data tujuan pencairan lengkap | Error "Lengkapi data penarikan" |
-| Admin approve | Withdrawal harus `pending` | Error status |
-| Admin reject | Admin wajib isi alasan | Form tidak bisa submit |
 
 ## Notifikasi
 
 | Titik | Notifikasi | Penerima |
 |---|---|---|
-| Withdrawal requested | "Withdrawal request baru — Rp{amount}" | Admin |
-| Withdrawal approved | "Penarikan Rp{amount} berhasil diproses — cek rekening/akun" | Creator |
-| Withdrawal rejected | "Penarikan ditolak: {reason}" | Creator |
+| Withdrawal processed | "Penarikan Rp{amount} berhasil — cek rekeningmu" | Creator |
 
 ## Edge Cases
 
-- **Saldo kurang dari amount** — ditolak saat validasi awal (sebelum buat record).
+- **Saldo kurang dari amount** — ditolak saat validasi awal.
 - **Amount di bawah minimum withdraw** — ditolak.
-- **Reject admin** — saldo wajib dikembalikan penuh ke `wallet.balance` (invariant: tidak ada saldo hilang).
 - **Hanya saldo available yang bisa ditarik** — `pendingBalance` dan `escrowBalance` tidak bisa ditarik.
-- **Pending withdrawal ganda** — creator bisa memiliki banyak withdrawal request, tetapi total amount pending tidak boleh melebihi `wallet.balance`.
-- **Transfer bank/e-wallet gagal** — jika admin sudah approve tetapi transfer gagal (rekening/akun salah, provider offline), admin dapat membatalkan: `withdrawals.status → rejected` dengan alasan "Transfer gagal", saldo dikembalikan.
 - **Withdrawal diakses saat wallet dibekukan** — jika user `status: suspended`, withdrawal tidak bisa diajukan.
+- **Transfer gagal di sisi bank/e-wallet** — di luar tanggung jawab platform. Dana sudah keluar dari wallet sistem.
 
 ## Links
 
