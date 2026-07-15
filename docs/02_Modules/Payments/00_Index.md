@@ -1,6 +1,6 @@
 # Modul Payments
 
-Sistem finansial Marketiv: payment gateway Midtrans, wallet per user, ledger transaksi, escrow (held/released/refunded), dan penarikan dana (withdrawal) dengan persetujuan admin. Modul ini memiliki data `payments`, `wallets`, `transactions`, `escrows`, dan `withdrawals`.
+Sistem finansial Marketiv: payment gateway Midtrans, wallet per user, ledger transaksi, escrow (held/released/refunded), dan penarikan dana (withdrawal) langsung cair tanpa review admin. Modul ini memiliki data `payments`, `wallets`, `transactions`, `escrows`, dan `withdrawals`.
 
 ## Daftar Dokumen
 

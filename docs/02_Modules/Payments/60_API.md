@@ -33,7 +33,7 @@ Dimiliki pemilik wallet.
 - **Input**: `{ amount, payoutMethod, providerName, accountNumber, accountName }`
 - **payoutMethod**: `bank | ewallet`.
 - **Validasi**: `amount ≥ MINIMUM_WITHDRAW` (`Rp50.000` — konstanta sistem, lihat [ADR-007](../../04_Decisions/ADR-007.md)), `balance ≥ amount`, dan data tujuan pencairan lengkap.
-- **Proses**: buat dokumen `withdrawals` (`status = pending`); menunggu **persetujuan admin**.
+- **Proses**: buat dokumen `withdrawals` (`status = processed`); langsung cair tanpa review admin.
 - **Akses**: Owner (user).
 
 ### Payment Service

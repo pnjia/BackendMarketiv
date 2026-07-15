@@ -9,7 +9,7 @@ Modul Payments mengelola seluruh aliran dana Marketiv.
 - **Wallet** — satu wallet per user; menyimpan `balance` (tersedia) dan `pendingBalance` (belum cair).
 - **Transactions** — ledger seluruh mutasi saldo (deposit, withdrawal, payment, refund, release, fee).
 - **Escrow** — dana ditahan saat pembayaran order, dirilis saat deliverable di-approve, atau dikembalikan (refund). Status `held | released | refunded`.
-- **Withdrawals** — permintaan pencairan dana ke bank/e-wallet, perlu **persetujuan admin**.
+- **Withdrawals** — pencairan dana ke bank/e-wallet langsung diproses tanpa review admin.
 
 ## Prinsip
 
