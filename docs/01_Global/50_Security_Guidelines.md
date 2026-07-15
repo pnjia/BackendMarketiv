@@ -55,16 +55,7 @@ Permission.read(Role.user(senderId)),
 Permission.read(Role.user(receiverId))
 ```
 
-**Chat Attachment** (`chat-files` bucket):
-
-```javascript
-Permission.read(Role.user(senderId)),
-Permission.read(Role.user(receiverId)),
-Permission.write(Role.user(senderId))
-```
-
-- Attachment chat wajib divalidasi ukuran dan MIME type sesuai `../02_Modules/Chat/30_Business_Rules.md`.
-- File hanya boleh dibaca participant conversation.
+> Chat tidak mendukung attachment. Hanya pesan teks dan offer.
 
 ## Function API Key Scope
 
