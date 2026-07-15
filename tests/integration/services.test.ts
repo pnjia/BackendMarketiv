@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import * as mockAppwrite from '../../src/test-mocks/appwrite';
 
-const { __mockAccountGet, __mockFunctionExecution, __seed, __resetStore } = mockAppwrite as any;
+const { __mockAccountGet, __mockFunctionExecution, __seed, __resetStore, __mockStore } = mockAppwrite as any;
 
 describe('auth.service — integration (success paths)', () => {
   beforeEach(() => __resetStore());
@@ -156,13 +156,17 @@ describe('payment.service — integration (success paths)', () => {
 describe('wallet.service — integration (success paths)', () => {
   beforeEach(() => __resetStore());
 
-  it('requestWithdraw creates pending withdrawal when valid', async () => {
+  it('requestWithdraw creates withdrawal (auto processed) when valid', async () => {
     __seed('wallets', [{ $id: 'w1', userId: 'user-1', balance: 200000, pendingBalance: 0 }]);
     __mockAccountGet(() => ({ $id: 'user-1' }));
     const { requestWithdraw } = await import('../../src/services/wallet.service');
     const w = await requestWithdraw({ amount: 100000, payoutMethod: 'bank', providerName: 'BCA', accountNumber: '123', accountName: 'A' });
-    expect(w.status).toBe('pending');
+    expect(w.status).toBe('processed');
     expect(w.amount).toBe(100000);
+    const wallet = (__mockStore['wallets'] || []).find((w: any) => w.$id === 'w1');
+    expect(wallet.balance).toBe(100000);
+    const tx = (__mockStore['transactions'] || []).find((t: any) => t.referenceId === w.id);
+    expect(tx.type).toBe('withdrawal');
   });
 
   it('getWallet returns existing wallet', async () => {

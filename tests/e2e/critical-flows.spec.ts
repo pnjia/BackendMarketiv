@@ -27,9 +27,9 @@ test.describe('Critical Flow: Fraud', () => {
 });
 
 test.describe('Critical Flow: Withdraw', () => {
-  test('request withdraw → pending → admin approve/reject', async ({ page }) => {
+  test('request withdraw → auto processed', async ({ page }) => {
     await page.goto('/login');
-    // creator requests withdrawal (balance + min amount), admin reviews.
+    // creator requests withdrawal (balance + min amount), langsung processed tanpa review admin.
     expect(true).toBe(true);
   });
 });

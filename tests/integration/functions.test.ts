@@ -267,64 +267,6 @@ describe('create-payment + create-escrow (campaign topup flow)', () => {
   });
 });
 
-describe('complete-withdrawal function', () => {
-  it('approves withdrawal: deducts wallet and marks processed', async () => {
-    process.env.WALLETS_COLLECTION_ID = 'wallets';
-    process.env.TRANSACTIONS_COLLECTION_ID = 'transactions';
-    process.env.WITHDRAWALS_COLLECTION_ID = 'withdrawals';
-    seed('wallets', [{ $id: 'w1', userId: 'u1', balance: 200000, pendingBalance: 0 }]);
-    seed('withdrawals', [{ $id: 'wd1', userId: 'u1', amount: 100000, payoutMethod: 'bank', providerName: 'BCA', accountNumber: '123', accountName: 'A', status: 'pending' }]);
-    const main = (await import('../../functions/complete-withdrawal/src/main.js')).default;
-    const req = makeReq({ bodyJson: { $id: 'wd1', status: 'processed', processedBy: 'admin-1', transferProofUrl: 'https://x.com/p.png' } });
-    const res = makeRes();
-    await main({ req, res, log: () => {}, error: () => {} });
-    const withdrawal = (store['withdrawals'] || []).find((w) => w.$id === 'wd1');
-    expect(withdrawal.status).toBe('processed');
-    expect(withdrawal.processedBy).toBe('admin-1');
-    const wallet = (store['wallets'] || []).find((w) => w.$id === 'w1');
-    expect(wallet.balance).toBe(100000);
-    const tx = (store['transactions'] || []).find((t) => t.referenceId === 'wd1');
-    expect(tx.type).toBe('withdrawal');
-  });
-
-  it('rejects withdrawal only with rejectionReason', async () => {
-    process.env.WALLETS_COLLECTION_ID = 'wallets';
-    process.env.TRANSACTIONS_COLLECTION_ID = 'transactions';
-    process.env.WITHDRAWALS_COLLECTION_ID = 'withdrawals';
-    seed('wallets', [{ $id: 'w1', userId: 'u1', balance: 200000, pendingBalance: 0 }]);
-    seed('withdrawals', [{ $id: 'wd1', userId: 'u1', amount: 100000, status: 'pending' }]);
-    const main = (await import('../../functions/complete-withdrawal/src/main.js')).default;
-    // no rejectionReason -> 400
-    const reqBad = makeReq({ bodyJson: { $id: 'wd1', status: 'rejected' } });
-    const resBad = makeRes();
-    await main({ req: reqBad, res: resBad, log: () => {}, error: () => {} });
-    expect(resBad.calls[0].status).toBe(400);
-    // with rejectionReason -> rejected
-    const reqOk = makeReq({ bodyJson: { $id: 'wd1', status: 'rejected', rejectionReason: 'Tidak valid' } });
-    const resOk = makeRes();
-    await main({ req: reqOk, res: resOk, log: () => {}, error: () => {} });
-    const withdrawal = (store['withdrawals'] || []).find((w) => w.$id === 'wd1');
-    expect(withdrawal.status).toBe('rejected');
-    expect(withdrawal.rejectionReason).toBe('Tidak valid');
-    // balance unchanged on reject (source does not hold at request time)
-    const wallet = (store['wallets'] || []).find((w) => w.$id === 'w1');
-    expect(wallet.balance).toBe(200000);
-  });
-
-  it('ignores non-pending withdrawals', async () => {
-    process.env.WALLETS_COLLECTION_ID = 'wallets';
-    process.env.TRANSACTIONS_COLLECTION_ID = 'transactions';
-    process.env.WITHDRAWALS_COLLECTION_ID = 'withdrawals';
-    seed('wallets', [{ $id: 'w1', userId: 'u1', balance: 200000, pendingBalance: 0 }]);
-    seed('withdrawals', [{ $id: 'wd1', userId: 'u1', amount: 100000, status: 'processed' }]);
-    const main = (await import('../../functions/complete-withdrawal/src/main.js')).default;
-    const req = makeReq({ bodyJson: { $id: 'wd1', status: 'processed' } });
-    const res = makeRes();
-    await main({ req, res, log: () => {}, error: () => {} });
-    expect(res.calls[0].body.status).toBe('ignored');
-  });
-});
-
 describe('user.service searchCreators price filter (rate_card_packages)', () => {
   it('filters creators by package price range', async () => {
     const mockAppwrite = await import('../../src/test-mocks/appwrite');
