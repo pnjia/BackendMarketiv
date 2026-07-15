@@ -21,11 +21,7 @@
 - Validasi: min amount, balance cukup, metode valid, data tujuan pencairan lengkap.
 - Riwayat withdrawal.
 
-### Admin: Withdrawal Review
-
-- Daftar withdrawal pending.
-- Tampilkan metode pencairan, provider, nomor rekening/akun, nama pemilik, dan riwayat withdrawal creator.
-- Approve dengan catatan/bukti transfer atau reject dengan alasan wajib.
+> Withdrawal langsung diproses tanpa review admin. Tidak ada halaman review withdrawal untuk admin.
 
 ## Komponen
 

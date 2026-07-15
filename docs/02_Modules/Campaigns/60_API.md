@@ -63,18 +63,17 @@ Dimiliki UMKM. Inti alur PPV.
 
 #### `addCampaignAsset()` — [Client SDK]
 
-- **Input**: `{ campaignId, source, type, fileUrl, fileId?, fileName? }`
+- **Input**: `{ campaignId, type, fileUrl, fileName? }`
 - **Validasi**:
-  - `source = storage` wajib `fileId` dan file harus milik owner campaign.
-  - `source = external_url` wajib URL `https`.
+  - `fileUrl` wajib URL `https://`.
   - Hanya owner campaign yang boleh menambah asset.
-- **Proses**: buat dokumen `campaign_assets`.
+- **Proses**: buat dokumen `campaign_assets` dengan `source: 'external_url'`.
 - **Akses**: UMKM (owner campaign).
 
 #### `removeCampaignAsset()` — [Client SDK]
 
 - **Input**: `{ assetId }`
-- **Proses**: hapus dokumen `campaign_assets`. Jika `source = storage`, file di Appwrite Storage tidak otomatis terhapus (user harus hapus via File Manager).
+- **Proses**: hapus dokumen `campaign_assets`.
 - **Akses**: UMKM (owner campaign).
 
 ---

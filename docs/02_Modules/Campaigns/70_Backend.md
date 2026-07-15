@@ -33,17 +33,8 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
   - Kurangi `campaigns.totalClaims` untuk campaign terkait.
   - Notifikasi ke kreator: "Claim-mu expired karena melebihi batas waktu submit".
 
-## Backend Helpers
-
-### upload-campaign-asset
-
-- **Trigger**: dipanggil frontend saat upload asset campaign.
-- **Aksi**: panggil File Manager `uploadFile()` (modul Users) hanya dengan file, lalu buat `campaign_assets` dengan `source = storage` dan `fileId` dari hasil upload.
-- **Catatan**: helper ini bukan Appwrite Function event-driven.
-
 ## Aturan Backend
 
 - Unique constraint `campaignId + creatorId` pada claim (backend validation).
 - Cek `status = active`, `isProfileCompleted = true`, `totalClaims < claimLimit`.
-- Asset `source = storage` wajib memiliki `fileId` yang valid dan milik owner campaign.
-- Asset `source = external_url` wajib protokol `https`.
+- Asset hanya mendukung `source = external_url` dengan protokol `https`.

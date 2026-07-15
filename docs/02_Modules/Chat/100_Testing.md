@@ -14,12 +14,14 @@
 - Kirim pesan text → dokumen `messages` tersimpan + `conversations.last_message`/`last_message_at` di-update.
 - Type default `text` jika tidak diberi.
 - Pesan `text` tanpa `content` → throw `ChatServiceError('validation', 'Pesan tidak boleh kosong.')`.
-- Kirim pesan image valid → message tersimpan dengan `attachmentUrl` (upload dilakukan lewat function `upload-chat-attachment` SEBELUM `sendMessage` dipanggil).
-- Kirim pesan file valid → message tersimpan dengan `attachmentUrl`.
 - Kirim pesan sebagai non-participant → throw `ChatServiceError('forbidden', 'Kamu bukan participant percakapan ini.')`.
 - `conversationId` kosong → throw `ChatServiceError('validation', 'Conversation ID wajib diisi.')`.
 
-Catatan: Validasi format/size attachment (image ≤5MB, file ≤10MB) dilakukan di Appwrite Function `upload-chat-attachment`, bukan di `chat.service.ts`.
+### Read Receipt (`markConversationAsRead`)
+
+- Menandai semua pesan dari lawan bicara yang belum dibaca sebagai telah dibaca.
+- Tidak menandai pesan milik sendiri.
+- `conversationId` kosong → throw `ChatServiceError('validation', ...)`.
 
 ## Offer dari Chat
 
@@ -39,4 +41,4 @@ Catatan: Validasi format/size attachment (image ≤5MB, file ≤10MB) dilakukan 
 ## Di Luar MVP
 
 - Multi-file upload tidak tersedia.
-- Read receipt, unread counter, dan typing indicator tidak tersedia.
+- Typing indicator tidak tersedia.

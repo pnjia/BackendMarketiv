@@ -83,25 +83,21 @@ Dana ditahan per order. Relasi: Order (1) → Escrow (1).
 
 ## withdrawals
 
-Permintaan pencairan dana. Relasi: merujuk user (FK → users).
+Riwayat pencairan dana. Langsung processed tanpa review admin.
 
-| Attribute        | Type     | Required | Catatan                                      |
-| ---------------- | -------- | -------- | -------------------------------------------- |
-| userId           | string   | yes      | FK → users                                   |
-| amount           | integer  | yes      | nominal dalam Rupiah                         |
-| payoutMethod     | enum     | yes      | `bank\|ewallet`                              |
-| providerName     | string   | yes      | nama bank atau provider e-wallet             |
-| accountNumber    | string   | yes      | nomor rekening atau nomor akun/HP e-wallet   |
-| accountName      | string   | yes      | nama pemilik rekening atau akun e-wallet     |
-| status           | enum     | yes      | `pending\|processed\|rejected`               |
-| adminNote        | string   | no       | catatan admin saat proses/review             |
-| rejectionReason  | string   | no       | alasan jika withdrawal ditolak               |
-| processedAt      | datetime | no       | waktu status berubah ke `processed`          |
-| processedBy      | string   | no       | FK → users admin yang memproses              |
-| transferProofUrl | string   | no       | URL bukti transfer manual jika tersedia      |
+| Attribute     | Type     | Required | Catatan                                      |
+| ------------- | -------- | -------- | -------------------------------------------- |
+| userId        | string   | yes      | FK → users                                   |
+| amount        | integer  | yes      | nominal dalam Rupiah                         |
+| payoutMethod  | enum     | yes      | `bank\|ewallet`                              |
+| providerName  | string   | yes      | nama bank atau provider e-wallet             |
+| accountNumber | string   | yes      | nomor rekening atau nomor akun/HP e-wallet   |
+| accountName   | string   | yes      | nama pemilik rekening atau akun e-wallet     |
+| status        | enum     | yes      | `processed`                                  |
+| processedAt   | datetime | yes      | waktu proses                                 |
 
-**Index**: `userId`, `status`, `payoutMethod`, `createdAt DESC`.
+**Index**: `userId`, `createdAt DESC`.
 
-**Permission**: User create · Admin approve.
+**Permission**: User create · User read · System write.
 
 > `orderId` merujuk koleksi milik modul Orders (`../Orders/50_Database.md`). Aturan saldo, tipe transaksi, status escrow & withdraw: `30_Business_Rules.md`.

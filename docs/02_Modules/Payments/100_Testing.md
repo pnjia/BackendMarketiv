@@ -42,7 +42,7 @@
 - `getWallet()` → return `Wallet` (balance, pendingBalance); tidak ada → throw `not_found`.
 - `getTransactions()` → list `transactions` urut terbaru, filter `type` opsional.
 - `getWithdrawals()` → list `withdrawals` urut terbaru, filter `status` opsional.
-- `requestWithdraw()` valid (amount ≥ 50000, balance cukup, payout lengkap) → dokumen `withdrawals` status `pending`.
+- `requestWithdraw()` valid (amount ≥ 50000, balance cukup, payout lengkap) → dokumen `withdrawals` status `processed`, balance berkurang, transaksi tercatat.
 - `requestWithdraw()` amount <50000 → throw `WalletServiceError('validation', 'Minimum penarikan Rp50.000')`.
 - `requestWithdraw()` balance < amount → throw `WalletServiceError('validation', 'Saldo tidak mencukupi')`.
 - `requestWithdraw()` payout method invalid → throw `WalletServiceError('validation', 'Metode penarikan tidak valid')`.
@@ -76,14 +76,10 @@
 - Refund escrow → balance UMKM kembali.
 - Escrow tidak bisa diubah oleh user (admin/system only).
 
-## Withdrawal (Appwrite Function `create-user-wallet`, `complete-withdrawal`)
+## Withdrawal (`requestWithdraw`)
 
-- Withdrawal valid (balance cukup, min amount terpenuhi) → status `pending`.
+- Withdrawal valid (balance cukup, min amount terpenuhi) → balance langsung berkurang, status `processed`, transaksi tercatat.
 - Withdrawal invalid (balance kurang) → error.
 - Withdrawal invalid (payout method tidak valid atau data tujuan pencairan tidak lengkap) → error.
 - Withdrawal bank dan e-wallet menyimpan `payoutMethod`, `providerName`, `accountNumber`, dan `accountName`.
-- Admin approve (function `complete-withdrawal`) → balance berkurang, status `processed`.
-- Admin reject → balance dikembalikan, status `rejected`.
-- Admin reject tanpa `rejectionReason` → error.
-
-Catatan: Function `complete-withdrawal` **belum diimplementasikan** di `functions/` — hanya aturan di `70_Backend.md`.
+- Withdrawal langsung diproses tanpa review admin.

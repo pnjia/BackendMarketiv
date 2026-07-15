@@ -8,13 +8,13 @@ Sumber kebenaran skema koleksi milik modul Chat. Satu fakta = satu lokasi.
 
 Ruang chat antara satu UMKM dan satu creator. Relasi: Conversation (1) → Messages (N).
 
-| Attribute          | Type    | Required | Catatan                              |
-| ------------------ | ------- | -------- | ------------------------------------ |
-| umkm_id            | string  | yes      | FK → users                           |
-| creator_id         | string  | yes      | FK → users                           |
-| offer_id           | string  | no       | FK → offers terakhir/terkait         |
-| last_message       | string  | no       | denormalisasi pesan terakhir         |
-| last_message_at    | datetime| no       | denormalisasi waktu pesan terakhir   |
+| Attribute       | Type    | Required | Catatan                              |
+| --------------- | ------- | -------- | ------------------------------------ |
+| umkm_id         | string  | yes      | FK → users                           |
+| creator_id      | string  | yes      | FK → users                           |
+| offer_id        | string  | no       | FK → offers terakhir/terkait         |
+| last_message    | string  | no       | denormalisasi pesan terakhir         |
+| last_message_at | datetime| no       | denormalisasi waktu pesan terakhir   |
 
 **Index**: `umkm_id`, `creator_id`, unique `umkm_id + creator_id`, `offer_id`.
 
@@ -32,16 +32,11 @@ Pesan dalam sebuah percakapan. Relasi: Conversation (1) → Messages (N).
 | --------------- | ------ | -------- | ---------------------------------- |
 | conversation_id | string  | yes      | FK → conversations                 |
 | sender_id       | string  | yes      | FK → users                         |
-| message_type    | string  | yes      | `text\|image\|file\|offer\|system` |
-| content         | string  | no       | isi pesan (untuk `text`/`system`)    |
-| offer_id        | string  | no       | FK → offers untuk tipe `offer`       |
-| attachment_url  | string  | no       | URL Storage untuk `image`/`file`     |
-| attachment_name | string  | no       | nama file asli                       |
-| attachment_size | integer | no       | ukuran file dalam byte               |
-| attachment_mime | string  | no       | MIME type file                       |
+| message_type    | string  | yes      | `text\|offer\|system`              |
+| content         | string  | no       | isi pesan (untuk `text`/`system`)  |
+| offer_id        | string  | no       | FK → offers untuk tipe `offer`     |
+| read_at         | datetime| no       | timestamp saat pesan dibaca        |
 
-**Index**: `conversation_id`, `sender_id`.
+**Index**: `conversation_id`, `sender_id`, `read_at`.
 
 **Permission**: Participant only.
-
-> Attachment disimpan di Storage bucket `chat-files` dan dibatasi oleh aturan di `30_Business_Rules.md`. Read receipt dan unread counter dikecualikan dari MVP chat dasar.

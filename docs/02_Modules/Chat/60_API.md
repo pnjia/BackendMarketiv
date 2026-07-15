@@ -14,8 +14,14 @@ Fungsi-fungsi berikut dipanggil langsung dari frontend Next.js via **Appwrite Cl
 
 ### `sendMessage()` — [Client SDK]
 
-- **Input**: `{ conversationId, type?, content?, offerId?, attachmentUrl?, attachmentName?, attachmentSize?, attachmentMime? }` — `type` default `text`.
-- **Proses**: validasi participant, tipe pesan, dan batas attachment; buat dokumen `messages`; update `last_message` & `last_message_at` pada conversation induk.
+- **Input**: `{ conversationId, type?, content?, offerId? }` — `type` default `text`.
+- **Proses**: validasi participant, tipe pesan; buat dokumen `messages`; update `last_message` & `last_message_at` pada conversation induk.
+- **Akses**: Participant.
+
+### `markConversationAsRead()` — [Client SDK]
+
+- **Input**: `{ conversationId }`
+- **Proses**: query semua pesan dalam conversation di mana `sender_id != currentUserId` dan `read_at IS NULL`, lalu update `read_at` dengan timestamp sekarang.
 - **Akses**: Participant.
 
 ---
@@ -37,13 +43,6 @@ UI penerima subscribe ke channel dokumen `messages` percakapan terkait; saat ada
 Pesan chat tidak dikirim lewat Appwrite Messaging sebagai data utama. Setelah `messages.create`, function `send-chat-notification` membuat notifikasi penerima dan mengirim push notification Appwrite Messaging jika target push user tersedia.
 
 > Pesan bertipe `offer` merujuk custom offer yang dibuat UMKM — lihat `../Offers/`.
-> Pesan bertipe `image`/`file` memakai file yang sudah di-upload ke bucket `chat-files` dan harus lolos whitelist ukuran/format.
-
----
-
-## Appwrite Functions (Server-side)
-
-Module ini tidak memiliki REST API publik sendiri. Sinkronisasi server-side untuk Chat dijalankan lewat Appwrite Functions dan didokumentasikan di [70_Backend.md](70_Backend.md).
 
 ---
 

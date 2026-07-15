@@ -11,13 +11,14 @@
 ### Chat Room
 
 - Riwayat pesan (infinite scroll / pagination).
-- Input pesan teks dengan satu attachment opsional.
+- Input pesan teks.
 - Tombol "Buat Offer" (khusus UMKM).
 - Real-time update saat pesan baru masuk.
+- Read receipt: tampilkan indikator "Sudah dibaca" pada pesan milik pengirim.
 
 ## Komponen
 
 - `ConversationList` — sidebar daftar chat.
-- `MessageBubble` — bubble pesan dengan tipe (text/image/file/offer/system).
-- `ChatInput` — input pesan teks + attachment picker terbatas.
+- `MessageBubble` — bubble pesan dengan tipe (text/offer/system) + indikator read receipt.
+- `ChatInput` — input pesan teks + tombol offer.
 - `OfferMessageCard` — kartu offer di dalam chat (tap untuk detail).

@@ -88,6 +88,6 @@ Permintaan withdraw valid bila:
 - `balance ≥ amount`.
 - Tujuan pencairan wajib memakai `payoutMethod = bank` atau `ewallet`.
 - `providerName`, `accountNumber`, dan `accountName` wajib terisi untuk bank maupun e-wallet.
-- Memerlukan **persetujuan admin** (admin gate) sebelum dana ditransfer.
+- Withdrawal **langsung diproses** tanpa review admin. Dana langsung keluar dari wallet.
 
 > Escrow & transactions disimpan terpisah (`50_Database.md`). Aggregate order: `../../04_Decisions/ADR-003.md`.
