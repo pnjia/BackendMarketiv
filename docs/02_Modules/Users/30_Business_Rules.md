@@ -39,8 +39,9 @@ Disimpan langsung di `creator_profiles` agar dashboard & browse cepat, walau bis
 - `totalOrders` — jumlah order selesai.
 - `rating` — rating creator.
 
-## Storage Kuota
+## Storage Kuota [DORMANT — post-MVP]
 
+- **Infrastruktur ini dormant.** File Manager berbasis `user_files` & `user_storage_usage` tidak diaktifkan di MVP. Semua aset menggunakan external URL (Google Drive). Infrastruktur siap diaktifkan jika feedback demo minggu pertama meminta file manager internal.
 - Setiap user memiliki kuota penyimpanan default **100 MB** (104.857.600 bytes) untuk file yang diupload ke Appwrite Storage.
 - Kuota dihitung dari total `sizeBytes` seluruh `user_files` berstatus `active`.
 - Upload ditolak jika `usedBytes + file.size > quotaBytes`.

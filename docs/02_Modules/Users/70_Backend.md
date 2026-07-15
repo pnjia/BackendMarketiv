@@ -8,9 +8,11 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
 
 - **Trigger**: `users.create` (dari modul Authentication).
 - **Aksi**: buat `umkm_profiles` atau `creator_profiles` sesuai role; inisialisasi `user_storage_usage` dengan `usedBytes = 0`, `quotaBytes = 104857600`, `fileCount = 0`.
+- ⚠️ `user_storage_usage` dormant — tidak dipakai MVP.
 
-### validate-and-upload
+### validate-and-upload ⚠️ DORMANT
 
+- **Infrastruktur dormant — tidak aktif di MVP.** Diaktifkan jika feedback demo minggu pertama meminta file manager internal.
 - **Trigger**: dipanggil API `uploadFile()`.
 - **Execute**: authenticated users.
 - **Input**: `{ fileName, mimeType, sizeBytes, contentBase64 }`.
@@ -22,8 +24,9 @@ Dokumen ini khusus untuk Appwrite Functions dan aturan backend. Kontrak pemanggi
   5. Buat metadata di `user_files` dengan `status = active`.
   6. Increment `usedBytes` dan `fileCount` di `user_storage_usage`.
 
-### delete-file
+### delete-file ⚠️ DORMANT
 
+- **Infrastruktur dormant — tidak aktif di MVP.** Diaktifkan jika feedback demo minggu pertama meminta file manager internal.
 - **Trigger**: dipanggil API `deleteFile()`.
 - **Execute**: authenticated users.
 - **Input**: `{ fileId }`.

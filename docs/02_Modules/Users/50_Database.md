@@ -189,9 +189,9 @@ Public: read
 
 ---
 
-## 6. `user_storage_usage`
+## 6. `user_storage_usage` ⚠️ DORMANT (post-MVP)
 
-Relasi: `users` 1 ── 1 `user_storage_usage`.
+Relasi: `users` 1 ── 1 `user_storage_usage`. Tidak digunakan di MVP — semua aset pakai external URL. Infrastruktur siap diaktifkan jika feedback demo minggu pertama meminta file manager internal.
 
 ### Attributes
 
@@ -217,9 +217,9 @@ System: write
 
 ---
 
-## 7. `user_files`
+## 7. `user_files` ⚠️ DORMANT (post-MVP)
 
-Riwayat metadata setiap file yang diupload user ke Appwrite Storage. Relasi: `users` 1 ── N `user_files`.
+Riwayat metadata setiap file yang diupload user ke Appwrite Storage. Relasi: `users` 1 ── N `user_files`. Tidak digunakan di MVP — semua aset pakai external URL. Infrastruktur siap diaktifkan jika feedback demo minggu pertama meminta file manager internal.
 
 ### Attributes
 

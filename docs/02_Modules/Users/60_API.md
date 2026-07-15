@@ -48,8 +48,9 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `rate_c
 
 ---
 
-### `uploadFile()` — [Client SDK]
+### `uploadFile()` — [Client SDK] ⚠️ DORMANT
 
+- **Infrastruktur dormant — tidak aktif di MVP.** Semua aset pakai external URL. Diaktifkan jika feedback demo minggu pertama meminta file manager internal.
 - **Input**: `{ file }`
 - **Proses**: validasi kuota → upload ke Appwrite Storage → catat metadata ke `user_files` → update `user_storage_usage`.
 - **Validasi**:
@@ -59,19 +60,19 @@ Memakai index pada `creator_profiles` (city, rating, totalFollowers) dan `rate_c
   - File type allowed: `image/*`, `video/*`, `application/pdf`, `application/msword`, `application/vnd.openxmlformats-officedocument.*`.
 - **Akses**: Authenticated user (owner).
 
-### `deleteFile()` — [Client SDK]
+### `deleteFile()` — [Client SDK] ⚠️ DORMANT
 
 - **Input**: `{ fileId }`
 - **Proses**: validasi kepemilikan → hapus dari Appwrite Storage → soft delete metadata `user_files` (`status = deleted`, set `deletedAt`) → update `user_storage_usage`.
 - **Akses**: Authenticated user (owner).
 
-### `getMyFiles(filter)` — [Client SDK]
+### `getMyFiles(filter)` — [Client SDK] ⚠️ DORMANT
 
 - **Input**: `{ status? }`
 - **Proses**: list file milik user.
 - **Akses**: Authenticated user (owner).
 
-### `getStorageUsage()` — [Client SDK]
+### `getStorageUsage()` — [Client SDK] ⚠️ DORMANT
 
 - **Proses**: return `{ usedBytes, quotaBytes, fileCount }` untuk user.
 - **Akses**: Authenticated user (owner).
