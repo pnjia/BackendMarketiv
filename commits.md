@@ -120,7 +120,9 @@ Update knowledge graph setelah semua perubahan. Hanya affect `graphify-out/`.
 
 ---
 
-## 2026-07-18 — Platform Fee 5%→2%
+## 2026-07-18 — Platform Fee 5%→2% + Config Sync
+
+### 13. Feature: Platform Fee 2%
 
 ### 13. Feature: Platform Fee 2%
 **`2ab8113`** 20:13 — `feat: turunkan platform fee 5%→2%`
@@ -148,6 +150,14 @@ Files:
 - `docs/02_Modules/Payments/50_Database.md` — fee 2% di deskripsi kolom fee_amount
 
 **Verifikasi**: ✅ Unit test PASS (7/7), Integration test PASS (24/24). Tidak ada sisa "5%" atau "0.05" di `src/` dan `docs/`.
+
+### 14. Chore: Config Sync
+**`649b630`** 20:13 — `chore: sinkron appwrite.config.json key tablesDB→databasesDB, tables→databases`
+
+Appwrite CLI v22 rename key `tablesDB` → `databasesDB`, `tables` → `databases`. Isi identik (hanya rename key).
+
+Files:
+- `appwrite.config.json` — 3466 insert/delete, pure key rename
 
 ---
 
